@@ -32,6 +32,10 @@ public class DateSelector {
         mDayOfMonth = c.get(Calendar.DAY_OF_MONTH);  
 	}
 	  
+	/**
+	 * @param tv
+	 * @param ed
+	 */
 	public void setDate(final TextView tv,final EditText ed){
 		  
 		DatePickerDialog datePickerDialog = new DatePickerDialog(mContext, 

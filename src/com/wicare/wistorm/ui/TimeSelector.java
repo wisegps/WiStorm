@@ -30,7 +30,12 @@ public class TimeSelector {
         mMinute = c.get(Calendar.MINUTE);  
 	}
 	
+	/**
+	 * @param tv 
+	 * @param ed
+	 */
 	public void setTime(final TextView tv,final EditText ed){
+		
 		TimePickerDialog timePickerDialog = new TimePickerDialog(mContext, 
 				new OnTimeSetListener() {						   
 		    @Override

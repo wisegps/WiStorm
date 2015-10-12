@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WiStorm</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">设置</string>
+    
+    <string name="set_time">设置时间</string>
+	<string name="set_Date">设置日期</string>
+	
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <string-array name="cityDate">
+        <item>aa</item>
+        <item>bb</item>
+        <item>cc</item>
+        <item>dd</item>
+        <item>ee</item>
+        <item>ff</item>
+        <item>gg</item>
+        <item>hh</item>
+        <item>ii</item>
+        <item>jj</item>
+        <item>kk</item>
+        <item>ll</item>
+        <item>mm</item>
+        <item>nn</item>
+        <item>oo</item>
+        <item>pp</item>
+        <item>qq</item>
+        <item>rr</item>
+        <item>ss</item>
+        <item>tt</item>
+        <item>uu</item>
+        <item>vv</item>
+        <item>ww</item>
+        <item>xx</item>
+        <item>yy</item>
+        <item>zz</item>
+   
+    </string-array>
+
+</resources>
