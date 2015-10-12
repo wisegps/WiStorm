@@ -4,5 +4,8 @@
     <string name="app_name">WiStorm</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-
+    
+    <string name="set_time">Set Time</string>
+	<string name="set_Date">Set Date</string>
+	
 </resources>
