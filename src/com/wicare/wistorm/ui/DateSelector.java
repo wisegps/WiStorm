@@ -8,13 +8,14 @@ import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.content.Context;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 
 /**
  * DateSlector
- * @author c
+ * @author Wu
  * @date 2015-10-9
  */
 public class DateSelector {
@@ -25,7 +26,7 @@ public class DateSelector {
 	public DateSelector(Context context){
 		
 		mContext = context; 
-		// 获取系统当前日期
+		// 鑾峰彇褰撳墠鏃ユ湡
 		final Calendar c = Calendar.getInstance();  
         mYear = c.get(Calendar.YEAR);  
         mMonthOfYear = c.get(Calendar.MONTH);  
@@ -36,7 +37,7 @@ public class DateSelector {
 	 * @param tv
 	 * @param ed
 	 */
-	public void setDate(final TextView tv,final EditText ed){
+	public void setDate(final TextView textView,final EditText editText,final Button button){
 		  
 		DatePickerDialog datePickerDialog = new DatePickerDialog(mContext, 
 			new OnDateSetListener() {     
@@ -47,15 +48,20 @@ public class DateSelector {
 			setmMonthOfYear(monthOfYear + 1);
 			setmDayOfMonth(dayOfMonth);
 			
-			if(tv != null){
-				tv.setText(getmYear()   + "-"
-				+ getmMonthOfYear() 	+ "-"
-				+ getmDayOfMonth()  	+ "-");
+			if(textView != null){
+				textView.setText(getmYear() + "-"
+				+ getmMonthOfYear() 		+ "-"
+				+ getmDayOfMonth() );
 			}
-			if(ed != null){
-				ed.setText(getmYear()   + "-"
-				+ getmMonthOfYear() 	+ "-"
-				+ getmDayOfMonth()  	+ "-");
+			if(editText != null){
+				editText.setText(getmYear() + "-"
+				+ getmMonthOfYear() 		+ "-"
+				+ getmDayOfMonth());
+			}
+			if(button !=null){
+				button.setText(getmYear()   + "-"
+				+ getmMonthOfYear() 		+ "-"
+				+ getmDayOfMonth());
 			}
 		}},mYear, mMonthOfYear, mDayOfMonth);
 		datePickerDialog.setTitle(R.string.set_Date);

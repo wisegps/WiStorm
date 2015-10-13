@@ -60,5 +60,14 @@
             android:divider="@null"
             android:scrollbars="none" >
         </ListView>
+        
+<!--         <TextView 
+            android:id="@+id/tv_clear_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/clear_history"
+            /> -->
 
 </LinearLayout>

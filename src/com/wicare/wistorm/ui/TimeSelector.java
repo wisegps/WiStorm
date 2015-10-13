@@ -7,6 +7,7 @@ import com.wisegps.wistorm.R;
 import android.app.TimePickerDialog;
 import android.app.TimePickerDialog.OnTimeSetListener;
 import android.content.Context;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -24,7 +25,7 @@ public class TimeSelector {
 	public TimeSelector(Context context){
 		
 		mContext = context;
-		// 获取系统本机当前的时间 
+		// 锟斤拷取系统锟斤拷锟斤拷锟斤拷前锟斤拷时锟斤拷 
         final Calendar c = Calendar.getInstance();  
         mHour = c.get(Calendar.HOUR_OF_DAY);  
         mMinute = c.get(Calendar.MINUTE);  
@@ -34,7 +35,7 @@ public class TimeSelector {
 	 * @param tv 
 	 * @param ed
 	 */
-	public void setTime(final TextView tv,final EditText ed){
+	public void setTime(final TextView textView,final EditText editText,final Button button){
 		
 		TimePickerDialog timePickerDialog = new TimePickerDialog(mContext, 
 				new OnTimeSetListener() {						   
@@ -44,12 +45,15 @@ public class TimeSelector {
 				// TODO Auto-generated method stub
 		    	setmHour(hourOfDay);
 		    	setmMinute(minute);
-		    	if(tv!=null){
-		    		tv.setText(getmHour() + ":" + getmMinute());		
+		    	if(textView!=null){
+		    		textView.setText(getmHour() + ":" + getmMinute());		
 		    	}
-		    	if(ed!=null){
-		    		ed.setText(getmHour() + ":" + getmMinute());
+		    	if(editText!=null){
+		    		editText.setText(getmHour() + ":" + getmMinute());
 		    	}
+		    	if(button !=null){
+		    		button.setText(getmHour() + ":" + getmMinute());
+				}
 			}
 		},mHour, mMinute, true);
 		timePickerDialog.setTitle(R.string.set_time);

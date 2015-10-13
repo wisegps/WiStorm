@@ -1,34 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
 
-    <string-array name="cityDate">
-        <item>aa</item>
-        <item>bb</item>
-        <item>cc</item>
-        <item>dd</item>
-        <item>ee</item>
-        <item>ff</item>
-        <item>gg</item>
-        <item>hh</item>
-        <item>ii</item>
-        <item>jj</item>
-        <item>kk</item>
-        <item>ll</item>
-        <item>mm</item>
-        <item>nn</item>
-        <item>oo</item>
-        <item>pp</item>
-        <item>qq</item>
-        <item>rr</item>
-        <item>ss</item>
-        <item>tt</item>
-        <item>uu</item>
-        <item>vv</item>
-        <item>ww</item>
-        <item>xx</item>
-        <item>yy</item>
-        <item>zz</item>
-   
+    <string-array name="English">
+        <item>Mother</item>
+        <item>Passion</item>
+        <item>Smile </item>
+        <item>Love </item>
+        <item>Eternity </item>
+        <item>Fantastic</item>
+        <item>Destiny </item>
+        <item>Freedom </item>
+        <item>Liberty </item>
+        <item>Tranquillity</item>
+        <item>Peace</item>
+        <item>Blossom</item>
+        <item>Sunshine</item>
+        <item>Sweetheart</item>
+        <item>Gorgeous</item>
+        <item>Cherish</item>
+        <item>Enthusiasm</item>
+        <item>Hope</item>
+        <item>Grace</item>
+        <item>Rainbow</item>
+        <item>Blue</item>
+        <item>Sunflower</item>
+        <item>Twinkle</item>
+        <item>Serendipity</item>
+        <item>Bliss</item>
+        <item>Lullaby</item>
+        <item>Sophisticated</item>
+        <item>Renaissance</item>
+        <item>Cute</item>
+        <item>Cosy</item>
+        <item>Butterfly</item>
+        <item>Galaxy</item>
+        <item>Hilarious</item>
+        <item>Moment</item>
+        <item>Extravaganza</item>
+        <item>Aqua</item>
+        <item>Sentiment</item>
+        <item>Cosmopolitan</item>
+        <item>Bubble</item>
+        <item>Pumpkin</item>
+        <item>Banana</item>
+        <item>Lollipop</item>
+        <item>If</item>
+        <item>Bumblebee</item>
+        <item>Giggle</item>
+        <item>Paradox</item>
+        <item>uoioioiupiitu</item>
+        <item>Delicacy</item>
+        <item>Umbrella</item>
+        <item>Peekaboo</item>
+        <item>Kangaroo</item>
+        <item>Flabbergasted</item>
+        <item>Hippopotamus</item>
+        <item>Gothic</item>
+        <item>Bumblebee</item>
+        <item>Coconut</item>
+        <item>Smashing</item>
+        <item>Whoops</item>
+        <item>Tickle</item>
+        <item>Loquacious</item>
+        <item>Flip-flop</item>
+        <item>Smithereens</item>
+        <item>Oi</item>        
+        <item>Gazebo</item>
+        <item>Hiccup</item>
+        <item>Hodgepodge</item>
+        <item>Explosion</item>
+        <item>Shipshape</item>
+        <item>Fuselage</item>
+        <item>Zing</item>
+        <item>Gum</item>
+        <item>Hen-night</item>
+        
     </string-array>
 
 </resources>

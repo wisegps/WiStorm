@@ -2,7 +2,7 @@ package com.wicare.wistorm.ui;
 
 /**
  * WLisView
- * @author c
+ * @author Wu
  * @date 2015-10-9
  */
 public class WLisView {

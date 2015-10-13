@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+    
+    <ImageView 
+        android:id="@+id/iv_serach_bar_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true" />
+    
+    <TextView
+        android:id="@+id/tv_search_bar_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue_press"
+        android:padding="15dp"
+        android:textSize="18sp"
+        android:layout_toRightOf="@id/iv_serach_bar_icon"
+        android:layout_centerInParent="true" />
+    
+    <ImageView 
+        android:id="@+id/iv_serach_bar_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true" />
+    
+    
+    
+    <View 
+        android:id="@+id/v_line"
+        android:layout_below="@+id/tv_search_bar_info"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e1e1e1"/> 
+        
+    <TextView 
+        android:id="@+id/tv_clear_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@id/v_line"
+        android:gravity="center"
+        android:text="@string/clear_history"
+        />
+        
+
+    
+</RelativeLayout>
