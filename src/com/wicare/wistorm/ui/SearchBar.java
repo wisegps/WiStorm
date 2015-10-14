@@ -248,6 +248,10 @@ public class SearchBar extends Activity implements TextWatcher, OnItemClickListe
 		}	
  	}
  	
+ 	/**
+ 	 * ui for  adapter
+ 	 *
+ 	 */
  	class ViewHolder {  
  	    ImageView img_icon; 
  	    ImageView img_up;
