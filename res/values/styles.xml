@@ -1,6 +1,6 @@
 <resources>
-
-    <!--
+   
+     <!--
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
@@ -16,5 +16,12 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-
+    
+    <!-- WBottomPopupWindow  anim -->
+    <style name="wise_anim_menu_bottom_bar">
+        <item name="android:windowEnterAnimation">@anim/wise_menu_bottom_in</item> 
+        <item name="android:windowExitAnimation">@anim/wise_menu_bottom_out</item>  
+     </style>
+    
+    
 </resources>

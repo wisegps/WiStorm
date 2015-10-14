@@ -13,6 +13,8 @@ public final class R {
         public static int slide_in_from_top=0x7f040001;
         public static int slide_out_to_bottom=0x7f040002;
         public static int slide_out_to_top=0x7f040003;
+        public static int wise_menu_bottom_in=0x7f040004;
+        public static int wise_menu_bottom_out=0x7f040005;
     }
     public static final class array {
         public static int English=0x7f080000;
@@ -154,12 +156,24 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int ptrSubHeaderTextAppearance=0x7f01000b;
     }
     public static final class color {
+        public static int black=0x7f090007;
+        /**  淡蓝色字体 
+         */
+        public static int blue_light=0x7f090000;
         /**  蓝色 
          */
-        public static int blue_press=0x7f090000;
-        /**  灰色 
+        public static int blue_press=0x7f090001;
+        public static int gray_light=0x7f090004;
+        /**  深蓝色字体 
          */
-        public static int navy_gray=0x7f090001;
+        public static int navy=0x7f090002;
+        /**  浅蓝色字体 
+         */
+        public static int navy_blue=0x7f090005;
+        /**  灰色字体颜色 
+         */
+        public static int navy_gray=0x7f090003;
+        public static int white=0x7f090006;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -194,8 +208,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int wise_search_clear_pressed=0x7f02000d;
     }
     public static final class id {
-        public static int action_settings=0x7f06001a;
+        public static int action_settings=0x7f06001e;
         public static int both=0x7f060003;
+        public static int btn_cancel=0x7f060018;
+        public static int btn_exit=0x7f060017;
+        public static int btn_save=0x7f060016;
         public static int disabled=0x7f060004;
         public static int et_search=0x7f060012;
         public static int fl_inner=0x7f06000c;
@@ -203,10 +220,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int gridview=0x7f060000;
         public static int iv_back=0x7f060011;
         public static int iv_search_clear=0x7f060013;
-        public static int iv_serach_bar_icon=0x7f060015;
-        public static int iv_serach_bar_up=0x7f060017;
+        public static int iv_serach_bar_icon=0x7f060019;
+        public static int iv_serach_bar_up=0x7f06001b;
         public static int lv_search=0x7f060014;
         public static int manualOnly=0x7f060005;
+        public static int pop_layout=0x7f060015;
         public static int pullDownFromTop=0x7f060006;
         public static int pullFromEnd=0x7f060007;
         public static int pullFromStart=0x7f060008;
@@ -217,9 +235,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int pull_to_refresh_text=0x7f06000f;
         public static int rotate=0x7f06000b;
         public static int scrollview=0x7f060002;
-        public static int tv_clear_history=0x7f060019;
-        public static int tv_search_bar_info=0x7f060016;
-        public static int v_line=0x7f060018;
+        public static int tv_clear_history=0x7f06001d;
+        public static int tv_search_bar_info=0x7f06001a;
+        public static int v_line=0x7f06001c;
         public static int webview=0x7f060001;
     }
     public static final class layout {
@@ -227,7 +245,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int pull_to_refresh_header_horizontal=0x7f030001;
         public static int pull_to_refresh_header_vertical=0x7f030002;
         public static int wise_activity_search_bar=0x7f030003;
-        public static int wise_itemlistw_search_bar=0x7f030004;
+        public static int wise_buttom_popupwindow=0x7f030004;
+        public static int wise_itemlistw_search_bar=0x7f030005;
     }
     public static final class menu {
         public static int main=0x7f0b0000;
@@ -276,6 +295,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static int AppTheme=0x7f0a0001;
+        /**  WBottomPopupWindow  anim 
+         */
+        public static int wise_anim_menu_bottom_bar=0x7f0a0002;
     }
     public static final class styleable {
         /** Attributes that can be used with a PullToRefresh.
