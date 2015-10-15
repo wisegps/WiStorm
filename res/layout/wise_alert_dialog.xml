@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    
+    
+    <TextView 
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue_press"
+        android:padding="15dp"
+        android:textSize="24sp"
+		android:text="Dialog Title:"
+        />
+
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/blue_press"
+        />
+    
+    <TextView 
+        android:id="@+id/dialog_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:textSize="18sp"
+		android:text="这里设置信息"
+        />
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_light"
+        />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal" >
+        
+        <Button 
+            android:id="@+id/btn_dialog_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:text="取消"
+            />
+        <View 
+	        android:layout_width="1dp"
+	        android:layout_height="wrap_content"
+	        android:background="@color/gray_light"
+	        />
+        <Button 
+            android:id="@+id/btn_dialog_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+			android:background="@color/white"
+            android:text="确定"
+            />
+    </LinearLayout>
+    
+</LinearLayout>
