@@ -19,8 +19,8 @@
     
     <!-- WBottomPopupWindow  anim -->
     <style name="wise_anim_menu_bottom_bar">
-        <item name="android:windowEnterAnimation">@anim/wise_menu_bottom_in</item> 
-        <item name="android:windowExitAnimation">@anim/wise_menu_bottom_out</item>  
+        <item name="android:windowEnterAnimation">@anim/ws_menu_bottom_in</item> 
+        <item name="android:windowExitAnimation">@anim/ws_menu_bottom_out</item>  
      </style>
     
     

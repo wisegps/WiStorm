@@ -53,7 +53,7 @@ public class WClearEditText extends EditText implements
     	mClearDrawable = getCompoundDrawables()[2]; 
         if (mClearDrawable == null) { 
 //        	throw new NullPointerException("You can add drawableRight attribute in XML");
-        	mClearDrawable = getResources().getDrawable(R.drawable.wise_clearedittext_selector); 
+        	mClearDrawable = getResources().getDrawable(R.drawable.ws_clearedittext_selector); 
         } 
         
         mClearDrawable.setBounds(0, 0, mClearDrawable.getIntrinsicWidth(), mClearDrawable.getIntrinsicHeight()); 

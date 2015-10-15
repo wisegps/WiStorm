@@ -27,7 +27,7 @@ public class WBottomPopupWindow extends PopupWindow {
 		
 		LayoutInflater inflater = (LayoutInflater)context
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		mMenuView = inflater.inflate(R.layout.wise_buttom_popupwindow, null);
+		mMenuView = inflater.inflate(R.layout.ws_buttom_popupwindow, null);
 		btnSave =   (Button) mMenuView.findViewById(R.id.btn_save);
 		btnExit =   (Button) mMenuView.findViewById(R.id.btn_exit);
 		btnCancel = (Button) mMenuView.findViewById(R.id.btn_cancel);

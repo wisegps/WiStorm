@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:src="@drawable/wise_common_icon_back_btn_normal" />
+            android:src="@drawable/ws_common_icon_back_btn_normal" />
         
         
         <com.wicare.wistorm.ui.WClearEditText 
@@ -26,18 +26,10 @@
             android:layout_marginRight="10dp"
             android:layout_centerInParent="true"
             android:singleLine="true"
-            android:background="@drawable/wise_bg_border_rect"
-            android:drawableLeft="@drawable/wise_common_icon_searchbox_magnifier_2"
+            android:background="@drawable/ws_bg_border_rect"
+            android:drawableLeft="@drawable/ws_common_icon_searchbox_magnifier_2"
         	android:hint=" 搜索......" /> 
-  <!--       <ImageView 
-            android:id="@+id/iv_search_clear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerInParent="true"
-            android:paddingRight="20dp"
-            android:src="@drawable/wise_search_bar_selector" 
-            android:visibility="gone" /> -->
+
         
     </RelativeLayout>
 
@@ -56,18 +48,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:background="@drawable/wise_bg_rect_list_search"
+            android:background="@drawable/ws_bg_rect_list_search"
             android:divider="@null"
             android:scrollbars="none" >
         </ListView>
         
-<!--         <TextView 
-            android:id="@+id/tv_clear_history"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="15dp"
-            android:text="@string/clear_history"
-            /> -->
 
 </LinearLayout>

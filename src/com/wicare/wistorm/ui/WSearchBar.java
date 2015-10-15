@@ -198,7 +198,7 @@ public class WSearchBar implements TextWatcher, OnItemClickListener {
 			View view;  
 			ViewHolder viewHolder;  
 			if (convertView == null) {  
-			    view = LayoutInflater.from(mContext).inflate(R.layout.wise_itemlistw_search_bar, null);  
+			    view = LayoutInflater.from(mContext).inflate(R.layout.ws_itemlistw_search_bar, null);  
 			    viewHolder = new ViewHolder();  
 		    	viewHolder.img_icon = (ImageView) view.findViewById(R.id.iv_serach_bar_icon);  
 			    viewHolder.img_up   = (ImageView) view.findViewById(R.id.iv_serach_bar_up) ;
@@ -208,8 +208,8 @@ public class WSearchBar implements TextWatcher, OnItemClickListener {
 			    view = convertView;  
 			    viewHolder = (ViewHolder)view.getTag();//重新获取viewholder       
 			}  
-			viewHolder.img_icon.setImageResource(R.drawable.wise_common_icon_searchbox_magnifier_2);  
-		    viewHolder.img_up  .setImageResource(R.drawable.wise_icon_search_up_retrieval);
+			viewHolder.img_icon.setImageResource(R.drawable.ws_common_icon_searchbox_magnifier_2);  
+		    viewHolder.img_up  .setImageResource(R.drawable.ws_icon_search_up_retrieval);
 		    viewHolder.tv_info .setText(searchListData.get(position));   		    
 			return view;  
 		}

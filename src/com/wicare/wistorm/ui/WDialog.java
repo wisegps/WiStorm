@@ -22,7 +22,7 @@ public class WDialog extends AlertDialog{
 	public WDialog(Context context) {
 		super(context);
 		this.mContext = context;
-		this.layoutRes = R.layout.wise_alert_dialog;
+		this.layoutRes = R.layout.ws_alert_dialog;
 	}
 	
 	/**

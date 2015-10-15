@@ -37,17 +37,5 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#e1e1e1"/> 
-        
-    <TextView 
-        android:id="@+id/tv_clear_history"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:layout_below="@id/v_line"
-        android:gravity="center"
-        android:text="@string/clear_history"
-        />
-        
-
-    
+  
 </RelativeLayout>

@@ -13,8 +13,8 @@ public final class R {
         public static int slide_in_from_top=0x7f040001;
         public static int slide_out_to_bottom=0x7f040002;
         public static int slide_out_to_top=0x7f040003;
-        public static int wise_menu_bottom_in=0x7f040004;
-        public static int wise_menu_bottom_out=0x7f040005;
+        public static int ws_menu_bottom_in=0x7f040004;
+        public static int ws_menu_bottom_out=0x7f040005;
     }
     public static final class array {
         public static int English=0x7f080000;
@@ -198,18 +198,18 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int indicator_arrow=0x7f020003;
         public static int indicator_bg_bottom=0x7f020004;
         public static int indicator_bg_top=0x7f020005;
-        public static int wise_bg_border_rect=0x7f020006;
-        public static int wise_bg_rect_list_search=0x7f020007;
-        public static int wise_clearedittext_selector=0x7f020008;
-        public static int wise_common_icon_back_btn_normal=0x7f020009;
-        public static int wise_common_icon_searchbox_magnifier_2=0x7f02000a;
-        public static int wise_icon_search_up_retrieval=0x7f02000b;
-        public static int wise_search_bar_selector=0x7f02000c;
-        public static int wise_search_clear_normal=0x7f02000d;
-        public static int wise_search_clear_pressed=0x7f02000e;
+        public static int ws_bg_border_rect=0x7f020006;
+        public static int ws_bg_rect_list_search=0x7f020007;
+        public static int ws_clearedittext_selector=0x7f020008;
+        public static int ws_common_icon_back_btn_normal=0x7f020009;
+        public static int ws_common_icon_searchbox_magnifier_2=0x7f02000a;
+        public static int ws_icon_search_up_retrieval=0x7f02000b;
+        public static int ws_search_bar_selector=0x7f02000c;
+        public static int ws_search_clear_normal=0x7f02000d;
+        public static int ws_search_clear_pressed=0x7f02000e;
     }
     public static final class id {
-        public static int action_settings=0x7f060021;
+        public static int action_settings=0x7f060020;
         public static int both=0x7f060003;
         public static int btn_cancel=0x7f06001b;
         public static int btn_dialog_cancel=0x7f060016;
@@ -239,19 +239,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int pull_to_refresh_text=0x7f06000f;
         public static int rotate=0x7f06000b;
         public static int scrollview=0x7f060002;
-        public static int tv_clear_history=0x7f060020;
         public static int tv_search_bar_info=0x7f06001d;
         public static int v_line=0x7f06001f;
         public static int webview=0x7f060001;
     }
     public static final class layout {
-        public static int activity_main=0x7f030000;
-        public static int pull_to_refresh_header_horizontal=0x7f030001;
-        public static int pull_to_refresh_header_vertical=0x7f030002;
-        public static int wise_activity_search_bar=0x7f030003;
-        public static int wise_alert_dialog=0x7f030004;
-        public static int wise_buttom_popupwindow=0x7f030005;
-        public static int wise_itemlistw_search_bar=0x7f030006;
+        public static int pull_to_refresh_header_horizontal=0x7f030000;
+        public static int pull_to_refresh_header_vertical=0x7f030001;
+        public static int ws_activity_search_bar=0x7f030002;
+        public static int ws_alert_dialog=0x7f030003;
+        public static int ws_buttom_popupwindow=0x7f030004;
+        public static int ws_itemlistw_search_bar=0x7f030005;
     }
     public static final class menu {
         public static int main=0x7f0b0000;
