@@ -9,4 +9,6 @@
 	<string name="set_Date">Set Date</string>
 	<string name="clear_history">Clear History</string>
 	
+	<string name="search_nothing">no related information found!</string>
+	
 </resources>

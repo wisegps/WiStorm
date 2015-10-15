@@ -13,13 +13,13 @@ import android.widget.TextView;
 
 import com.wisegps.wistorm.R;
 
+/**
+ * DateSlector
+ * @author Wu
+ * @date 2015-10-9
+ */
 public class WDateSelector {
-	
-	/**
-	 * DateSlector
-	 * @author Wu
-	 * @date 2015-10-9
-	 */
+
 	private Context mContext;
 	private int mYear, mMonthOfYear, mDayOfMonth;
 	

@@ -17,7 +17,8 @@
             android:layout_alignParentLeft="true"
             android:src="@drawable/wise_common_icon_back_btn_normal" />
         
-        <EditText
+        
+        <com.wicare.wistorm.ui.WClearEditText 
             android:id="@+id/et_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -27,9 +28,8 @@
             android:singleLine="true"
             android:background="@drawable/wise_bg_border_rect"
             android:drawableLeft="@drawable/wise_common_icon_searchbox_magnifier_2"
-            android:hint=" 搜索......" />
-        
-        <ImageView 
+        	android:hint=" 搜索......" /> 
+  <!--       <ImageView 
             android:id="@+id/iv_search_clear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
             android:layout_centerInParent="true"
             android:paddingRight="20dp"
             android:src="@drawable/wise_search_bar_selector" 
-            android:visibility="gone" />
+            android:visibility="gone" /> -->
         
     </RelativeLayout>
 

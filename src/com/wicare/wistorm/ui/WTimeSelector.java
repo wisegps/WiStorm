@@ -12,12 +12,13 @@ import android.widget.TimePicker;
 
 import com.wisegps.wistorm.R;
 
+/**
+ * TimeSelector
+ * @author c
+ * @date 2015-10-9
+ * 
+ */
 public class WTimeSelector {
-	/**
-	 * TimeSelector
-	 * @author c
-	 * @date 2015-10-9
-	 */
 
 	private Context mContext;
 	private int mHour,mMinute;
