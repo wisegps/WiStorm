@@ -51,17 +51,18 @@
             android:orientation="vertical"
             android:paddingBottom="10dp" >
 
-            <EditText
+            <com.wicare.wistorm.ui.WClearEditText
                 android:id="@+id/et_account"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/ws_icon_user" 
                 android:background="@android:color/transparent"
                 android:hint="@string/ws_account_hit"
                 android:paddingLeft="10dp"
                 android:singleLine="true"
-                android:textColor="#000000"
+                android:textColor="#000000"   
                 android:textSize="18sp" />
 
             <TextView
@@ -69,12 +70,13 @@
                 android:layout_height="1dp"
                 android:background="#e5e5e5" />
 
-            <EditText
+            <com.wicare.wistorm.ui.WClearEditText
                 android:id="@+id/et_password"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/ws_account_icon"
                 android:background="@android:color/transparent"
                 android:hint="@string/ws_password_hit"
                 android:inputType="textPassword"

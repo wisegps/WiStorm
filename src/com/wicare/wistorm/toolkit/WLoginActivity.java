@@ -4,6 +4,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.wicare.wistorm.api.WUserApi;
+import com.wicare.wistorm.api.WUserApi.OnLoginListener;
+import com.wicare.wistorm.ui.WClearEditText;
 import com.wisegps.wistorm.R;
 
 import android.app.Activity;
@@ -26,16 +28,15 @@ import android.widget.Toast;
 public class WLoginActivity extends Activity implements OnClickListener,
 		WUserApi.OnLoginListener {
 
-	private EditText etAccount, etPassword;
+	private WClearEditText etAccount, etPassword;
 	public Button btnLogin;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.ws_login);
-		etAccount = (EditText) findViewById(R.id.et_account);
-		etPassword = (EditText) findViewById(R.id.et_password);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);	
+		etAccount = (WClearEditText) findViewById(R.id.et_account);
+		etPassword = (WClearEditText) findViewById(R.id.et_password);
 		btnLogin = (Button) findViewById(R.id.btn_login);
 		btnLogin.setOnClickListener(this);
 	}
@@ -58,8 +59,12 @@ public class WLoginActivity extends Activity implements OnClickListener,
 	public void login() {
 		String userName = etAccount.getText().toString().trim();
 		String password = etPassword.getText().toString().trim();
+	
 		if (userName.length() == 0 || password.length() == 0) {
 			loginFail(WUserApi.Fail_Null);
+			
+			etAccount.setShakeAnimation();
+			etPassword.setShakeAnimation();
 			return;
 		}
 
@@ -104,6 +109,8 @@ public class WLoginActivity extends Activity implements OnClickListener,
 			errorId = R.string.ws_login_null;
 		}
 		Toast.makeText(this, errorId, Toast.LENGTH_LONG).show();
+		etAccount.setShakeAnimation();
+		etPassword.setShakeAnimation();
 		btnLogin.setEnabled(true);
 	}
 

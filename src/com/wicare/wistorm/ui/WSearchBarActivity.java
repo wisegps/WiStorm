@@ -5,84 +5,63 @@ import java.util.ArrayList;
 import com.wisegps.wistorm.R;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
+import android.os.Bundle;
 import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
 
-/**
- * 实现搜索功能
- * @author Wu
- * @date 2015-10-15
- * 
- */
-public class WSearchBar implements TextWatcher, OnItemClickListener {
+public class WSearchBarActivity extends Activity implements TextWatcher, OnItemClickListener, OnClickListener{
 	
-	private static final String TAG = "WSearchBar";
 	
-	private Context mContext;
+	private static final String TAG = "WSearchBarActivity";
 	/**
 	 * 搜索列表
-	 * 
 	 */
 	private ListView lvSearch;
 	/**
 	 * 自定义的搜索框
-	 * 
 	 */
 	private WClearEditText etSearch = null;
+	/**
+	 * 返回
+	 */
+	private ImageView ivBack = null;
 	
 	Handler mHandler = new Handler();
 	/**
 	 * listview 适配器
-	 * 
 	 */
 	private listSearchBarAdapter searchBarAdapter;
 	/**
 	 * 筛选出来的数据
-	 * 
 	 */	
 	ArrayList<String> newListData = new ArrayList<String>();
 	
-	
-	/**
-	 * 刷新listview搜索结果
-	 */
-	Runnable searchChanged = new Runnable() {	
- 		@Override
- 		public void run() {
- 			String strKey = etSearch.getText().toString();
-
-			getmNewDates(strKey);//获取更新数据
- 			Log.i(TAG, ""+"notifyDataSetChanged");	
- 			searchBarAdapter.setData(newListData);
- 			
- 			if(newListData.isEmpty()){
- 				Toast.makeText(mContext, R.string.search_nothing, Toast.LENGTH_SHORT).show();
- 				etSearch.setShakeAnimation();//没有搜索到内容时抖动窗口
- 			}
- 			searchBarAdapter.notifyDataSetChanged();//更新	
- 		}
- 	};
-	
-	
-	public WSearchBar (Context context,ListView listView,WClearEditText editView){
-		this.mContext = context;
-		this.lvSearch = listView;
-		this.etSearch = editView;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.ws_activity_search_bar);
+		ivBack   = (ImageView) findViewById(R.id.iv_back);
+		ivBack .setOnClickListener(this);
+		lvSearch = (ListView) findViewById(R.id.lv_search);
+		etSearch = (WClearEditText) findViewById(R.id.et_search);
 		initWSearchBar();
-	}
+	}	
 	
 	/**
 	 * 初始化WSearchBar
@@ -93,11 +72,81 @@ public class WSearchBar implements TextWatcher, OnItemClickListener {
 		etSearch.addTextChangedListener(this);
 		lvSearch.setOnItemClickListener(this);
 		//加载listview	
-		searchBarAdapter = new listSearchBarAdapter(mContext);
+		searchBarAdapter = new listSearchBarAdapter(this);
 		searchBarAdapter.setData(newListData);
 		lvSearch.setAdapter(searchBarAdapter);
 	}
 	
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		WSearchBarActivity.this.finish();
+	}
+	
+	/**
+	 * 获得根据搜索框的数据data来从元数据筛选，筛选出来的数据放入mDataSubs里
+	 * @param mDataSubs
+	 * @param data
+	 */
+	private void getmNewDates(String strKey){
+		for(int i = 0; i < getData().size(); i++){
+			if(getData().get(i).contains(strKey)){
+				newListData.add(getData().get(i));
+				Log.i(TAG ,"getmNewDates" + getData().get(i));
+			}    	
+		}	
+	}
+	
+	/**
+	 * 这些把预先设置的数据存到arraylist
+	 * @return arraylist
+	 */
+	private ArrayList<String> getData() {
+		String[] SourceDateList = this.getResources().getStringArray(R.array.English);
+		ArrayList<String> arraylist = new ArrayList<String>();   
+		//根据需求添加一些数据,     
+		for (int i = 0; i <SourceDateList.length; i++) {            
+			arraylist.add(SourceDateList[i]);   
+		}  
+		return arraylist;   
+	}  
+	
+	
+	/**
+	 * 刷新listview搜索结果
+	 */
+	Runnable searchChanged = new Runnable() {	
+ 		@Override
+ 		public void run() {
+ 			String strKey = etSearch.getText().toString();
+			getmNewDates(strKey);//获取更新数据
+ 			Log.i(TAG, ""+"notifyDataSetChanged");	
+ 			searchBarAdapter.setData(newListData);
+ 			if(newListData.isEmpty()){
+ 				Toast.makeText(WSearchBarActivity.this, R.string.search_nothing, Toast.LENGTH_SHORT).show();
+ 				etSearch.setShakeAnimation();//没有搜索到内容时抖动窗口
+ 			}
+ 			searchBarAdapter.notifyDataSetChanged();//更新	
+ 		}
+ 	};
+ 	
+ 	
+ 	/**
+ 	 * 	设置搜索页面的返回图标
+ 	 * @param ivBackId
+ 	 */
+ 	public void setIvBack(int ivBackId){
+ 		ImageView ivBack   = (ImageView) findViewById(R.id.iv_back);
+ 		ivBack.setImageResource(ivBackId);
+ 	}
+ 	
+ 	/**
+ 	 * 	设置搜索框背景
+ 	 * @param editTextBackgroundId
+ 	 */
+ 	public void setEditTextBackground(int editTextBackgroundId){
+ 		etSearch.setBackgroundResource(editTextBackgroundId);
+ 	}
 	
 
 	@Override
@@ -109,7 +158,7 @@ public class WSearchBar implements TextWatcher, OnItemClickListener {
 	@Override
 	public void beforeTextChanged(CharSequence s, int start, int count,
 			int after) {
-		Log.i(TAG, "beforeTextChanged()...");
+		Log.i(TAG, "beforeTextChanged()...");	
 	}
 
 	@Override
@@ -127,43 +176,10 @@ public class WSearchBar implements TextWatcher, OnItemClickListener {
 
 	@Override
 	public void afterTextChanged(Editable s) {
-		Log.i(TAG, "afterTextChanged()...");
+		Log.i(TAG, "afterTextChanged()...");	
 	}
 	
 	
-	
-	/**
-	 * 获得根据搜索框的数据data来从元数据筛选，筛选出来的数据放入mDataSubs里
-	 * @param mDataSubs
-	 * @param data
-	 */
-	private void getmNewDates(String strKey){
-		for(int i = 0; i < getData().size(); i++){
-			if(getData().get(i).contains(strKey)){
-				newListData.add(getData().get(i));
-				Log.i(TAG ,"getmNewDates" + getData().get(i));
-			}    	
-		}	
-	}
-	
-	
-	
-	/**
-	 * 这些把预先设置的数据存到arraylist
-	 * @return arraylist
-	 */
-	private ArrayList<String> getData() {
-		String[] SourceDateList = mContext.getResources().getStringArray(R.array.English);
-		ArrayList<String> arraylist = new ArrayList<String>();   
-		//根据需求添加一些数据,     
-		for (int i = 0; i <SourceDateList.length; i++) {            
-			arraylist.add(SourceDateList[i]);   
-		}  
-		return arraylist;   
-	}  
-	
-	
-		
 	/**
 	 * 搜索列表的适配器
  	 */
@@ -226,12 +242,10 @@ public class WSearchBar implements TextWatcher, OnItemClickListener {
  	
  	/**
  	 * ui for adapter
- 	 *
  	 */
  	class ViewHolder { 
  	    ImageView img_icon; 
  	    ImageView img_up;
  	    TextView  tv_info;  
  	}
-
 }
