@@ -4,11 +4,23 @@
     <string name="app_name">WiStorm</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <!-- 登录 -->
+    <string name="ws_net_timeout">网络连接超时</string>
+    <string name="ws_tv_check_update">系统检测到有新版本，点击更新</string>
+    <string name="ws_account_hit">请输入账号</string>
+    <string name="ws_password_hit">请输入密码</string>
+    <string name="ws_login">登录</string>
+    <string name="ws_check_pwd">记住密码</string>
+    <string name="ws_login_pd_context">登录中，请稍后.</string>
+    <string name="ws_login_id_wrong">账号或密码错误，请再次尝试</string>
+    <string name="ws_login_null">用户名和密码不能为空，请重试。</string>
+    <string name="ws_accout_bind_phone">该账号已绑定其他手机</string>
+
     
-    <string name="set_time">Set Time</string>
-	<string name="set_Date">Set Date</string>
-	<string name="clear_history">Clear History</string>
-	
-	<string name="search_nothing">no related information found!</string>
-	
+  	<string name="set_time">设置时间</string> 
+  	<string name="set_Date">设置日期</string> 
+  	<string name="clear_history">清除历史记录</string> 
+  	<string name="search_nothing">搜索不到相关内容</string> 
+    
+  
 </resources>

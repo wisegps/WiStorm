@@ -15,6 +15,7 @@ public final class R {
         public static int slide_out_to_top=0x7f040003;
         public static int ws_menu_bottom_in=0x7f040004;
         public static int ws_menu_bottom_out=0x7f040005;
+        public static int ws_progressbar_loading=0x7f040006;
     }
     public static final class array {
         public static int English=0x7f080000;
@@ -198,37 +199,67 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int indicator_arrow=0x7f020003;
         public static int indicator_bg_bottom=0x7f020004;
         public static int indicator_bg_top=0x7f020005;
-        public static int ws_bg_border_rect=0x7f020006;
-        public static int ws_bg_rect_list_search=0x7f020007;
-        public static int ws_clearedittext_selector=0x7f020008;
-        public static int ws_common_icon_back_btn_normal=0x7f020009;
-        public static int ws_common_icon_searchbox_magnifier_2=0x7f02000a;
-        public static int ws_icon_search_up_retrieval=0x7f02000b;
-        public static int ws_search_bar_selector=0x7f02000c;
-        public static int ws_search_clear_normal=0x7f02000d;
-        public static int ws_search_clear_pressed=0x7f02000e;
+        public static int wise_bg_border_rect=0x7f020006;
+        public static int wise_bg_rect_list_search=0x7f020007;
+        public static int wise_common_icon_back_btn_normal=0x7f020008;
+        public static int wise_common_icon_searchbox_magnifier_2=0x7f020009;
+        public static int wise_search_bar_selector=0x7f02000a;
+        public static int wise_search_clear_normal=0x7f02000b;
+        public static int wise_search_clear_pressed=0x7f02000c;
+        public static int ws_bg_border_rect=0x7f02000d;
+        public static int ws_bg_rect_list_search=0x7f02000e;
+        public static int ws_btn_bg=0x7f02000f;
+        public static int ws_btn_check=0x7f020010;
+        public static int ws_btn_unckeck=0x7f020011;
+        public static int ws_checkbox_checked=0x7f020012;
+        public static int ws_checkbox_unchecked=0x7f020013;
+        public static int ws_clearedittext_selector=0x7f020014;
+        public static int ws_common_icon_back_btn_normal=0x7f020015;
+        public static int ws_common_icon_searchbox_magnifier_2=0x7f020016;
+        public static int ws_icon_search_up_retrieval=0x7f020017;
+        public static int ws_loading_bg=0x7f020018;
+        public static int ws_login_bg=0x7f020019;
+        public static int ws_logo=0x7f02001a;
+        public static int ws_progressbar_loading_01=0x7f02001b;
+        public static int ws_progressbar_loading_02=0x7f02001c;
+        public static int ws_progressbar_loading_03=0x7f02001d;
+        public static int ws_progressbar_loading_04=0x7f02001e;
+        public static int ws_progressbar_loading_05=0x7f02001f;
+        public static int ws_progressbar_loading_06=0x7f020020;
+        public static int ws_progressbar_loading_07=0x7f020021;
+        public static int ws_round_bg=0x7f020022;
+        public static int ws_search_bar_selector=0x7f020023;
+        public static int ws_search_clear_normal=0x7f020024;
+        public static int ws_search_clear_pressed=0x7f020025;
+        public static int ws_selector_checkbox=0x7f020026;
     }
     public static final class id {
-        public static int action_settings=0x7f060020;
+        public static int action_settings=0x7f06002b;
         public static int both=0x7f060003;
-        public static int btn_cancel=0x7f06001b;
-        public static int btn_dialog_cancel=0x7f060016;
-        public static int btn_dialog_ok=0x7f060017;
-        public static int btn_exit=0x7f06001a;
-        public static int btn_save=0x7f060019;
-        public static int dialog_message=0x7f060015;
-        public static int dialog_title=0x7f060014;
+        public static int btn_cancel=0x7f06001c;
+        public static int btn_dialog_cancel=0x7f060017;
+        public static int btn_dialog_ok=0x7f060018;
+        public static int btn_exit=0x7f06001b;
+        public static int btn_login=0x7f060025;
+        public static int btn_save=0x7f06001a;
+        public static int dialog_message=0x7f060016;
+        public static int dialog_title=0x7f060015;
         public static int disabled=0x7f060004;
+        public static int et_account=0x7f060023;
+        public static int et_password=0x7f060024;
         public static int et_search=0x7f060012;
         public static int fl_inner=0x7f06000c;
         public static int flip=0x7f06000a;
         public static int gridview=0x7f060000;
         public static int iv_back=0x7f060011;
-        public static int iv_serach_bar_icon=0x7f06001c;
-        public static int iv_serach_bar_up=0x7f06001e;
-        public static int lv_search=0x7f060013;
+        public static int iv_loading=0x7f060029;
+        public static int iv_search_clear=0x7f060013;
+        public static int iv_serach_bar_icon=0x7f06001d;
+        public static int iv_serach_bar_up=0x7f06001f;
+        public static int lv_search=0x7f060014;
         public static int manualOnly=0x7f060005;
-        public static int pop_layout=0x7f060018;
+        public static int notePswd=0x7f060026;
+        public static int pop_layout=0x7f060019;
         public static int pullDownFromTop=0x7f060006;
         public static int pullFromEnd=0x7f060007;
         public static int pullFromStart=0x7f060008;
@@ -239,17 +270,25 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int pull_to_refresh_text=0x7f06000f;
         public static int rotate=0x7f06000b;
         public static int scrollview=0x7f060002;
-        public static int tv_search_bar_info=0x7f06001d;
-        public static int v_line=0x7f06001f;
+        public static int tv_loading_msg=0x7f06002a;
+        public static int tv_search_bar_info=0x7f06001e;
+        public static int tv_update=0x7f060027;
+        public static int tv_version=0x7f060028;
+        public static int v_line=0x7f060020;
         public static int webview=0x7f060001;
+        public static int ws_iv_logo=0x7f060022;
+        public static int ws_llyt_login=0x7f060021;
     }
     public static final class layout {
         public static int pull_to_refresh_header_horizontal=0x7f030000;
         public static int pull_to_refresh_header_vertical=0x7f030001;
-        public static int ws_activity_search_bar=0x7f030002;
-        public static int ws_alert_dialog=0x7f030003;
-        public static int ws_buttom_popupwindow=0x7f030004;
-        public static int ws_itemlistw_search_bar=0x7f030005;
+        public static int wise_activity_search_bar=0x7f030002;
+        public static int ws_activity_search_bar=0x7f030003;
+        public static int ws_alert_dialog=0x7f030004;
+        public static int ws_buttom_popupwindow=0x7f030005;
+        public static int ws_itemlistw_search_bar=0x7f030006;
+        public static int ws_login=0x7f030007;
+        public static int ws_progressbar_loading=0x7f030008;
     }
     public static final class menu {
         public static int main=0x7f0b0000;
@@ -257,7 +296,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     public static final class string {
         public static int action_settings=0x7f070008;
         public static int app_name=0x7f070006;
-        public static int clear_history=0x7f07000b;
+        public static int clear_history=0x7f070015;
         public static int hello_world=0x7f070007;
         /**  Just use standard Pull Down String when pulling up. These can be set for languages which require it 
  Just use standard Pull Down String when pulling up. These can be set for languages which require it 
@@ -268,9 +307,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int pull_to_refresh_pull_label=0x7f070000;
         public static int pull_to_refresh_refreshing_label=0x7f070002;
         public static int pull_to_refresh_release_label=0x7f070001;
-        public static int search_nothing=0x7f07000c;
-        public static int set_Date=0x7f07000a;
-        public static int set_time=0x7f070009;
+        public static int search_nothing=0x7f070016;
+        public static int set_Date=0x7f070014;
+        public static int set_time=0x7f070013;
+        public static int ws_account_hit=0x7f07000b;
+        public static int ws_accout_bind_phone=0x7f070012;
+        public static int ws_check_pwd=0x7f07000e;
+        public static int ws_login=0x7f07000d;
+        public static int ws_login_id_wrong=0x7f070010;
+        public static int ws_login_null=0x7f070011;
+        public static int ws_login_pd_context=0x7f07000f;
+        /**  登录 
+         */
+        public static int ws_net_timeout=0x7f070009;
+        public static int ws_password_hit=0x7f07000c;
+        public static int ws_tv_check_update=0x7f07000a;
     }
     public static final class style {
         /** 
@@ -299,9 +350,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static int AppTheme=0x7f0a0001;
-        /**  WBottomPopupWindow  anim 
+        /**   加载动画 style
+  背景缓存颜色  
          */
-        public static int wise_anim_menu_bottom_bar=0x7f0a0002;
+        public static int progressDialog=0x7f0a0002;
+        /**   WBottomPopupWindow  anim  
+         */
+        public static int ws_anim_menu_bottom_bar=0x7f0a0003;
     }
     public static final class styleable {
         /** Attributes that can be used with a PullToRefresh.

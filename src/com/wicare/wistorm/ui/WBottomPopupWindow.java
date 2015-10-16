@@ -45,7 +45,7 @@ public class WBottomPopupWindow extends PopupWindow {
         //设置SelectPicPopupWindow弹出窗体可点击  
         this.setFocusable(true);  
         //设置SelectPicPopupWindow弹出窗体动画效果  
-        this.setAnimationStyle(R.style.wise_anim_menu_bottom_bar);//下到上
+        this.setAnimationStyle(R.style.ws_anim_menu_bottom_bar);//下到上
         //实例化一个ColorDrawable颜色为全透明  
         ColorDrawable dw = new ColorDrawable(0xffffffff);  
         //设置SelectPicPopupWindow弹出窗体的背景  

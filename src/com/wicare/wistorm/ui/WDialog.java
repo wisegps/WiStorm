@@ -3,7 +3,6 @@ package com.wicare.wistorm.ui;
 import com.wisegps.wistorm.R;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 
@@ -46,23 +45,13 @@ public class WDialog extends AlertDialog{
 		this.layoutRes = resLayout;
 	}
 	
-	
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(layoutRes);	
-		
+
+		setContentView(layoutRes);
 	}
 	
-	
-	public void setWDialogTitle(String title){
-		setTitle(title);
-	}
-	
-	public void setWDialogIcon(int iconRes){
-		setIcon(iconRes);
-	}
 
 } 
