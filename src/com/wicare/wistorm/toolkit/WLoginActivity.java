@@ -29,12 +29,17 @@ public class WLoginActivity extends Activity implements OnClickListener,
 		WUserApi.OnLoginListener {
 
 	private WClearEditText etAccount, etPassword;
-	public Button btnLogin;
+	public Button btnLogin;//登录按钮
+	private int bgId = R.drawable.ws_login_bg; //默认背景
+	private int logoId = R.drawable.ws_logo;//默认logo
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);	
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		setContentView(R.layout.ws_login);
+		setBackground(bgId);
+		setLogo(logoId);
 		etAccount = (WClearEditText) findViewById(R.id.et_account);
 		etPassword = (WClearEditText) findViewById(R.id.et_password);
 		btnLogin = (Button) findViewById(R.id.btn_login);
@@ -56,13 +61,13 @@ public class WLoginActivity extends Activity implements OnClickListener,
 	 * 
 	 * login 点击后发送登录请求
 	 */
-	public void login() {
+	private void login() {
 		String userName = etAccount.getText().toString().trim();
 		String password = etPassword.getText().toString().trim();
-	
+
 		if (userName.length() == 0 || password.length() == 0) {
 			loginFail(WUserApi.Fail_Null);
-			
+
 			etAccount.setShakeAnimation();
 			etPassword.setShakeAnimation();
 			return;
@@ -115,24 +120,28 @@ public class WLoginActivity extends Activity implements OnClickListener,
 	}
 
 	/**
-	 * setBackground 设置背景图片
+	 * setBackground 子类重写覆盖此方法可以设置背景图片
 	 * 
 	 * @param bgId
 	 *            图片ID
 	 */
 	public void setBackground(int bgId) {
+		this.bgId = bgId;
 		findViewById(R.id.ws_llyt_login).setBackgroundResource(bgId);
+
 	}
 
 	/**
-	 * setLogo 设置logo图片
+	 * setLogo 子类重写覆盖此方法可以设置logo图片
 	 * 
 	 * @param logoId
 	 *            图片id
 	 */
 	public void setLogo(int logoId) {
+		this.logoId = logoId;
 		ImageView ivLogo = (ImageView) findViewById(R.id.ws_iv_logo);
 		ivLogo.setImageResource(logoId);
+
 	}
 
 }

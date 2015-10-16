@@ -169,7 +169,7 @@ public class WUserApi extends WiStormAPI {
 		 * 
 		 * loginSucess 登录成功
 		 */
-		public void loginSucess(String response);
+		public  void loginSucess(String response);
 
 		/**
 		 * 
