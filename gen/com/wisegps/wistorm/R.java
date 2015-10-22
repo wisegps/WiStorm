@@ -184,13 +184,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static int activity_horizontal_margin=0x7f060005;
-        public static int activity_vertical_margin=0x7f060006;
-        public static int header_footer_left_right_padding=0x7f060003;
-        public static int header_footer_top_bottom_padding=0x7f060004;
-        public static int indicator_corner_radius=0x7f060001;
-        public static int indicator_internal_padding=0x7f060002;
-        public static int indicator_right_padding=0x7f060000;
+        public static int activity_horizontal_margin=0x7f050005;
+        public static int activity_vertical_margin=0x7f050006;
+        public static int header_footer_left_right_padding=0x7f050003;
+        public static int header_footer_top_bottom_padding=0x7f050004;
+        public static int indicator_corner_radius=0x7f050001;
+        public static int indicator_internal_padding=0x7f050002;
+        public static int indicator_right_padding=0x7f050000;
     }
     public static final class drawable {
         public static int default_ptr_flip=0x7f020000;
@@ -199,96 +199,122 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int indicator_arrow=0x7f020003;
         public static int indicator_bg_bottom=0x7f020004;
         public static int indicator_bg_top=0x7f020005;
-        public static int wise_bg_border_rect=0x7f020006;
-        public static int wise_bg_rect_list_search=0x7f020007;
-        public static int wise_common_icon_back_btn_normal=0x7f020008;
-        public static int wise_common_icon_searchbox_magnifier_2=0x7f020009;
-        public static int wise_search_bar_selector=0x7f02000a;
-        public static int wise_search_clear_normal=0x7f02000b;
-        public static int wise_search_clear_pressed=0x7f02000c;
-        public static int ws_account_icon=0x7f02000d;
-        public static int ws_bg_border_rect=0x7f02000e;
-        public static int ws_bg_rect_list_search=0x7f02000f;
-        public static int ws_btn_bg=0x7f020010;
-        public static int ws_btn_check=0x7f020011;
-        public static int ws_btn_unckeck=0x7f020012;
-        public static int ws_checkbox_checked=0x7f020013;
-        public static int ws_checkbox_unchecked=0x7f020014;
-        public static int ws_clearedittext_selector=0x7f020015;
-        public static int ws_common_icon_back_btn_normal=0x7f020016;
-        public static int ws_common_icon_searchbox_magnifier_2=0x7f020017;
-        public static int ws_icon_search_up_retrieval=0x7f020018;
-        public static int ws_icon_user=0x7f020019;
-        public static int ws_loading_bg=0x7f02001a;
-        public static int ws_login_bg=0x7f02001b;
-        public static int ws_logo=0x7f02001c;
-        public static int ws_progressbar_loading_01=0x7f02001d;
-        public static int ws_progressbar_loading_02=0x7f02001e;
-        public static int ws_progressbar_loading_03=0x7f02001f;
-        public static int ws_progressbar_loading_04=0x7f020020;
-        public static int ws_progressbar_loading_05=0x7f020021;
-        public static int ws_progressbar_loading_06=0x7f020022;
-        public static int ws_progressbar_loading_07=0x7f020023;
-        public static int ws_round_bg=0x7f020024;
-        public static int ws_search_bar_selector=0x7f020025;
-        public static int ws_search_clear_normal=0x7f020026;
-        public static int ws_search_clear_pressed=0x7f020027;
-        public static int ws_selector_checkbox=0x7f020028;
+        public static int ws_account_icon=0x7f020006;
+        public static int ws_bg_border_rect=0x7f020007;
+        public static int ws_bg_rect_list_search=0x7f020008;
+        public static int ws_btn_bg=0x7f020009;
+        public static int ws_btn_check=0x7f02000a;
+        public static int ws_btn_unckeck=0x7f02000b;
+        public static int ws_checkbox_checked=0x7f02000c;
+        public static int ws_checkbox_unchecked=0x7f02000d;
+        public static int ws_clearedittext_selector=0x7f02000e;
+        public static int ws_common_icon_back_btn_normal=0x7f02000f;
+        public static int ws_common_icon_searchbox_magnifier_2=0x7f020010;
+        public static int ws_dialog_bg=0x7f020011;
+        public static int ws_ico_tab_friends=0x7f020012;
+        public static int ws_ico_tab_friends_c=0x7f020013;
+        public static int ws_ico_tab_home=0x7f020014;
+        public static int ws_ico_tab_home_c=0x7f020015;
+        public static int ws_ico_tab_more=0x7f020016;
+        public static int ws_ico_tab_more_c=0x7f020017;
+        public static int ws_ico_tab_msg=0x7f020018;
+        public static int ws_ico_tab_msg_c=0x7f020019;
+        public static int ws_icon_search_up_retrieval=0x7f02001a;
+        public static int ws_icon_user=0x7f02001b;
+        public static int ws_loading_bg=0x7f02001c;
+        public static int ws_login_bg=0x7f02001d;
+        public static int ws_logo=0x7f02001e;
+        public static int ws_progress_bg=0x7f02001f;
+        public static int ws_progressbar_loading_01=0x7f020020;
+        public static int ws_progressbar_loading_02=0x7f020021;
+        public static int ws_progressbar_loading_03=0x7f020022;
+        public static int ws_progressbar_loading_04=0x7f020023;
+        public static int ws_progressbar_loading_05=0x7f020024;
+        public static int ws_progressbar_loading_06=0x7f020025;
+        public static int ws_progressbar_loading_07=0x7f020026;
+        public static int ws_round_bg=0x7f020027;
+        public static int ws_search_bar_selector=0x7f020028;
+        public static int ws_search_clear_normal=0x7f020029;
+        public static int ws_search_clear_pressed=0x7f02002a;
+        public static int ws_selector_checkbox=0x7f02002b;
     }
     public static final class id {
-        public static int action_settings=0x7f05002a;
-        public static int both=0x7f050003;
-        public static int btn_cancel=0x7f05001b;
-        public static int btn_dialog_cancel=0x7f050016;
-        public static int btn_dialog_ok=0x7f050017;
-        public static int btn_exit=0x7f05001a;
-        public static int btn_login=0x7f050024;
-        public static int btn_save=0x7f050019;
-        public static int dialog_message=0x7f050015;
-        public static int dialog_title=0x7f050014;
-        public static int disabled=0x7f050000;
-        public static int et_account=0x7f050022;
-        public static int et_password=0x7f050023;
-        public static int et_search=0x7f050012;
-        public static int fl_inner=0x7f05000c;
-        public static int flip=0x7f050008;
-        public static int gridview=0x7f050009;
-        public static int iv_back=0x7f050011;
-        public static int iv_loading=0x7f050028;
-        public static int iv_serach_bar_icon=0x7f05001c;
-        public static int iv_serach_bar_up=0x7f05001e;
-        public static int lv_search=0x7f050013;
-        public static int manualOnly=0x7f050004;
-        public static int notePswd=0x7f050025;
-        public static int pop_layout=0x7f050018;
-        public static int pullDownFromTop=0x7f050005;
-        public static int pullFromEnd=0x7f050002;
-        public static int pullFromStart=0x7f050001;
-        public static int pullUpFromBottom=0x7f050006;
-        public static int pull_to_refresh_image=0x7f05000d;
-        public static int pull_to_refresh_progress=0x7f05000e;
-        public static int pull_to_refresh_sub_text=0x7f050010;
-        public static int pull_to_refresh_text=0x7f05000f;
-        public static int rotate=0x7f050007;
-        public static int scrollview=0x7f05000b;
-        public static int tv_loading_msg=0x7f050029;
-        public static int tv_search_bar_info=0x7f05001d;
-        public static int tv_update=0x7f050026;
-        public static int tv_version=0x7f050027;
-        public static int v_line=0x7f05001f;
-        public static int webview=0x7f05000a;
-        public static int ws_iv_logo=0x7f050021;
-        public static int ws_llyt_login=0x7f050020;
+        public static int action_settings=0x7f06003e;
+        public static int both=0x7f060003;
+        public static int btn_cancel=0x7f060014;
+        public static int btn_exit=0x7f060013;
+        public static int btn_login=0x7f060023;
+        public static int btn_save=0x7f060012;
+        public static int disabled=0x7f060004;
+        public static int et_account=0x7f060021;
+        public static int et_password=0x7f060022;
+        public static int et_search=0x7f06002d;
+        public static int fl_inner=0x7f06000c;
+        public static int flip=0x7f06000a;
+        public static int gridview=0x7f060000;
+        public static int iv_back=0x7f06002c;
+        public static int iv_loading=0x7f060027;
+        public static int iv_serach_bar_icon=0x7f06001b;
+        public static int iv_serach_bar_up=0x7f06001d;
+        public static int iv_tabbar_item0=0x7f060033;
+        public static int iv_tabbar_item1=0x7f060036;
+        public static int iv_tabbar_item2=0x7f060039;
+        public static int iv_tabbar_item3=0x7f06003c;
+        public static int listView=0x7f060016;
+        public static int lv_search=0x7f06002e;
+        public static int lv_view=0x7f060017;
+        public static int manualOnly=0x7f060005;
+        public static int message=0x7f060018;
+        public static int negativeButton=0x7f06001a;
+        public static int notePswd=0x7f060024;
+        public static int pop_layout=0x7f060011;
+        public static int positiveButton=0x7f060019;
+        public static int pullDownFromTop=0x7f060006;
+        public static int pullFromEnd=0x7f060007;
+        public static int pullFromStart=0x7f060008;
+        public static int pullUpFromBottom=0x7f060009;
+        public static int pull_refresh_list=0x7f060029;
+        public static int pull_to_refresh_image=0x7f06000d;
+        public static int pull_to_refresh_progress=0x7f06000e;
+        public static int pull_to_refresh_sub_text=0x7f060010;
+        public static int pull_to_refresh_text=0x7f06000f;
+        public static int rotate=0x7f06000b;
+        public static int scrollview=0x7f060002;
+        public static int tabbar_content=0x7f06002f;
+        public static int tabbar_item0=0x7f060032;
+        public static int tabbar_item1=0x7f060035;
+        public static int tabbar_item2=0x7f060038;
+        public static int tabbar_item3=0x7f06003b;
+        public static int tabbar_layout=0x7f060031;
+        public static int tabbar_viewLine=0x7f060030;
+        public static int title=0x7f060015;
+        public static int tv_item_info=0x7f06002b;
+        public static int tv_item_title=0x7f06002a;
+        public static int tv_loading_msg=0x7f060028;
+        public static int tv_search_bar_info=0x7f06001c;
+        public static int tv_tabbar_title0=0x7f060034;
+        public static int tv_tabbar_title1=0x7f060037;
+        public static int tv_tabbar_title2=0x7f06003a;
+        public static int tv_tabbar_title3=0x7f06003d;
+        public static int tv_update=0x7f060025;
+        public static int tv_version=0x7f060026;
+        public static int v_line=0x7f06001e;
+        public static int webview=0x7f060001;
+        public static int ws_iv_logo=0x7f060020;
+        public static int ws_llyt_login=0x7f06001f;
     }
     public static final class layout {
         public static int pull_to_refresh_header_horizontal=0x7f030000;
         public static int pull_to_refresh_header_vertical=0x7f030001;
-        public static int ws_activity_search_bar=0x7f030002;
-        public static int ws_alert_dialog=0x7f030003;
-        public static int ws_buttom_popupwindow=0x7f030004;
-        public static int ws_itemlistw_search_bar=0x7f030005;
-        public static int ws_login=0x7f030006;
-        public static int ws_progressbar_loading=0x7f030007;
+        public static int ws_buttom_popupwindow=0x7f030002;
+        public static int ws_customs_dialog=0x7f030003;
+        public static int ws_itemlistw_search_bar=0x7f030004;
+        public static int ws_login=0x7f030005;
+        public static int ws_progressbar_loading=0x7f030006;
+        public static int ws_pull_refresh=0x7f030007;
+        public static int ws_pull_refresh_items=0x7f030008;
+        public static int ws_search_bar=0x7f030009;
+        public static int ws_tabbar=0x7f03000a;
     }
     public static final class menu {
         public static int main=0x7f0b0000;
@@ -350,7 +376,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static int AppTheme=0x7f0a0001;
-        /**   加载动画 style
+        /**  dialog style
   背景缓存颜色  
          */
         public static int progressDialog=0x7f0a0002;
@@ -427,7 +453,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wisegps.wistorm:ptrAdapterViewBackground
         */
-        public static final int PullToRefresh_ptrAdapterViewBackground = 16;
+        public static int PullToRefresh_ptrAdapterViewBackground = 16;
         /**
           <p>
           @attr description
@@ -446,7 +472,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wisegps.wistorm:ptrAnimationStyle
         */
-        public static final int PullToRefresh_ptrAnimationStyle = 12;
+        public static int PullToRefresh_ptrAnimationStyle = 12;
         /**
           <p>
           @attr description
@@ -458,7 +484,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wisegps.wistorm:ptrDrawable
         */
-        public static final int PullToRefresh_ptrDrawable = 6;
+        public static int PullToRefresh_ptrDrawable = 6;
         /**
           <p>This symbol is the offset where the {@link com.wisegps.wistorm.R.attr#ptrDrawableBottom}
           attribute's value can be found in the {@link #PullToRefresh} array.
@@ -468,7 +494,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.wisegps.wistorm:ptrDrawableBottom
         */
-        public static final int PullToRefresh_ptrDrawableBottom = 18;
+        public static int PullToRefresh_ptrDrawableBottom = 18;
         /**
           <p>
           @attr description
@@ -480,7 +506,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wisegps.wistorm:ptrDrawableEnd
         */
-        public static final int PullToRefresh_ptrDrawableEnd = 8;
+        public static int PullToRefresh_ptrDrawableEnd = 8;
         /**
           <p>
           @attr description
@@ -492,7 +518,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wisegps.wistorm:ptrDrawableStart
         */
-        public static final int PullToRefresh_ptrDrawableStart = 7;
+        public static int PullToRefresh_ptrDrawableStart = 7;
         /**
           <p>This symbol is the offset where the {@link com.wisegps.wistorm.R.attr#ptrDrawableTop}
           attribute's value can be found in the {@link #PullToRefresh} array.
@@ -502,7 +528,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.wisegps.wistorm:ptrDrawableTop
         */
-        public static final int PullToRefresh_ptrDrawableTop = 17;
+        public static int PullToRefresh_ptrDrawableTop = 17;
         /**
           <p>
           @attr description
@@ -516,7 +542,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wisegps.wistorm:ptrHeaderBackground
         */
-        public static final int PullToRefresh_ptrHeaderBackground = 1;
+        public static int PullToRefresh_ptrHeaderBackground = 1;
         /**
           <p>
           @attr description
@@ -530,7 +556,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wisegps.wistorm:ptrHeaderSubTextColor
         */
-        public static final int PullToRefresh_ptrHeaderSubTextColor = 3;
+        public static int PullToRefresh_ptrHeaderSubTextColor = 3;
         /**
           <p>
           @attr description
@@ -542,7 +568,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wisegps.wistorm:ptrHeaderTextAppearance
         */
-        public static final int PullToRefresh_ptrHeaderTextAppearance = 10;
+        public static int PullToRefresh_ptrHeaderTextAppearance = 10;
         /**
           <p>
           @attr description
@@ -556,7 +582,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wisegps.wistorm:ptrHeaderTextColor
         */
-        public static final int PullToRefresh_ptrHeaderTextColor = 2;
+        public static int PullToRefresh_ptrHeaderTextColor = 2;
         /**
           <p>
           @attr description
@@ -573,7 +599,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wisegps.wistorm:ptrListViewExtrasEnabled
         */
-        public static final int PullToRefresh_ptrListViewExtrasEnabled = 14;
+        public static int PullToRefresh_ptrListViewExtrasEnabled = 14;
         /**
           <p>
           @attr description
@@ -597,7 +623,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wisegps.wistorm:ptrMode
         */
-        public static final int PullToRefresh_ptrMode = 4;
+        public static int PullToRefresh_ptrMode = 4;
         /**
           <p>
           @attr description
@@ -610,7 +636,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wisegps.wistorm:ptrOverScroll
         */
-        public static final int PullToRefresh_ptrOverScroll = 9;
+        public static int PullToRefresh_ptrOverScroll = 9;
         /**
           <p>
           @attr description
@@ -624,7 +650,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wisegps.wistorm:ptrRefreshableViewBackground
         */
-        public static final int PullToRefresh_ptrRefreshableViewBackground = 0;
+        public static int PullToRefresh_ptrRefreshableViewBackground = 0;
         /**
           <p>
           @attr description
@@ -640,7 +666,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wisegps.wistorm:ptrRotateDrawableWhilePulling
         */
-        public static final int PullToRefresh_ptrRotateDrawableWhilePulling = 15;
+        public static int PullToRefresh_ptrRotateDrawableWhilePulling = 15;
         /**
           <p>
           @attr description
@@ -653,7 +679,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wisegps.wistorm:ptrScrollingWhileRefreshingEnabled
         */
-        public static final int PullToRefresh_ptrScrollingWhileRefreshingEnabled = 13;
+        public static int PullToRefresh_ptrScrollingWhileRefreshingEnabled = 13;
         /**
           <p>
           @attr description
@@ -666,7 +692,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wisegps.wistorm:ptrShowIndicator
         */
-        public static final int PullToRefresh_ptrShowIndicator = 5;
+        public static int PullToRefresh_ptrShowIndicator = 5;
         /**
           <p>
           @attr description
@@ -678,6 +704,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wisegps.wistorm:ptrSubHeaderTextAppearance
         */
-        public static final int PullToRefresh_ptrSubHeaderTextAppearance = 11;
+        public static int PullToRefresh_ptrSubHeaderTextAppearance = 11;
     };
 }

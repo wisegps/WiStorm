@@ -24,7 +24,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
-public class WSearchBarActivity extends Activity implements TextWatcher, OnItemClickListener, OnClickListener{
+public class WSearchBarActivity extends Activity implements TextWatcher, 
+		OnItemClickListener, OnClickListener{
 	
 	
 	private static final String TAG = "WSearchBarActivity";
@@ -55,7 +56,7 @@ public class WSearchBarActivity extends Activity implements TextWatcher, OnItemC
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.ws_activity_search_bar);
+		setContentView(R.layout.ws_search_bar);
 		ivBack   = (ImageView) findViewById(R.id.iv_back);
 		ivBack .setOnClickListener(this);
 		lvSearch = (ListView) findViewById(R.id.lv_search);

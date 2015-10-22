@@ -3,7 +3,6 @@
     android:id="@+id/pop_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:background="#eaeaea"
     android:paddingLeft="5dp"
     android:paddingRight="5dp">  
@@ -20,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/blue_press"
-            android:background="#ffffff"
+            android:background="@color/white"
             android:text="Save" />
         <View 
             android:layout_width="match_parent"
@@ -31,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/blue_press"
-            android:background="#ffffff"
+            android:background="@color/white"
             android:text="Exit" />
         <View 
             android:layout_width="match_parent"
@@ -42,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/blue_press"
-            android:background="#ffffff"
+            android:background="@color/white"
             android:text="Cancel" />
        
     </LinearLayout>

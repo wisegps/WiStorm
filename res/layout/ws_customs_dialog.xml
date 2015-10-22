@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:minWidth="250dp"  
+    android:orientation="vertical"  
+    android:layout_width="match_parent"  
+    android:layout_height="wrap_content" 
+    android:background="#eaeaea"
+    android:padding="3dp" >  
+    
+    
+    <LinearLayout 
+        android:background="@drawable/ws_round_bg" 
+        android:orientation="vertical"  
+	    android:layout_width="fill_parent"  	    
+	    android:layout_height="wrap_content" >
+
+         <!-- dialog 标题 --> 
+        <TextView  
+            android:id="@+id/title"  
+            android:padding="10dip" 
+            android:textSize="24sp"
+            android:background="@color/white" 
+            android:textColor="@color/blue_press"
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content" />  
+	            
+	    <View 
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:background="@color/gray_light" />
+	    
+	        
+        <ListView 
+            android:id="@+id/listView"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">            
+        </ListView> 
+        
+        <View 
+            android:id="@+id/lv_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:background="@color/gray_light" />
+    
+   	<!-- dialog 内容 -->
+        <TextView  
+            android:id="@+id/message"  
+            android:padding="10dip"  
+            android:textSize="18sp"
+            android:background="@color/white" 
+            android:layout_width="fill_parent"  
+            android:layout_height="wrap_content" />  	            
+	    
+	    <View 
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:background="@color/gray_light" />
+	     
+	   	<!-- dialog 确定和取消按钮 --> 
+        <TextView   
+            android:id="@+id/positiveButton"  
+            android:background="@color/white"  
+            android:padding="10dip" 
+            android:gravity="center"
+            android:layout_width="match_parent"   
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue_press"  
+            android:textSize="18sp"
+            android:singleLine="true"/> 
+             
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:background="@color/gray_light" />
+        
+        <TextView   
+            android:id="@+id/negativeButton"  
+         	android:background="@color/white" 
+         	android:padding="10dip" 
+         	android:gravity="center"
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content" 
+            android:textColor="@color/blue_press" 
+            android:textSize="18sp"
+            android:singleLine="true"/>  
+	             
+    </LinearLayout>
+   
+   
+   
+</LinearLayout>  

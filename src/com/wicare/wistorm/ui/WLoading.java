@@ -10,6 +10,11 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ * customs progressbar  
+ * @author Wu
+ *
+ */
 public class WLoading extends Dialog{
 	 
 	private Context context;
