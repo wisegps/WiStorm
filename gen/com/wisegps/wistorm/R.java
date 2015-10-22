@@ -239,12 +239,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int ws_selector_checkbox=0x7f02002b;
     }
     public static final class id {
-        public static int action_settings=0x7f06003e;
+        public static int action_settings=0x7f060032;
         public static int both=0x7f060003;
         public static int btn_cancel=0x7f060014;
         public static int btn_exit=0x7f060013;
         public static int btn_login=0x7f060023;
         public static int btn_save=0x7f060012;
+        public static int content=0x7f06002f;
         public static int disabled=0x7f060004;
         public static int et_account=0x7f060021;
         public static int et_password=0x7f060022;
@@ -256,10 +257,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int iv_loading=0x7f060027;
         public static int iv_serach_bar_icon=0x7f06001b;
         public static int iv_serach_bar_up=0x7f06001d;
-        public static int iv_tabbar_item0=0x7f060033;
-        public static int iv_tabbar_item1=0x7f060036;
-        public static int iv_tabbar_item2=0x7f060039;
-        public static int iv_tabbar_item3=0x7f06003c;
         public static int listView=0x7f060016;
         public static int lv_search=0x7f06002e;
         public static int lv_view=0x7f060017;
@@ -280,25 +277,16 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int pull_to_refresh_text=0x7f06000f;
         public static int rotate=0x7f06000b;
         public static int scrollview=0x7f060002;
-        public static int tabbar_content=0x7f06002f;
-        public static int tabbar_item0=0x7f060032;
-        public static int tabbar_item1=0x7f060035;
-        public static int tabbar_item2=0x7f060038;
-        public static int tabbar_item3=0x7f06003b;
-        public static int tabbar_layout=0x7f060031;
-        public static int tabbar_viewLine=0x7f060030;
+        public static int tabbarLayout=0x7f060031;
         public static int title=0x7f060015;
         public static int tv_item_info=0x7f06002b;
         public static int tv_item_title=0x7f06002a;
         public static int tv_loading_msg=0x7f060028;
         public static int tv_search_bar_info=0x7f06001c;
-        public static int tv_tabbar_title0=0x7f060034;
-        public static int tv_tabbar_title1=0x7f060037;
-        public static int tv_tabbar_title2=0x7f06003a;
-        public static int tv_tabbar_title3=0x7f06003d;
         public static int tv_update=0x7f060025;
         public static int tv_version=0x7f060026;
         public static int v_line=0x7f06001e;
+        public static int viewLine=0x7f060030;
         public static int webview=0x7f060001;
         public static int ws_iv_logo=0x7f060020;
         public static int ws_llyt_login=0x7f06001f;
@@ -308,13 +296,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int pull_to_refresh_header_vertical=0x7f030001;
         public static int ws_buttom_popupwindow=0x7f030002;
         public static int ws_customs_dialog=0x7f030003;
-        public static int ws_itemlistw_search_bar=0x7f030004;
-        public static int ws_login=0x7f030005;
-        public static int ws_progressbar_loading=0x7f030006;
-        public static int ws_pull_refresh=0x7f030007;
-        public static int ws_pull_refresh_items=0x7f030008;
-        public static int ws_search_bar=0x7f030009;
-        public static int ws_tabbar=0x7f03000a;
+        public static int ws_item_tabbar=0x7f030004;
+        public static int ws_itemlistw_search_bar=0x7f030005;
+        public static int ws_login=0x7f030006;
+        public static int ws_progressbar_loading=0x7f030007;
+        public static int ws_pull_refresh=0x7f030008;
+        public static int ws_pull_refresh_items=0x7f030009;
+        public static int ws_search_bar=0x7f03000a;
+        public static int ws_tabbar=0x7f03000b;
     }
     public static final class menu {
         public static int main=0x7f0b0000;
