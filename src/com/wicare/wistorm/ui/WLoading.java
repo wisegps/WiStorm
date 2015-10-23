@@ -1,6 +1,5 @@
 package com.wicare.wistorm.ui;
 
-import com.wisegps.wistorm.R;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -9,6 +8,8 @@ import android.view.Gravity;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.wicare.wistorm.R;
 
 /**
  * customs progressbar  

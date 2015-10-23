@@ -1,6 +1,5 @@
 package com.wicare.wistorm.ui;
 
-import com.wisegps.wistorm.R;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -10,6 +9,8 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.wicare.wistorm.R;
 
 /**
  * TabBar

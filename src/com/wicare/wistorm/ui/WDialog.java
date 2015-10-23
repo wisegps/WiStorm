@@ -14,7 +14,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.wisegps.wistorm.R;
+import com.wicare.wistorm.R;
+
 
 /**
  * 自定义  alert Dialog

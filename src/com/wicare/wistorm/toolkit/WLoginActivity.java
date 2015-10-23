@@ -1,23 +1,18 @@
 package com.wicare.wistorm.toolkit;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import com.wicare.wistorm.api.WUserApi;
-import com.wicare.wistorm.api.WUserApi.OnLoginListener;
-import com.wicare.wistorm.ui.WClearEditText;
-import com.wisegps.wistorm.R;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.wicare.wistorm.R;
+import com.wicare.wistorm.api.WUserApi;
+import com.wicare.wistorm.ui.WClearEditText;
 
 /**
  * WLoginActivity 用户登录Activity 继承该类可以复用登录界面和登录功能

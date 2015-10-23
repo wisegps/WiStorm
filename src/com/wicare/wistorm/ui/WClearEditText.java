@@ -1,6 +1,5 @@
 package com.wicare.wistorm.ui;
 
-import com.wisegps.wistorm.R;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -15,6 +14,8 @@ import android.view.animation.Animation;
 import android.view.animation.CycleInterpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.EditText;
+
+import com.wicare.wistorm.R;
 
 /**
  * 自定义带有清除按键的 EditText  

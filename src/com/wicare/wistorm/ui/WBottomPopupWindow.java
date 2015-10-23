@@ -1,6 +1,5 @@
 package com.wicare.wistorm.ui;
 
-import com.wisegps.wistorm.R;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -13,6 +12,8 @@ import android.view.View.OnTouchListener;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.PopupWindow;
+
+import com.wicare.wistorm.R;
 
 public class WBottomPopupWindow extends PopupWindow {
 	

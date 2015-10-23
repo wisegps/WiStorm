@@ -11,7 +11,8 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.wisegps.wistorm.R;
+import com.wicare.wistorm.R;
+
 
 /**
  * DateSlector
