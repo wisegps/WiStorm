@@ -31,7 +31,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.wicare.wistorm.toolkit.WMap" >
+        <activity android:name="com.wicare.wistorm.toolkit.WMap" android:screenOrientation="portrait">
         </activity>
     </application>
 
