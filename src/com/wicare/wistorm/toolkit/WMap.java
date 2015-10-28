@@ -6,9 +6,16 @@ import android.os.Bundle;
 import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.MapView;
 import com.wicare.wistorm.R;
+import com.baidu.trace.LBSTraceClient;
+import com.baidu.trace.OnStartTraceListener;
+import com.baidu.trace.OnStopTraceListener;
+import com.baidu.trace.OnTrackListener;
+import com.baidu.trace.Trace;
+import com.baidu.trace.OnGeoFenceListener;
+import com.baidu.trace.OnEntityListener;
 
 /**
- * WMap
+ * WMap 百度地图activity
  * 
  * @author c
  * @date 2015-10-9
@@ -16,6 +23,7 @@ import com.wicare.wistorm.R;
 public class WMap extends Activity {
 
 	private MapView mMapView;
+	private LBSYingyan   yingyan;//鹰眼服务
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +33,10 @@ public class WMap extends Activity {
 		SDKInitializer.initialize(getApplicationContext());
 		setContentView(R.layout.ws_map);
 		mMapView = (MapView) findViewById(R.id.bmapView);
+		yingyan =new LBSYingyan(this);
+		
+
+	
 	}
 
 	@Override
@@ -39,6 +51,7 @@ public class WMap extends Activity {
 		super.onResume();
 		// 在activity执行onResume时执行mMapView. onResume ()，实现地图生命周期管理
 		mMapView.onResume();
+		yingyan.start("CCC");
 	}
 
 	@Override

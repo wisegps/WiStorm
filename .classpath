@@ -4,8 +4,9 @@
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="libs/BaiduLBS_Android.jar"/>
-	<classpathentry kind="lib" path="libs/httpmime-4.1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/BaiduLBS_Android.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/httpmime-4.1.2.jar"/>
+	<classpathentry kind="lib" path="libs/BaiduTraceSDK_v2_0_0.jar"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
