@@ -55,7 +55,7 @@ public class LBSYingyan {
 			// 轨迹服务推送接口（用于接收服务端推送消息，arg0 : 消息类型，arg1 : 消息内容，详情查看类参考）
 			@Override
 			public void onTracePushCallback(byte arg0, String arg1) {
-				
+
 				Log.i("LBSYingyan", "轨迹服务推送接口");
 			}
 		};
@@ -98,7 +98,6 @@ public class LBSYingyan {
 	/**
 	 * 轨迹实时查询
 	 */
-
 	public void query(String entityNames) {
 		// 鹰眼服务ID
 		// entity标识列表（多个entityName，以英文逗号"," 分割）
@@ -118,14 +117,14 @@ public class LBSYingyan {
 			// 查询失败回调接口
 			@Override
 			public void onRequestFailedCallback(String arg0) {
-				
-				Log.i("LBSYingyan","entity请求失败回调接口消息 : " + arg0);
+
+				Log.i("LBSYingyan", "entity请求失败回调接口消息 : " + arg0);
 			}
 
 			// 查询entity回调接口，返回查询结果列表
 			@Override
 			public void onQueryEntityListCallback(String arg0) {
-				Log.i("LBSYingyan","entity回调接口消息 : " + arg0);
+				Log.i("LBSYingyan", "entity回调接口消息 : " + arg0);
 			}
 		};
 
@@ -137,8 +136,11 @@ public class LBSYingyan {
 	/**
 	 * 
 	 * queryHistory 历史轨迹查询
-	 * @param entityName  entity标识
-	 * @param pageIndex  分页索引
+	 * 
+	 * @param entityName
+	 *            entity标识
+	 * @param pageIndex
+	 *            分页索引
 	 */
 
 	public void queryHistory(String entityName, int pageIndex) {
@@ -160,13 +162,13 @@ public class LBSYingyan {
 			// 请求失败回调接口
 			@Override
 			public void onRequestFailedCallback(String arg0) {
-				Log.i("LBSYingyan","track请求失败回调接口消息 : " + arg0);
+				Log.i("LBSYingyan", "track请求失败回调接口消息 : " + arg0);
 			}
 
 			// 查询历史轨迹回调接口
 			@Override
 			public void onQueryHistoryTrackCallback(String arg0) {
-				Log.i("LBSYingyan","查询历史轨迹回调接口消息 : " + arg0);
+				Log.i("LBSYingyan", "查询历史轨迹回调接口消息 : " + arg0);
 			}
 
 		};

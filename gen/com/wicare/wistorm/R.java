@@ -225,19 +225,20 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int ws_login_bg=0x7f02001d;
         public static int ws_logo=0x7f02001e;
         public static int ws_map_follow=0x7f02001f;
-        public static int ws_progress_bg=0x7f020020;
-        public static int ws_progressbar_loading_01=0x7f020021;
-        public static int ws_progressbar_loading_02=0x7f020022;
-        public static int ws_progressbar_loading_03=0x7f020023;
-        public static int ws_progressbar_loading_04=0x7f020024;
-        public static int ws_progressbar_loading_05=0x7f020025;
-        public static int ws_progressbar_loading_06=0x7f020026;
-        public static int ws_progressbar_loading_07=0x7f020027;
-        public static int ws_round_bg=0x7f020028;
-        public static int ws_search_bar_selector=0x7f020029;
-        public static int ws_search_clear_normal=0x7f02002a;
-        public static int ws_search_clear_pressed=0x7f02002b;
-        public static int ws_selector_checkbox=0x7f02002c;
+        public static int ws_park=0x7f020020;
+        public static int ws_progress_bg=0x7f020021;
+        public static int ws_progressbar_loading_01=0x7f020022;
+        public static int ws_progressbar_loading_02=0x7f020023;
+        public static int ws_progressbar_loading_03=0x7f020024;
+        public static int ws_progressbar_loading_04=0x7f020025;
+        public static int ws_progressbar_loading_05=0x7f020026;
+        public static int ws_progressbar_loading_06=0x7f020027;
+        public static int ws_progressbar_loading_07=0x7f020028;
+        public static int ws_round_bg=0x7f020029;
+        public static int ws_search_bar_selector=0x7f02002a;
+        public static int ws_search_clear_normal=0x7f02002b;
+        public static int ws_search_clear_pressed=0x7f02002c;
+        public static int ws_selector_checkbox=0x7f02002d;
     }
     public static final class id {
         public static int action_settings=0x7f050033;

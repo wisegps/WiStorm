@@ -1,10 +1,14 @@
 package com.wicare.wistorm.toolkit;
 
+import java.util.ArrayList;
+import java.util.List;
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.graphics.Point;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
-
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
@@ -17,9 +21,14 @@ import com.baidu.mapapi.map.MapStatus;
 import com.baidu.mapapi.map.MapStatusUpdate;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
+import com.baidu.mapapi.map.Marker;
+import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.MyLocationConfiguration;
+import com.baidu.mapapi.map.Overlay;
+import com.baidu.mapapi.map.PolylineOptions;
 import com.baidu.mapapi.map.MyLocationConfiguration.LocationMode;
 import com.baidu.mapapi.map.MyLocationData;
+import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.model.LatLng;
 import com.baidu.mapapi.search.geocode.GeoCodeOption;
 import com.baidu.mapapi.search.geocode.GeoCodeResult;
@@ -27,22 +36,28 @@ import com.baidu.mapapi.search.geocode.GeoCoder;
 import com.baidu.mapapi.search.geocode.OnGetGeoCoderResultListener;
 import com.baidu.mapapi.search.geocode.ReverseGeoCodeOption;
 import com.baidu.mapapi.search.geocode.ReverseGeoCodeResult;
+import com.baidu.mapapi.search.poi.OnGetPoiSearchResultListener;
+import com.baidu.mapapi.search.poi.PoiCitySearchOption;
+import com.baidu.mapapi.search.poi.PoiDetailResult;
+import com.baidu.mapapi.search.poi.PoiNearbySearchOption;
+import com.baidu.mapapi.search.poi.PoiResult;
+import com.baidu.mapapi.search.poi.PoiSearch;
 import com.wicare.wistorm.R;
 
 /**
- * WMap 百度地图activity 继承该类可以使直接使用定位，图标显示，划线等功能
+ * WMapBase 百度地图activity 继承该类可以使直接使用定位，图标显示，划线等功能
  * 
  * @author c
- * @date 2015-10-9
+ * @date 2015-10-29
  */
 public class WMap extends Activity implements BDLocationListener,
-		OnGetGeoCoderResultListener {
+		OnGetGeoCoderResultListener, OnGetPoiSearchResultListener {
 
 	private MapView mMapView;
 	private BaiduMap mBaiduMap;
 	public LocationClient mLocationClient;// 定位服务客户端
-
 	public GeoCoder geoCoder;
+	public PoiSearch mPoiSearch;
 	private LBSYingyan yingyan;// 鹰眼服务
 
 	@Override
@@ -142,12 +157,17 @@ public class WMap extends Activity implements BDLocationListener,
 		// 当不需要定位图层时关闭定位图层
 		// mMapView.getMap().setMyLocationEnabled(false);
 
-		// 设置地图中心坐标
+		// 测试设置地图中心坐标
 		LatLng latLng = new LatLng(location.getLatitude(),
 				location.getLongitude());
+
+		/*---------------测试内容----------------*/
+		// 测试滚到地图中心
 		animateMapCenter(latLng);
+		// 测试地理反位置编码
 		reverseGeoCode(latLng);
-		//getGeoCode("深圳", "西丽366大街50号");
+		// 测试地理位置编码
+		getGeoCode("深圳", "西丽崇文花园");
 	}
 
 	/**
@@ -168,6 +188,114 @@ public class WMap extends Activity implements BDLocationListener,
 		mBaiduMap.animateMapStatus(mMapStatusUpdate);
 	}
 
+	/*-----------------------------------覆盖物标注篇--------------------------------------------------*/
+	/**
+	 * addOverlay 在地图指定的位置上添加标注信息
+	 * 
+	 * @param point
+	 *            坐标点
+	 * @return 标注
+	 */
+	public Marker addOverlay(LatLng point) {
+		// 默认Marker图标id
+		int drawableId = R.drawable.ws_park;
+		return addOverlay(point, drawableId, null);
+	}
+
+	/**
+	 * 
+	 * addOverlay在地图指定的位置上添加标注信息
+	 * 
+	 * @param point
+	 *            坐标点
+	 * @param drawableId
+	 *            图片id
+	 * @param bundle
+	 *            附加信息
+	 * @return 标注
+	 */
+
+	public Marker addOverlay(LatLng point, int drawableId, Bundle bundle) {
+		// 构建Marker图标
+		BitmapDescriptor bmDesc = BitmapDescriptorFactory
+				.fromResource(drawableId);
+
+		return addOverlay(point, bmDesc, bundle);
+	}
+
+	/**
+	 * 
+	 * addOverlay在地图指定的位置上添加标注信息
+	 * 
+	 * @param point坐标点
+	 * @param markerBitmap
+	 * @param bundle
+	 *            附加信息
+	 * @return 标注
+	 */
+
+	public Marker addOverlay(LatLng point, Bitmap markerBitmap, Bundle bundle) {
+		BitmapDescriptor bitmap = BitmapDescriptorFactory
+				.fromBitmap(markerBitmap);
+		return addOverlay(point, bitmap, bundle);
+	}
+
+	/**
+	 * 
+	 * addOverlay在地图指定的位置上添加标注信息
+	 * 
+	 * @param point坐标点
+	 * @param bmDesc
+	 * @param bundle
+	 *            附加信息
+	 * @return 标注
+	 */
+
+	private Marker addOverlay(LatLng point, BitmapDescriptor bmDesc,
+			Bundle bundle) {
+		// 构建MarkerOption，用于在地图上添加Marker
+		OverlayOptions option = new MarkerOptions().position(point)
+				.extraInfo(bundle).icon(bmDesc).anchor(0.5f, 0.5f);
+		// 在地图上添加Marker，并显示
+		Marker marker = (Marker) mBaiduMap.addOverlay(option);
+		return marker;
+	}
+
+	/**
+	 * 
+	 * addLine 在地图上画线
+	 * 
+	 * @param startPoint
+	 *            起点坐标
+	 * @param endPoint
+	 *            终点坐标
+	 * @return
+	 */
+	public Overlay addLineOverlay(LatLng startPoint, LatLng endPoint) {
+
+		// 测试
+		// startPoint = new LatLng(23,113);
+		// endPoint = new LatLng(25,116);
+
+		// 如果划线超出屏幕，就移动到屏幕中间区域显示
+		Point screenPoint = mBaiduMap.getProjection()
+				.toScreenLocation(endPoint);
+		if (screenPoint.x < 0 || screenPoint.x > mMapView.getWidth()
+				|| screenPoint.y < 0 || screenPoint.y > mMapView.getHeight()) {
+			animateMapCenter(endPoint);
+		}
+
+		// 根据 起点， 终点划线
+		List<LatLng> points = new ArrayList<LatLng>();
+		points.add(startPoint);// 点元素
+		points.add(endPoint);// 点元素
+		OverlayOptions polyline = new PolylineOptions().color(Color.GREEN)
+				.points(points);
+		Overlay lineOverlay = mBaiduMap.addOverlay(polyline);
+		return lineOverlay;
+
+	}
+
 	/*-----------------------------------地理位置编码篇--------------------------------------------------*/
 	/**
 	 * initGeoCoder 初始化地理编码类
@@ -182,7 +310,7 @@ public class WMap extends Activity implements BDLocationListener,
 
 	/**
 	 * reverseGeoCode 反向地理编码服务实现了将地球表面的地址坐标转换为标准地址的过程
-	 *  
+	 * 
 	 * 
 	 * @param latLng
 	 *            坐标
@@ -218,7 +346,9 @@ public class WMap extends Activity implements BDLocationListener,
 		String address = result.getAddress();
 		Log.i("WMap", "地址转坐标: " + address);
 		Log.i("WMap", "地址转坐标: " + latLng.latitude + " " + latLng.longitude);
-		
+		addOverlay(latLng);
+		// addLineOverlay(null, null);
+		poiSearch("深圳", "美食");
 	}
 
 	/**
@@ -232,6 +362,67 @@ public class WMap extends Activity implements BDLocationListener,
 		String address = result.getAddress();
 		Log.i("WMap", "坐标转地址: " + address);
 		Log.i("WMap", "坐标转地址: " + latLng.latitude + " " + latLng.longitude);
+
+	}
+
+	/*-----------------------------------POI检索篇--------------------------------------------------*/
+
+	/**
+	 * 
+	 * initPoiSearch 初始化poi
+	 */
+	private void initPoiSearch() {
+		if (mPoiSearch != null) {
+			return;
+		}
+		// 创建POI检索实例
+		mPoiSearch = PoiSearch.newInstance();
+		// 设置POI检索监听者；
+		mPoiSearch.setOnGetPoiSearchResultListener(this);
+		// mPoiSearch.destroy();
+	}
+
+	/**
+	 * 
+	 * poiSearch 城市兴趣点检索
+	 * 
+	 * @param city
+	 * @param keyword
+	 */
+	public void poiSearch(String city, String keyword) {
+		initPoiSearch();
+		mPoiSearch.searchInCity((new PoiCitySearchOption()).city(city)
+				.keyword(keyword).pageNum(10));
+
+	}
+	
+	/**
+	 * 
+	 *poiSearchNearBy周边兴趣点检索
+	 *@param location 位置
+	 *@param radius  半径
+	 *@param keyword  关键字
+	 */
+	public void poiSearchNearBy(LatLng location, int radius,String keyword) {
+		initPoiSearch();
+		mPoiSearch.searchNearby(new PoiNearbySearchOption().keyword(keyword).location(location).radius(radius));
+	}
+
+	/**
+	 * 获取Place详情页检索结果
+	 */
+	@Override
+	public void onGetPoiDetailResult(PoiDetailResult poiDetailResult) {
+		Log.i("WMap", "获取Place详情页检索结果: " + poiDetailResult.getAddress());
+
+	}
+
+	/**
+	 * 获取poi检索结果
+	 */
+	@Override
+	public void onGetPoiResult(PoiResult poiResult) {
+		Log.i("WMap", "获取poi检索结果: " + poiResult.getAllPoi().get(0).name);
 	}
 
 	/*-----------------------------------生命周期篇--------------------------------------------------*/
@@ -239,13 +430,15 @@ public class WMap extends Activity implements BDLocationListener,
 	protected void onDestroy() {
 		super.onDestroy();
 		mMapView.onDestroy();
+		if (mPoiSearch != null) {
+			mPoiSearch.destroy();
+		}
 	}
 
 	@Override
 	protected void onResume() {
 		super.onResume();
 		mMapView.onResume();
-		// 开启定位
 	}
 
 	@Override
