@@ -277,6 +277,13 @@ public class WMap extends Activity implements BDLocationListener,
 		// startPoint = new LatLng(23,113);
 		// endPoint = new LatLng(25,116);
 
+		if (startPoint == null) {
+			return null;
+		}
+		if (endPoint == null) {
+			return null;
+		}
+
 		// 如果划线超出屏幕，就移动到屏幕中间区域显示
 		Point screenPoint = mBaiduMap.getProjection()
 				.toScreenLocation(endPoint);
@@ -395,17 +402,22 @@ public class WMap extends Activity implements BDLocationListener,
 				.keyword(keyword).pageNum(10));
 
 	}
-	
+
 	/**
 	 * 
-	 *poiSearchNearBy周边兴趣点检索
-	 *@param location 位置
-	 *@param radius  半径
-	 *@param keyword  关键字
+	 * poiSearchNearBy周边兴趣点检索
+	 * 
+	 * @param location
+	 *            位置
+	 * @param radius
+	 *            半径
+	 * @param keyword
+	 *            关键字
 	 */
-	public void poiSearchNearBy(LatLng location, int radius,String keyword) {
+	public void poiSearchNearBy(LatLng location, int radius, String keyword) {
 		initPoiSearch();
-		mPoiSearch.searchNearby(new PoiNearbySearchOption().keyword(keyword).location(location).radius(radius));
+		mPoiSearch.searchNearby(new PoiNearbySearchOption().keyword(keyword)
+				.location(location).radius(radius));
 	}
 
 	/**
