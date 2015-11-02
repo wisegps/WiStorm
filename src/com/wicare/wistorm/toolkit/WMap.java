@@ -73,7 +73,6 @@ public class WMap extends Activity implements BDLocationListener,
 		mBaiduMap = mMapView.getMap();
 		// 鹰眼服务
 		yingyan = new LBSYingyan(this);
-		initLocation();
 
 	}
 
@@ -103,12 +102,10 @@ public class WMap extends Activity implements BDLocationListener,
 		option.SetIgnoreCacheException(false);// 可选，默认false，设置是否收集CRASH信息，默认收集
 		option.setEnableSimulateGps(false);// 可选，默认false，设置是否需要过滤gps仿真结果，默认需要
 		mLocationClient.setLocOption(option);
-
 		// 开启定位
 		mLocationClient.start();
-
 		// 关闭定位
-		// mLocationClient.stop();
+
 	}
 
 	/**
@@ -116,17 +113,17 @@ public class WMap extends Activity implements BDLocationListener,
 	 */
 	@Override
 	public void onReceiveLocation(BDLocation location) {
-
-		StringBuffer sb = new StringBuffer(256);
-		sb.append("\nlatitude : ");
-		sb.append(location.getLatitude());
-		sb.append("\nlontitude : ");
-		sb.append(location.getLongitude());
-		sb.append("\nradius : ");
-		sb.append(location.getRadius());
-
-		Log.i("WMap", "定位" + sb.toString());
-		setMyLocation(location);
+//
+//		StringBuffer sb = new StringBuffer(256);
+//		sb.append("\nlatitude : ");
+//		sb.append(location.getLatitude());
+//		sb.append("\nlontitude : ");
+//		sb.append(location.getLongitude());
+//		sb.append("\nradius : ");
+//		sb.append(location.getRadius());
+//
+//		Log.i("WMap", "定位" + sb.toString());
+//		setMyLocation(location);
 
 	}
 
@@ -157,17 +154,7 @@ public class WMap extends Activity implements BDLocationListener,
 		// 当不需要定位图层时关闭定位图层
 		// mMapView.getMap().setMyLocationEnabled(false);
 
-		// 测试设置地图中心坐标
-		LatLng latLng = new LatLng(location.getLatitude(),
-				location.getLongitude());
-
-		/*---------------测试内容----------------*/
-		// 测试滚到地图中心
-		animateMapCenter(latLng);
-		// 测试地理反位置编码
-		reverseGeoCode(latLng);
-		// 测试地理位置编码
-		getGeoCode("深圳", "西丽崇文花园");
+		
 	}
 
 	/**
@@ -354,7 +341,6 @@ public class WMap extends Activity implements BDLocationListener,
 		Log.i("WMap", "地址转坐标: " + address);
 		Log.i("WMap", "地址转坐标: " + latLng.latitude + " " + latLng.longitude);
 		addOverlay(latLng);
-		// addLineOverlay(null, null);
 		poiSearch("深圳", "美食");
 	}
 
@@ -440,23 +426,35 @@ public class WMap extends Activity implements BDLocationListener,
 	/*-----------------------------------生命周期篇--------------------------------------------------*/
 	@Override
 	protected void onDestroy() {
-		super.onDestroy();
-		mMapView.onDestroy();
+		Log.i("WMap", "onDestroy");
+
 		if (mPoiSearch != null) {
 			mPoiSearch.destroy();
 		}
+		// 退出时销毁定位
+		if (mLocationClient != null) {
+			mLocationClient.stop();
+		}
+
+		super.onDestroy();
+		mMapView.onDestroy();
+
 	}
 
 	@Override
 	protected void onResume() {
+
 		super.onResume();
 		mMapView.onResume();
+
 	}
 
 	@Override
 	protected void onPause() {
+
 		super.onPause();
 		mMapView.onPause();
+
 	}
 
 }

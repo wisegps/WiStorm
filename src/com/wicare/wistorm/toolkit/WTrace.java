@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Looper;
+import android.util.Log;
 
 import com.baidu.mapapi.model.LatLng;
 
@@ -47,6 +48,7 @@ public class WTrace extends WMap {
 	 *            下一个坐标点
 	 */
 	private void track() {
+		Log.i("WTrace", "track1");
 
 		/*
 		 * 每间隔IntervalTime执行一次轨迹播放
@@ -54,6 +56,7 @@ public class WTrace extends WMap {
 		trackHandler.postDelayed(new Runnable() {
 			@Override
 			public void run() {
+				Log.i("WTrace", "track2");
 				track();
 			}
 		}, IntervalTime);
@@ -75,7 +78,7 @@ public class WTrace extends WMap {
 		}
 
 		final LatLng latLng = entityList.get(index++);
-
+		Log.i("WTrace", "track3");
 		// 在UI主线程画轨迹线
 		runOnUiThread(new Runnable() {
 			@Override
@@ -85,7 +88,7 @@ public class WTrace extends WMap {
 				onTrackListener(index);
 			}
 		});
-
+		Log.i("WTrace", "track4");
 	}
 
 	/**
@@ -148,6 +151,14 @@ public class WTrace extends WMap {
 	public void onTrackListener(int index) {
 
 	}
+	
+	
+	@Override
+	protected void onDestroy() {
+		stopTrack();
+		super.onDestroy();
+
+	}
 
 	/**
 	 * 播放状态
@@ -164,4 +175,6 @@ public class WTrace extends WMap {
 		RePlay// 重新播放
 	}
 
+	
+	
 }
