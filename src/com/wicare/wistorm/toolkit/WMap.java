@@ -53,12 +53,14 @@ import com.wicare.wistorm.R;
 public class WMap extends Activity implements BDLocationListener,
 		OnGetGeoCoderResultListener, OnGetPoiSearchResultListener {
 
+	private int layoutId = R.layout.ws_map;
 	private MapView mMapView;
 	private BaiduMap mBaiduMap;
 	public LocationClient mLocationClient;// 定位服务客户端
 	public GeoCoder geoCoder;
 	public PoiSearch mPoiSearch;
 	private LBSYingyan yingyan;// 鹰眼服务
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -67,13 +69,23 @@ public class WMap extends Activity implements BDLocationListener,
 		// 在使用SDK各组件之前初始化context信息，传入ApplicationContext
 		// 注意该方法要再setContentView方法之前实现
 		SDKInitializer.initialize(getApplicationContext());
-		setContentView(R.layout.ws_map);
+		setContentView(layoutId);
 		// 地图页面
 		mMapView = (MapView) findViewById(R.id.bmapView);
 		mBaiduMap = mMapView.getMap();
 		// 鹰眼服务
 		yingyan = new LBSYingyan(this);
 
+	}
+
+	
+	/**
+	 * 
+	 *setCustomView  设置自定义布局
+	 *@param layoutId
+	 */
+	public void setCustomView(int layoutId) {
+		this.layoutId = layoutId;
 	}
 
 	/*---------------------------------------定位篇--------------------------------------------------*/
