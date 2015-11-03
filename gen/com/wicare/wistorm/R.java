@@ -21,13 +21,68 @@ public final class R {
         public static int English=0x7f080000;
     }
     public static final class attr {
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int behindOffset=0x7f010003;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int behindScrollScale=0x7f010005;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int behindWidth=0x7f010004;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int fadeDegree=0x7f01000b;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int fadeEnabled=0x7f01000a;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>left</code></td><td>0</td><td></td></tr>
+<tr><td><code>right</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static int mode=0x7f010000;
         /**  BELOW HERE ARE DEPRECEATED. DO NOT USE. 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
-        public static int ptrAdapterViewBackground=0x7f010010;
+        public static int ptrAdapterViewBackground=0x7f01001e;
         /**  Style of Animation should be used displayed when pulling. 
          <p>Must be one or more (separated by '|') of the following constant values.</p>
 <table>
@@ -39,56 +94,56 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>flip</code></td><td>0x1</td><td></td></tr>
 </table>
          */
-        public static int ptrAnimationStyle=0x7f01000c;
+        public static int ptrAnimationStyle=0x7f01001a;
         /**  Drawable to use as Loading Indicator. Changes both Header and Footer. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static int ptrDrawable=0x7f010006;
+        public static int ptrDrawable=0x7f010014;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static int ptrDrawableBottom=0x7f010012;
+        public static int ptrDrawableBottom=0x7f010020;
         /**  Drawable to use as Loading Indicator in the Footer View. Overrides value set in ptrDrawable. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static int ptrDrawableEnd=0x7f010008;
+        public static int ptrDrawableEnd=0x7f010016;
         /**  Drawable to use as Loading Indicator in the Header View. Overrides value set in ptrDrawable. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static int ptrDrawableStart=0x7f010007;
+        public static int ptrDrawableStart=0x7f010015;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static int ptrDrawableTop=0x7f010011;
+        public static int ptrDrawableTop=0x7f01001f;
         /**  A drawable to use as the background of the Header and Footer Loading Views 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
-        public static int ptrHeaderBackground=0x7f010001;
+        public static int ptrHeaderBackground=0x7f01000f;
         /**  Text Color of the Header and Footer Loading Views Sub Header 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
-        public static int ptrHeaderSubTextColor=0x7f010003;
+        public static int ptrHeaderSubTextColor=0x7f010011;
         /**  Base text color, typeface, size, and style for Header and Footer Loading Views 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static int ptrHeaderTextAppearance=0x7f01000a;
+        public static int ptrHeaderTextAppearance=0x7f010018;
         /**  Text Color of the Header and Footer Loading Views 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
-        public static int ptrHeaderTextColor=0x7f010002;
+        public static int ptrHeaderTextColor=0x7f010010;
         /** 
         	Whether PullToRefreshListView has it's extras enabled. This allows the user to be 
         	able to scroll while refreshing, and behaves better. It acheives this by adding
@@ -98,7 +153,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
          */
-        public static int ptrListViewExtrasEnabled=0x7f01000e;
+        public static int ptrListViewExtrasEnabled=0x7f01001c;
         /**  Mode of Pull-to-Refresh that should be used 
          <p>Must be one or more (separated by '|') of the following constant values.</p>
 <table>
@@ -115,20 +170,20 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>pullUpFromBottom</code></td><td>0x2</td><td></td></tr>
 </table>
          */
-        public static int ptrMode=0x7f010004;
+        public static int ptrMode=0x7f010012;
         /**  Whether Android's built-in Over Scroll should be utilised for Pull-to-Refresh. 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
          */
-        public static int ptrOverScroll=0x7f010009;
+        public static int ptrOverScroll=0x7f010017;
         /**  A drawable to use as the background of the Refreshable View 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
-        public static int ptrRefreshableViewBackground=0x7f010000;
+        public static int ptrRefreshableViewBackground=0x7f01000e;
         /** 
         	Whether the Drawable should be continually rotated as you pull. This only
         	takes effect when using the 'Rotate' Animation Style.
@@ -137,24 +192,80 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
          */
-        public static int ptrRotateDrawableWhilePulling=0x7f01000f;
+        public static int ptrRotateDrawableWhilePulling=0x7f01001d;
         /**  Whether the user can scroll while the View is Refreshing 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
          */
-        public static int ptrScrollingWhileRefreshingEnabled=0x7f01000d;
+        public static int ptrScrollingWhileRefreshingEnabled=0x7f01001b;
         /**  Whether the Indicator overlay(s) should be used 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
          */
-        public static int ptrShowIndicator=0x7f010005;
+        public static int ptrShowIndicator=0x7f010013;
         /**  Base text color, typeface, size, and style for Header and Footer Loading Views Sub Header 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static int ptrSubHeaderTextAppearance=0x7f01000b;
+        public static int ptrSubHeaderTextAppearance=0x7f010019;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static int selectorDrawable=0x7f01000d;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int selectorEnabled=0x7f01000c;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static int shadowDrawable=0x7f010008;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int shadowWidth=0x7f010009;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>margin</code></td><td>0</td><td></td></tr>
+<tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static int touchModeAbove=0x7f010006;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>margin</code></td><td>0</td><td></td></tr>
+<tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static int touchModeBehind=0x7f010007;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static int viewAbove=0x7f010001;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static int viewBehind=0x7f010002;
     }
     public static final class color {
         public static int black=0x7f090007;
@@ -191,6 +302,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int indicator_corner_radius=0x7f060001;
         public static int indicator_internal_padding=0x7f060002;
         public static int indicator_right_padding=0x7f060000;
+        public static int slidingmenu_menu_margin_left=0x7f060008;
+        public static int slidingmenu_offset=0x7f060007;
     }
     public static final class drawable {
         public static int default_ptr_flip=0x7f020000;
@@ -211,103 +324,124 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int ws_common_icon_back_btn_normal=0x7f02000f;
         public static int ws_common_icon_searchbox_magnifier_2=0x7f020010;
         public static int ws_dialog_bg=0x7f020011;
-        public static int ws_ico_tab_friends=0x7f020012;
-        public static int ws_ico_tab_friends_c=0x7f020013;
-        public static int ws_ico_tab_home=0x7f020014;
-        public static int ws_ico_tab_home_c=0x7f020015;
-        public static int ws_ico_tab_more=0x7f020016;
-        public static int ws_ico_tab_more_c=0x7f020017;
-        public static int ws_ico_tab_msg=0x7f020018;
-        public static int ws_ico_tab_msg_c=0x7f020019;
-        public static int ws_icon_search_up_retrieval=0x7f02001a;
-        public static int ws_icon_user=0x7f02001b;
-        public static int ws_loading_bg=0x7f02001c;
-        public static int ws_login_bg=0x7f02001d;
-        public static int ws_logo=0x7f02001e;
-        public static int ws_map_follow=0x7f02001f;
-        public static int ws_park=0x7f020020;
-        public static int ws_progress_bg=0x7f020021;
-        public static int ws_progressbar_loading_01=0x7f020022;
-        public static int ws_progressbar_loading_02=0x7f020023;
-        public static int ws_progressbar_loading_03=0x7f020024;
-        public static int ws_progressbar_loading_04=0x7f020025;
-        public static int ws_progressbar_loading_05=0x7f020026;
-        public static int ws_progressbar_loading_06=0x7f020027;
-        public static int ws_progressbar_loading_07=0x7f020028;
-        public static int ws_round_bg=0x7f020029;
-        public static int ws_search_bar_selector=0x7f02002a;
-        public static int ws_search_clear_normal=0x7f02002b;
-        public static int ws_search_clear_pressed=0x7f02002c;
-        public static int ws_selector_checkbox=0x7f02002d;
+        public static int ws_ic_slidingmenu_menu_1=0x7f020012;
+        public static int ws_ic_slidingmenu_menu_2=0x7f020013;
+        public static int ws_ic_slidingmenu_menu_3=0x7f020014;
+        public static int ws_ico_tab_friends=0x7f020015;
+        public static int ws_ico_tab_friends_c=0x7f020016;
+        public static int ws_ico_tab_home=0x7f020017;
+        public static int ws_ico_tab_home_c=0x7f020018;
+        public static int ws_ico_tab_more=0x7f020019;
+        public static int ws_ico_tab_more_c=0x7f02001a;
+        public static int ws_ico_tab_msg=0x7f02001b;
+        public static int ws_ico_tab_msg_c=0x7f02001c;
+        public static int ws_icon_search_up_retrieval=0x7f02001d;
+        public static int ws_icon_user=0x7f02001e;
+        public static int ws_loading_bg=0x7f02001f;
+        public static int ws_login_bg=0x7f020020;
+        public static int ws_logo=0x7f020021;
+        public static int ws_map_follow=0x7f020022;
+        public static int ws_park=0x7f020023;
+        public static int ws_progress_bg=0x7f020024;
+        public static int ws_progressbar_loading_01=0x7f020025;
+        public static int ws_progressbar_loading_02=0x7f020026;
+        public static int ws_progressbar_loading_03=0x7f020027;
+        public static int ws_progressbar_loading_04=0x7f020028;
+        public static int ws_progressbar_loading_05=0x7f020029;
+        public static int ws_progressbar_loading_06=0x7f02002a;
+        public static int ws_progressbar_loading_07=0x7f02002b;
+        public static int ws_round_bg=0x7f02002c;
+        public static int ws_search_bar_selector=0x7f02002d;
+        public static int ws_search_clear_normal=0x7f02002e;
+        public static int ws_search_clear_pressed=0x7f02002f;
+        public static int ws_selector_checkbox=0x7f020030;
     }
     public static final class id {
-        public static int action_settings=0x7f050033;
-        public static int bmapView=0x7f050027;
-        public static int both=0x7f050003;
-        public static int btn_cancel=0x7f050014;
-        public static int btn_exit=0x7f050013;
-        public static int btn_login=0x7f050023;
-        public static int btn_save=0x7f050012;
-        public static int content=0x7f050030;
-        public static int disabled=0x7f050000;
-        public static int et_account=0x7f050021;
-        public static int et_password=0x7f050022;
-        public static int et_search=0x7f05002e;
-        public static int fl_inner=0x7f05000c;
-        public static int flip=0x7f050008;
-        public static int gridview=0x7f050009;
-        public static int iv_back=0x7f05002d;
-        public static int iv_loading=0x7f050028;
-        public static int iv_serach_bar_icon=0x7f05001b;
-        public static int iv_serach_bar_up=0x7f05001d;
-        public static int listView=0x7f050016;
-        public static int lv_search=0x7f05002f;
-        public static int lv_view=0x7f050017;
-        public static int manualOnly=0x7f050004;
-        public static int message=0x7f050018;
-        public static int negativeButton=0x7f05001a;
-        public static int notePswd=0x7f050024;
-        public static int pop_layout=0x7f050011;
-        public static int positiveButton=0x7f050019;
-        public static int pullDownFromTop=0x7f050005;
-        public static int pullFromEnd=0x7f050002;
-        public static int pullFromStart=0x7f050001;
-        public static int pullUpFromBottom=0x7f050006;
-        public static int pull_refresh_list=0x7f05002a;
-        public static int pull_to_refresh_image=0x7f05000d;
-        public static int pull_to_refresh_progress=0x7f05000e;
-        public static int pull_to_refresh_sub_text=0x7f050010;
-        public static int pull_to_refresh_text=0x7f05000f;
-        public static int rotate=0x7f050007;
-        public static int scrollview=0x7f05000b;
-        public static int tabbarLayout=0x7f050032;
-        public static int title=0x7f050015;
-        public static int tv_item_info=0x7f05002c;
-        public static int tv_item_title=0x7f05002b;
-        public static int tv_loading_msg=0x7f050029;
-        public static int tv_search_bar_info=0x7f05001c;
-        public static int tv_update=0x7f050025;
-        public static int tv_version=0x7f050026;
-        public static int v_line=0x7f05001e;
-        public static int viewLine=0x7f050031;
-        public static int webview=0x7f05000a;
-        public static int ws_iv_logo=0x7f050020;
-        public static int ws_llyt_login=0x7f05001f;
+        public static int action_settings=0x7f05003e;
+        public static int bmapView=0x7f05002e;
+        public static int both=0x7f050008;
+        public static int btn_cancel=0x7f05001a;
+        public static int btn_exit=0x7f050019;
+        public static int btn_login=0x7f05002a;
+        public static int btn_save=0x7f050018;
+        public static int content=0x7f05003b;
+        public static int disabled=0x7f050009;
+        public static int et_account=0x7f050028;
+        public static int et_password=0x7f050029;
+        public static int et_search=0x7f050035;
+        public static int fl_inner=0x7f050011;
+        public static int flip=0x7f05000f;
+        public static int fullscreen=0x7f050006;
+        public static int gridview=0x7f050001;
+        public static int img=0x7f050021;
+        public static int iv_back=0x7f050034;
+        public static int iv_loading=0x7f05002f;
+        public static int iv_serach_bar_icon=0x7f050022;
+        public static int iv_serach_bar_up=0x7f050024;
+        public static int left=0x7f050004;
+        public static int listView=0x7f05001c;
+        public static int lv_left_menu=0x7f050038;
+        public static int lv_search=0x7f050036;
+        public static int lv_view=0x7f05001d;
+        public static int manualOnly=0x7f05000a;
+        public static int margin=0x7f050007;
+        public static int menu_left_content=0x7f050037;
+        public static int menu_right_content=0x7f05003a;
+        public static int message=0x7f05001e;
+        public static int negativeButton=0x7f050020;
+        public static int notePswd=0x7f05002b;
+        public static int pop_layout=0x7f050017;
+        public static int positiveButton=0x7f05001f;
+        public static int pullDownFromTop=0x7f05000b;
+        public static int pullFromEnd=0x7f05000c;
+        public static int pullFromStart=0x7f05000d;
+        public static int pullUpFromBottom=0x7f05000e;
+        public static int pull_refresh_list=0x7f050031;
+        public static int pull_to_refresh_image=0x7f050012;
+        public static int pull_to_refresh_progress=0x7f050013;
+        public static int pull_to_refresh_sub_text=0x7f050015;
+        public static int pull_to_refresh_text=0x7f050014;
+        public static int right=0x7f050005;
+        public static int rotate=0x7f050010;
+        public static int scrollview=0x7f050003;
+        public static int selected_view=0x7f050000;
+        public static int slidingmenumain=0x7f050016;
+        public static int tabbarLayout=0x7f05003d;
+        public static int title=0x7f05001b;
+        public static int tv_fragment_name=0x7f050039;
+        public static int tv_item_info=0x7f050033;
+        public static int tv_item_title=0x7f050032;
+        public static int tv_loading_msg=0x7f050030;
+        public static int tv_search_bar_info=0x7f050023;
+        public static int tv_update=0x7f05002c;
+        public static int tv_version=0x7f05002d;
+        public static int v_line=0x7f050025;
+        public static int viewLine=0x7f05003c;
+        public static int webview=0x7f050002;
+        public static int ws_iv_logo=0x7f050027;
+        public static int ws_llyt_login=0x7f050026;
     }
     public static final class layout {
         public static int pull_to_refresh_header_horizontal=0x7f030000;
         public static int pull_to_refresh_header_vertical=0x7f030001;
-        public static int ws_buttom_popupwindow=0x7f030002;
-        public static int ws_customs_dialog=0x7f030003;
-        public static int ws_item_tabbar=0x7f030004;
-        public static int ws_itemlistw_search_bar=0x7f030005;
-        public static int ws_login=0x7f030006;
-        public static int ws_map=0x7f030007;
-        public static int ws_progressbar_loading=0x7f030008;
-        public static int ws_pull_refresh=0x7f030009;
-        public static int ws_pull_refresh_items=0x7f03000a;
-        public static int ws_search_bar=0x7f03000b;
-        public static int ws_tabbar=0x7f03000c;
+        public static int slidingmenumain=0x7f030002;
+        public static int ws_buttom_popupwindow=0x7f030003;
+        public static int ws_customs_dialog=0x7f030004;
+        public static int ws_item_list_slidingmenu=0x7f030005;
+        public static int ws_item_tabbar=0x7f030006;
+        public static int ws_itemlistw_search_bar=0x7f030007;
+        public static int ws_login=0x7f030008;
+        public static int ws_map=0x7f030009;
+        public static int ws_progressbar_loading=0x7f03000a;
+        public static int ws_pull_refresh=0x7f03000b;
+        public static int ws_pull_refresh_items=0x7f03000c;
+        public static int ws_search_bar=0x7f03000d;
+        public static int ws_slidingmenu_left_content=0x7f03000e;
+        public static int ws_slidingmenu_left_fragment=0x7f03000f;
+        public static int ws_slidingmenu_menufragment=0x7f030010;
+        public static int ws_slidingmenu_right_content=0x7f030011;
+        public static int ws_slidingmenu_right_tabbar=0x7f030012;
+        public static int ws_tabbar=0x7f030013;
     }
     public static final class menu {
         public static int main=0x7f0b0000;
@@ -329,6 +463,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int search_nothing=0x7f070016;
         public static int set_Date=0x7f070014;
         public static int set_time=0x7f070013;
+        /**   侧滑菜单 Slidingmenu 
+         */
+        public static int slidingmen_mene_1=0x7f070017;
+        public static int slidingmen_mene_2=0x7f070018;
+        public static int slidingmen_mene_3=0x7f070019;
         public static int ws_account_hit=0x7f07000b;
         public static int ws_accout_bind_phone=0x7f070012;
         public static int ws_check_pwd=0x7f07000e;
@@ -427,11 +566,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            @see #PullToRefresh_ptrSubHeaderTextAppearance
          */
         public static final int[] PullToRefresh = {
-            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
-            0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007,
-            0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b,
-            0x7f01000c, 0x7f01000d, 0x7f01000e, 0x7f01000f,
-            0x7f010010, 0x7f010011, 0x7f010012
+            0x7f01000e, 0x7f01000f, 0x7f010010, 0x7f010011,
+            0x7f010012, 0x7f010013, 0x7f010014, 0x7f010015,
+            0x7f010016, 0x7f010017, 0x7f010018, 0x7f010019,
+            0x7f01001a, 0x7f01001b, 0x7f01001c, 0x7f01001d,
+            0x7f01001e, 0x7f01001f, 0x7f010020
         };
         /**
           <p>
@@ -446,7 +585,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrAdapterViewBackground
         */
-        public static final int PullToRefresh_ptrAdapterViewBackground = 16;
+        public static int PullToRefresh_ptrAdapterViewBackground = 16;
         /**
           <p>
           @attr description
@@ -465,7 +604,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrAnimationStyle
         */
-        public static final int PullToRefresh_ptrAnimationStyle = 12;
+        public static int PullToRefresh_ptrAnimationStyle = 12;
         /**
           <p>
           @attr description
@@ -477,7 +616,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrDrawable
         */
-        public static final int PullToRefresh_ptrDrawable = 6;
+        public static int PullToRefresh_ptrDrawable = 6;
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#ptrDrawableBottom}
           attribute's value can be found in the {@link #PullToRefresh} array.
@@ -487,7 +626,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.wicare.wistorm:ptrDrawableBottom
         */
-        public static final int PullToRefresh_ptrDrawableBottom = 18;
+        public static int PullToRefresh_ptrDrawableBottom = 18;
         /**
           <p>
           @attr description
@@ -499,7 +638,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrDrawableEnd
         */
-        public static final int PullToRefresh_ptrDrawableEnd = 8;
+        public static int PullToRefresh_ptrDrawableEnd = 8;
         /**
           <p>
           @attr description
@@ -511,7 +650,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrDrawableStart
         */
-        public static final int PullToRefresh_ptrDrawableStart = 7;
+        public static int PullToRefresh_ptrDrawableStart = 7;
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#ptrDrawableTop}
           attribute's value can be found in the {@link #PullToRefresh} array.
@@ -521,7 +660,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.wicare.wistorm:ptrDrawableTop
         */
-        public static final int PullToRefresh_ptrDrawableTop = 17;
+        public static int PullToRefresh_ptrDrawableTop = 17;
         /**
           <p>
           @attr description
@@ -535,7 +674,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrHeaderBackground
         */
-        public static final int PullToRefresh_ptrHeaderBackground = 1;
+        public static int PullToRefresh_ptrHeaderBackground = 1;
         /**
           <p>
           @attr description
@@ -549,7 +688,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrHeaderSubTextColor
         */
-        public static final int PullToRefresh_ptrHeaderSubTextColor = 3;
+        public static int PullToRefresh_ptrHeaderSubTextColor = 3;
         /**
           <p>
           @attr description
@@ -561,7 +700,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrHeaderTextAppearance
         */
-        public static final int PullToRefresh_ptrHeaderTextAppearance = 10;
+        public static int PullToRefresh_ptrHeaderTextAppearance = 10;
         /**
           <p>
           @attr description
@@ -575,7 +714,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrHeaderTextColor
         */
-        public static final int PullToRefresh_ptrHeaderTextColor = 2;
+        public static int PullToRefresh_ptrHeaderTextColor = 2;
         /**
           <p>
           @attr description
@@ -592,7 +731,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrListViewExtrasEnabled
         */
-        public static final int PullToRefresh_ptrListViewExtrasEnabled = 14;
+        public static int PullToRefresh_ptrListViewExtrasEnabled = 14;
         /**
           <p>
           @attr description
@@ -616,7 +755,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrMode
         */
-        public static final int PullToRefresh_ptrMode = 4;
+        public static int PullToRefresh_ptrMode = 4;
         /**
           <p>
           @attr description
@@ -629,7 +768,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrOverScroll
         */
-        public static final int PullToRefresh_ptrOverScroll = 9;
+        public static int PullToRefresh_ptrOverScroll = 9;
         /**
           <p>
           @attr description
@@ -643,7 +782,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrRefreshableViewBackground
         */
-        public static final int PullToRefresh_ptrRefreshableViewBackground = 0;
+        public static int PullToRefresh_ptrRefreshableViewBackground = 0;
         /**
           <p>
           @attr description
@@ -659,7 +798,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrRotateDrawableWhilePulling
         */
-        public static final int PullToRefresh_ptrRotateDrawableWhilePulling = 15;
+        public static int PullToRefresh_ptrRotateDrawableWhilePulling = 15;
         /**
           <p>
           @attr description
@@ -672,7 +811,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrScrollingWhileRefreshingEnabled
         */
-        public static final int PullToRefresh_ptrScrollingWhileRefreshingEnabled = 13;
+        public static int PullToRefresh_ptrScrollingWhileRefreshingEnabled = 13;
         /**
           <p>
           @attr description
@@ -685,7 +824,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrShowIndicator
         */
-        public static final int PullToRefresh_ptrShowIndicator = 5;
+        public static int PullToRefresh_ptrShowIndicator = 5;
         /**
           <p>
           @attr description
@@ -697,6 +836,243 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrSubHeaderTextAppearance
         */
-        public static final int PullToRefresh_ptrSubHeaderTextAppearance = 11;
+        public static int PullToRefresh_ptrSubHeaderTextAppearance = 11;
+        /** Attributes that can be used with a SlidingMenu.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SlidingMenu_behindOffset com.wicare.wistorm:behindOffset}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_behindScrollScale com.wicare.wistorm:behindScrollScale}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_behindWidth com.wicare.wistorm:behindWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_fadeDegree com.wicare.wistorm:fadeDegree}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_fadeEnabled com.wicare.wistorm:fadeEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_mode com.wicare.wistorm:mode}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_selectorDrawable com.wicare.wistorm:selectorDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_selectorEnabled com.wicare.wistorm:selectorEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_shadowDrawable com.wicare.wistorm:shadowDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_shadowWidth com.wicare.wistorm:shadowWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_touchModeAbove com.wicare.wistorm:touchModeAbove}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_touchModeBehind com.wicare.wistorm:touchModeBehind}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_viewAbove com.wicare.wistorm:viewAbove}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_viewBehind com.wicare.wistorm:viewBehind}</code></td><td></td></tr>
+           </table>
+           @see #SlidingMenu_behindOffset
+           @see #SlidingMenu_behindScrollScale
+           @see #SlidingMenu_behindWidth
+           @see #SlidingMenu_fadeDegree
+           @see #SlidingMenu_fadeEnabled
+           @see #SlidingMenu_mode
+           @see #SlidingMenu_selectorDrawable
+           @see #SlidingMenu_selectorEnabled
+           @see #SlidingMenu_shadowDrawable
+           @see #SlidingMenu_shadowWidth
+           @see #SlidingMenu_touchModeAbove
+           @see #SlidingMenu_touchModeBehind
+           @see #SlidingMenu_viewAbove
+           @see #SlidingMenu_viewBehind
+         */
+        public static final int[] SlidingMenu = {
+            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
+            0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007,
+            0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b,
+            0x7f01000c, 0x7f01000d
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#behindOffset}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.wicare.wistorm:behindOffset
+        */
+        public static int SlidingMenu_behindOffset = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#behindScrollScale}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.wicare.wistorm:behindScrollScale
+        */
+        public static int SlidingMenu_behindScrollScale = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#behindWidth}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.wicare.wistorm:behindWidth
+        */
+        public static int SlidingMenu_behindWidth = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#fadeDegree}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.wicare.wistorm:fadeDegree
+        */
+        public static int SlidingMenu_fadeDegree = 11;
+        /**
+          <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#fadeEnabled}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.wicare.wistorm:fadeEnabled
+        */
+        public static int SlidingMenu_fadeEnabled = 10;
+        /**
+          <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#mode}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>left</code></td><td>0</td><td></td></tr>
+<tr><td><code>right</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name com.wicare.wistorm:mode
+        */
+        public static int SlidingMenu_mode = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#selectorDrawable}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.wicare.wistorm:selectorDrawable
+        */
+        public static int SlidingMenu_selectorDrawable = 13;
+        /**
+          <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#selectorEnabled}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.wicare.wistorm:selectorEnabled
+        */
+        public static int SlidingMenu_selectorEnabled = 12;
+        /**
+          <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#shadowDrawable}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.wicare.wistorm:shadowDrawable
+        */
+        public static int SlidingMenu_shadowDrawable = 8;
+        /**
+          <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#shadowWidth}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.wicare.wistorm:shadowWidth
+        */
+        public static int SlidingMenu_shadowWidth = 9;
+        /**
+          <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#touchModeAbove}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>margin</code></td><td>0</td><td></td></tr>
+<tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name com.wicare.wistorm:touchModeAbove
+        */
+        public static int SlidingMenu_touchModeAbove = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#touchModeBehind}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>margin</code></td><td>0</td><td></td></tr>
+<tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name com.wicare.wistorm:touchModeBehind
+        */
+        public static int SlidingMenu_touchModeBehind = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#viewAbove}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.wicare.wistorm:viewAbove
+        */
+        public static int SlidingMenu_viewAbove = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#viewBehind}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.wicare.wistorm:viewBehind
+        */
+        public static int SlidingMenu_viewBehind = 2;
     };
 }

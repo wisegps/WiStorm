@@ -22,5 +22,10 @@
   	<string name="clear_history">清除历史记录</string> 
   	<string name="search_nothing">搜索不到相关内容</string> 
     
+  	<!--  侧滑菜单 Slidingmenu --> 
+	<string name="slidingmen_mene_1">侧滑菜单一</string> 
+	<string name="slidingmen_mene_2">侧滑菜单二</string> 
+	<string name="slidingmen_mene_3">侧滑菜单三</string> 
+  	
   
 </resources>
