@@ -18,7 +18,9 @@ public final class R {
         public static int ws_progressbar_loading=0x7f040006;
     }
     public static final class array {
-        public static int English=0x7f080000;
+        public static int English=0x7f080002;
+        public static int all_citys=0x7f080000;
+        public static int city_pinyin=0x7f080001;
     }
     public static final class attr {
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
@@ -268,6 +270,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int viewBehind=0x7f010002;
     }
     public static final class color {
+        public static int balck_light=0x7f09000d;
         public static int black=0x7f090007;
         /**  淡蓝色字体 
          */
@@ -275,7 +278,16 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /**  蓝色 
          */
         public static int blue_press=0x7f090001;
+        /**    <color name="gray_light">#515151</color> 
+ 字母索引弹框字体颜色 
+         */
+        public static int gray_alpha=0x7f09000a;
         public static int gray_light=0x7f090004;
+        public static int gray_list=0x7f09000b;
+        public static int gray_view=0x7f09000c;
+        /**  淡绿色标题背景颜色
+         */
+        public static int light_green=0x7f090009;
         /**  深蓝色字体 
          */
         public static int navy=0x7f090002;
@@ -285,6 +297,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /**  灰色字体颜色 
          */
         public static int navy_gray=0x7f090003;
+        /**  半透明黑
+         */
+        public static int tran_black=0x7f090008;
         public static int white=0x7f090006;
     }
     public static final class dimen {
@@ -312,145 +327,178 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int indicator_arrow=0x7f020003;
         public static int indicator_bg_bottom=0x7f020004;
         public static int indicator_bg_top=0x7f020005;
-        public static int ws_account_icon=0x7f020006;
-        public static int ws_bg_border_rect=0x7f020007;
-        public static int ws_bg_rect_list_search=0x7f020008;
-        public static int ws_btn_bg=0x7f020009;
-        public static int ws_btn_check=0x7f02000a;
-        public static int ws_btn_unckeck=0x7f02000b;
-        public static int ws_checkbox_checked=0x7f02000c;
-        public static int ws_checkbox_unchecked=0x7f02000d;
-        public static int ws_clearedittext_selector=0x7f02000e;
-        public static int ws_common_icon_back_btn_normal=0x7f02000f;
-        public static int ws_common_icon_searchbox_magnifier_2=0x7f020010;
-        public static int ws_dialog_bg=0x7f020011;
-        public static int ws_ic_slidingmenu_menu_1=0x7f020012;
-        public static int ws_ic_slidingmenu_menu_2=0x7f020013;
-        public static int ws_ic_slidingmenu_menu_3=0x7f020014;
-        public static int ws_ico_tab_friends=0x7f020015;
-        public static int ws_ico_tab_friends_c=0x7f020016;
-        public static int ws_ico_tab_home=0x7f020017;
-        public static int ws_ico_tab_home_c=0x7f020018;
-        public static int ws_ico_tab_more=0x7f020019;
-        public static int ws_ico_tab_more_c=0x7f02001a;
-        public static int ws_ico_tab_msg=0x7f02001b;
-        public static int ws_ico_tab_msg_c=0x7f02001c;
-        public static int ws_icon_search_up_retrieval=0x7f02001d;
-        public static int ws_icon_user=0x7f02001e;
-        public static int ws_loading_bg=0x7f02001f;
-        public static int ws_login_bg=0x7f020020;
-        public static int ws_logo=0x7f020021;
-        public static int ws_map_follow=0x7f020022;
-        public static int ws_park=0x7f020023;
-        public static int ws_progress_bg=0x7f020024;
-        public static int ws_progressbar_loading_01=0x7f020025;
-        public static int ws_progressbar_loading_02=0x7f020026;
-        public static int ws_progressbar_loading_03=0x7f020027;
-        public static int ws_progressbar_loading_04=0x7f020028;
-        public static int ws_progressbar_loading_05=0x7f020029;
-        public static int ws_progressbar_loading_06=0x7f02002a;
-        public static int ws_progressbar_loading_07=0x7f02002b;
-        public static int ws_round_bg=0x7f02002c;
-        public static int ws_search_bar_selector=0x7f02002d;
-        public static int ws_search_clear_normal=0x7f02002e;
-        public static int ws_search_clear_pressed=0x7f02002f;
-        public static int ws_selector_checkbox=0x7f020030;
+        public static int switch_city_item_selector=0x7f020006;
+        public static int ws_account_icon=0x7f020007;
+        public static int ws_alpha_overlay=0x7f020008;
+        public static int ws_bg_border_rect=0x7f020009;
+        public static int ws_bg_rect_list_search=0x7f02000a;
+        public static int ws_btn_bg=0x7f02000b;
+        public static int ws_btn_check=0x7f02000c;
+        public static int ws_btn_unckeck=0x7f02000d;
+        public static int ws_checkbox_checked=0x7f02000e;
+        public static int ws_checkbox_unchecked=0x7f02000f;
+        public static int ws_clearedittext_selector=0x7f020010;
+        public static int ws_common_icon_back_btn_normal=0x7f020011;
+        public static int ws_common_icon_searchbox_magnifier_2=0x7f020012;
+        public static int ws_dialog_bg=0x7f020013;
+        public static int ws_ic_slidingmenu_menu_1=0x7f020014;
+        public static int ws_ic_slidingmenu_menu_2=0x7f020015;
+        public static int ws_ic_slidingmenu_menu_3=0x7f020016;
+        public static int ws_ico_back=0x7f020017;
+        public static int ws_ico_tab_friends=0x7f020018;
+        public static int ws_ico_tab_friends_c=0x7f020019;
+        public static int ws_ico_tab_home=0x7f02001a;
+        public static int ws_ico_tab_home_c=0x7f02001b;
+        public static int ws_ico_tab_more=0x7f02001c;
+        public static int ws_ico_tab_more_c=0x7f02001d;
+        public static int ws_ico_tab_msg=0x7f02001e;
+        public static int ws_ico_tab_msg_c=0x7f02001f;
+        public static int ws_icon_search_up_retrieval=0x7f020020;
+        public static int ws_icon_user=0x7f020021;
+        public static int ws_loading_bg=0x7f020022;
+        public static int ws_login_bg=0x7f020023;
+        public static int ws_logo=0x7f020024;
+        public static int ws_map_follow=0x7f020025;
+        public static int ws_park=0x7f020026;
+        public static int ws_progress_bg=0x7f020027;
+        public static int ws_progressbar_loading_01=0x7f020028;
+        public static int ws_progressbar_loading_02=0x7f020029;
+        public static int ws_progressbar_loading_03=0x7f02002a;
+        public static int ws_progressbar_loading_04=0x7f02002b;
+        public static int ws_progressbar_loading_05=0x7f02002c;
+        public static int ws_progressbar_loading_06=0x7f02002d;
+        public static int ws_progressbar_loading_07=0x7f02002e;
+        public static int ws_round_bg=0x7f02002f;
+        public static int ws_search_bar_selector=0x7f020030;
+        public static int ws_search_clear_normal=0x7f020031;
+        public static int ws_search_clear_pressed=0x7f020032;
+        public static int ws_selector_checkbox=0x7f020033;
     }
     public static final class id {
-        public static int action_settings=0x7f05003e;
-        public static int bmapView=0x7f05002e;
+        public static int MyLetterListView01=0x7f05001d;
+        public static int action_settings=0x7f05004d;
+        public static int alpha=0x7f05001f;
+        public static int bmapView=0x7f05003e;
         public static int both=0x7f050008;
-        public static int btn_cancel=0x7f05001a;
-        public static int btn_exit=0x7f050019;
-        public static int btn_login=0x7f05002a;
-        public static int btn_save=0x7f050018;
-        public static int content=0x7f05003b;
+        public static int btn_cancel=0x7f050026;
+        public static int btn_exit=0x7f050025;
+        public static int btn_login=0x7f05003a;
+        public static int btn_save=0x7f050024;
+        public static int city=0x7f050027;
+        public static int content=0x7f05004a;
         public static int disabled=0x7f050009;
-        public static int et_account=0x7f050028;
-        public static int et_password=0x7f050029;
-        public static int et_search=0x7f050035;
+        public static int et_account=0x7f050038;
+        public static int et_password=0x7f050039;
+        public static int et_search=0x7f050044;
         public static int fl_inner=0x7f050011;
         public static int flip=0x7f05000f;
         public static int fullscreen=0x7f050006;
+        public static int gps_city=0x7f05002d;
         public static int gridview=0x7f050001;
-        public static int img=0x7f050021;
-        public static int iv_back=0x7f050034;
-        public static int iv_loading=0x7f05002f;
-        public static int iv_serach_bar_icon=0x7f050022;
-        public static int iv_serach_bar_up=0x7f050024;
+        public static int img=0x7f050032;
+        public static int iv_back=0x7f050018;
+        public static int iv_loading=0x7f05003f;
+        public static int iv_serach_bar_icon=0x7f050033;
+        public static int iv_serach_bar_up=0x7f050035;
         public static int left=0x7f050004;
-        public static int listView=0x7f05001c;
-        public static int lv_left_menu=0x7f050038;
-        public static int lv_search=0x7f050036;
-        public static int lv_view=0x7f05001d;
+        public static int listView=0x7f050028;
+        public static int list_view=0x7f05001a;
+        public static int ll_item=0x7f05001e;
+        public static int locate=0x7f050021;
+        public static int locateHint=0x7f050022;
+        public static int lv_left_menu=0x7f050047;
+        public static int lv_search=0x7f050045;
+        public static int lv_view=0x7f050029;
         public static int manualOnly=0x7f05000a;
         public static int margin=0x7f050007;
-        public static int menu_left_content=0x7f050037;
-        public static int menu_right_content=0x7f05003a;
-        public static int message=0x7f05001e;
-        public static int negativeButton=0x7f050020;
-        public static int notePswd=0x7f05002b;
-        public static int pop_layout=0x7f050017;
-        public static int positiveButton=0x7f05001f;
+        public static int menu_left_content=0x7f050046;
+        public static int menu_right_content=0x7f050049;
+        public static int message=0x7f05002a;
+        public static int name=0x7f050020;
+        public static int negativeButton=0x7f05002c;
+        public static int notePswd=0x7f05003b;
+        public static int pbLocate=0x7f05002e;
+        public static int pop_layout=0x7f050023;
+        public static int positiveButton=0x7f05002b;
         public static int pullDownFromTop=0x7f05000b;
         public static int pullFromEnd=0x7f05000c;
         public static int pullFromStart=0x7f05000d;
         public static int pullUpFromBottom=0x7f05000e;
-        public static int pull_refresh_list=0x7f050031;
+        public static int pull_refresh_list=0x7f050041;
         public static int pull_to_refresh_image=0x7f050012;
         public static int pull_to_refresh_progress=0x7f050013;
         public static int pull_to_refresh_sub_text=0x7f050015;
         public static int pull_to_refresh_text=0x7f050014;
+        public static int recentHint=0x7f05002f;
+        public static int recent_city=0x7f050030;
         public static int right=0x7f050005;
         public static int rotate=0x7f050010;
         public static int scrollview=0x7f050003;
+        public static int search_result=0x7f05001b;
         public static int selected_view=0x7f050000;
+        public static int sh=0x7f050019;
         public static int slidingmenumain=0x7f050016;
-        public static int tabbarLayout=0x7f05003d;
-        public static int title=0x7f05001b;
-        public static int tv_fragment_name=0x7f050039;
-        public static int tv_item_info=0x7f050033;
-        public static int tv_item_title=0x7f050032;
-        public static int tv_loading_msg=0x7f050030;
-        public static int tv_search_bar_info=0x7f050023;
-        public static int tv_update=0x7f05002c;
-        public static int tv_version=0x7f05002d;
-        public static int v_line=0x7f050025;
-        public static int viewLine=0x7f05003c;
+        public static int tabbarLayout=0x7f05004c;
+        public static int title=0x7f050017;
+        public static int tv_fragment_name=0x7f050048;
+        public static int tv_item_info=0x7f050043;
+        public static int tv_item_title=0x7f050042;
+        public static int tv_loading_msg=0x7f050040;
+        public static int tv_noresult=0x7f05001c;
+        public static int tv_search_bar_info=0x7f050034;
+        public static int tv_update=0x7f05003c;
+        public static int tv_version=0x7f05003d;
+        public static int v_line=0x7f050031;
+        public static int viewLine=0x7f05004b;
         public static int webview=0x7f050002;
-        public static int ws_iv_logo=0x7f050027;
-        public static int ws_llyt_login=0x7f050026;
+        public static int ws_iv_logo=0x7f050037;
+        public static int ws_llyt_login=0x7f050036;
     }
     public static final class layout {
         public static int pull_to_refresh_header_horizontal=0x7f030000;
         public static int pull_to_refresh_header_vertical=0x7f030001;
         public static int slidingmenumain=0x7f030002;
-        public static int ws_buttom_popupwindow=0x7f030003;
-        public static int ws_customs_dialog=0x7f030004;
-        public static int ws_item_list_slidingmenu=0x7f030005;
-        public static int ws_item_tabbar=0x7f030006;
-        public static int ws_itemlistw_search_bar=0x7f030007;
-        public static int ws_login=0x7f030008;
-        public static int ws_map=0x7f030009;
-        public static int ws_progressbar_loading=0x7f03000a;
-        public static int ws_pull_refresh=0x7f03000b;
-        public static int ws_pull_refresh_items=0x7f03000c;
-        public static int ws_search_bar=0x7f03000d;
-        public static int ws_slidingmenu_left_content=0x7f03000e;
-        public static int ws_slidingmenu_left_fragment=0x7f03000f;
-        public static int ws_slidingmenu_menufragment=0x7f030010;
-        public static int ws_slidingmenu_right_content=0x7f030011;
-        public static int ws_slidingmenu_right_tabbar=0x7f030012;
-        public static int ws_tabbar=0x7f030013;
+        public static int ws_activity_switch=0x7f030003;
+        public static int ws_all_city_list_item=0x7f030004;
+        public static int ws_all_city_title=0x7f030005;
+        public static int ws_alpha_overlay=0x7f030006;
+        public static int ws_buttom_popupwindow=0x7f030007;
+        public static int ws_city_item=0x7f030008;
+        public static int ws_customs_dialog=0x7f030009;
+        public static int ws_gps_city_list_item=0x7f03000a;
+        public static int ws_hot_city_list_item=0x7f03000b;
+        public static int ws_item_list_slidingmenu=0x7f03000c;
+        public static int ws_item_tabbar=0x7f03000d;
+        public static int ws_itemlistw_search_bar=0x7f03000e;
+        public static int ws_login=0x7f03000f;
+        public static int ws_map=0x7f030010;
+        public static int ws_progressbar_loading=0x7f030011;
+        public static int ws_pull_refresh=0x7f030012;
+        public static int ws_pull_refresh_items=0x7f030013;
+        public static int ws_search_bar=0x7f030014;
+        public static int ws_slidingmenu_left_content=0x7f030015;
+        public static int ws_slidingmenu_left_fragment=0x7f030016;
+        public static int ws_slidingmenu_menufragment=0x7f030017;
+        public static int ws_slidingmenu_right_content=0x7f030018;
+        public static int ws_slidingmenu_right_tabbar=0x7f030019;
+        public static int ws_tabbar=0x7f03001a;
     }
     public static final class menu {
         public static int main=0x7f0b0000;
     }
     public static final class string {
         public static int action_settings=0x7f070008;
+        /**   切换城市 
+         */
+        public static int all_city=0x7f07001a;
         public static int app_name=0x7f070006;
         public static int clear_history=0x7f070015;
+        public static int gps_city=0x7f07001c;
+        public static int gpsing=0x7f07001f;
         public static int hello_world=0x7f070007;
+        public static int hit_search=0x7f07001d;
+        public static int hot_city=0x7f07001b;
+        public static int no_search_city=0x7f070020;
         /**  Just use standard Pull Down String when pulling up. These can be set for languages which require it 
  Just use standard Pull Down String when pulling up. These can be set for languages which require it 
          */
@@ -461,6 +509,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int pull_to_refresh_refreshing_label=0x7f070002;
         public static int pull_to_refresh_release_label=0x7f070001;
         public static int search_nothing=0x7f070016;
+        public static int select_city_again=0x7f070021;
         public static int set_Date=0x7f070014;
         public static int set_time=0x7f070013;
         /**   侧滑菜单 Slidingmenu 
@@ -468,6 +517,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int slidingmen_mene_1=0x7f070017;
         public static int slidingmen_mene_2=0x7f070018;
         public static int slidingmen_mene_3=0x7f070019;
+        public static int switch_city=0x7f07001e;
         public static int ws_account_hit=0x7f07000b;
         public static int ws_accout_bind_phone=0x7f070012;
         public static int ws_check_pwd=0x7f07000e;

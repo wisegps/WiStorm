@@ -19,5 +19,17 @@
     
     <color name="black">#000000</color>
     
+    <!-- 半透明黑-->
+    <color name="tran_black">#a0000000</color>
+    <!-- 淡绿色标题背景颜色-->
+    <color name="light_green">#FF32B9AA</color>
+  <!--   <color name="gray_light">#515151</color> -->
+  	<!-- 字母索引弹框字体颜色 -->
+    <color name="gray_alpha">#8E8D8B</color>
+    <color name="gray_list">#FF767676</color>
+    <color name="gray_view">#E2E2E2</color>
+    
+    <color name="balck_light">#212121</color>
+    
     
 </resources>
