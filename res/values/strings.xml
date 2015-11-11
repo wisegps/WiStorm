@@ -36,6 +36,12 @@
 	<string name="gpsing">正在定位...</string>
 	<string name="no_search_city">未定位到城市,请选择</string>
 	<string name="select_city_again">重新选择</string>
+	
+	
+	<!-- 二维码 -->
+	<string name="scan_text">将二维码/条形码放入框内，即可自动扫描</string>
+	
+	
   	
 	<string-array name="all_citys">
         <item>北京</item>

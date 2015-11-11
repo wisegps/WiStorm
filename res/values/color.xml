@@ -23,7 +23,7 @@
     <color name="tran_black">#a0000000</color>
     <!-- 淡绿色标题背景颜色-->
     <color name="light_green">#FF32B9AA</color>
-  <!--   <color name="gray_light">#515151</color> -->
+    <!--   <color name="gray_light">#515151</color> -->
   	<!-- 字母索引弹框字体颜色 -->
     <color name="gray_alpha">#8E8D8B</color>
     <color name="gray_list">#FF767676</color>
@@ -31,5 +31,9 @@
     
     <color name="balck_light">#212121</color>
     
+     <!-- 二维码 -->
+    <color name="possible_result_points">#c0ffff00</color> 
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color> 
     
 </resources>
