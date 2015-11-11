@@ -18,9 +18,9 @@ public final class R {
         public static int ws_progressbar_loading=0x7f040006;
     }
     public static final class array {
-        public static int English=0x7f080002;
-        public static int all_citys=0x7f080000;
-        public static int city_pinyin=0x7f080001;
+        public static int English=0x7f090002;
+        public static int all_citys=0x7f090000;
+        public static int city_pinyin=0x7f090001;
     }
     public static final class attr {
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
@@ -272,37 +272,42 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int viewBehind=0x7f010002;
     }
     public static final class color {
-        public static int balck_light=0x7f09000d;
-        public static int black=0x7f090007;
+        public static int balck_light=0x7f0a000d;
+        public static int black=0x7f0a0007;
         /**  淡蓝色字体 
          */
-        public static int blue_light=0x7f090000;
+        public static int blue_light=0x7f0a0000;
         /**  蓝色 
          */
-        public static int blue_press=0x7f090001;
+        public static int blue_press=0x7f0a0001;
         /**    <color name="gray_light">#515151</color> 
  字母索引弹框字体颜色 
          */
-        public static int gray_alpha=0x7f09000a;
-        public static int gray_light=0x7f090004;
-        public static int gray_list=0x7f09000b;
-        public static int gray_view=0x7f09000c;
+        public static int gray_alpha=0x7f0a000a;
+        public static int gray_light=0x7f0a0004;
+        public static int gray_list=0x7f0a000b;
+        public static int gray_view=0x7f0a000c;
         /**  淡绿色标题背景颜色
          */
-        public static int light_green=0x7f090009;
+        public static int light_green=0x7f0a0009;
         /**  深蓝色字体 
          */
-        public static int navy=0x7f090002;
+        public static int navy=0x7f0a0002;
         /**  浅蓝色字体 
          */
-        public static int navy_blue=0x7f090005;
+        public static int navy_blue=0x7f0a0005;
         /**  灰色字体颜色 
          */
-        public static int navy_gray=0x7f090003;
+        public static int navy_gray=0x7f0a0003;
+        /**  二维码 
+         */
+        public static int possible_result_points=0x7f0a000e;
+        public static int result_view=0x7f0a000f;
         /**  半透明黑
          */
-        public static int tran_black=0x7f090008;
-        public static int white=0x7f090006;
+        public static int tran_black=0x7f0a0008;
+        public static int viewfinder_mask=0x7f0a0010;
+        public static int white=0x7f0a0006;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -312,15 +317,15 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static int activity_horizontal_margin=0x7f060005;
-        public static int activity_vertical_margin=0x7f060006;
-        public static int header_footer_left_right_padding=0x7f060003;
-        public static int header_footer_top_bottom_padding=0x7f060004;
-        public static int indicator_corner_radius=0x7f060001;
-        public static int indicator_internal_padding=0x7f060002;
-        public static int indicator_right_padding=0x7f060000;
-        public static int slidingmenu_menu_margin_left=0x7f060008;
-        public static int slidingmenu_offset=0x7f060007;
+        public static int activity_horizontal_margin=0x7f070005;
+        public static int activity_vertical_margin=0x7f070006;
+        public static int header_footer_left_right_padding=0x7f070003;
+        public static int header_footer_top_bottom_padding=0x7f070004;
+        public static int indicator_corner_radius=0x7f070001;
+        public static int indicator_internal_padding=0x7f070002;
+        public static int indicator_right_padding=0x7f070000;
+        public static int slidingmenu_menu_margin_left=0x7f070008;
+        public static int slidingmenu_offset=0x7f070007;
     }
     public static final class drawable {
         public static int default_ptr_flip=0x7f020000;
@@ -521,296 +526,337 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int ws_map_follow=0x7f0200c3;
         public static int ws_park=0x7f0200c4;
         public static int ws_progress_bg=0x7f0200c5;
-        public static int ws_progressbar_loading_01=0x7f0200c6;
-        public static int ws_progressbar_loading_02=0x7f0200c7;
-        public static int ws_progressbar_loading_03=0x7f0200c8;
-        public static int ws_progressbar_loading_04=0x7f0200c9;
-        public static int ws_progressbar_loading_05=0x7f0200ca;
-        public static int ws_progressbar_loading_06=0x7f0200cb;
-        public static int ws_progressbar_loading_07=0x7f0200cc;
-        public static int ws_round_bg=0x7f0200cd;
-        public static int ws_search_bar_selector=0x7f0200ce;
-        public static int ws_search_clear_normal=0x7f0200cf;
-        public static int ws_search_clear_pressed=0x7f0200d0;
-        public static int ws_selector_checkbox=0x7f0200d1;
+        public static int ws_progressbar_loading_0=0x7f0200c6;
+        public static int ws_progressbar_loading_01=0x7f0200c7;
+        public static int ws_progressbar_loading_02=0x7f0200c8;
+        public static int ws_progressbar_loading_03=0x7f0200c9;
+        public static int ws_progressbar_loading_04=0x7f0200ca;
+        public static int ws_progressbar_loading_05=0x7f0200cb;
+        public static int ws_progressbar_loading_06=0x7f0200cc;
+        public static int ws_progressbar_loading_07=0x7f0200cd;
+        public static int ws_progressbar_loading_1=0x7f0200ce;
+        public static int ws_progressbar_loading_10=0x7f0200cf;
+        public static int ws_progressbar_loading_11=0x7f0200d0;
+        public static int ws_progressbar_loading_2=0x7f0200d1;
+        public static int ws_progressbar_loading_3=0x7f0200d2;
+        public static int ws_progressbar_loading_4=0x7f0200d3;
+        public static int ws_progressbar_loading_5=0x7f0200d4;
+        public static int ws_progressbar_loading_6=0x7f0200d5;
+        public static int ws_progressbar_loading_7=0x7f0200d6;
+        public static int ws_progressbar_loading_8=0x7f0200d7;
+        public static int ws_progressbar_loading_9=0x7f0200d8;
+        public static int ws_round_bg=0x7f0200d9;
+        public static int ws_search_bar_selector=0x7f0200da;
+        public static int ws_search_clear_normal=0x7f0200db;
+        public static int ws_search_clear_pressed=0x7f0200dc;
+        public static int ws_selector_checkbox=0x7f0200dd;
     }
     public static final class id {
-        public static int MyLetterListView01=0x7f050037;
-        public static int action_settings=0x7f050067;
-        public static int actionbarLayout=0x7f05001c;
-        public static int actionbarLayoutId=0x7f050012;
-        public static int alpha=0x7f050039;
-        public static int atDescTextView=0x7f050028;
-        public static int atLayout=0x7f050023;
-        public static int atTextView=0x7f050027;
-        public static int backImageView=0x7f05002b;
-        public static int bmapView=0x7f050058;
-        public static int both=0x7f050009;
-        public static int btn_cancel=0x7f050040;
-        public static int btn_exit=0x7f05003f;
-        public static int btn_login=0x7f050054;
-        public static int btn_save=0x7f05003e;
-        public static int checkedImageView=0x7f050030;
-        public static int city=0x7f050041;
-        public static int closeImageView=0x7f050020;
-        public static int content=0x7f050064;
-        public static int disabled=0x7f050006;
-        public static int divider=0x7f050021;
-        public static int et_account=0x7f050052;
-        public static int et_password=0x7f050053;
-        public static int et_search=0x7f05005e;
-        public static int fl_inner=0x7f050016;
-        public static int flip=0x7f05000e;
-        public static int fullscreen=0x7f050003;
-        public static int gps_city=0x7f050047;
-        public static int gridView=0x7f05002d;
-        public static int gridview=0x7f05000f;
-        public static int hScrollView=0x7f050025;
-        public static int imageRemoveBtn=0x7f05002a;
-        public static int imageView=0x7f050029;
-        public static int imagesLinearLayout=0x7f050026;
-        public static int img=0x7f05004c;
-        public static int imgRichpushBtnBack=0x7f050013;
-        public static int imgView=0x7f050014;
-        public static int iv_back=0x7f050032;
-        public static int iv_loading=0x7f050059;
-        public static int iv_serach_bar_icon=0x7f05004d;
-        public static int iv_serach_bar_up=0x7f05004f;
-        public static int left=0x7f050000;
-        public static int listView=0x7f050042;
-        public static int list_view=0x7f050034;
-        public static int ll_item=0x7f050038;
-        public static int locate=0x7f05003b;
-        public static int locateHint=0x7f05003c;
-        public static int logoImageView=0x7f05002e;
-        public static int lv_left_menu=0x7f050061;
-        public static int lv_search=0x7f05005f;
-        public static int lv_view=0x7f050043;
-        public static int mainRelLayout=0x7f05001d;
-        public static int manualOnly=0x7f05000a;
-        public static int margin=0x7f050002;
-        public static int menu_left_content=0x7f050060;
-        public static int menu_right_content=0x7f050063;
-        public static int message=0x7f050044;
-        public static int name=0x7f05003a;
-        public static int nameTextView=0x7f05002f;
-        public static int negativeButton=0x7f050046;
-        public static int none=0x7f050004;
-        public static int notePswd=0x7f050055;
-        public static int okImageView=0x7f05002c;
-        public static int pbLocate=0x7f050048;
-        public static int pop_layout=0x7f05003d;
-        public static int positiveButton=0x7f050045;
-        public static int pullDownFromTop=0x7f05000b;
-        public static int pullFromEnd=0x7f050008;
-        public static int pullFromStart=0x7f050007;
-        public static int pullUpFromBottom=0x7f05000c;
-        public static int pull_refresh_list=0x7f05005b;
-        public static int pull_to_refresh_image=0x7f050017;
-        public static int pull_to_refresh_progress=0x7f050018;
-        public static int pull_to_refresh_sub_text=0x7f05001a;
-        public static int pull_to_refresh_text=0x7f050019;
-        public static int recentHint=0x7f050049;
-        public static int recent_city=0x7f05004a;
-        public static int right=0x7f050001;
-        public static int rotate=0x7f05000d;
-        public static int scrollview=0x7f050011;
-        public static int search_result=0x7f050035;
-        public static int selected_view=0x7f050005;
-        public static int sh=0x7f050033;
-        public static int slidingmenumain=0x7f05001b;
-        public static int tabbarLayout=0x7f050066;
-        public static int textCounterTextView=0x7f050024;
-        public static int textEditText=0x7f050022;
-        public static int title=0x7f050031;
-        public static int titleEditText=0x7f05001f;
-        public static int titleLayout=0x7f05001e;
-        public static int tvRichpushTitle=0x7f050015;
-        public static int tv_fragment_name=0x7f050062;
-        public static int tv_item_info=0x7f05005d;
-        public static int tv_item_title=0x7f05005c;
-        public static int tv_loading_msg=0x7f05005a;
-        public static int tv_noresult=0x7f050036;
-        public static int tv_search_bar_info=0x7f05004e;
-        public static int tv_update=0x7f050056;
-        public static int tv_version=0x7f050057;
-        public static int v_line=0x7f05004b;
-        public static int viewLine=0x7f050065;
-        public static int webview=0x7f050010;
-        public static int ws_iv_logo=0x7f050051;
-        public static int ws_llyt_login=0x7f050050;
+        public static int MyLetterListView01=0x7f060049;
+        public static int action_settings=0x7f060079;
+        public static int actionbarLayout=0x7f06002e;
+        public static int actionbarLayoutId=0x7f060024;
+        public static int alpha=0x7f06004b;
+        public static int atDescTextView=0x7f06003a;
+        public static int atLayout=0x7f060035;
+        public static int atTextView=0x7f060039;
+        /**  Messages IDs 
+         */
+        public static int auto_focus=0x7f060012;
+        public static int backImageView=0x7f06003d;
+        public static int bmapView=0x7f06006a;
+        public static int both=0x7f060009;
+        public static int bt_bigin_scan=0x7f06001e;
+        public static int btn_cancel=0x7f060052;
+        public static int btn_exit=0x7f060051;
+        public static int btn_login=0x7f060066;
+        public static int btn_save=0x7f060050;
+        public static int checkedImageView=0x7f060042;
+        public static int city=0x7f060053;
+        public static int closeImageView=0x7f060032;
+        public static int content=0x7f060076;
+        public static int decode=0x7f060013;
+        public static int decode_failed=0x7f060014;
+        public static int decode_succeeded=0x7f060015;
+        public static int disabled=0x7f060006;
+        public static int divider=0x7f060033;
+        public static int encode_failed=0x7f060016;
+        public static int encode_succeeded=0x7f060017;
+        public static int et_account=0x7f060064;
+        public static int et_password=0x7f060065;
+        public static int et_search=0x7f060070;
+        public static int fl_inner=0x7f060028;
+        public static int flip=0x7f06000e;
+        public static int fullscreen=0x7f060003;
+        public static int gps_city=0x7f060059;
+        public static int gridView=0x7f06003f;
+        public static int gridview=0x7f06000f;
+        public static int hScrollView=0x7f060037;
+        public static int imageRemoveBtn=0x7f06003c;
+        public static int imageView=0x7f06003b;
+        public static int imagesLinearLayout=0x7f060038;
+        public static int img=0x7f06005e;
+        public static int imgRichpushBtnBack=0x7f060025;
+        public static int imgView=0x7f060026;
+        public static int iv_back=0x7f060044;
+        public static int iv_loading=0x7f06006b;
+        public static int iv_qr_image=0x7f060020;
+        public static int iv_serach_bar_icon=0x7f06005f;
+        public static int iv_serach_bar_up=0x7f060061;
+        public static int launch_product_query=0x7f060018;
+        public static int left=0x7f060000;
+        public static int listView=0x7f060054;
+        public static int list_view=0x7f060046;
+        public static int ll_item=0x7f06004a;
+        public static int locate=0x7f06004d;
+        public static int locateHint=0x7f06004e;
+        public static int logoImageView=0x7f060040;
+        public static int lv_left_menu=0x7f060073;
+        public static int lv_search=0x7f060071;
+        public static int lv_view=0x7f060055;
+        public static int mainRelLayout=0x7f06002f;
+        public static int manualOnly=0x7f06000a;
+        public static int margin=0x7f060002;
+        public static int menu_left_content=0x7f060072;
+        public static int menu_right_content=0x7f060075;
+        public static int message=0x7f060056;
+        public static int name=0x7f06004c;
+        public static int nameTextView=0x7f060041;
+        public static int negativeButton=0x7f060058;
+        public static int none=0x7f060004;
+        public static int notePswd=0x7f060067;
+        public static int okImageView=0x7f06003e;
+        public static int openLight=0x7f060023;
+        public static int pbLocate=0x7f06005a;
+        public static int pop_layout=0x7f06004f;
+        public static int positiveButton=0x7f060057;
+        public static int preview_view=0x7f060021;
+        public static int pullDownFromTop=0x7f06000b;
+        public static int pullFromEnd=0x7f060008;
+        public static int pullFromStart=0x7f060007;
+        public static int pullUpFromBottom=0x7f06000c;
+        public static int pull_refresh_list=0x7f06006d;
+        public static int pull_to_refresh_image=0x7f060029;
+        public static int pull_to_refresh_progress=0x7f06002a;
+        public static int pull_to_refresh_sub_text=0x7f06002c;
+        public static int pull_to_refresh_text=0x7f06002b;
+        public static int quit=0x7f060019;
+        public static int recentHint=0x7f06005b;
+        public static int recent_city=0x7f06005c;
+        public static int restart_preview=0x7f06001a;
+        public static int return_scan_result=0x7f06001b;
+        public static int right=0x7f060001;
+        public static int rotate=0x7f06000d;
+        public static int scan_result=0x7f06001f;
+        public static int scrollview=0x7f060011;
+        public static int search_book_contents_failed=0x7f06001c;
+        public static int search_book_contents_succeeded=0x7f06001d;
+        public static int search_result=0x7f060047;
+        public static int selected_view=0x7f060005;
+        public static int sh=0x7f060045;
+        public static int slidingmenumain=0x7f06002d;
+        public static int tabbarLayout=0x7f060078;
+        public static int textCounterTextView=0x7f060036;
+        public static int textEditText=0x7f060034;
+        public static int title=0x7f060043;
+        public static int titleEditText=0x7f060031;
+        public static int titleLayout=0x7f060030;
+        public static int tvRichpushTitle=0x7f060027;
+        public static int tv_fragment_name=0x7f060074;
+        public static int tv_item_info=0x7f06006f;
+        public static int tv_item_title=0x7f06006e;
+        public static int tv_loading_msg=0x7f06006c;
+        public static int tv_noresult=0x7f060048;
+        public static int tv_search_bar_info=0x7f060060;
+        public static int tv_update=0x7f060068;
+        public static int tv_version=0x7f060069;
+        public static int v_line=0x7f06005d;
+        public static int viewLine=0x7f060077;
+        public static int viewfinder_view=0x7f060022;
+        public static int webview=0x7f060010;
+        public static int ws_iv_logo=0x7f060063;
+        public static int ws_llyt_login=0x7f060062;
     }
     public static final class layout {
-        public static int jpush_richpush_actionbar_layout=0x7f030000;
-        public static int pull_to_refresh_header_horizontal=0x7f030001;
-        public static int pull_to_refresh_header_vertical=0x7f030002;
-        public static int slidingmenumain=0x7f030003;
-        public static int ssdk_oks_skyblue_editpage=0x7f030004;
-        public static int ssdk_oks_skyblue_editpage_at_layout=0x7f030005;
-        public static int ssdk_oks_skyblue_editpage_inc_image_layout=0x7f030006;
-        public static int ssdk_oks_skyblue_share_actionbar=0x7f030007;
-        public static int ssdk_oks_skyblue_share_platform_list=0x7f030008;
-        public static int ssdk_oks_skyblue_share_platform_list_item=0x7f030009;
-        public static int ws_activity_switch=0x7f03000a;
-        public static int ws_all_city_list_item=0x7f03000b;
-        public static int ws_all_city_title=0x7f03000c;
-        public static int ws_alpha_overlay=0x7f03000d;
-        public static int ws_buttom_popupwindow=0x7f03000e;
-        public static int ws_city_item=0x7f03000f;
-        public static int ws_customs_dialog=0x7f030010;
-        public static int ws_gps_city_list_item=0x7f030011;
-        public static int ws_hot_city_list_item=0x7f030012;
-        public static int ws_item_list_slidingmenu=0x7f030013;
-        public static int ws_item_tabbar=0x7f030014;
-        public static int ws_itemlistw_search_bar=0x7f030015;
-        public static int ws_login=0x7f030016;
-        public static int ws_map=0x7f030017;
-        public static int ws_progressbar_loading=0x7f030018;
-        public static int ws_pull_refresh=0x7f030019;
-        public static int ws_pull_refresh_items=0x7f03001a;
-        public static int ws_search_bar=0x7f03001b;
-        public static int ws_slidingmenu_left_content=0x7f03001c;
-        public static int ws_slidingmenu_left_fragment=0x7f03001d;
-        public static int ws_slidingmenu_menufragment=0x7f03001e;
-        public static int ws_slidingmenu_right_content=0x7f03001f;
-        public static int ws_slidingmenu_right_tabbar=0x7f030020;
-        public static int ws_tabbar=0x7f030021;
+        public static int activity_zxing_frame=0x7f030000;
+        public static int camera=0x7f030001;
+        public static int jpush_richpush_actionbar_layout=0x7f030002;
+        public static int pull_to_refresh_header_horizontal=0x7f030003;
+        public static int pull_to_refresh_header_vertical=0x7f030004;
+        public static int slidingmenumain=0x7f030005;
+        public static int ssdk_oks_skyblue_editpage=0x7f030006;
+        public static int ssdk_oks_skyblue_editpage_at_layout=0x7f030007;
+        public static int ssdk_oks_skyblue_editpage_inc_image_layout=0x7f030008;
+        public static int ssdk_oks_skyblue_share_actionbar=0x7f030009;
+        public static int ssdk_oks_skyblue_share_platform_list=0x7f03000a;
+        public static int ssdk_oks_skyblue_share_platform_list_item=0x7f03000b;
+        public static int ws_activity_switch=0x7f03000c;
+        public static int ws_all_city_list_item=0x7f03000d;
+        public static int ws_all_city_title=0x7f03000e;
+        public static int ws_alpha_overlay=0x7f03000f;
+        public static int ws_buttom_popupwindow=0x7f030010;
+        public static int ws_city_item=0x7f030011;
+        public static int ws_customs_dialog=0x7f030012;
+        public static int ws_gps_city_list_item=0x7f030013;
+        public static int ws_hot_city_list_item=0x7f030014;
+        public static int ws_item_list_slidingmenu=0x7f030015;
+        public static int ws_item_tabbar=0x7f030016;
+        public static int ws_itemlistw_search_bar=0x7f030017;
+        public static int ws_login=0x7f030018;
+        public static int ws_map=0x7f030019;
+        public static int ws_progressbar_loading=0x7f03001a;
+        public static int ws_pull_refresh=0x7f03001b;
+        public static int ws_pull_refresh_items=0x7f03001c;
+        public static int ws_search_bar=0x7f03001d;
+        public static int ws_slidingmenu_left_content=0x7f03001e;
+        public static int ws_slidingmenu_left_fragment=0x7f03001f;
+        public static int ws_slidingmenu_menufragment=0x7f030020;
+        public static int ws_slidingmenu_right_content=0x7f030021;
+        public static int ws_slidingmenu_right_tabbar=0x7f030022;
+        public static int ws_tabbar=0x7f030023;
     }
     public static final class menu {
-        public static int main=0x7f0b0000;
+        public static int main=0x7f0c0000;
+    }
+    public static final class raw {
+        public static int beep=0x7f050000;
+        public static int realm_properties=0x7f050001;
     }
     public static final class string {
-        public static int action_settings=0x7f070060;
+        public static int action_settings=0x7f080060;
         /**   切换城市 
          */
-        public static int all_city=0x7f070072;
-        public static int app_name=0x7f07005e;
-        public static int clear_history=0x7f07006d;
-        public static int gps_city=0x7f070074;
-        public static int gpsing=0x7f070077;
-        public static int hello_world=0x7f07005f;
-        public static int hit_search=0x7f070075;
-        public static int hot_city=0x7f070073;
-        public static int no_search_city=0x7f070078;
+        public static int all_city=0x7f080072;
+        public static int app_name=0x7f08005e;
+        public static int clear_history=0x7f08006d;
+        public static int gps_city=0x7f080074;
+        public static int gpsing=0x7f080077;
+        public static int hello_world=0x7f08005f;
+        public static int hit_search=0x7f080075;
+        public static int hot_city=0x7f080073;
+        public static int no_search_city=0x7f080078;
         /**  Just use standard Pull Down String when pulling up. These can be set for languages which require it 
  Just use standard Pull Down String when pulling up. These can be set for languages which require it 
          */
-        public static int pull_to_refresh_from_bottom_pull_label=0x7f070003;
-        public static int pull_to_refresh_from_bottom_refreshing_label=0x7f070005;
-        public static int pull_to_refresh_from_bottom_release_label=0x7f070004;
-        public static int pull_to_refresh_pull_label=0x7f070000;
-        public static int pull_to_refresh_refreshing_label=0x7f070002;
-        public static int pull_to_refresh_release_label=0x7f070001;
-        public static int search_nothing=0x7f07006e;
-        public static int select_city_again=0x7f070079;
-        public static int set_Date=0x7f07006c;
-        public static int set_time=0x7f07006b;
+        public static int pull_to_refresh_from_bottom_pull_label=0x7f080003;
+        public static int pull_to_refresh_from_bottom_refreshing_label=0x7f080005;
+        public static int pull_to_refresh_from_bottom_release_label=0x7f080004;
+        public static int pull_to_refresh_pull_label=0x7f080000;
+        public static int pull_to_refresh_refreshing_label=0x7f080002;
+        public static int pull_to_refresh_release_label=0x7f080001;
+        /**  二维码 
+         */
+        public static int scan_text=0x7f08007a;
+        public static int search_nothing=0x7f08006e;
+        public static int select_city_again=0x7f080079;
+        public static int set_Date=0x7f08006c;
+        public static int set_time=0x7f08006b;
         /**   侧滑菜单 Slidingmenu 
          */
-        public static int slidingmen_mene_1=0x7f07006f;
-        public static int slidingmen_mene_2=0x7f070070;
-        public static int slidingmen_mene_3=0x7f070071;
-        public static int ssdk_alipay=0x7f070056;
-        public static int ssdk_alipay_client_inavailable=0x7f070026;
-        public static int ssdk_baidutieba=0x7f070053;
-        public static int ssdk_baidutieba_client_inavailable=0x7f070024;
-        public static int ssdk_bluetooth=0x7f070049;
-        public static int ssdk_douban=0x7f070036;
-        public static int ssdk_dropbox=0x7f070040;
-        public static int ssdk_email=0x7f070031;
-        public static int ssdk_evernote=0x7f070038;
-        public static int ssdk_facebook=0x7f07002d;
-        public static int ssdk_facebookmessenger=0x7f070052;
-        public static int ssdk_flickr=0x7f07003e;
-        public static int ssdk_foursquare=0x7f07003b;
-        public static int ssdk_google_plus_client_inavailable=0x7f07001b;
-        public static int ssdk_googleplus=0x7f07003a;
-        public static int ssdk_instagram=0x7f070042;
-        public static int ssdk_instagram_client_inavailable=0x7f07001e;
-        public static int ssdk_instapager_email_or_password_incorrect=0x7f070051;
-        public static int ssdk_instapager_login_html=0x7f070006;
-        public static int ssdk_instapaper=0x7f07004c;
-        public static int ssdk_instapaper_email=0x7f07004d;
-        public static int ssdk_instapaper_login=0x7f07004f;
-        public static int ssdk_instapaper_logining=0x7f070050;
-        public static int ssdk_instapaper_pwd=0x7f07004e;
-        public static int ssdk_kaixin=0x7f070030;
-        public static int ssdk_kakaostory=0x7f070047;
-        public static int ssdk_kakaostory_client_inavailable=0x7f070022;
-        public static int ssdk_kakaotalk=0x7f070046;
-        public static int ssdk_kakaotalk_client_inavailable=0x7f070021;
-        public static int ssdk_laiwang=0x7f070054;
-        public static int ssdk_laiwang_client_inavailable=0x7f070025;
-        public static int ssdk_laiwangmoments=0x7f070055;
-        public static int ssdk_line=0x7f070048;
-        public static int ssdk_line_client_inavailable=0x7f070020;
-        public static int ssdk_linkedin=0x7f070039;
-        public static int ssdk_mingdao=0x7f070045;
-        public static int ssdk_mingdao_share_content=0x7f07005a;
-        public static int ssdk_neteasemicroblog=0x7f070035;
-        public static int ssdk_oks_cancel=0x7f070007;
-        public static int ssdk_oks_finish=0x7f070008;
-        public static int ssdk_oks_list_friends=0x7f070010;
-        public static int ssdk_oks_multi_share=0x7f07000c;
-        public static int ssdk_oks_pull_to_refresh=0x7f070012;
-        public static int ssdk_oks_refreshing=0x7f070014;
-        public static int ssdk_oks_release_to_refresh=0x7f070013;
-        public static int ssdk_oks_select_a_friend=0x7f070016;
-        public static int ssdk_oks_select_one_plat_at_least=0x7f07000f;
-        public static int ssdk_oks_shake2share=0x7f070015;
-        public static int ssdk_oks_share=0x7f07000b;
-        public static int ssdk_oks_share_canceled=0x7f07000e;
-        public static int ssdk_oks_share_completed=0x7f07000d;
-        public static int ssdk_oks_share_failed=0x7f070011;
-        public static int ssdk_oks_share_to=0x7f07000a;
-        public static int ssdk_oks_sharing=0x7f070009;
-        public static int ssdk_pinterest=0x7f07003d;
-        public static int ssdk_pinterest_client_inavailable=0x7f07001d;
-        public static int ssdk_pocket=0x7f07004b;
-        public static int ssdk_qq=0x7f07003c;
-        public static int ssdk_qq_client_inavailable=0x7f07001c;
-        public static int ssdk_qzone=0x7f070029;
-        public static int ssdk_renren=0x7f07002f;
-        public static int ssdk_share_to_baidutieba=0x7f070057;
-        public static int ssdk_share_to_mingdao=0x7f07005b;
-        public static int ssdk_share_to_qq=0x7f070059;
-        public static int ssdk_share_to_qzone=0x7f070058;
-        public static int ssdk_share_to_qzone_default=0x7f07005c;
-        public static int ssdk_shortmessage=0x7f070032;
-        public static int ssdk_sinaweibo=0x7f070027;
-        public static int ssdk_sohumicroblog=0x7f070033;
-        public static int ssdk_sohusuishenkan=0x7f070034;
-        public static int ssdk_tencentweibo=0x7f070028;
-        public static int ssdk_tumblr=0x7f07003f;
-        public static int ssdk_twitter=0x7f07002e;
-        public static int ssdk_use_login_button=0x7f07005d;
-        public static int ssdk_vkontakte=0x7f070041;
-        public static int ssdk_website=0x7f070018;
-        public static int ssdk_wechat=0x7f07002a;
-        public static int ssdk_wechat_client_inavailable=0x7f07001a;
-        public static int ssdk_wechatfavorite=0x7f07002c;
-        public static int ssdk_wechatmoments=0x7f07002b;
-        public static int ssdk_weibo_oauth_regiseter=0x7f070017;
-        public static int ssdk_weibo_upload_content=0x7f070019;
-        public static int ssdk_whatsapp=0x7f07004a;
-        public static int ssdk_whatsapp_client_inavailable=0x7f070023;
-        public static int ssdk_yixin=0x7f070043;
-        public static int ssdk_yixin_client_inavailable=0x7f07001f;
-        public static int ssdk_yixinmoments=0x7f070044;
-        public static int ssdk_youdao=0x7f070037;
-        public static int switch_city=0x7f070076;
-        public static int ws_account_hit=0x7f070063;
-        public static int ws_accout_bind_phone=0x7f07006a;
-        public static int ws_check_pwd=0x7f070066;
-        public static int ws_login=0x7f070065;
-        public static int ws_login_id_wrong=0x7f070068;
-        public static int ws_login_null=0x7f070069;
-        public static int ws_login_pd_context=0x7f070067;
+        public static int slidingmen_mene_1=0x7f08006f;
+        public static int slidingmen_mene_2=0x7f080070;
+        public static int slidingmen_mene_3=0x7f080071;
+        public static int ssdk_alipay=0x7f080056;
+        public static int ssdk_alipay_client_inavailable=0x7f080026;
+        public static int ssdk_baidutieba=0x7f080053;
+        public static int ssdk_baidutieba_client_inavailable=0x7f080024;
+        public static int ssdk_bluetooth=0x7f080049;
+        public static int ssdk_douban=0x7f080036;
+        public static int ssdk_dropbox=0x7f080040;
+        public static int ssdk_email=0x7f080031;
+        public static int ssdk_evernote=0x7f080038;
+        public static int ssdk_facebook=0x7f08002d;
+        public static int ssdk_facebookmessenger=0x7f080052;
+        public static int ssdk_flickr=0x7f08003e;
+        public static int ssdk_foursquare=0x7f08003b;
+        public static int ssdk_google_plus_client_inavailable=0x7f08001b;
+        public static int ssdk_googleplus=0x7f08003a;
+        public static int ssdk_instagram=0x7f080042;
+        public static int ssdk_instagram_client_inavailable=0x7f08001e;
+        public static int ssdk_instapager_email_or_password_incorrect=0x7f080051;
+        public static int ssdk_instapager_login_html=0x7f080006;
+        public static int ssdk_instapaper=0x7f08004c;
+        public static int ssdk_instapaper_email=0x7f08004d;
+        public static int ssdk_instapaper_login=0x7f08004f;
+        public static int ssdk_instapaper_logining=0x7f080050;
+        public static int ssdk_instapaper_pwd=0x7f08004e;
+        public static int ssdk_kaixin=0x7f080030;
+        public static int ssdk_kakaostory=0x7f080047;
+        public static int ssdk_kakaostory_client_inavailable=0x7f080022;
+        public static int ssdk_kakaotalk=0x7f080046;
+        public static int ssdk_kakaotalk_client_inavailable=0x7f080021;
+        public static int ssdk_laiwang=0x7f080054;
+        public static int ssdk_laiwang_client_inavailable=0x7f080025;
+        public static int ssdk_laiwangmoments=0x7f080055;
+        public static int ssdk_line=0x7f080048;
+        public static int ssdk_line_client_inavailable=0x7f080020;
+        public static int ssdk_linkedin=0x7f080039;
+        public static int ssdk_mingdao=0x7f080045;
+        public static int ssdk_mingdao_share_content=0x7f08005a;
+        public static int ssdk_neteasemicroblog=0x7f080035;
+        public static int ssdk_oks_cancel=0x7f080007;
+        public static int ssdk_oks_finish=0x7f080008;
+        public static int ssdk_oks_list_friends=0x7f080010;
+        public static int ssdk_oks_multi_share=0x7f08000c;
+        public static int ssdk_oks_pull_to_refresh=0x7f080012;
+        public static int ssdk_oks_refreshing=0x7f080014;
+        public static int ssdk_oks_release_to_refresh=0x7f080013;
+        public static int ssdk_oks_select_a_friend=0x7f080016;
+        public static int ssdk_oks_select_one_plat_at_least=0x7f08000f;
+        public static int ssdk_oks_shake2share=0x7f080015;
+        public static int ssdk_oks_share=0x7f08000b;
+        public static int ssdk_oks_share_canceled=0x7f08000e;
+        public static int ssdk_oks_share_completed=0x7f08000d;
+        public static int ssdk_oks_share_failed=0x7f080011;
+        public static int ssdk_oks_share_to=0x7f08000a;
+        public static int ssdk_oks_sharing=0x7f080009;
+        public static int ssdk_pinterest=0x7f08003d;
+        public static int ssdk_pinterest_client_inavailable=0x7f08001d;
+        public static int ssdk_pocket=0x7f08004b;
+        public static int ssdk_qq=0x7f08003c;
+        public static int ssdk_qq_client_inavailable=0x7f08001c;
+        public static int ssdk_qzone=0x7f080029;
+        public static int ssdk_renren=0x7f08002f;
+        public static int ssdk_share_to_baidutieba=0x7f080057;
+        public static int ssdk_share_to_mingdao=0x7f08005b;
+        public static int ssdk_share_to_qq=0x7f080059;
+        public static int ssdk_share_to_qzone=0x7f080058;
+        public static int ssdk_share_to_qzone_default=0x7f08005c;
+        public static int ssdk_shortmessage=0x7f080032;
+        public static int ssdk_sinaweibo=0x7f080027;
+        public static int ssdk_sohumicroblog=0x7f080033;
+        public static int ssdk_sohusuishenkan=0x7f080034;
+        public static int ssdk_tencentweibo=0x7f080028;
+        public static int ssdk_tumblr=0x7f08003f;
+        public static int ssdk_twitter=0x7f08002e;
+        public static int ssdk_use_login_button=0x7f08005d;
+        public static int ssdk_vkontakte=0x7f080041;
+        public static int ssdk_website=0x7f080018;
+        public static int ssdk_wechat=0x7f08002a;
+        public static int ssdk_wechat_client_inavailable=0x7f08001a;
+        public static int ssdk_wechatfavorite=0x7f08002c;
+        public static int ssdk_wechatmoments=0x7f08002b;
+        public static int ssdk_weibo_oauth_regiseter=0x7f080017;
+        public static int ssdk_weibo_upload_content=0x7f080019;
+        public static int ssdk_whatsapp=0x7f08004a;
+        public static int ssdk_whatsapp_client_inavailable=0x7f080023;
+        public static int ssdk_yixin=0x7f080043;
+        public static int ssdk_yixin_client_inavailable=0x7f08001f;
+        public static int ssdk_yixinmoments=0x7f080044;
+        public static int ssdk_youdao=0x7f080037;
+        public static int switch_city=0x7f080076;
+        public static int ws_account_hit=0x7f080063;
+        public static int ws_accout_bind_phone=0x7f08006a;
+        public static int ws_check_pwd=0x7f080066;
+        public static int ws_login=0x7f080065;
+        public static int ws_login_id_wrong=0x7f080068;
+        public static int ws_login_null=0x7f080069;
+        public static int ws_login_pd_context=0x7f080067;
         /**  登录 
          */
-        public static int ws_net_timeout=0x7f070061;
-        public static int ws_password_hit=0x7f070064;
-        public static int ws_tv_check_update=0x7f070062;
+        public static int ws_net_timeout=0x7f080061;
+        public static int ws_password_hit=0x7f080064;
+        public static int ws_tv_check_update=0x7f080062;
     }
     public static final class style {
         /** 
@@ -834,18 +880,18 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     
  API 14 theme customizations can go here. 
          */
-        public static int AppBaseTheme=0x7f0a0000;
+        public static int AppBaseTheme=0x7f0b0000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static int AppTheme=0x7f0a0001;
+        public static int AppTheme=0x7f0b0001;
         /**  dialog style
   背景缓存颜色  
          */
-        public static int progressDialog=0x7f0a0002;
+        public static int progressDialog=0x7f0b0002;
         /**   WBottomPopupWindow  anim  
          */
-        public static int ws_anim_menu_bottom_bar=0x7f0a0003;
+        public static int ws_anim_menu_bottom_bar=0x7f0b0003;
     }
     public static final class styleable {
         /** Attributes that can be used with a PullToRefresh.
