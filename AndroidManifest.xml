@@ -54,8 +54,7 @@
             android:name="com.wicare.wistorm.toolkit.WMap"
             android:screenOrientation="portrait" >
         </activity>
-
-
+       
     </application>
 
 </manifest>

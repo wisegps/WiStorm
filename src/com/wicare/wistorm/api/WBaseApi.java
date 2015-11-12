@@ -6,5 +6,4 @@ package com.wicare.wistorm.api;
  * @date 2015-10-12
  */
 public class WBaseApi extends WiStormAPI {
-
 }

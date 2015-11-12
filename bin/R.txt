@@ -290,7 +290,7 @@ int drawable ws_search_clear_normal 0x7f0200db
 int drawable ws_search_clear_pressed 0x7f0200dc
 int drawable ws_selector_checkbox 0x7f0200dd
 int id MyLetterListView01 0x7f060049
-int id action_settings 0x7f060079
+int id action_settings 0x7f06007b
 int id actionbarLayout 0x7f06002e
 int id actionbarLayoutId 0x7f060024
 int id alpha 0x7f06004b
@@ -302,6 +302,7 @@ int id backImageView 0x7f06003d
 int id bmapView 0x7f06006a
 int id both 0x7f060009
 int id bt_bigin_scan 0x7f06001e
+int id btnGetCode 0x7f06007a
 int id btn_cancel 0x7f060052
 int id btn_exit 0x7f060051
 int id btn_login 0x7f060066
@@ -317,6 +318,7 @@ int id disabled 0x7f060006
 int id divider 0x7f060033
 int id encode_failed 0x7f060016
 int id encode_succeeded 0x7f060017
+int id etPhone 0x7f060079
 int id et_account 0x7f060064
 int id et_password 0x7f060065
 int id et_search 0x7f060070
@@ -446,7 +448,8 @@ int layout ws_slidingmenu_left_fragment 0x7f03001f
 int layout ws_slidingmenu_menufragment 0x7f030020
 int layout ws_slidingmenu_right_content 0x7f030021
 int layout ws_slidingmenu_right_tabbar 0x7f030022
-int layout ws_tabbar 0x7f030023
+int layout ws_sms 0x7f030023
+int layout ws_tabbar 0x7f030024
 int menu main 0x7f0c0000
 int raw beep 0x7f050000
 int raw realm_properties 0x7f050001

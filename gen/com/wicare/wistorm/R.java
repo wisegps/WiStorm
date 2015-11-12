@@ -553,7 +553,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     }
     public static final class id {
         public static int MyLetterListView01=0x7f060049;
-        public static int action_settings=0x7f060079;
+        public static int action_settings=0x7f06007b;
         public static int actionbarLayout=0x7f06002e;
         public static int actionbarLayoutId=0x7f060024;
         public static int alpha=0x7f06004b;
@@ -567,6 +567,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int bmapView=0x7f06006a;
         public static int both=0x7f060009;
         public static int bt_bigin_scan=0x7f06001e;
+        public static int btnGetCode=0x7f06007a;
         public static int btn_cancel=0x7f060052;
         public static int btn_exit=0x7f060051;
         public static int btn_login=0x7f060066;
@@ -582,6 +583,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int divider=0x7f060033;
         public static int encode_failed=0x7f060016;
         public static int encode_succeeded=0x7f060017;
+        public static int etPhone=0x7f060079;
         public static int et_account=0x7f060064;
         public static int et_password=0x7f060065;
         public static int et_search=0x7f060070;
@@ -713,7 +715,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int ws_slidingmenu_menufragment=0x7f030020;
         public static int ws_slidingmenu_right_content=0x7f030021;
         public static int ws_slidingmenu_right_tabbar=0x7f030022;
-        public static int ws_tabbar=0x7f030023;
+        public static int ws_sms=0x7f030023;
+        public static int ws_tabbar=0x7f030024;
     }
     public static final class menu {
         public static int main=0x7f0c0000;
