@@ -51,7 +51,7 @@
             android:orientation="vertical"
             android:paddingBottom="10dp" >
 
-            <com.wicare.wistorm.ui.WClearEditText
+            <com.wicare.wistorm.ui.WInputField
                 android:id="@+id/et_account"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
                 android:layout_height="1dp"
                 android:background="#e5e5e5" />
 
-            <com.wicare.wistorm.ui.WClearEditText
+            <com.wicare.wistorm.ui.WInputField
                 android:id="@+id/et_password"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"

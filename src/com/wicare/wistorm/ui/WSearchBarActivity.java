@@ -36,7 +36,7 @@ public class WSearchBarActivity extends Activity implements TextWatcher,
 	/**
 	 * 自定义的搜索框
 	 */
-	private WClearEditText etSearch = null;
+	private WInputField etSearch = null;
 	/**
 	 * 返回
 	 */
@@ -60,7 +60,7 @@ public class WSearchBarActivity extends Activity implements TextWatcher,
 		ivBack   = (ImageView) findViewById(R.id.iv_back);
 		ivBack .setOnClickListener(this);
 		lvSearch = (ListView) findViewById(R.id.lv_search);
-		etSearch = (WClearEditText) findViewById(R.id.et_search);
+		etSearch = (WInputField) findViewById(R.id.et_search);
 		initWSearchBar();
 	}	
 	

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:background="@color/light_green" >
+     
+        <ImageView
+			android:id="@+id/iv_back"
+			android:layout_width="60dp"
+			android:layout_height="50dp"
+			android:background="@drawable/ws_ico_back" />
+
+	     <TextView
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:layout_centerHorizontal="true"
+	         android:layout_centerVertical="true"
+	         android:text="汽车品牌"
+	         android:textColor="@color/white"
+	         android:textSize="16sp" />
+	     
+ 	</RelativeLayout>
+ 	
+    
+    <!-- 品牌 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_brand"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 自定义搜索 栏 -->
+
+        <com.wicare.wistorm.ui.WInputField
+            android:id="@+id/et_car_key"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+	        android:background="@drawable/ws_bg_rect_list_search"
+	        android:drawableLeft="@drawable/ws_common_icon_searchbox_magnifier_2"
+	        android:drawablePadding="5dp"
+            android:hint="请输入关键字"
+            android:singleLine="true"
+            android:padding="10dip"
+            android:textColor="@color/navy" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/et_car_key"  >
+            
+            <!-- 汽车品牌列表 -->
+            <ListView
+		        android:id="@+id/lv_car_brand"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:cacheColorHint="#00000000"
+		        android:divider="#00000000"
+		        android:dividerHeight="0dp"
+		        android:listSelector="@android:color/transparent"
+		        android:scrollbars="none"  />
+            
+            <!-- 点击字母显示 -->
+
+            <TextView
+                android:id="@+id/tv_car_alpha_overlay_bg"
+                android:layout_width="80.0dip"
+                android:layout_height="80.0dip"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ws_car_selector_tv_overlay_bg"
+                android:gravity="center"
+                android:textColor="#ffffffff"
+                android:textSize="30.0dip"
+                android:visibility="invisible" />
+            
+            <!-- 右边字母索引 -->
+            
+            <com.wicare.wistorm.ui.WCarSelectorSideBar
+		        android:id="@+id/sb_letter"
+		        android:layout_width="25dip"
+		        android:layout_height="fill_parent"
+		        android:layout_alignParentRight="true"
+		        android:layout_marginRight="2dp"  />
+            
+            
+            <ListView 
+                android:id="@+id/lv_car_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/gray_light"
+                android:dividerHeight="0.5dip"
+                android:visibility="gone" >
+           
+            </ListView>
+            
+            
+            
+        </RelativeLayout>   
+    </RelativeLayout>
+    
+    
+    
+    
+    
+
+</LinearLayout>

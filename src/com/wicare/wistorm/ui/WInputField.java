@@ -23,7 +23,7 @@ import com.wicare.wistorm.R;
  * @date 2015-10-15
  * 
  */
-public class WClearEditText extends EditText implements  
+public class WInputField extends EditText implements  
 		OnFocusChangeListener, TextWatcher{
 	/**
 	 * 删除按钮的引用
@@ -34,16 +34,16 @@ public class WClearEditText extends EditText implements
      */
     private boolean hasFoucs;
  
-    public WClearEditText(Context context) { 
+    public WInputField(Context context) { 
     	this(context, null); 
     } 
  
-    public WClearEditText(Context context, AttributeSet attrs) { 
+    public WInputField(Context context, AttributeSet attrs) { 
     	//这里构造方法也很重要，不加这个很多属性不能再XML里面定义
     	this(context, attrs, android.R.attr.editTextStyle); 
     } 
     
-    public WClearEditText(Context context, AttributeSet attrs, int defStyle) {
+    public WInputField(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init();
     }

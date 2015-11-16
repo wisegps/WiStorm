@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import com.wicare.wistorm.R;
 import com.wicare.wistorm.api.WUserApi;
-import com.wicare.wistorm.ui.WClearEditText;
+import com.wicare.wistorm.ui.WInputField;
 
 /**
  * WLoginActivity 用户登录Activity 继承该类可以复用登录界面和登录功能
@@ -23,7 +23,7 @@ import com.wicare.wistorm.ui.WClearEditText;
 public class WLoginActivity extends Activity implements OnClickListener,
 		WUserApi.OnLoginListener {
 
-	private WClearEditText etAccount, etPassword;
+	private WInputField etAccount, etPassword;
 	public Button btnLogin;//登录按钮
 	private int bgId = R.drawable.ws_login_bg; //默认背景
 	private int logoId = R.drawable.ws_logo;//默认logo
@@ -35,8 +35,8 @@ public class WLoginActivity extends Activity implements OnClickListener,
 		setContentView(R.layout.ws_login);
 		setBackground(bgId);
 		setLogo(logoId);
-		etAccount = (WClearEditText) findViewById(R.id.et_account);
-		etPassword = (WClearEditText) findViewById(R.id.et_password);
+		etAccount = (WInputField) findViewById(R.id.et_account);
+		etPassword = (WInputField) findViewById(R.id.et_password);
 		btnLogin = (Button) findViewById(R.id.btn_login);
 		btnLogin.setOnClickListener(this);
 	}

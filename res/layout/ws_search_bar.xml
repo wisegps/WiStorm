@@ -18,7 +18,7 @@
             android:src="@drawable/ws_common_icon_back_btn_normal" />
         
         
-        <com.wicare.wistorm.ui.WClearEditText 
+        <com.wicare.wistorm.ui.WInputField 
             android:id="@+id/et_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
