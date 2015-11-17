@@ -20,6 +20,8 @@
 	<classpathentry exported="true" kind="lib" path="libs/ShareSDK-Wechat-Core-2.6.4.jar"/>
 	<classpathentry exported="true" kind="lib" path="libs/ShareSDK-Wechat-Favorite-2.6.4.jar"/>
 	<classpathentry exported="true" kind="lib" path="libs/ShareSDK-Wechat-Moments-2.6.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/oss_wise.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/volley.jar"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
