@@ -1,12 +1,15 @@
 package com.wicare.wistorm.ui;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 import com.wicare.wistorm.R;
-import com.wicare.wistorm.model.CarBrandData;
+import com.wicare.wistorm.model.CarBrandData; 
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -70,10 +73,15 @@ public class WCarBrandAdapter extends BaseAdapter {
 			viewHolder.carLetter.setVisibility(View.GONE);
 		}
 		
-		
-		
 		viewHolder.carBrand.setText(mCarBrandDataList.get(position).getBrand());
-//		viewHolder.mFrontImg.setImageResource(R.drawable.ic_launcher);
+		if(new File(WCarBrandSelector.VehicleLogoPath + this.mCarBrandDataList.get(position).getId() + ".png").exists()){
+			Bitmap image = BitmapFactory.decodeFile(WCarBrandSelector.VehicleLogoPath+this.mCarBrandDataList.get(position).getId() + ".png");
+			viewHolder.carBrandLogo.setImageBitmap(image);
+		}else{
+			viewHolder.carBrandLogo.setImageResource(R.drawable.icon_car_default);
+			if(!"".equals(this.mCarBrandDataList.get(position).getLogoUrl()) && this.mCarBrandDataList.get(position).getLogoUrl() != null){
+			}
+		}
 		return view;
 	}
 
@@ -107,22 +115,22 @@ public class WCarBrandAdapter extends BaseAdapter {
 		}
 		return -1;
 	}
-	
-	/**
-	 * 提取英文的首字母，非英文字母用#代替。
-	 * 
-	 * @param str
-	 * @return
-	 */
-	private String getAlpha(String str) {
-		String  sortStr = str.trim().substring(0, 1).toUpperCase();
-		// 正则表达式，判断首字母是否是英文字母
-		if (sortStr.matches("[A-Z]")) {
-			return sortStr;
-		} else {
-			return "#";
-		}
-	}
+//	
+//	/**
+//	 * 提取英文的首字母，非英文字母用#代替。
+//	 * 
+//	 * @param str
+//	 * @return
+//	 */
+//	private String getAlpha(String str) {
+//		String  sortStr = str.trim().substring(0, 1).toUpperCase();
+//		// 正则表达式，判断首字母是否是英文字母
+//		if (sortStr.matches("[A-Z]")) {
+//			return sortStr;
+//		} else {
+//			return "#";
+//		}
+//	}
 	
 	
 	
