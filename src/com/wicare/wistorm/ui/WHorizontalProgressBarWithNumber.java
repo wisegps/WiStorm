@@ -64,7 +64,7 @@ public class WHorizontalProgressBarWithNumber extends ProgressBar {
 	 */
 	protected int mRealWidth;
 
-	protected boolean mIfDrawText = true;
+	protected boolean mIfDrawText = false;//这里不要话百分比文字
 
 	protected static final int VISIBLE = 0;
 	
@@ -182,7 +182,8 @@ public class WHorizontalProgressBarWithNumber extends ProgressBar {
 		String text = getProgress() + "%";
 		// mPaint.getTextBounds(text, 0, text.length(), mTextBound);
 
-		float textWidth = mPaint.measureText(text);
+//		float textWidth = mPaint.measureText(text);
+		float textWidth = 0f;
 		float textHeight = (mPaint.descent() + mPaint.ascent()) / 2;
 
 		if (progressPosX + textWidth > mRealWidth)
