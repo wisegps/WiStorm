@@ -22,29 +22,22 @@ public class WEncrypt {
 	 * @param string
 	 *            原始内容
 	 * @return md5 16进制字符串
+	 * 
+	 *         public final static String getMD5(String input) { try {
+	 *         MessageDigest md = MessageDigest.getInstance("MD5"); byte[]
+	 *         messageDigest = md.digest(input.getBytes()); BigInteger number =
+	 *         new BigInteger(1, messageDigest); String hashtext =
+	 *         number.toString(16); // Now we need to zero pad it if you
+	 *         actually want the full 32 // chars. while (hashtext.length() <
+	 *         32) { hashtext = "0" + hashtext; } return hashtext; } catch
+	 *         (NoSuchAlgorithmException e) { e.printStackTrace(); } return
+	 *         input;
+	 * 
+	 *         }
 	 */
-	public final static String getMD5(String input) {
-		try {
-			MessageDigest md = MessageDigest.getInstance("MD5");
-			byte[] messageDigest = md.digest(input.getBytes());
-			BigInteger number = new BigInteger(1, messageDigest);
-			String hashtext = number.toString(16);
-			// Now we need to zero pad it if you actually want the full 32
-			// chars.
-			while (hashtext.length() < 32) {
-				hashtext = "0" + hashtext;
-			}
-			return hashtext;
-		} catch (NoSuchAlgorithmException e) {
-			e.printStackTrace();
-		}
-		return input;
-
-	}
-
 	/**
 	 * 
-	 * MD5加密加密方式二
+	 * MD5加密加密方式二 *
 	 * 
 	 * @param input
 	 *            原始内容
@@ -82,9 +75,11 @@ public class WEncrypt {
 
 	/**
 	 * 
-	 *md5File  文件MD5加密
-	 *@param filePath 文件路径
-	 *@return  文件加密后十六进制字符串
+	 * md5File 文件MD5加密
+	 * 
+	 * @param filePath
+	 *            文件路径
+	 * @return 文件加密后十六进制字符串
 	 */
 	public static String md5File(String filePath) {
 		try {
