@@ -36,4 +36,8 @@
     <color name="result_view">#b0000000</color>
     <color name="viewfinder_mask">#60000000</color> 
     
+    <!-- 关于字体颜色 -->
+    <color name="green_light">#32B9AA</color>
+    
+    
 </resources>

@@ -33,34 +33,31 @@
         android:id="@+id/iv_app_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:maxWidth="80dp"
-        android:maxHeight="80dp"
+        android:maxWidth="100dp"
+        android:maxHeight="100dp"
         android:adjustViewBounds="true"
         android:src="@drawable/ic_launcher" 
         android:layout_marginTop="90dp"
         android:layout_centerHorizontal="true"/>
     
-    <TextView 
-        android:id="@+id/tv_app_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/iv_app_logo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:text="@string/app_name"
-        android:textSize="13sp"
-        android:textStyle="bold"/>
+    <RelativeLayout 
+        android:id="@+id/rl_v"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
     
-    <TextView 
-        android:id="@+id/tv_app_version"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_app_name"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:text="@string/app_version"
-        android:textSize="16sp"
-        android:textColor="@color/gray_alpha" />
+	    <TextView 
+	        android:id="@+id/tv_app_version"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="5dp"
+	        android:text="@string/app_version"
+	        android:textColor="@color/green_light" />
+        
+    </RelativeLayout>
+    
+    
     
     <TextView 
         android:id="@+id/tv_app_copyright"
@@ -72,15 +69,34 @@
         android:text="@string/app_copyright"
         android:textColor="@color/gray_alpha" />
     
-    <TextView 
-        android:id="@+id/tv_app_checkupdata"
-        android:layout_width="wrap_content"
+    
+    <RelativeLayout 
+        android:id="@+id/rl_updata"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
 		android:layout_above="@id/tv_app_copyright"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:textStyle="bold"
-        android:text="@string/app_checkupdata" />
+		android:layout_marginBottom="10dp" >
+        <TextView 
+	        android:id="@+id/tv_app_checkupdata"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        android:textColor="@color/green_light"
+	        android:text="@string/app_checkupdata" />
+        
+        <TextView 
+	        android:id="@+id/tv_app_org"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/tv_app_checkupdata"
+	        android:gravity="center"
+	        android:textColor="@color/green_light"
+	        android:text="@string/about_app_org" />
+        
+    </RelativeLayout>
+    
+    
+  
     
 
 </RelativeLayout>

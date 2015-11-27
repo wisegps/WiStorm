@@ -9,13 +9,14 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class WAboutApp extends Activity {
 	
 	private ImageView ivBack;
-	private TextView  tvUpdataCheck;
+	private RelativeLayout rl_updata;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +24,11 @@ public class WAboutApp extends Activity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.ws_about_app);
 		ivBack = (ImageView)findViewById(R.id.iv_back);
-		tvUpdataCheck = (TextView)findViewById(R.id.tv_app_checkupdata);
 		ivBack.setOnClickListener(onClickListener);
-		tvUpdataCheck.setOnClickListener(onClickListener);
-		tvUpdataCheck.getPaint().setFlags(Paint. UNDERLINE_TEXT_FLAG ); //下划线
-		tvUpdataCheck.getPaint().setAntiAlias(true);//抗锯齿
+		rl_updata = (RelativeLayout)findViewById(R.id.rl_updata);
+		rl_updata.setOnClickListener(onClickListener);
+//		tvUpdataCheck.getPaint().setFlags(Paint. UNDERLINE_TEXT_FLAG ); //下划线
+//		tvUpdataCheck.getPaint().setAntiAlias(true);//抗锯齿
 	}
 	
 	/**
@@ -40,7 +41,7 @@ public class WAboutApp extends Activity {
 			if(v.getId() == R.id.iv_back){
 				WAboutApp.this.finish();
 			}
-			if(v.getId() == R.id.tv_app_checkupdata){
+			if(v.getId() == R.id.rl_updata){
 				Toast.makeText(WAboutApp.this, getResources().getString(R.string.app_checkupdata), Toast.LENGTH_SHORT).show();
 			}
 		}
@@ -60,17 +61,17 @@ public class WAboutApp extends Activity {
 	/**
 	 * @param resId 资源文件id（设置app的名字）
 	 */
-	public void setAppName(int resId){
-		TextView tv_app_name = (TextView) findViewById(R.id.tv_app_name);
-		tv_app_name.setText(resId);
+	public void setAppOrg(int resId){
+		TextView tv_app_org = (TextView) findViewById(R.id.tv_app_org);
+		tv_app_org.setText(resId);
 	}
 	
 	/**
-	 * @param appName app的名字
+	 * @param appOrg app的名字
 	 */
-	public void setAppName(String appName){
-		TextView tv_app_name = (TextView) findViewById(R.id.tv_app_name);
-		tv_app_name.setText(appName);
+	public void setAppName(String appOrg){
+		TextView tv_app_org = (TextView) findViewById(R.id.tv_app_org);
+		tv_app_org.setText(appOrg);
 	}
 
 	
@@ -84,7 +85,7 @@ public class WAboutApp extends Activity {
 	}
 	
 	/**
-	 * @param appName app的版本
+	 * @param appVersion app的版本
 	 */
 	public void setAppVersion(String appVersion){
 		TextView tv_app_version = (TextView) findViewById(R.id.tv_app_version);
@@ -101,7 +102,7 @@ public class WAboutApp extends Activity {
 	}
 	
 	/**
-	 * @param appName app的版权
+	 * @param appCopyright app的版权
 	 */
 	public void setAppCopyright(String appCopyright){
 		TextView tv_app_copyright = (TextView) findViewById(R.id.tv_app_copyright);

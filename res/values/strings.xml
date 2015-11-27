@@ -46,12 +46,12 @@
 	<string name="car_type_title">选择车款</string>
 	
 	
-	
+	<!-- 关于 -->
 	<string name="app_version">V 1.0.0</string>
     <string name="app_checkupdata">检查版本更新</string>
 	<string name="about_app">关于</string>
 	<string name="app_copyright">Copyright @ 2015-2016 Wistorm</string>
-	
+	<string name="about_app_org">http://www.bibibaba.cn</string>
 	
   	
 	<string-array name="all_citys">
