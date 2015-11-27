@@ -10,7 +10,9 @@ import android.util.TypedValue;
  * 随机选择颜色 在饼图中运用
  */
 public abstract class ColorUtils {
-
+     
+	
+//	test
 	public static final int POW10[] = { 1, 10, 100, 1000, 10000, 100000, 1000000 };
 	public static final int DEFAULT_COLOR = Color.parseColor("#DFDFDF");
 	public static final int DEFAULT_DARKEN_COLOR = Color.parseColor("#DDDDDD");
