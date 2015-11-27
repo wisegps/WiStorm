@@ -12,7 +12,7 @@ import android.util.TypedValue;
 public abstract class ColorUtils {
      
 	
-//	fdkalsfkldsjfklasd
+//	fdkalsfkldsjfklasdfadsdasdsa sda dsaf sdf asd
 	public static final int POW10[] = { 1, 10, 100, 1000, 10000, 100000, 1000000 };
 	public static final int DEFAULT_COLOR = Color.parseColor("#DFDFDF");
 	public static final int DEFAULT_DARKEN_COLOR = Color.parseColor("#DDDDDD");
