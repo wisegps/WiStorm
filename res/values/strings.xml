@@ -44,6 +44,15 @@
 	<string name="car_brand_title">汽车品牌</string>
 	<string name="car_series_title">选择车型</string>
 	<string name="car_type_title">选择车款</string>
+	
+	
+	
+	<string name="app_version">V 1.0.0</string>
+    <string name="app_checkupdata">检查版本更新</string>
+	<string name="about_app">关于</string>
+	<string name="app_copyright">Copyright @ 2015-2016 Wistorm</string>
+	
+	
   	
 	<string-array name="all_citys">
         <item>北京</item>

@@ -96,6 +96,8 @@ public class WCarBrandSelector extends Activity implements OnClickListener, Text
 		setContentView(R.layout.ws_brand_selector);
 		initView();
 		startProgressDialog();//加载弹框
+		
+		Log.e(TAG, "---------"+VehicleLogoPath);
 	}
 	
 	
