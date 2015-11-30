@@ -24,6 +24,8 @@ public class WDateSelector {
 	private Context mContext;
 	private int mYear, mMonthOfYear, mDayOfMonth;
 	
+	private OnDateChangedListener mOnDateChangedListener;
+	
 	public WDateSelector(Context context){		
 		mContext = context; 
 		// get current date
@@ -31,6 +33,7 @@ public class WDateSelector {
         mYear = c.get(Calendar.YEAR);  
         mMonthOfYear = c.get(Calendar.MONTH);  
         mDayOfMonth = c.get(Calendar.DAY_OF_MONTH);  
+        
 	}
 	  
 
@@ -41,7 +44,7 @@ public class WDateSelector {
 	 * @param editText
 	 * @param button
 	 */
-	public void setDate(final TextView textView,final EditText editText,final Button button){
+	public void setDate(){
 		  
 		DatePickerDialog datePickerDialog = new DatePickerDialog(mContext, 
 			new OnDateSetListener() {     
@@ -51,26 +54,35 @@ public class WDateSelector {
 			setmYear(year);
 			setmMonthOfYear(monthOfYear + 1);
 			setmDayOfMonth(dayOfMonth);
-			
-			if(textView != null){
-				textView.setText(getmYear() + "-"
-				+ getmMonthOfYear() 		+ "-"
-				+ getmDayOfMonth() );
-			}
-			if(editText != null){
-				editText.setText(getmYear() + "-"
-				+ getmMonthOfYear() 		+ "-"
-				+ getmDayOfMonth());
-			}
-			if(button !=null){
-				button.setText(getmYear()   + "-"
-				+ getmMonthOfYear() 		+ "-"
-				+ getmDayOfMonth());
-			}
+			onDateChanged();//监听日期变化
+	
 		}},mYear, mMonthOfYear, mDayOfMonth);
 		datePickerDialog.setTitle(R.string.set_Date);
 		datePickerDialog.show();
 	}
+
+	 /*
+     *接口回调 参数是当前的View
+     */
+    public interface OnDateChangedListener {
+        void onDateChanged(String year,String month,String day);
+    }
+    /*
+     *对外的公开方法 
+     */
+    public void setOnDateChangedListener(OnDateChangedListener callback){
+        mOnDateChangedListener = callback;
+    }
+     
+    /**
+     *  numberPicker 变化时候监听函数
+     */
+    private void onDateChanged() {
+        if (mOnDateChangedListener != null) {
+            mOnDateChangedListener.onDateChanged(
+            		String.valueOf(getmYear()),String.valueOf(getmMonthOfYear()),String.valueOf(getmDayOfMonth()));
+        }
+    }
 
 	
 	public int getmYear() {

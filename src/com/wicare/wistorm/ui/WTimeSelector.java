@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 
 import com.wicare.wistorm.R;
+import com.wicare.wistorm.ui.WDateSelector.OnDateChangedListener;
 
 
 /**
@@ -23,7 +24,7 @@ public class WTimeSelector {
 
 	private Context mContext;
 	private int mHour,mMinute;
-	
+	private OnTimeChangedListener mOnTimeChangedListener;
 	public WTimeSelector(Context context){
 		
 		mContext = context;
@@ -37,7 +38,7 @@ public class WTimeSelector {
 	 * @param tv 
 	 * @param ed
 	 */
-	public void setTime(final TextView textView,final EditText editText,final Button button){
+	public void setTime(){
 		
 		TimePickerDialog timePickerDialog = new TimePickerDialog(mContext, 
 				new OnTimeSetListener() {						   
@@ -47,20 +48,39 @@ public class WTimeSelector {
 				// TODO Auto-generated method stub
 		    	setmHour(hourOfDay);
 		    	setmMinute(minute);
-		    	if(textView!=null){
-		    		textView.setText(getmHour() + ":" + getmMinute());		
-		    	}
-		    	if(editText!=null){
-		    		editText.setText(getmHour() + ":" + getmMinute());
-		    	}
-		    	if(button !=null){
-		    		button.setText(getmHour() + ":" + getmMinute());
-				}
+		    	onDateChanged();//监听时间变化
 			}
 		},mHour, mMinute, true);
 		timePickerDialog.setTitle(R.string.set_time);
 		timePickerDialog.show();
 	}
+	
+	
+	 /*
+     *接口回调 参数是当前的View
+     */
+    public interface OnTimeChangedListener {
+        void onTimeChanged(String hour,String minute);
+    }
+    /*
+     *对外的公开方法 
+     */
+    public void setOnTimeChangedListener(OnTimeChangedListener callback){
+        mOnTimeChangedListener = callback;
+    }
+     
+    /**
+     *  numberPicker 变化时候监听函数
+     */
+    private void onDateChanged() {
+        if (mOnTimeChangedListener != null) {
+            mOnTimeChangedListener.onTimeChanged(
+            		String.valueOf(getmHour()),String.valueOf(getmMinute()));
+        }
+    }
+
+	
+	
 
 	private int getmHour() {
 		return mHour;
