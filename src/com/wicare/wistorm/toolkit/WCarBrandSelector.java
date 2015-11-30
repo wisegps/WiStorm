@@ -1,4 +1,4 @@
-package com.wicare.wistorm.ui;
+package com.wicare.wistorm.toolkit;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -19,6 +19,11 @@ import org.json.JSONObject;
 import com.wicare.wistorm.R;
 import com.wicare.wistorm.http.HttpThread;
 import com.wicare.wistorm.model.CarBrandData;
+import com.wicare.wistorm.ui.WCarBrandAdapter;
+import com.wicare.wistorm.ui.WCarSelectorSideBar;
+import com.wicare.wistorm.ui.WInputField;
+import com.wicare.wistorm.ui.WLoading;
+import com.wicare.wistorm.ui.WPingYinUtil;
 import com.wicare.wistorm.ui.WCarSelectorSideBar.OnTouchingLetterChangedListener;
 
 import android.annotation.SuppressLint;

@@ -1,4 +1,4 @@
-package com.wicare.wistorm.ui;
+package com.wicare.wistorm.toolkit;
 
 import java.io.IOException;
 import java.util.Hashtable;

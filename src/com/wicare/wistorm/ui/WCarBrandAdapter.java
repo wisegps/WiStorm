@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.wicare.wistorm.R;
 import com.wicare.wistorm.model.CarBrandData; 
+import com.wicare.wistorm.toolkit.WCarBrandSelector;
 
 import android.content.Context;
 import android.graphics.Bitmap;

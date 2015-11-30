@@ -21,7 +21,7 @@ import java.util.Vector;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.Result;
 import com.wicare.wistorm.R;
-import com.wicare.wistorm.ui.WZxingActivity;
+import com.wicare.wistorm.toolkit.WZxingActivity;
 
 import android.app.Activity;
 import android.content.Intent;

@@ -1,4 +1,4 @@
-package com.wicare.wistorm.ui;
+package com.wicare.wistorm.toolkit;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,6 +12,9 @@ import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
 import com.wicare.wistorm.R;
+import com.wicare.wistorm.ui.WCity;
+import com.wicare.wistorm.ui.WLetterSideBar;
+import com.wicare.wistorm.ui.WPingYinUtil;
 import com.wicare.wistorm.ui.WLetterSideBar.OnTouchingLetterChangedListener;
 
 import android.annotation.SuppressLint;
