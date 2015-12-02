@@ -37,4 +37,13 @@
 	  	<item name="android:windowExitAnimation">@anim/ws_menu_bottom_out</item> 
 	</style>
 
+	<!-- 标题返回按钮样式 -->
+    <style name="title_back_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:src">@drawable/ws_nav_back</item>
+    </style>
+    
 </resources>

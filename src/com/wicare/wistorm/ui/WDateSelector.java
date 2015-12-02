@@ -23,7 +23,14 @@ public class WDateSelector {
 
 	private Context mContext;
 	private int mYear, mMonthOfYear, mDayOfMonth;
+	private String strYear,strMonthOfYear,strDayOfMonth;
 	
+
+
+	public void setStrDayOfMonth(String strDayOfMonth) {
+		this.strDayOfMonth = strDayOfMonth;
+	}
+
 	private OnDateChangedListener mOnDateChangedListener;
 	
 	public WDateSelector(Context context){		
@@ -51,9 +58,24 @@ public class WDateSelector {
 		@SuppressLint("ShowToast") @Override
 		public void onDateSet(DatePicker view, int year,int monthOfYear, int dayOfMonth) {
 				// TODO Auto-generated method stub	
-			setmYear(year);
-			setmMonthOfYear(monthOfYear + 1);
-			setmDayOfMonth(dayOfMonth);
+			
+			if(year <10){
+				setStrYear("0" + year);
+			}else{
+				setStrYear("" + year);
+			}
+			int month = monthOfYear + 1;
+			if(month <10){
+				setStrMonthOfYear("0" + month);
+			}else{
+				setStrMonthOfYear("" + month);
+			}
+			if(dayOfMonth <10){
+				setStrDayOfMonth("0" + dayOfMonth);
+			}else{
+				setStrDayOfMonth("" + dayOfMonth);
+			}
+
 			onDateChanged();//监听日期变化
 	
 		}},mYear, mMonthOfYear, mDayOfMonth);
@@ -80,33 +102,32 @@ public class WDateSelector {
     private void onDateChanged() {
         if (mOnDateChangedListener != null) {
             mOnDateChangedListener.onDateChanged(
-            		String.valueOf(getmYear()),String.valueOf(getmMonthOfYear()),String.valueOf(getmDayOfMonth()));
+            		getStrYear(),getStrMonthOfYear(),getStrDayOfMonth());
         }
     }
 
-	
-	public int getmYear() {
-		return mYear;
+    public String getStrYear() {
+		return strYear;
 	}
 
-	public void setmYear(int mYear) {
-		this.mYear = mYear;
+
+	public void setStrYear(String strYear) {
+		this.strYear = strYear;
 	}
 
-	public int getmMonthOfYear() {
-		return mMonthOfYear;
+
+	public String getStrMonthOfYear() {
+		return strMonthOfYear;
 	}
 
-	public void setmMonthOfYear(int mMonthOfYear) {
-		this.mMonthOfYear = mMonthOfYear;
+
+	public void setStrMonthOfYear(String strMonthOfYear) {
+		this.strMonthOfYear = strMonthOfYear;
 	}
 
-	public int getmDayOfMonth() {
-		return mDayOfMonth;
-	}
 
-	public void setmDayOfMonth(int mDayOfMonth) {
-		this.mDayOfMonth = mDayOfMonth;
+	public String getStrDayOfMonth() {
+		return strDayOfMonth;
 	}
 
 }

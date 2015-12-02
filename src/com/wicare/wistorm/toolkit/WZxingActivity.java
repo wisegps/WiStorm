@@ -63,7 +63,7 @@ public class WZxingActivity extends Activity implements Callback {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.camera);
+		setContentView(R.layout.ws_camera);
 		WZxingCameraManager.init(getApplication());
 		wZxingViewfinderView = (WZxingViewfinderView) findViewById(R.id.viewfinder_view);
 		hasSurface = false;

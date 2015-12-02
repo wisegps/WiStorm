@@ -5,13 +5,9 @@ import java.util.Calendar;
 import android.app.TimePickerDialog;
 import android.app.TimePickerDialog.OnTimeSetListener;
 import android.content.Context;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.TimePicker;
 
 import com.wicare.wistorm.R;
-import com.wicare.wistorm.ui.WDateSelector.OnDateChangedListener;
 
 
 /**
@@ -24,6 +20,11 @@ public class WTimeSelector {
 
 	private Context mContext;
 	private int mHour,mMinute;
+	
+	private String strHour,strMinute;
+	
+	
+
 	private OnTimeChangedListener mOnTimeChangedListener;
 	public WTimeSelector(Context context){
 		
@@ -45,9 +46,17 @@ public class WTimeSelector {
 		    @Override
 			public void onTimeSet(TimePicker view,
 					int hourOfDay, int minute) {
-				// TODO Auto-generated method stub
-		    	setmHour(hourOfDay);
-		    	setmMinute(minute);
+				
+		    	if(hourOfDay<10){
+		    		setStrHour("0" + hourOfDay);
+		    	}else{
+		    		setStrHour("" + hourOfDay);
+		    	}
+		    	if(minute<10){
+		    		setStrMinute("0" + minute);
+		    	}else{
+		    		setStrMinute("" + minute);
+		    	}
 		    	onDateChanged();//监听时间变化
 			}
 		},mHour, mMinute, true);
@@ -74,27 +83,23 @@ public class WTimeSelector {
      */
     private void onDateChanged() {
         if (mOnTimeChangedListener != null) {
-            mOnTimeChangedListener.onTimeChanged(
-            		String.valueOf(getmHour()),String.valueOf(getmMinute()));
+            mOnTimeChangedListener.onTimeChanged(getStrHour(),getStrMinute());
         }
     }
 
-	
-	
-
-	private int getmHour() {
-		return mHour;
+    public String getStrHour() {
+		return strHour;
 	}
 
-	private void setmHour(int mHour) {
-		this.mHour = mHour;
+	public void setStrHour(String strHour) {
+		this.strHour = strHour;
 	}
 
-	private int getmMinute() {
-		return mMinute;
+	public String getStrMinute() {
+		return strMinute;
 	}
 
-	private void setmMinute(int mMinute) {
-		this.mMinute = mMinute;
+	public void setStrMinute(String strMinute) {
+		this.strMinute = strMinute;
 	}
 }

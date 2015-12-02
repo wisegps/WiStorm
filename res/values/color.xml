@@ -39,5 +39,14 @@
     <!-- 关于字体颜色 -->
     <color name="green_light">#32B9AA</color>
     
+    <!-- 导航条背景色 -->
+    <color name="title_back">#50B7DE</color>
+    <!-- 灰色背景 -->
+    <color name="gray_bg">#F4F6F6</color>
+    <!-- 分割线 -->
+    <color name="line">#D2DADE</color>
+    <color name="gray">#d8d9e1</color>
+    
+    
     
 </resources>

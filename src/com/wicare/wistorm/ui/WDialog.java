@@ -38,6 +38,8 @@ public class WDialog extends Dialog{
 	} 
 	
 	
+	
+	
 	 /**
 	 * 所有的方法执行完都会返回一个Builder
 	 * 使得后面可以直接create和show 
@@ -230,16 +232,11 @@ public class WDialog extends Dialog{
             // 设置内容  
             if (message != null) {  
                 ((TextView) layout.findViewById(R.id.message)).setText(message);  
-            } else if (contentView != null) {  
-                // if no message set  
-                // 添加view  
-                ((LinearLayout) layout.findViewById(R.id.message))  
-                        .removeAllViews();  
-                ((LinearLayout) layout.findViewById(R.id.message)).addView(  
-                        contentView, new LayoutParams(  
-                                LayoutParams.WRAP_CONTENT,  
-                                LayoutParams.WRAP_CONTENT));  
-            }  
+            }else{
+            	 // 如果没有取消按钮就将其隐藏  
+                layout.findViewById(R.id.message).setVisibility(  
+                        View.GONE); 
+            }
             dialog.setContentView(layout);  
             return dialog;  
         }  

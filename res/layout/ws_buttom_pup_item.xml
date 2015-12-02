@@ -3,13 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/ws_bg_white_shade"
     android:orientation="horizontal" >
-    
-    <ListView 
-        android:id="@+id/lv_pop"
+    <Button 
+        android:id="@+id/bt_item_pop"        
+        android:layout_margin="@dimen/margins"
+        android:padding="@dimen/margins"
+        android:background="@drawable/ws_bg_adress"             
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:divider="@null" ></ListView>
-    
+        android:layout_height="wrap_content"/>
 </LinearLayout>

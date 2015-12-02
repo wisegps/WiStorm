@@ -1,71 +1,108 @@
 package com.wicare.wistorm.ui;
 
+import java.util.List;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
-import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.BitmapDrawable;
+import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.View.OnClickListener;
-import android.view.View.OnTouchListener;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.PopupWindow;
 
 import com.wicare.wistorm.R;
 
+/**
+ * @author Wu
+ * 底部弹窗
+ */
 public class WBottomPopupWindow extends PopupWindow {
+	private Context mContext;
+	ListView lv_pop;
+	OnItemClickListener onItemClickListener;
+	PopupWindow mPopupWindow;
 	
-	private Button btnSave;
-	private Button btnExit;
-	private Button btnCancel;
-	private View mMenuView;
+	public WBottomPopupWindow(Context context){
+		mContext = context;
+	}
+	public void initView(View v){
+		LayoutInflater mLayoutInflater = LayoutInflater.from(mContext);
+        View popunwindwow = mLayoutInflater.inflate(R.layout.ws_buttom_popupwindow,null);
+        mPopupWindow = new PopupWindow(popunwindwow, LayoutParams.FILL_PARENT,
+                LayoutParams.WRAP_CONTENT);
+        //mPopupWindow.setAnimationStyle(R.style.PopupAnimation);
+        mPopupWindow.setAnimationStyle(R.style.ws_anim_menu_bottom_bar);
+        mPopupWindow.setBackgroundDrawable(new BitmapDrawable());
+        mPopupWindow.setFocusable(true);
+        mPopupWindow.setOutsideTouchable(true);
+        mPopupWindow.showAtLocation(v, Gravity.BOTTOM, 0, 0);
+        lv_pop = (ListView)popunwindwow.findViewById(R.id.lv_pop);
+	}
 	
-	@SuppressLint({ "InflateParams", "ClickableViewAccessibility" }) 
-	public WBottomPopupWindow(Context context,OnClickListener itemsOnClickListener){
-		super(context);
-		
-		LayoutInflater inflater = (LayoutInflater)context
-				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		mMenuView = inflater.inflate(R.layout.ws_buttom_popupwindow, null);
-		btnSave =   (Button) mMenuView.findViewById(R.id.btn_save);
-		btnExit =   (Button) mMenuView.findViewById(R.id.btn_exit);
-		btnCancel = (Button) mMenuView.findViewById(R.id.btn_cancel);
-		
-		btnSave .setOnClickListener(itemsOnClickListener);
-		btnExit .setOnClickListener(itemsOnClickListener);
-		btnCancel .setOnClickListener(itemsOnClickListener);
-		
-		//设置SelectPicPopupWindow的View  
-        this.setContentView(mMenuView);  
-        //设置SelectPicPopupWindow弹出窗体的宽  
-        this.setWidth(LayoutParams.MATCH_PARENT);  
-        //设置SelectPicPopupWindow弹出窗体的高  
-        this.setHeight(LayoutParams.WRAP_CONTENT);  
-        //设置SelectPicPopupWindow弹出窗体可点击  
-        this.setFocusable(true);  
-        //设置SelectPicPopupWindow弹出窗体动画效果  
-        this.setAnimationStyle(R.style.ws_anim_menu_bottom_bar);//下到上
-        //实例化一个ColorDrawable颜色为全透明  
-        ColorDrawable dw = new ColorDrawable(0xffffffff);  
-        //设置SelectPicPopupWindow弹出窗体的背景  
-        this.setBackgroundDrawable(dw);  
-        
-        //mMenuView添加OnTouchListener监听判断获取触屏位置如果在选择框外面则销毁弹出框 
-        mMenuView.setOnTouchListener(new OnTouchListener() {    
-	        public boolean onTouch(View v, MotionEvent event) {   
-	            int height = mMenuView.findViewById(R.id.pop_layout).getTop();  
-	            int y=(int) event.getY();  
-	            if(event.getAction()==MotionEvent.ACTION_UP){  
-	                if(y<height){  
-	                    dismiss();  
-	                }  
-	            }                 
-	            return true;  
-	        }  
-	    });  
-	}	
+	public void dismiss(){
+        mPopupWindow.dismiss();
+	}
 	
-
+	public void setData(List<String> items){
+		lv_pop.setAdapter(new ItemAdapter(items));
+	}
+	
+	public interface OnItemClickListener{
+		public abstract void OnItemClick(int index);
+	}
+	
+	public void SetOnItemClickListener(OnItemClickListener onItemClickListener){
+		this.onItemClickListener = onItemClickListener;
+	}
+	
+	class ItemAdapter extends BaseAdapter{
+		private LayoutInflater layoutInflater;
+		List<String> datas;
+		public ItemAdapter(List<String> items){
+			layoutInflater = LayoutInflater.from(mContext);
+			datas = items;
+		}
+		@Override
+		public int getCount() {
+			return datas.size();
+		}
+		@Override
+		public Object getItem(int position) {
+			return datas.get(position);
+		}
+		@Override
+		public long getItemId(int position) {
+			return position;
+		}
+		@Override
+		public View getView(final int position, View convertView, ViewGroup parent) {
+			ViewHolder holder = null;
+			if(convertView == null){
+				convertView = layoutInflater.inflate(R.layout.ws_buttom_pup_item, null);
+	            holder = new ViewHolder();
+	            holder.bt_item_pop = (Button) convertView.findViewById(R.id.bt_item_pop);
+	            convertView.setTag(holder);
+			}else{
+				holder = (ViewHolder) convertView.getTag();
+			}
+			holder.bt_item_pop.setText(datas.get(position));
+			holder.bt_item_pop.setOnClickListener(new OnClickListener() {				
+				@Override
+				public void onClick(View v) {
+					if(onItemClickListener != null){
+						onItemClickListener.OnItemClick(position);
+					}
+				}
+			});
+			return convertView;
+		}
+		private class ViewHolder {
+	        Button bt_item_pop;
+	    }
+	}
 }
