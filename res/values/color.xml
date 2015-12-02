@@ -46,6 +46,8 @@
     <!-- 分割线 -->
     <color name="line">#D2DADE</color>
     <color name="gray">#d8d9e1</color>
+     <!-- 首页所有卡片的背景 -->
+    <color name="cards_bg">#eeedeb</color>
     
     
     
