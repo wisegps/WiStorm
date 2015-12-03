@@ -1,4 +1,4 @@
-package com.wicare.wistorm.ui;
+package com.wicare.wistorm.toolkit;
 
 import com.wicare.wistorm.R;
 
