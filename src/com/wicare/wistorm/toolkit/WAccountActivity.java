@@ -1,7 +1,11 @@
 package com.wicare.wistorm.toolkit;
 
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.http.NameValuePair;
@@ -16,6 +20,7 @@ import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.Volley;
 import com.wicare.wistorm.R;
 import com.wicare.wistorm.http.HttpThread;
+import com.wicare.wistorm.toolkit.WUploadUtil.OnUploadProcessListener;
 import com.wicare.wistorm.ui.WBottomPopupWindow;
 import com.wicare.wistorm.ui.WBottomPopupWindow.OnItemClickListener;
 import com.wicare.wistorm.ui.WDateSelector;
@@ -25,8 +30,11 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Bitmap.Config;
@@ -37,28 +45,33 @@ import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class AccountActivity extends Activity {
+/**
+ * @author Wu
+ * 帐号信息以及修改
+ */
+public class WAccountActivity extends Activity implements OnUploadProcessListener {
 	
-	static final String TAG = "AccountActivity";
+	static final String TAG = "WAccountActivity";
 	
-	String accountUrl = "http://api.bibibaba.cn/customer/178?auth_code=127a154df2d7850c4232542b4faa2c3d";
-	private static final int UPDATA_ACCOUNT  = 1;
+	static final String accountUrl = WConfig.BaseUrl 
+			+ "customer/" 
+			+ WConfig.CustomerId + "?"
+			+ "auth_code=" 
+			+ WConfig.AuthCode;
 	
-	private static final int GET_ACCOUNT_MSG = 2;
-	
-	
+	static final int UPDATA_ACCOUNT  = 1;
+	static final int GET_ACCOUNT_MSG = 2;
 	private TextView tv_phone, tv_name, tv_email, tv_sex, tv_birth;
-	private ImageView iv_pic;
+	private ImageView iv_pic;//头像
 	private RequestQueue mQueue;
-	private String birth;
+	private String birth;//生日
 	
 	
 	@Override
@@ -97,18 +110,23 @@ public class AccountActivity extends Activity {
 			if(v.getId() == R.id.tv_name){
 	
 				String name = tv_name.getText().toString().trim();
-				Intent intent2 = new Intent(AccountActivity.this, WNameChangeActivity.class);
+				Intent intent2 = new Intent(WAccountActivity.this, WNameChangeActivity.class);
 				intent2.putExtra("name", name);
 				startActivityForResult(intent2, 1);
 		       
 			}
-			if(v.getId() == R.id.tv_sex){
-				AlertDialog.Builder builder = new AlertDialog.Builder(AccountActivity.this);
+			if(v.getId() == R.id.tv_sex){//修改性别
+				AlertDialog.Builder builder = new AlertDialog.Builder(WAccountActivity.this);
                 builder.setTitle(getResources().getString(R.string.sex_title));
                 builder.setSingleChoiceItems(sexItems,0,new DialogInterface.OnClickListener() {  
                     @Override  
                     public void onClick(DialogInterface dialog, int which) {  
-                    	String url = "http://api.bibibaba.cn/customer/178?/field?auth_code=127a154df2d7850c4232542b4faa2c3d";
+                    	
+                    	String url = WConfig.BaseUrl 
+                    			+ "customer/" + WConfig.CustomerId  
+                    			+ "/field?" 
+                    			+ "auth_code=" + WConfig.AuthCode;
+                    	
                     	List<NameValuePair> params = new ArrayList<NameValuePair>();
         				params.add(new BasicNameValuePair("field_name", "sex"));
         				params.add(new BasicNameValuePair("field_type", "Number"));
@@ -130,26 +148,35 @@ public class AccountActivity extends Activity {
                 builder.show();
 			}
 			if(v.getId() == R.id.tv_update_pwd){
-				
+				startActivity(new Intent(WAccountActivity.this, WUpdatePwdActivity.class));
 			}
-			if(v.getId() == R.id.tv_phone){
-				
+			if(v.getId() == R.id.tv_phone){//修改手机号
+				Intent intent = new Intent(WAccountActivity.this, WChangeEmailPhoneActivity.class);
+				intent.putExtra("mark", 3);
+				intent.putExtra("phone", tv_phone.getText().toString().trim());
+				startActivityForResult(intent, 1);
 			}
-			if(v.getId() == R.id.tv_email){
-				
+			if(v.getId() == R.id.tv_email){//修改邮箱
+				Intent intent1 = new Intent(WAccountActivity.this, WChangeEmailPhoneActivity.class);
+				intent1.putExtra("mark", 4);
+				intent1.putExtra("email", tv_email.getText().toString().trim());
+				startActivityForResult(intent1, 1);
 			}
 			if(v.getId() == R.id.iv_pic){//更改头像
 				picPop();
 			}
 			if(v.getId() == R.id.tv_birth){//设置生日日期
-				WDateSelector dateSelector = new WDateSelector(AccountActivity.this);
+				WDateSelector dateSelector = new WDateSelector(WAccountActivity.this);
 				dateSelector.setDate();
 				dateSelector.setOnDateChangedListener(new OnDateChangedListener() {
 					
 					@Override
 					public void onDateChanged(String year, String month, String day) {
-					
-						String url = "http://api.bibibaba.cn/customer/178/field?auth_code=127a154df2d7850c4232542b4faa2c3d";
+						String url = WConfig.BaseUrl 
+								+ "customer/" 
+								+ WConfig.CustomerId 
+								+ "/field?" 
+								+ "auth_code=" + WConfig.AuthCode;
 						String Date = year + "-" + month + "-" + day;
 						List<NameValuePair> params = new ArrayList<NameValuePair>();
 						params.add(new BasicNameValuePair("field_name", "birth"));
@@ -178,7 +205,7 @@ public class AccountActivity extends Activity {
                 jsonCustomer(msg.obj.toString());
                 break;
             case UPDATA_ACCOUNT:
-            	updaAccount();
+            	updaAccount();//提交完重新更新ui
                 break;    
                 
             }
@@ -204,6 +231,17 @@ public class AccountActivity extends Activity {
 			tv_phone.setText(jsonObject.getString("mobile"));
 			tv_name.setText(jsonObject.getString("cust_name"));
 			tv_email.setText(jsonObject.getString("email"));
+			String password = jsonObject.getString("password");
+			
+			SharedPreferences preferences=getSharedPreferences(WConfig.USER_DATA,Context.MODE_PRIVATE);
+			Editor editor=preferences.edit();
+			editor.putString(WConfig.PASSWD, password);
+			editor.commit();
+			
+			
+			Log.e(TAG, password);
+			Log.e(TAG+"11111", SystemTools.getM5DEndo("123456"));
+			
 			if (jsonObject.getString("sex").equals("0")) {
 				tv_sex.setText("男");
 			} else {
@@ -211,7 +249,7 @@ public class AccountActivity extends Activity {
 			}
 			birth = jsonObject.getString("birth").substring(0, 10);
 			tv_birth.setText(birth);
-			String logo = jsonObject.getString("logo");
+			String logo = jsonObject.getString("logo");		
 			if (logo == null || logo.equals("")) {
 
 			} else {
@@ -275,12 +313,12 @@ public class AccountActivity extends Activity {
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
 		if (requestCode == 9 && resultCode == Activity.RESULT_OK) {
-			Uri uri = data.getData();
+			Uri uri = data.getData();//选取图片的路径
 			Log.e("uri", uri.toString());
 			ContentResolver cr = this.getContentResolver();
 			try {
 				Bitmap bitmap = BitmapFactory.decodeStream(cr.openInputStream(uri));
-//				UpdateBitmap(bitmap);
+				UpdateBitmap(bitmap);
 			} catch (FileNotFoundException e) {
 				Log.e("Exception", e.getMessage(), e);
 			}
@@ -293,10 +331,99 @@ public class AccountActivity extends Activity {
 			}
 			Bundle bundle = data.getExtras();
 			Bitmap bitmap = (Bitmap) bundle.get("data");// 获取相机返回的数据，并转换为Bitmap图片格式
-//			UpdateBitmap(bitmap);
+			UpdateBitmap(bitmap);
+		}else if(resultCode ==1){
+			tv_name.setText(data.getStringExtra("name"));
 		}
+		
+		
+		
+		
 	}
 
+	String fileName; //图片路径名字
+
+	/**
+	 * @param bitmap 
+	 */
+	private void UpdateBitmap(Bitmap bitmap) {
+		File filePath = new File(WConfig.userIconPath);
+		if (!filePath.exists()) {
+			filePath.mkdirs();
+		}
+		bitmap = WPicCompresses.scaleImage(bitmap, 200);
+		bitmap = WPicCompresses.getSquareBitmap(bitmap);
+		FileOutputStream b = null;
+		fileName = WConfig.userIconPath + WConfig.CustomerId + ".png";
+		try {
+			b = new FileOutputStream(fileName);
+			bitmap.compress(Bitmap.CompressFormat.JPEG, 100, b);// 把数据写入文件
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				b.flush();
+				b.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		iv_pic.setImageBitmap(bitmap);
+
+		String url = WConfig.BaseUrl 
+				+ "upload_image?" 
+				+ "auth_code="  + WConfig.AuthCode;
+		
+		WUploadUtil.getInstance().setOnUploadProcessListener(WAccountActivity.this);
+		WUploadUtil.getInstance().uploadFile(fileName, "image", url, new HashMap<String, String>());
+	}
+
+
+	/**
+	 * @param str
+	 */
+	private void jsonUpdatePic(String str) {
+		try {
+			JSONObject jsonObject = new JSONObject(str);
+			if (jsonObject.getString("status_code").equals("0")) {
+				String ImageUrl = jsonObject.getString("image_file_url");
+				
+				String url = WConfig.BaseUrl 
+						+ "customer/" + WConfig.CustomerId 
+						+ "/field?" 
+						+ "auth_code=" + WConfig.AuthCode;
+				
+				List<NameValuePair> params = new ArrayList<NameValuePair>();
+				params.add(new BasicNameValuePair("field_name", "logo"));
+				params.add(new BasicNameValuePair("field_type", "String"));
+				params.add(new BasicNameValuePair("field_value", ImageUrl));
+				
+				new HttpThread.putDataThread(mHandler, url, params, UPDATA_ACCOUNT).start();
+			}
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+	}
 	
+	@Override
+	public void onUploadDone(int responseCode, String message) {
+		// TODO Auto-generated method stub
+		if (responseCode == 1) {
+			jsonUpdatePic(message);
+		} else if (responseCode == 2) {
+			Toast.makeText(WAccountActivity.this, "文件不存在", Toast.LENGTH_SHORT).show();
+		} else if (responseCode == 3) {
+			Toast.makeText(WAccountActivity.this, "服务器接受失败", Toast.LENGTH_SHORT).show();
+		}
+	}
+	
+	@Override
+	public void onUploadProcess(int uploadSize) {
+	}
+
+
+	@Override
+	public void initUpload(int fileSize) {
+	}
 }	
 

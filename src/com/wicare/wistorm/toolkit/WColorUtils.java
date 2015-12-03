@@ -9,7 +9,7 @@ import android.util.TypedValue;
  * @author WU
  * 随机选择颜色 在饼图中运用
  */
-public abstract class ColorUtils {
+public abstract class WColorUtils {
      
 	
 	public static final int POW10[] = { 1, 10, 100, 1000, 10000, 100000, 1000000 };
@@ -222,7 +222,7 @@ public abstract class ColorUtils {
 		}
 
 		double rawInterval = range / steps;
-		double interval = ColorUtils.roundToOneSignificantFigure(rawInterval);
+		double interval = WColorUtils.roundToOneSignificantFigure(rawInterval);
 		double intervalMagnitude = Math.pow(10, (int) Math.log10(interval));
 		int intervalSigDigit = (int) (interval / intervalMagnitude);
 		if (intervalSigDigit > 5) {
@@ -231,7 +231,7 @@ public abstract class ColorUtils {
 		}
 
 		double first = Math.ceil(start / interval) * interval;
-		double last = ColorUtils.nextUp(Math.floor(stop / interval) * interval);
+		double last = WColorUtils.nextUp(Math.floor(stop / interval) * interval);
 
 		double intervalValue;
 		int valueIndex;

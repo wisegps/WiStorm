@@ -32,7 +32,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static int behindOffset=0x7f010003;
+        public static int behindOffset=0x7f010016;
         /** <p>Must be a floating point value, such as "<code>1.2</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -40,7 +40,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static int behindScrollScale=0x7f010005;
+        public static int behindScrollScale=0x7f010018;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -50,7 +50,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static int behindWidth=0x7f010004;
+        public static int behindWidth=0x7f010017;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -77,7 +77,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static int fadeDegree=0x7f01000b;
+        public static int fadeDegree=0x7f01001e;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -85,7 +85,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static int fadeEnabled=0x7f01000a;
+        public static int fadeEnabled=0x7f01001d;
         /** <p>Must be one of the following constant values.</p>
 <table>
 <colgroup align="left" />
@@ -96,7 +96,7 @@ containing a value of this type.
 <tr><td><code>right</code></td><td>1</td><td></td></tr>
 </table>
          */
-        public static int mode=0x7f010000;
+        public static int mode=0x7f010013;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -181,7 +181,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
-        public static int ptrAdapterViewBackground=0x7f01001e;
+        public static int ptrAdapterViewBackground=0x7f010010;
         /**  Style of Animation should be used displayed when pulling. 
          <p>Must be one or more (separated by '|') of the following constant values.</p>
 <table>
@@ -193,56 +193,56 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>flip</code></td><td>0x1</td><td></td></tr>
 </table>
          */
-        public static int ptrAnimationStyle=0x7f01001a;
+        public static int ptrAnimationStyle=0x7f01000c;
         /**  Drawable to use as Loading Indicator. Changes both Header and Footer. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static int ptrDrawable=0x7f010014;
+        public static int ptrDrawable=0x7f010006;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static int ptrDrawableBottom=0x7f010020;
+        public static int ptrDrawableBottom=0x7f010012;
         /**  Drawable to use as Loading Indicator in the Footer View. Overrides value set in ptrDrawable. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static int ptrDrawableEnd=0x7f010016;
+        public static int ptrDrawableEnd=0x7f010008;
         /**  Drawable to use as Loading Indicator in the Header View. Overrides value set in ptrDrawable. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static int ptrDrawableStart=0x7f010015;
+        public static int ptrDrawableStart=0x7f010007;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static int ptrDrawableTop=0x7f01001f;
+        public static int ptrDrawableTop=0x7f010011;
         /**  A drawable to use as the background of the Header and Footer Loading Views 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
-        public static int ptrHeaderBackground=0x7f01000f;
+        public static int ptrHeaderBackground=0x7f010001;
         /**  Text Color of the Header and Footer Loading Views Sub Header 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
-        public static int ptrHeaderSubTextColor=0x7f010011;
+        public static int ptrHeaderSubTextColor=0x7f010003;
         /**  Base text color, typeface, size, and style for Header and Footer Loading Views 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static int ptrHeaderTextAppearance=0x7f010018;
+        public static int ptrHeaderTextAppearance=0x7f01000a;
         /**  Text Color of the Header and Footer Loading Views 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
-        public static int ptrHeaderTextColor=0x7f010010;
+        public static int ptrHeaderTextColor=0x7f010002;
         /** 
         	Whether PullToRefreshListView has it's extras enabled. This allows the user to be 
         	able to scroll while refreshing, and behaves better. It acheives this by adding
@@ -252,7 +252,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
          */
-        public static int ptrListViewExtrasEnabled=0x7f01001c;
+        public static int ptrListViewExtrasEnabled=0x7f01000e;
         /**  Mode of Pull-to-Refresh that should be used 
          <p>Must be one or more (separated by '|') of the following constant values.</p>
 <table>
@@ -269,20 +269,20 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>pullUpFromBottom</code></td><td>0x2</td><td></td></tr>
 </table>
          */
-        public static int ptrMode=0x7f010012;
+        public static int ptrMode=0x7f010004;
         /**  Whether Android's built-in Over Scroll should be utilised for Pull-to-Refresh. 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
          */
-        public static int ptrOverScroll=0x7f010017;
+        public static int ptrOverScroll=0x7f010009;
         /**  A drawable to use as the background of the Refreshable View 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
-        public static int ptrRefreshableViewBackground=0x7f01000e;
+        public static int ptrRefreshableViewBackground=0x7f010000;
         /** 
         	Whether the Drawable should be continually rotated as you pull. This only
         	takes effect when using the 'Rotate' Animation Style.
@@ -291,28 +291,28 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
          */
-        public static int ptrRotateDrawableWhilePulling=0x7f01001d;
+        public static int ptrRotateDrawableWhilePulling=0x7f01000f;
         /**  Whether the user can scroll while the View is Refreshing 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
          */
-        public static int ptrScrollingWhileRefreshingEnabled=0x7f01001b;
+        public static int ptrScrollingWhileRefreshingEnabled=0x7f01000d;
         /**  Whether the Indicator overlay(s) should be used 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
          */
-        public static int ptrShowIndicator=0x7f010013;
+        public static int ptrShowIndicator=0x7f010005;
         /**  Base text color, typeface, size, and style for Header and Footer Loading Views Sub Header 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static int ptrSubHeaderTextAppearance=0x7f010019;
+        public static int ptrSubHeaderTextAppearance=0x7f01000b;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static int selectorDrawable=0x7f01000d;
+        public static int selectorDrawable=0x7f010020;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -320,11 +320,11 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static int selectorEnabled=0x7f01000c;
+        public static int selectorEnabled=0x7f01001f;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static int shadowDrawable=0x7f010008;
+        public static int shadowDrawable=0x7f01001b;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -334,7 +334,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static int shadowWidth=0x7f010009;
+        public static int shadowWidth=0x7f01001c;
         /** <p>Must be one of the following constant values.</p>
 <table>
 <colgroup align="left" />
@@ -343,10 +343,9 @@ containing a value of this type.
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
 <tr><td><code>margin</code></td><td>0</td><td></td></tr>
 <tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
-<tr><td><code>none</code></td><td>2</td><td></td></tr>
 </table>
          */
-        public static int touchModeAbove=0x7f010006;
+        public static int touchModeAbove=0x7f010019;
         /** <p>Must be one of the following constant values.</p>
 <table>
 <colgroup align="left" />
@@ -355,18 +354,17 @@ containing a value of this type.
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
 <tr><td><code>margin</code></td><td>0</td><td></td></tr>
 <tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
-<tr><td><code>none</code></td><td>2</td><td></td></tr>
 </table>
          */
-        public static int touchModeBehind=0x7f010007;
+        public static int touchModeBehind=0x7f01001a;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static int viewAbove=0x7f010001;
+        public static int viewAbove=0x7f010014;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static int viewBehind=0x7f010002;
+        public static int viewBehind=0x7f010015;
     }
     public static final class color {
         public static int balck_light=0x7f0a000d;
@@ -430,47 +428,47 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static int activity_horizontal_margin=0x7f070005;
-        public static int activity_vertical_margin=0x7f070006;
-        public static int big_number=0x7f070012;
-        public static int bigs_number=0x7f070011;
-        public static int bt=0x7f070009;
+        public static int activity_horizontal_margin=0x7f060005;
+        public static int activity_vertical_margin=0x7f060006;
+        public static int big_number=0x7f060012;
+        public static int bigs_number=0x7f060011;
+        public static int bt=0x7f060009;
         /**  内容文字大小 
          */
-        public static int content=0x7f070016;
+        public static int content=0x7f060016;
         /**  圆角 
          */
-        public static int corners=0x7f070010;
-        public static int double_margins=0x7f07000f;
+        public static int corners=0x7f060010;
+        public static int double_margins=0x7f06000f;
         /**  头部字体 
          */
-        public static int head=0x7f070013;
-        public static int header_footer_left_right_padding=0x7f070003;
-        public static int header_footer_top_bottom_padding=0x7f070004;
-        public static int image_width=0x7f07000e;
-        public static int indicator_corner_radius=0x7f070001;
-        public static int indicator_internal_padding=0x7f070002;
-        public static int indicator_right_padding=0x7f070000;
+        public static int head=0x7f060013;
+        public static int header_footer_left_right_padding=0x7f060003;
+        public static int header_footer_top_bottom_padding=0x7f060004;
+        public static int image_width=0x7f06000e;
+        public static int indicator_corner_radius=0x7f060001;
+        public static int indicator_internal_padding=0x7f060002;
+        public static int indicator_right_padding=0x7f060000;
         /**  辅助字体，按钮 
          */
-        public static int main=0x7f070015;
+        public static int main=0x7f060015;
         /**  内容边距 
          */
-        public static int margins=0x7f07000d;
-        public static int score_number=0x7f070018;
-        public static int slidingmenu_menu_margin_left=0x7f070008;
-        public static int slidingmenu_offset=0x7f070007;
-        public static int small=0x7f070017;
+        public static int margins=0x7f06000d;
+        public static int score_number=0x7f060018;
+        public static int slidingmenu_menu_margin_left=0x7f060008;
+        public static int slidingmenu_offset=0x7f060007;
+        public static int small=0x7f060017;
         /**  标题文字 
          */
-        public static int title=0x7f070014;
+        public static int title=0x7f060014;
         /**  头部高度 
          */
-        public static int title_hight=0x7f07000a;
+        public static int title_hight=0x7f06000a;
         /**  头部图片按钮大小 
          */
-        public static int title_image=0x7f07000b;
-        public static int title_width=0x7f07000c;
+        public static int title_image=0x7f06000b;
+        public static int title_width=0x7f06000c;
     }
     public static final class drawable {
         public static int bt_blue_press=0x7f020000;
@@ -483,421 +481,432 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int indicator_arrow=0x7f020007;
         public static int indicator_bg_bottom=0x7f020008;
         public static int indicator_bg_top=0x7f020009;
-        public static int richpush_btn_selector=0x7f02000a;
-        public static int ssdk_auth_title_back=0x7f02000b;
-        public static int ssdk_back_arr=0x7f02000c;
-        public static int ssdk_logo=0x7f02000d;
-        public static int ssdk_oks_auth_follow_cb_chd=0x7f02000e;
-        public static int ssdk_oks_auth_follow_cb_unc=0x7f02000f;
-        public static int ssdk_oks_auth_title_back=0x7f020010;
-        public static int ssdk_oks_blue_point=0x7f020011;
-        public static int ssdk_oks_btn_back_nor=0x7f020012;
-        public static int ssdk_oks_classic_platform_corners_bg=0x7f020013;
-        public static int ssdk_oks_edittext_back=0x7f020014;
-        public static int ssdk_oks_img_cancel=0x7f020015;
-        public static int ssdk_oks_light_blue_point=0x7f020016;
-        public static int ssdk_oks_logo_alipay=0x7f020017;
-        public static int ssdk_oks_logo_bluetooth=0x7f020018;
-        public static int ssdk_oks_logo_douban=0x7f020019;
-        public static int ssdk_oks_logo_dropbox=0x7f02001a;
-        public static int ssdk_oks_logo_email=0x7f02001b;
-        public static int ssdk_oks_logo_evernote=0x7f02001c;
-        public static int ssdk_oks_logo_facebook=0x7f02001d;
-        public static int ssdk_oks_logo_facebookmessenger=0x7f02001e;
-        public static int ssdk_oks_logo_flickr=0x7f02001f;
-        public static int ssdk_oks_logo_foursquare=0x7f020020;
-        public static int ssdk_oks_logo_googleplus=0x7f020021;
-        public static int ssdk_oks_logo_instagram=0x7f020022;
-        public static int ssdk_oks_logo_instapaper=0x7f020023;
-        public static int ssdk_oks_logo_kaixin=0x7f020024;
-        public static int ssdk_oks_logo_kakaostory=0x7f020025;
-        public static int ssdk_oks_logo_kakaotalk=0x7f020026;
-        public static int ssdk_oks_logo_laiwang=0x7f020027;
-        public static int ssdk_oks_logo_laiwangmoments=0x7f020028;
-        public static int ssdk_oks_logo_line=0x7f020029;
-        public static int ssdk_oks_logo_linkedin=0x7f02002a;
-        public static int ssdk_oks_logo_mingdao=0x7f02002b;
-        public static int ssdk_oks_logo_pinterest=0x7f02002c;
-        public static int ssdk_oks_logo_pocket=0x7f02002d;
-        public static int ssdk_oks_logo_qq=0x7f02002e;
-        public static int ssdk_oks_logo_qzone=0x7f02002f;
-        public static int ssdk_oks_logo_renren=0x7f020030;
-        public static int ssdk_oks_logo_shortmessage=0x7f020031;
-        public static int ssdk_oks_logo_sinaweibo=0x7f020032;
-        public static int ssdk_oks_logo_sohusuishenkan=0x7f020033;
-        public static int ssdk_oks_logo_tencentweibo=0x7f020034;
-        public static int ssdk_oks_logo_tumblr=0x7f020035;
-        public static int ssdk_oks_logo_twitter=0x7f020036;
-        public static int ssdk_oks_logo_vkontakte=0x7f020037;
-        public static int ssdk_oks_logo_wechat=0x7f020038;
-        public static int ssdk_oks_logo_wechatfavorite=0x7f020039;
-        public static int ssdk_oks_logo_wechatmoments=0x7f02003a;
-        public static int ssdk_oks_logo_whatsapp=0x7f02003b;
-        public static int ssdk_oks_logo_yixin=0x7f02003c;
-        public static int ssdk_oks_logo_yixinmoments=0x7f02003d;
-        public static int ssdk_oks_logo_youdao=0x7f02003e;
-        public static int ssdk_oks_pin=0x7f02003f;
-        public static int ssdk_oks_ptr_ptr=0x7f020040;
-        public static int ssdk_oks_shake_to_share_back=0x7f020041;
-        public static int ssdk_oks_skyblue_actionbar_back_btn=0x7f020042;
-        public static int ssdk_oks_skyblue_actionbar_ok_btn=0x7f020043;
-        public static int ssdk_oks_skyblue_editpage_bg=0x7f020044;
-        public static int ssdk_oks_skyblue_editpage_close=0x7f020045;
-        public static int ssdk_oks_skyblue_editpage_divider=0x7f020046;
-        public static int ssdk_oks_skyblue_editpage_image_bg=0x7f020047;
-        public static int ssdk_oks_skyblue_editpage_image_remove=0x7f020048;
-        public static int ssdk_oks_skyblue_logo_alipayshare=0x7f020049;
-        public static int ssdk_oks_skyblue_logo_alipayshare_checked=0x7f02004a;
-        public static int ssdk_oks_skyblue_logo_baidutieba=0x7f02004b;
-        public static int ssdk_oks_skyblue_logo_baidutieba_checked=0x7f02004c;
-        public static int ssdk_oks_skyblue_logo_bluetooth=0x7f02004d;
-        public static int ssdk_oks_skyblue_logo_bluetooth_checked=0x7f02004e;
-        public static int ssdk_oks_skyblue_logo_douban=0x7f02004f;
-        public static int ssdk_oks_skyblue_logo_douban_checked=0x7f020050;
-        public static int ssdk_oks_skyblue_logo_dropbox=0x7f020051;
-        public static int ssdk_oks_skyblue_logo_dropbox_checked=0x7f020052;
-        public static int ssdk_oks_skyblue_logo_email=0x7f020053;
-        public static int ssdk_oks_skyblue_logo_email_checked=0x7f020054;
-        public static int ssdk_oks_skyblue_logo_evernote=0x7f020055;
-        public static int ssdk_oks_skyblue_logo_evernote_checked=0x7f020056;
-        public static int ssdk_oks_skyblue_logo_facebook=0x7f020057;
-        public static int ssdk_oks_skyblue_logo_facebook_checked=0x7f020058;
-        public static int ssdk_oks_skyblue_logo_facebookmessenger=0x7f020059;
-        public static int ssdk_oks_skyblue_logo_facebookmessenger_checked=0x7f02005a;
-        public static int ssdk_oks_skyblue_logo_flickr=0x7f02005b;
-        public static int ssdk_oks_skyblue_logo_flickr_checked=0x7f02005c;
-        public static int ssdk_oks_skyblue_logo_foursquare=0x7f02005d;
-        public static int ssdk_oks_skyblue_logo_foursquare_checked=0x7f02005e;
-        public static int ssdk_oks_skyblue_logo_googleplus=0x7f02005f;
-        public static int ssdk_oks_skyblue_logo_googleplus_checked=0x7f020060;
-        public static int ssdk_oks_skyblue_logo_instagram=0x7f020061;
-        public static int ssdk_oks_skyblue_logo_instagram_checked=0x7f020062;
-        public static int ssdk_oks_skyblue_logo_instapaper=0x7f020063;
-        public static int ssdk_oks_skyblue_logo_instapaper_checked=0x7f020064;
-        public static int ssdk_oks_skyblue_logo_kaixin=0x7f020065;
-        public static int ssdk_oks_skyblue_logo_kaixin_checked=0x7f020066;
-        public static int ssdk_oks_skyblue_logo_kakaostory=0x7f020067;
-        public static int ssdk_oks_skyblue_logo_kakaostory_checked=0x7f020068;
-        public static int ssdk_oks_skyblue_logo_kakaotalk=0x7f020069;
-        public static int ssdk_oks_skyblue_logo_kakaotalk_checked=0x7f02006a;
-        public static int ssdk_oks_skyblue_logo_laiwangmoments=0x7f02006b;
-        public static int ssdk_oks_skyblue_logo_laiwangmoments_checked=0x7f02006c;
-        public static int ssdk_oks_skyblue_logo_line=0x7f02006d;
-        public static int ssdk_oks_skyblue_logo_line_checked=0x7f02006e;
-        public static int ssdk_oks_skyblue_logo_linkedin=0x7f02006f;
-        public static int ssdk_oks_skyblue_logo_linkedin_checked=0x7f020070;
-        public static int ssdk_oks_skyblue_logo_mingdao=0x7f020071;
-        public static int ssdk_oks_skyblue_logo_mingdao_checked=0x7f020072;
-        public static int ssdk_oks_skyblue_logo_neteasemicroblog=0x7f020073;
-        public static int ssdk_oks_skyblue_logo_neteasemicroblog_checked=0x7f020074;
-        public static int ssdk_oks_skyblue_logo_pinterest=0x7f020075;
-        public static int ssdk_oks_skyblue_logo_pinterest_checked=0x7f020076;
-        public static int ssdk_oks_skyblue_logo_pocket=0x7f020077;
-        public static int ssdk_oks_skyblue_logo_pocket_checked=0x7f020078;
-        public static int ssdk_oks_skyblue_logo_qq=0x7f020079;
-        public static int ssdk_oks_skyblue_logo_qq_checked=0x7f02007a;
-        public static int ssdk_oks_skyblue_logo_qzone=0x7f02007b;
-        public static int ssdk_oks_skyblue_logo_qzone_checked=0x7f02007c;
-        public static int ssdk_oks_skyblue_logo_renren=0x7f02007d;
-        public static int ssdk_oks_skyblue_logo_renren_checked=0x7f02007e;
-        public static int ssdk_oks_skyblue_logo_shortmessage=0x7f02007f;
-        public static int ssdk_oks_skyblue_logo_shortmessage_checked=0x7f020080;
-        public static int ssdk_oks_skyblue_logo_sinaweibo=0x7f020081;
-        public static int ssdk_oks_skyblue_logo_sinaweibo_checked=0x7f020082;
-        public static int ssdk_oks_skyblue_logo_sohumicroblog=0x7f020083;
-        public static int ssdk_oks_skyblue_logo_sohumicroblog_checked=0x7f020084;
-        public static int ssdk_oks_skyblue_logo_sohusuishenkan=0x7f020085;
-        public static int ssdk_oks_skyblue_logo_sohusuishenkan_checked=0x7f020086;
-        public static int ssdk_oks_skyblue_logo_tencentweibo=0x7f020087;
-        public static int ssdk_oks_skyblue_logo_tencentweibo_checked=0x7f020088;
-        public static int ssdk_oks_skyblue_logo_tumblr=0x7f020089;
-        public static int ssdk_oks_skyblue_logo_tumblr_checked=0x7f02008a;
-        public static int ssdk_oks_skyblue_logo_twitter=0x7f02008b;
-        public static int ssdk_oks_skyblue_logo_twitter_checked=0x7f02008c;
-        public static int ssdk_oks_skyblue_logo_vkontakte=0x7f02008d;
-        public static int ssdk_oks_skyblue_logo_vkontakte_checked=0x7f02008e;
-        public static int ssdk_oks_skyblue_logo_wechat=0x7f02008f;
-        public static int ssdk_oks_skyblue_logo_wechat_checked=0x7f020090;
-        public static int ssdk_oks_skyblue_logo_wechatfavorite=0x7f020091;
-        public static int ssdk_oks_skyblue_logo_wechatfavorite_checked=0x7f020092;
-        public static int ssdk_oks_skyblue_logo_wechatmoments=0x7f020093;
-        public static int ssdk_oks_skyblue_logo_wechatmoments_checked=0x7f020094;
-        public static int ssdk_oks_skyblue_logo_whatsapp=0x7f020095;
-        public static int ssdk_oks_skyblue_logo_whatsapp_checked=0x7f020096;
-        public static int ssdk_oks_skyblue_logo_yixin=0x7f020097;
-        public static int ssdk_oks_skyblue_logo_yixin_checked=0x7f020098;
-        public static int ssdk_oks_skyblue_logo_yixinmoments=0x7f020099;
-        public static int ssdk_oks_skyblue_logo_yixinmoments_checked=0x7f02009a;
-        public static int ssdk_oks_skyblue_logo_youdao=0x7f02009b;
-        public static int ssdk_oks_skyblue_logo_youdao_checked=0x7f02009c;
-        public static int ssdk_oks_skyblue_platform_checked=0x7f02009d;
-        public static int ssdk_oks_skyblue_platform_checked_disabled=0x7f02009e;
-        public static int ssdk_oks_skyblue_platform_list_item=0x7f02009f;
-        public static int ssdk_oks_skyblue_platform_list_item_selected=0x7f0200a0;
-        public static int ssdk_oks_skyblue_platform_list_selector=0x7f0200a1;
-        public static int ssdk_oks_title_back=0x7f0200a2;
-        public static int ssdk_oks_title_shadow=0x7f0200a3;
-        public static int ssdk_oks_yaoyiyao=0x7f0200a4;
-        public static int ssdk_title_div=0x7f0200a5;
-        public static int switch_city_item_selector=0x7f0200a6;
-        public static int ws_account_icon=0x7f0200a7;
-        public static int ws_alpha_overlay=0x7f0200a8;
-        public static int ws_bg_adress=0x7f0200a9;
-        public static int ws_bg_border_rect=0x7f0200aa;
-        public static int ws_bg_btn_blue=0x7f0200ab;
-        public static int ws_bg_rect_list_search=0x7f0200ac;
-        public static int ws_bg_white=0x7f0200ad;
-        public static int ws_bg_white_shade=0x7f0200ae;
-        public static int ws_btn_bg=0x7f0200af;
-        public static int ws_btn_blue=0x7f0200b0;
-        public static int ws_btn_blue_press=0x7f0200b1;
-        public static int ws_btn_check=0x7f0200b2;
-        public static int ws_btn_right=0x7f0200b3;
-        public static int ws_btn_unckeck=0x7f0200b4;
-        public static int ws_car_selector_tv_overlay_bg=0x7f0200b5;
-        public static int ws_checkbox_checked=0x7f0200b6;
-        public static int ws_checkbox_unchecked=0x7f0200b7;
-        public static int ws_clearedittext_selector=0x7f0200b8;
-        public static int ws_common_icon_back_btn_normal=0x7f0200b9;
-        public static int ws_common_icon_searchbox_magnifier_2=0x7f0200ba;
-        public static int ws_dialog_bg=0x7f0200bb;
-        public static int ws_ic_slidingmenu_menu_1=0x7f0200bc;
-        public static int ws_ic_slidingmenu_menu_2=0x7f0200bd;
-        public static int ws_ic_slidingmenu_menu_3=0x7f0200be;
-        public static int ws_ico_baba=0x7f0200bf;
-        public static int ws_ico_back=0x7f0200c0;
-        public static int ws_ico_people_no=0x7f0200c1;
-        public static int ws_ico_poi_atm=0x7f0200c2;
-        public static int ws_ico_poi_bank=0x7f0200c3;
-        public static int ws_ico_poi_beauty=0x7f0200c4;
-        public static int ws_ico_poi_bus=0x7f0200c5;
-        public static int ws_ico_poi_charge=0x7f0200c6;
-        public static int ws_ico_poi_company=0x7f0200c7;
-        public static int ws_ico_poi_food=0x7f0200c8;
-        public static int ws_ico_poi_gas=0x7f0200c9;
-        public static int ws_ico_poi_home=0x7f0200ca;
-        public static int ws_ico_poi_hospital=0x7f0200cb;
-        public static int ws_ico_poi_hotel=0x7f0200cc;
-        public static int ws_ico_poi_metro=0x7f0200cd;
-        public static int ws_ico_poi_more=0x7f0200ce;
-        public static int ws_ico_poi_movie=0x7f0200cf;
-        public static int ws_ico_poi_parking=0x7f0200d0;
-        public static int ws_ico_poi_repair=0x7f0200d1;
-        public static int ws_ico_poi_scenic=0x7f0200d2;
-        public static int ws_ico_poi_shop=0x7f0200d3;
-        public static int ws_ico_tab_friends=0x7f0200d4;
-        public static int ws_ico_tab_friends_c=0x7f0200d5;
-        public static int ws_ico_tab_home=0x7f0200d6;
-        public static int ws_ico_tab_home_c=0x7f0200d7;
-        public static int ws_ico_tab_more=0x7f0200d8;
-        public static int ws_ico_tab_more_c=0x7f0200d9;
-        public static int ws_ico_tab_msg=0x7f0200da;
-        public static int ws_ico_tab_msg_c=0x7f0200db;
-        public static int ws_icon_search_up_retrieval=0x7f0200dc;
-        public static int ws_icon_user=0x7f0200dd;
-        public static int ws_img_circle_dot_blue=0x7f0200de;
-        public static int ws_img_circle_dot_blue_light=0x7f0200df;
-        public static int ws_loading_bg=0x7f0200e0;
-        public static int ws_login_bg=0x7f0200e1;
-        public static int ws_logo=0x7f0200e2;
-        public static int ws_map_follow=0x7f0200e3;
-        public static int ws_nav_back=0x7f0200e4;
-        public static int ws_nav_icon_back=0x7f0200e5;
-        public static int ws_park=0x7f0200e6;
-        public static int ws_progress_bg=0x7f0200e7;
-        public static int ws_progressbar_loading_0=0x7f0200e8;
-        public static int ws_progressbar_loading_01=0x7f0200e9;
-        public static int ws_progressbar_loading_02=0x7f0200ea;
-        public static int ws_progressbar_loading_03=0x7f0200eb;
-        public static int ws_progressbar_loading_04=0x7f0200ec;
-        public static int ws_progressbar_loading_05=0x7f0200ed;
-        public static int ws_progressbar_loading_06=0x7f0200ee;
-        public static int ws_progressbar_loading_07=0x7f0200ef;
-        public static int ws_progressbar_loading_1=0x7f0200f0;
-        public static int ws_progressbar_loading_10=0x7f0200f1;
-        public static int ws_progressbar_loading_11=0x7f0200f2;
-        public static int ws_progressbar_loading_2=0x7f0200f3;
-        public static int ws_progressbar_loading_3=0x7f0200f4;
-        public static int ws_progressbar_loading_4=0x7f0200f5;
-        public static int ws_progressbar_loading_5=0x7f0200f6;
-        public static int ws_progressbar_loading_6=0x7f0200f7;
-        public static int ws_progressbar_loading_7=0x7f0200f8;
-        public static int ws_progressbar_loading_8=0x7f0200f9;
-        public static int ws_progressbar_loading_9=0x7f0200fa;
-        public static int ws_round_bg=0x7f0200fb;
-        public static int ws_search_bar_selector=0x7f0200fc;
-        public static int ws_search_clear_normal=0x7f0200fd;
-        public static int ws_search_clear_pressed=0x7f0200fe;
-        public static int ws_selector_checkbox=0x7f0200ff;
+        public static int nav_icon_ok_nor=0x7f02000a;
+        public static int nav_icon_ok_sel=0x7f02000b;
+        public static int nav_ok=0x7f02000c;
+        public static int richpush_btn_selector=0x7f02000d;
+        public static int ssdk_auth_title_back=0x7f02000e;
+        public static int ssdk_back_arr=0x7f02000f;
+        public static int ssdk_logo=0x7f020010;
+        public static int ssdk_oks_auth_follow_cb_chd=0x7f020011;
+        public static int ssdk_oks_auth_follow_cb_unc=0x7f020012;
+        public static int ssdk_oks_auth_title_back=0x7f020013;
+        public static int ssdk_oks_blue_point=0x7f020014;
+        public static int ssdk_oks_btn_back_nor=0x7f020015;
+        public static int ssdk_oks_classic_platform_corners_bg=0x7f020016;
+        public static int ssdk_oks_edittext_back=0x7f020017;
+        public static int ssdk_oks_img_cancel=0x7f020018;
+        public static int ssdk_oks_light_blue_point=0x7f020019;
+        public static int ssdk_oks_logo_alipay=0x7f02001a;
+        public static int ssdk_oks_logo_bluetooth=0x7f02001b;
+        public static int ssdk_oks_logo_douban=0x7f02001c;
+        public static int ssdk_oks_logo_dropbox=0x7f02001d;
+        public static int ssdk_oks_logo_email=0x7f02001e;
+        public static int ssdk_oks_logo_evernote=0x7f02001f;
+        public static int ssdk_oks_logo_facebook=0x7f020020;
+        public static int ssdk_oks_logo_facebookmessenger=0x7f020021;
+        public static int ssdk_oks_logo_flickr=0x7f020022;
+        public static int ssdk_oks_logo_foursquare=0x7f020023;
+        public static int ssdk_oks_logo_googleplus=0x7f020024;
+        public static int ssdk_oks_logo_instagram=0x7f020025;
+        public static int ssdk_oks_logo_instapaper=0x7f020026;
+        public static int ssdk_oks_logo_kaixin=0x7f020027;
+        public static int ssdk_oks_logo_kakaostory=0x7f020028;
+        public static int ssdk_oks_logo_kakaotalk=0x7f020029;
+        public static int ssdk_oks_logo_laiwang=0x7f02002a;
+        public static int ssdk_oks_logo_laiwangmoments=0x7f02002b;
+        public static int ssdk_oks_logo_line=0x7f02002c;
+        public static int ssdk_oks_logo_linkedin=0x7f02002d;
+        public static int ssdk_oks_logo_mingdao=0x7f02002e;
+        public static int ssdk_oks_logo_pinterest=0x7f02002f;
+        public static int ssdk_oks_logo_pocket=0x7f020030;
+        public static int ssdk_oks_logo_qq=0x7f020031;
+        public static int ssdk_oks_logo_qzone=0x7f020032;
+        public static int ssdk_oks_logo_renren=0x7f020033;
+        public static int ssdk_oks_logo_shortmessage=0x7f020034;
+        public static int ssdk_oks_logo_sinaweibo=0x7f020035;
+        public static int ssdk_oks_logo_sohusuishenkan=0x7f020036;
+        public static int ssdk_oks_logo_tencentweibo=0x7f020037;
+        public static int ssdk_oks_logo_tumblr=0x7f020038;
+        public static int ssdk_oks_logo_twitter=0x7f020039;
+        public static int ssdk_oks_logo_vkontakte=0x7f02003a;
+        public static int ssdk_oks_logo_wechat=0x7f02003b;
+        public static int ssdk_oks_logo_wechatfavorite=0x7f02003c;
+        public static int ssdk_oks_logo_wechatmoments=0x7f02003d;
+        public static int ssdk_oks_logo_whatsapp=0x7f02003e;
+        public static int ssdk_oks_logo_yixin=0x7f02003f;
+        public static int ssdk_oks_logo_yixinmoments=0x7f020040;
+        public static int ssdk_oks_logo_youdao=0x7f020041;
+        public static int ssdk_oks_pin=0x7f020042;
+        public static int ssdk_oks_ptr_ptr=0x7f020043;
+        public static int ssdk_oks_shake_to_share_back=0x7f020044;
+        public static int ssdk_oks_skyblue_actionbar_back_btn=0x7f020045;
+        public static int ssdk_oks_skyblue_actionbar_ok_btn=0x7f020046;
+        public static int ssdk_oks_skyblue_editpage_bg=0x7f020047;
+        public static int ssdk_oks_skyblue_editpage_close=0x7f020048;
+        public static int ssdk_oks_skyblue_editpage_divider=0x7f020049;
+        public static int ssdk_oks_skyblue_editpage_image_bg=0x7f02004a;
+        public static int ssdk_oks_skyblue_editpage_image_remove=0x7f02004b;
+        public static int ssdk_oks_skyblue_logo_alipayshare=0x7f02004c;
+        public static int ssdk_oks_skyblue_logo_alipayshare_checked=0x7f02004d;
+        public static int ssdk_oks_skyblue_logo_baidutieba=0x7f02004e;
+        public static int ssdk_oks_skyblue_logo_baidutieba_checked=0x7f02004f;
+        public static int ssdk_oks_skyblue_logo_bluetooth=0x7f020050;
+        public static int ssdk_oks_skyblue_logo_bluetooth_checked=0x7f020051;
+        public static int ssdk_oks_skyblue_logo_douban=0x7f020052;
+        public static int ssdk_oks_skyblue_logo_douban_checked=0x7f020053;
+        public static int ssdk_oks_skyblue_logo_dropbox=0x7f020054;
+        public static int ssdk_oks_skyblue_logo_dropbox_checked=0x7f020055;
+        public static int ssdk_oks_skyblue_logo_email=0x7f020056;
+        public static int ssdk_oks_skyblue_logo_email_checked=0x7f020057;
+        public static int ssdk_oks_skyblue_logo_evernote=0x7f020058;
+        public static int ssdk_oks_skyblue_logo_evernote_checked=0x7f020059;
+        public static int ssdk_oks_skyblue_logo_facebook=0x7f02005a;
+        public static int ssdk_oks_skyblue_logo_facebook_checked=0x7f02005b;
+        public static int ssdk_oks_skyblue_logo_facebookmessenger=0x7f02005c;
+        public static int ssdk_oks_skyblue_logo_facebookmessenger_checked=0x7f02005d;
+        public static int ssdk_oks_skyblue_logo_flickr=0x7f02005e;
+        public static int ssdk_oks_skyblue_logo_flickr_checked=0x7f02005f;
+        public static int ssdk_oks_skyblue_logo_foursquare=0x7f020060;
+        public static int ssdk_oks_skyblue_logo_foursquare_checked=0x7f020061;
+        public static int ssdk_oks_skyblue_logo_googleplus=0x7f020062;
+        public static int ssdk_oks_skyblue_logo_googleplus_checked=0x7f020063;
+        public static int ssdk_oks_skyblue_logo_instagram=0x7f020064;
+        public static int ssdk_oks_skyblue_logo_instagram_checked=0x7f020065;
+        public static int ssdk_oks_skyblue_logo_instapaper=0x7f020066;
+        public static int ssdk_oks_skyblue_logo_instapaper_checked=0x7f020067;
+        public static int ssdk_oks_skyblue_logo_kaixin=0x7f020068;
+        public static int ssdk_oks_skyblue_logo_kaixin_checked=0x7f020069;
+        public static int ssdk_oks_skyblue_logo_kakaostory=0x7f02006a;
+        public static int ssdk_oks_skyblue_logo_kakaostory_checked=0x7f02006b;
+        public static int ssdk_oks_skyblue_logo_kakaotalk=0x7f02006c;
+        public static int ssdk_oks_skyblue_logo_kakaotalk_checked=0x7f02006d;
+        public static int ssdk_oks_skyblue_logo_laiwangmoments=0x7f02006e;
+        public static int ssdk_oks_skyblue_logo_laiwangmoments_checked=0x7f02006f;
+        public static int ssdk_oks_skyblue_logo_line=0x7f020070;
+        public static int ssdk_oks_skyblue_logo_line_checked=0x7f020071;
+        public static int ssdk_oks_skyblue_logo_linkedin=0x7f020072;
+        public static int ssdk_oks_skyblue_logo_linkedin_checked=0x7f020073;
+        public static int ssdk_oks_skyblue_logo_mingdao=0x7f020074;
+        public static int ssdk_oks_skyblue_logo_mingdao_checked=0x7f020075;
+        public static int ssdk_oks_skyblue_logo_neteasemicroblog=0x7f020076;
+        public static int ssdk_oks_skyblue_logo_neteasemicroblog_checked=0x7f020077;
+        public static int ssdk_oks_skyblue_logo_pinterest=0x7f020078;
+        public static int ssdk_oks_skyblue_logo_pinterest_checked=0x7f020079;
+        public static int ssdk_oks_skyblue_logo_pocket=0x7f02007a;
+        public static int ssdk_oks_skyblue_logo_pocket_checked=0x7f02007b;
+        public static int ssdk_oks_skyblue_logo_qq=0x7f02007c;
+        public static int ssdk_oks_skyblue_logo_qq_checked=0x7f02007d;
+        public static int ssdk_oks_skyblue_logo_qzone=0x7f02007e;
+        public static int ssdk_oks_skyblue_logo_qzone_checked=0x7f02007f;
+        public static int ssdk_oks_skyblue_logo_renren=0x7f020080;
+        public static int ssdk_oks_skyblue_logo_renren_checked=0x7f020081;
+        public static int ssdk_oks_skyblue_logo_shortmessage=0x7f020082;
+        public static int ssdk_oks_skyblue_logo_shortmessage_checked=0x7f020083;
+        public static int ssdk_oks_skyblue_logo_sinaweibo=0x7f020084;
+        public static int ssdk_oks_skyblue_logo_sinaweibo_checked=0x7f020085;
+        public static int ssdk_oks_skyblue_logo_sohumicroblog=0x7f020086;
+        public static int ssdk_oks_skyblue_logo_sohumicroblog_checked=0x7f020087;
+        public static int ssdk_oks_skyblue_logo_sohusuishenkan=0x7f020088;
+        public static int ssdk_oks_skyblue_logo_sohusuishenkan_checked=0x7f020089;
+        public static int ssdk_oks_skyblue_logo_tencentweibo=0x7f02008a;
+        public static int ssdk_oks_skyblue_logo_tencentweibo_checked=0x7f02008b;
+        public static int ssdk_oks_skyblue_logo_tumblr=0x7f02008c;
+        public static int ssdk_oks_skyblue_logo_tumblr_checked=0x7f02008d;
+        public static int ssdk_oks_skyblue_logo_twitter=0x7f02008e;
+        public static int ssdk_oks_skyblue_logo_twitter_checked=0x7f02008f;
+        public static int ssdk_oks_skyblue_logo_vkontakte=0x7f020090;
+        public static int ssdk_oks_skyblue_logo_vkontakte_checked=0x7f020091;
+        public static int ssdk_oks_skyblue_logo_wechat=0x7f020092;
+        public static int ssdk_oks_skyblue_logo_wechat_checked=0x7f020093;
+        public static int ssdk_oks_skyblue_logo_wechatfavorite=0x7f020094;
+        public static int ssdk_oks_skyblue_logo_wechatfavorite_checked=0x7f020095;
+        public static int ssdk_oks_skyblue_logo_wechatmoments=0x7f020096;
+        public static int ssdk_oks_skyblue_logo_wechatmoments_checked=0x7f020097;
+        public static int ssdk_oks_skyblue_logo_whatsapp=0x7f020098;
+        public static int ssdk_oks_skyblue_logo_whatsapp_checked=0x7f020099;
+        public static int ssdk_oks_skyblue_logo_yixin=0x7f02009a;
+        public static int ssdk_oks_skyblue_logo_yixin_checked=0x7f02009b;
+        public static int ssdk_oks_skyblue_logo_yixinmoments=0x7f02009c;
+        public static int ssdk_oks_skyblue_logo_yixinmoments_checked=0x7f02009d;
+        public static int ssdk_oks_skyblue_logo_youdao=0x7f02009e;
+        public static int ssdk_oks_skyblue_logo_youdao_checked=0x7f02009f;
+        public static int ssdk_oks_skyblue_platform_checked=0x7f0200a0;
+        public static int ssdk_oks_skyblue_platform_checked_disabled=0x7f0200a1;
+        public static int ssdk_oks_skyblue_platform_list_item=0x7f0200a2;
+        public static int ssdk_oks_skyblue_platform_list_item_selected=0x7f0200a3;
+        public static int ssdk_oks_skyblue_platform_list_selector=0x7f0200a4;
+        public static int ssdk_oks_title_back=0x7f0200a5;
+        public static int ssdk_oks_title_shadow=0x7f0200a6;
+        public static int ssdk_oks_yaoyiyao=0x7f0200a7;
+        public static int ssdk_title_div=0x7f0200a8;
+        public static int switch_city_item_selector=0x7f0200a9;
+        public static int ws_account_icon=0x7f0200aa;
+        public static int ws_alpha_overlay=0x7f0200ab;
+        public static int ws_bg_adress=0x7f0200ac;
+        public static int ws_bg_border_rect=0x7f0200ad;
+        public static int ws_bg_btn_blue=0x7f0200ae;
+        public static int ws_bg_rect_list_search=0x7f0200af;
+        public static int ws_bg_white=0x7f0200b0;
+        public static int ws_bg_white_shade=0x7f0200b1;
+        public static int ws_btn_bg=0x7f0200b2;
+        public static int ws_btn_blue=0x7f0200b3;
+        public static int ws_btn_blue_press=0x7f0200b4;
+        public static int ws_btn_check=0x7f0200b5;
+        public static int ws_btn_right=0x7f0200b6;
+        public static int ws_btn_unckeck=0x7f0200b7;
+        public static int ws_car_selector_tv_overlay_bg=0x7f0200b8;
+        public static int ws_checkbox_checked=0x7f0200b9;
+        public static int ws_checkbox_unchecked=0x7f0200ba;
+        public static int ws_clearedittext_selector=0x7f0200bb;
+        public static int ws_common_icon_back_btn_normal=0x7f0200bc;
+        public static int ws_common_icon_searchbox_magnifier_2=0x7f0200bd;
+        public static int ws_dialog_bg=0x7f0200be;
+        public static int ws_ic_slidingmenu_menu_1=0x7f0200bf;
+        public static int ws_ic_slidingmenu_menu_2=0x7f0200c0;
+        public static int ws_ic_slidingmenu_menu_3=0x7f0200c1;
+        public static int ws_ico_baba=0x7f0200c2;
+        public static int ws_ico_back=0x7f0200c3;
+        public static int ws_ico_people_no=0x7f0200c4;
+        public static int ws_ico_poi_atm=0x7f0200c5;
+        public static int ws_ico_poi_bank=0x7f0200c6;
+        public static int ws_ico_poi_beauty=0x7f0200c7;
+        public static int ws_ico_poi_bus=0x7f0200c8;
+        public static int ws_ico_poi_charge=0x7f0200c9;
+        public static int ws_ico_poi_company=0x7f0200ca;
+        public static int ws_ico_poi_food=0x7f0200cb;
+        public static int ws_ico_poi_gas=0x7f0200cc;
+        public static int ws_ico_poi_home=0x7f0200cd;
+        public static int ws_ico_poi_hospital=0x7f0200ce;
+        public static int ws_ico_poi_hotel=0x7f0200cf;
+        public static int ws_ico_poi_metro=0x7f0200d0;
+        public static int ws_ico_poi_more=0x7f0200d1;
+        public static int ws_ico_poi_movie=0x7f0200d2;
+        public static int ws_ico_poi_parking=0x7f0200d3;
+        public static int ws_ico_poi_repair=0x7f0200d4;
+        public static int ws_ico_poi_scenic=0x7f0200d5;
+        public static int ws_ico_poi_shop=0x7f0200d6;
+        public static int ws_ico_tab_friends=0x7f0200d7;
+        public static int ws_ico_tab_friends_c=0x7f0200d8;
+        public static int ws_ico_tab_home=0x7f0200d9;
+        public static int ws_ico_tab_home_c=0x7f0200da;
+        public static int ws_ico_tab_more=0x7f0200db;
+        public static int ws_ico_tab_more_c=0x7f0200dc;
+        public static int ws_ico_tab_msg=0x7f0200dd;
+        public static int ws_ico_tab_msg_c=0x7f0200de;
+        public static int ws_icon_search_up_retrieval=0x7f0200df;
+        public static int ws_icon_user=0x7f0200e0;
+        public static int ws_img_circle_dot_blue=0x7f0200e1;
+        public static int ws_img_circle_dot_blue_light=0x7f0200e2;
+        public static int ws_loading_bg=0x7f0200e3;
+        public static int ws_login_bg=0x7f0200e4;
+        public static int ws_logo=0x7f0200e5;
+        public static int ws_map_follow=0x7f0200e6;
+        public static int ws_nav_back=0x7f0200e7;
+        public static int ws_nav_icon_back=0x7f0200e8;
+        public static int ws_park=0x7f0200e9;
+        public static int ws_progress_bg=0x7f0200ea;
+        public static int ws_progressbar_loading_0=0x7f0200eb;
+        public static int ws_progressbar_loading_01=0x7f0200ec;
+        public static int ws_progressbar_loading_02=0x7f0200ed;
+        public static int ws_progressbar_loading_03=0x7f0200ee;
+        public static int ws_progressbar_loading_04=0x7f0200ef;
+        public static int ws_progressbar_loading_05=0x7f0200f0;
+        public static int ws_progressbar_loading_06=0x7f0200f1;
+        public static int ws_progressbar_loading_07=0x7f0200f2;
+        public static int ws_progressbar_loading_1=0x7f0200f3;
+        public static int ws_progressbar_loading_10=0x7f0200f4;
+        public static int ws_progressbar_loading_11=0x7f0200f5;
+        public static int ws_progressbar_loading_2=0x7f0200f6;
+        public static int ws_progressbar_loading_3=0x7f0200f7;
+        public static int ws_progressbar_loading_4=0x7f0200f8;
+        public static int ws_progressbar_loading_5=0x7f0200f9;
+        public static int ws_progressbar_loading_6=0x7f0200fa;
+        public static int ws_progressbar_loading_7=0x7f0200fb;
+        public static int ws_progressbar_loading_8=0x7f0200fc;
+        public static int ws_progressbar_loading_9=0x7f0200fd;
+        public static int ws_round_bg=0x7f0200fe;
+        public static int ws_search_bar_selector=0x7f0200ff;
+        public static int ws_search_clear_normal=0x7f020100;
+        public static int ws_search_clear_pressed=0x7f020101;
+        public static int ws_selector_checkbox=0x7f020102;
     }
     public static final class id {
-        public static int MyLetterListView01=0x7f060058;
-        public static int action_settings=0x7f0600a4;
-        public static int actionbarLayout=0x7f06002c;
-        public static int actionbarLayoutId=0x7f060022;
-        public static int alpha=0x7f06005d;
-        public static int atDescTextView=0x7f060038;
-        public static int atLayout=0x7f060033;
-        public static int atTextView=0x7f060037;
+        public static int MyLetterListView01=0x7f070057;
+        public static int action_settings=0x7f0700ac;
+        public static int actionbarLayout=0x7f07002b;
+        public static int actionbarLayoutId=0x7f070021;
+        public static int alpha=0x7f07005c;
+        public static int atDescTextView=0x7f070037;
+        public static int atLayout=0x7f070032;
+        public static int atTextView=0x7f070036;
         /**  Messages IDs 
          */
-        public static int auto_focus=0x7f060014;
-        public static int backImageView=0x7f06003b;
-        public static int bmapView=0x7f060089;
-        public static int both=0x7f060009;
-        public static int bt_bigin_scan=0x7f060059;
-        public static int bt_item_pop=0x7f06006d;
-        public static int bt_sure=0x7f06008b;
-        public static int btnGetCode=0x7f0600a3;
-        public static int btn_login=0x7f060085;
-        public static int checkedImageView=0x7f060040;
-        public static int city=0x7f060072;
-        public static int closeImageView=0x7f060030;
-        public static int content=0x7f06009f;
-        public static int decode=0x7f060015;
-        public static int decode_failed=0x7f060016;
-        public static int decode_succeeded=0x7f060017;
-        public static int disabled=0x7f060006;
-        public static int divider=0x7f060031;
-        public static int encode_failed=0x7f060018;
-        public static int encode_succeeded=0x7f060019;
-        public static int etPhone=0x7f0600a2;
-        public static int et_account=0x7f060083;
-        public static int et_car_key=0x7f060066;
-        public static int et_name=0x7f06008a;
-        public static int et_password=0x7f060084;
-        public static int et_search=0x7f060099;
-        public static int fl_inner=0x7f060026;
-        public static int flip=0x7f06000e;
-        public static int fullscreen=0x7f060003;
-        public static int gps_city=0x7f060078;
-        public static int gridView=0x7f06003d;
-        public static int gridview=0x7f06000f;
-        public static int gview_1=0x7f06008e;
-        public static int hScrollView=0x7f060035;
-        public static int image=0x7f06008c;
-        public static int imageRemoveBtn=0x7f06003a;
-        public static int imageView=0x7f060039;
-        public static int imagesLinearLayout=0x7f060036;
-        public static int img=0x7f06007d;
-        public static int imgRichpushBtnBack=0x7f060023;
-        public static int imgView=0x7f060024;
-        public static int invisible=0x7f060013;
-        public static int iv_app_logo=0x7f060043;
-        public static int iv_back=0x7f060042;
-        public static int iv_carbrand_logo=0x7f060062;
-        public static int iv_circle_page_0=0x7f060092;
-        public static int iv_circle_page_1=0x7f060093;
-        public static int iv_loading=0x7f060094;
-        public static int iv_pic=0x7f06004c;
-        public static int iv_qr_image=0x7f06005b;
-        public static int iv_serach_bar_icon=0x7f06007e;
-        public static int iv_serach_bar_up=0x7f060080;
-        public static int launch_product_query=0x7f06001a;
-        public static int left=0x7f060000;
-        public static int listView=0x7f060073;
-        public static int list_view=0x7f060055;
-        public static int ll_account=0x7f06004a;
-        public static int ll_cards=0x7f060021;
-        public static int ll_item=0x7f06005c;
-        public static int ll_main=0x7f06004b;
-        public static int llyt_circle_page=0x7f060091;
-        public static int locate=0x7f06005f;
-        public static int locateHint=0x7f060060;
-        public static int logoImageView=0x7f06003e;
-        public static int lv_car_brand=0x7f060067;
-        public static int lv_car_model=0x7f06006a;
-        public static int lv_car_type=0x7f06006b;
-        public static int lv_left_menu=0x7f06009c;
-        public static int lv_pop=0x7f06006c;
-        public static int lv_search=0x7f06009a;
-        public static int lv_view=0x7f060074;
-        public static int mainRelLayout=0x7f06002d;
-        public static int manualOnly=0x7f06000a;
-        public static int margin=0x7f060002;
-        public static int menu_left_content=0x7f06009b;
-        public static int menu_right_content=0x7f06009e;
-        public static int message=0x7f060075;
-        public static int name=0x7f06005e;
-        public static int nameTextView=0x7f06003f;
-        public static int negativeButton=0x7f060077;
-        public static int none=0x7f060004;
-        public static int notePswd=0x7f060086;
-        public static int okImageView=0x7f06003c;
-        public static int openLight=0x7f060070;
-        public static int pbLocate=0x7f060079;
-        public static int positiveButton=0x7f060076;
-        public static int preview_view=0x7f06006e;
-        public static int pullDownFromTop=0x7f06000b;
-        public static int pullFromEnd=0x7f060008;
-        public static int pullFromStart=0x7f060007;
-        public static int pullUpFromBottom=0x7f06000c;
-        public static int pull_refresh_list=0x7f060096;
-        public static int pull_to_refresh_image=0x7f060027;
-        public static int pull_to_refresh_progress=0x7f060028;
-        public static int pull_to_refresh_sub_text=0x7f06002a;
-        public static int pull_to_refresh_text=0x7f060029;
-        public static int quit=0x7f06001b;
-        public static int recentHint=0x7f06007a;
-        public static int recent_city=0x7f06007b;
-        public static int restart_preview=0x7f06001c;
-        public static int return_scan_result=0x7f06001d;
-        public static int right=0x7f060001;
-        public static int rl_brand=0x7f060065;
-        public static int rl_top_title=0x7f060041;
-        public static int rl_updata=0x7f060047;
-        public static int rl_v=0x7f060044;
-        public static int rotate=0x7f06000d;
-        public static int sb_letter=0x7f060069;
-        public static int scan_result=0x7f06005a;
-        public static int scrollView=0x7f060020;
-        public static int scrollview=0x7f060011;
-        public static int search_book_contents_failed=0x7f06001e;
-        public static int search_book_contents_succeeded=0x7f06001f;
-        public static int search_result=0x7f060056;
-        public static int selected_view=0x7f060005;
-        public static int sh=0x7f060054;
-        public static int slidingmenumain=0x7f06002b;
-        public static int tabbarLayout=0x7f0600a1;
-        public static int text=0x7f06008d;
-        public static int textCounterTextView=0x7f060034;
-        public static int textEditText=0x7f060032;
-        public static int title=0x7f060053;
-        public static int titleEditText=0x7f06002f;
-        public static int titleLayout=0x7f06002e;
-        public static int tvRichpushTitle=0x7f060025;
-        public static int tv_app_checkupdata=0x7f060048;
-        public static int tv_app_copyright=0x7f060046;
-        public static int tv_app_org=0x7f060049;
-        public static int tv_app_version=0x7f060045;
-        public static int tv_birth=0x7f060051;
-        public static int tv_car_alpha_overlay_bg=0x7f060068;
-        public static int tv_car_select_title=0x7f060064;
-        public static int tv_car_series_type=0x7f060071;
-        public static int tv_carbrand=0x7f060063;
-        public static int tv_carbrand_list_letter=0x7f060061;
-        public static int tv_email=0x7f06004f;
-        public static int tv_fragment_name=0x7f06009d;
-        public static int tv_item_info=0x7f060098;
-        public static int tv_item_title=0x7f060097;
-        public static int tv_loading_msg=0x7f060095;
-        public static int tv_name=0x7f06004e;
-        public static int tv_noresult=0x7f060057;
-        public static int tv_phone=0x7f06004d;
-        public static int tv_search_bar_info=0x7f06007f;
-        public static int tv_sex=0x7f060050;
-        public static int tv_update=0x7f060087;
-        public static int tv_update_pwd=0x7f060052;
-        public static int tv_version=0x7f060088;
-        public static int v_line=0x7f06007c;
-        public static int viewLine=0x7f0600a0;
-        public static int viewfinder_view=0x7f06006f;
-        public static int viewpager=0x7f060090;
-        public static int visible=0x7f060012;
-        public static int webview=0x7f060010;
-        public static int wn=0x7f06008f;
-        public static int ws_iv_logo=0x7f060082;
-        public static int ws_llyt_login=0x7f060081;
+        public static int auto_focus=0x7f070004;
+        public static int backImageView=0x7f07003a;
+        public static int bmapView=0x7f07008e;
+        public static int both=0x7f070010;
+        public static int bt_Submit=0x7f070077;
+        public static int bt_bigin_scan=0x7f070058;
+        public static int bt_item_pop=0x7f07006c;
+        public static int bt_register=0x7f070073;
+        public static int bt_sure=0x7f070090;
+        public static int btnGetCode=0x7f0700a8;
+        public static int btn_login=0x7f07008a;
+        public static int checkedImageView=0x7f07003f;
+        public static int city=0x7f070078;
+        public static int closeImageView=0x7f07002f;
+        public static int content=0x7f0700a4;
+        public static int decode=0x7f070005;
+        public static int decode_failed=0x7f070006;
+        public static int decode_succeeded=0x7f070007;
+        public static int disabled=0x7f070011;
+        public static int divider=0x7f070030;
+        public static int encode_failed=0x7f070008;
+        public static int encode_succeeded=0x7f070009;
+        public static int etPhone=0x7f0700a7;
+        public static int et_account=0x7f070072;
+        public static int et_captcha=0x7f070075;
+        public static int et_car_key=0x7f070065;
+        public static int et_name=0x7f07008f;
+        public static int et_new_pwd=0x7f0700aa;
+        public static int et_new_pwd_again=0x7f0700ab;
+        public static int et_password=0x7f070089;
+        public static int et_pwd=0x7f070076;
+        public static int et_search=0x7f07009e;
+        public static int fl_inner=0x7f070025;
+        public static int flip=0x7f070017;
+        public static int fullscreen=0x7f07001b;
+        public static int gps_city=0x7f07007e;
+        public static int gridView=0x7f07003c;
+        public static int gridview=0x7f070000;
+        public static int gview_1=0x7f070093;
+        public static int hScrollView=0x7f070034;
+        public static int image=0x7f070091;
+        public static int imageRemoveBtn=0x7f070039;
+        public static int imageView=0x7f070038;
+        public static int imagesLinearLayout=0x7f070035;
+        public static int img=0x7f070083;
+        public static int imgRichpushBtnBack=0x7f070022;
+        public static int imgView=0x7f070023;
+        public static int invisible=0x7f07001d;
+        public static int iv_app_logo=0x7f070042;
+        public static int iv_back=0x7f070041;
+        public static int iv_carbrand_logo=0x7f070061;
+        public static int iv_circle_page_0=0x7f070097;
+        public static int iv_circle_page_1=0x7f070098;
+        public static int iv_loading=0x7f070099;
+        public static int iv_pic=0x7f07004b;
+        public static int iv_qr_image=0x7f07005a;
+        public static int iv_serach_bar_icon=0x7f070084;
+        public static int iv_serach_bar_up=0x7f070086;
+        public static int iv_sure=0x7f0700a9;
+        public static int launch_product_query=0x7f07000a;
+        public static int left=0x7f070019;
+        public static int listView=0x7f070079;
+        public static int list_view=0x7f070054;
+        public static int ll_account=0x7f070049;
+        public static int ll_cards=0x7f070020;
+        public static int ll_item=0x7f07005b;
+        public static int ll_main=0x7f07004a;
+        public static int llyt_circle_page=0x7f070096;
+        public static int locate=0x7f07005e;
+        public static int locateHint=0x7f07005f;
+        public static int logoImageView=0x7f07003d;
+        public static int lv_car_brand=0x7f070066;
+        public static int lv_car_model=0x7f070069;
+        public static int lv_car_type=0x7f07006a;
+        public static int lv_left_menu=0x7f0700a1;
+        public static int lv_pop=0x7f07006b;
+        public static int lv_search=0x7f07009f;
+        public static int lv_view=0x7f07007a;
+        public static int mainRelLayout=0x7f07002c;
+        public static int manualOnly=0x7f070012;
+        public static int margin=0x7f07001c;
+        public static int menu_left_content=0x7f0700a0;
+        public static int menu_right_content=0x7f0700a3;
+        public static int message=0x7f07007b;
+        public static int name=0x7f07005d;
+        public static int nameTextView=0x7f07003e;
+        public static int negativeButton=0x7f07007d;
+        public static int notePswd=0x7f07008b;
+        public static int okImageView=0x7f07003b;
+        public static int openLight=0x7f07006f;
+        public static int pbLocate=0x7f07007f;
+        public static int positiveButton=0x7f07007c;
+        public static int preview_view=0x7f07006d;
+        public static int pullDownFromTop=0x7f070013;
+        public static int pullFromEnd=0x7f070014;
+        public static int pullFromStart=0x7f070015;
+        public static int pullUpFromBottom=0x7f070016;
+        public static int pull_refresh_list=0x7f07009b;
+        public static int pull_to_refresh_image=0x7f070026;
+        public static int pull_to_refresh_progress=0x7f070027;
+        public static int pull_to_refresh_sub_text=0x7f070029;
+        public static int pull_to_refresh_text=0x7f070028;
+        public static int quit=0x7f07000b;
+        public static int recentHint=0x7f070080;
+        public static int recent_city=0x7f070081;
+        public static int restart_preview=0x7f07000c;
+        public static int return_scan_result=0x7f07000d;
+        public static int right=0x7f07001a;
+        public static int rl_brand=0x7f070064;
+        public static int rl_top_title=0x7f070040;
+        public static int rl_updata=0x7f070046;
+        public static int rl_v=0x7f070043;
+        public static int rotate=0x7f070018;
+        public static int sb_letter=0x7f070068;
+        public static int scan_result=0x7f070059;
+        public static int scrollView=0x7f07001f;
+        public static int scrollview=0x7f070002;
+        public static int search_book_contents_failed=0x7f07000e;
+        public static int search_book_contents_succeeded=0x7f07000f;
+        public static int search_result=0x7f070055;
+        public static int selected_view=0x7f070003;
+        public static int sh=0x7f070053;
+        public static int slidingmenumain=0x7f07002a;
+        public static int tabbarLayout=0x7f0700a6;
+        public static int text=0x7f070092;
+        public static int textCounterTextView=0x7f070033;
+        public static int textEditText=0x7f070031;
+        public static int title=0x7f070052;
+        public static int titleEditText=0x7f07002e;
+        public static int titleLayout=0x7f07002d;
+        public static int tvRichpushTitle=0x7f070024;
+        public static int tv_account=0x7f070074;
+        public static int tv_app_checkupdata=0x7f070047;
+        public static int tv_app_copyright=0x7f070045;
+        public static int tv_app_org=0x7f070048;
+        public static int tv_app_version=0x7f070044;
+        public static int tv_birth=0x7f070050;
+        public static int tv_car_alpha_overlay_bg=0x7f070067;
+        public static int tv_car_select_title=0x7f070063;
+        public static int tv_car_series_type=0x7f070070;
+        public static int tv_carbrand=0x7f070062;
+        public static int tv_carbrand_list_letter=0x7f070060;
+        public static int tv_email=0x7f07004e;
+        public static int tv_fragment_name=0x7f0700a2;
+        public static int tv_item_info=0x7f07009d;
+        public static int tv_item_title=0x7f07009c;
+        public static int tv_loading_msg=0x7f07009a;
+        public static int tv_name=0x7f07004d;
+        public static int tv_noresult=0x7f070056;
+        public static int tv_phone=0x7f07004c;
+        public static int tv_search_bar_info=0x7f070085;
+        public static int tv_sex=0x7f07004f;
+        public static int tv_title=0x7f070071;
+        public static int tv_update=0x7f07008c;
+        public static int tv_update_pwd=0x7f070051;
+        public static int tv_version=0x7f07008d;
+        public static int v_line=0x7f070082;
+        public static int viewLine=0x7f0700a5;
+        public static int viewfinder_view=0x7f07006e;
+        public static int viewpager=0x7f070095;
+        public static int visible=0x7f07001e;
+        public static int webview=0x7f070001;
+        public static int wn=0x7f070094;
+        public static int ws_iv_logo=0x7f070088;
+        public static int ws_llyt_login=0x7f070087;
     }
     public static final class layout {
         public static int fragment_cards=0x7f030000;
@@ -924,30 +933,33 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int ws_buttom_pup_item=0x7f030015;
         public static int ws_camera=0x7f030016;
         public static int ws_car_series_and_type_item=0x7f030017;
-        public static int ws_city_item=0x7f030018;
-        public static int ws_customs_dialog=0x7f030019;
-        public static int ws_gps_city_list_item=0x7f03001a;
-        public static int ws_hot_city_list_item=0x7f03001b;
-        public static int ws_item_list_slidingmenu=0x7f03001c;
-        public static int ws_item_tabbar=0x7f03001d;
-        public static int ws_itemlistw_search_bar=0x7f03001e;
-        public static int ws_login=0x7f03001f;
-        public static int ws_map=0x7f030020;
-        public static int ws_name_change=0x7f030021;
-        public static int ws_navigation_gridview_item=0x7f030022;
-        public static int ws_navigation_item=0x7f030023;
-        public static int ws_navigationbar=0x7f030024;
-        public static int ws_progressbar_loading=0x7f030025;
-        public static int ws_pull_refresh=0x7f030026;
-        public static int ws_pull_refresh_items=0x7f030027;
-        public static int ws_search_bar=0x7f030028;
-        public static int ws_slidingmenu_left_content=0x7f030029;
-        public static int ws_slidingmenu_left_fragment=0x7f03002a;
-        public static int ws_slidingmenu_menufragment=0x7f03002b;
-        public static int ws_slidingmenu_right_content=0x7f03002c;
-        public static int ws_slidingmenu_right_tabbar=0x7f03002d;
-        public static int ws_sms=0x7f03002e;
-        public static int ws_tabbar=0x7f03002f;
+        public static int ws_change_email_phone=0x7f030018;
+        public static int ws_check_email_phone=0x7f030019;
+        public static int ws_city_item=0x7f03001a;
+        public static int ws_customs_dialog=0x7f03001b;
+        public static int ws_gps_city_list_item=0x7f03001c;
+        public static int ws_hot_city_list_item=0x7f03001d;
+        public static int ws_item_list_slidingmenu=0x7f03001e;
+        public static int ws_item_tabbar=0x7f03001f;
+        public static int ws_itemlistw_search_bar=0x7f030020;
+        public static int ws_login=0x7f030021;
+        public static int ws_map=0x7f030022;
+        public static int ws_name_change=0x7f030023;
+        public static int ws_navigation_gridview_item=0x7f030024;
+        public static int ws_navigation_item=0x7f030025;
+        public static int ws_navigationbar=0x7f030026;
+        public static int ws_progressbar_loading=0x7f030027;
+        public static int ws_pull_refresh=0x7f030028;
+        public static int ws_pull_refresh_items=0x7f030029;
+        public static int ws_search_bar=0x7f03002a;
+        public static int ws_slidingmenu_left_content=0x7f03002b;
+        public static int ws_slidingmenu_left_fragment=0x7f03002c;
+        public static int ws_slidingmenu_menufragment=0x7f03002d;
+        public static int ws_slidingmenu_right_content=0x7f03002e;
+        public static int ws_slidingmenu_right_tabbar=0x7f03002f;
+        public static int ws_sms=0x7f030030;
+        public static int ws_tabbar=0x7f030031;
+        public static int ws_updata_passwd=0x7f030032;
     }
     public static final class menu {
         public static int main=0x7f0c0000;
@@ -974,6 +986,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int car_series_title=0x7f08007c;
         public static int car_type_title=0x7f08007d;
         public static int clear_history=0x7f08006d;
+        public static int finish_all_msg=0x7f080086;
         public static int gps_city=0x7f080074;
         public static int gpsing=0x7f080077;
         public static int hello_world=0x7f08005f;
@@ -990,6 +1003,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int pull_to_refresh_pull_label=0x7f080000;
         public static int pull_to_refresh_refreshing_label=0x7f080002;
         public static int pull_to_refresh_release_label=0x7f080001;
+        public static int pw_err_again=0x7f080088;
+        public static int pw_two_diff=0x7f080087;
+        public static int pw_ud_fail=0x7f08008a;
+        public static int pw_ud_succ=0x7f080089;
         /**  二维码 
          */
         public static int scan_text=0x7f08007a;
@@ -997,6 +1014,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int select_city_again=0x7f080079;
         public static int set_Date=0x7f08006c;
         public static int set_time=0x7f08006b;
+        /**   帐号信息  
+         */
         public static int sex_title=0x7f080083;
         /**   侧滑菜单 Slidingmenu 
          */
@@ -1173,7 +1192,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.wicare.wistorm:border_color
         */
-        public static final int CircleImageView_border_color = 1;
+        public static int CircleImageView_border_color = 1;
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#border_width}
           attribute's value can be found in the {@link #CircleImageView} array.
@@ -1189,7 +1208,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.wicare.wistorm:border_width
         */
-        public static final int CircleImageView_border_width = 0;
+        public static int CircleImageView_border_width = 0;
         /** Attributes that can be used with a PullToRefresh.
            <p>Includes the following attributes:</p>
            <table>
@@ -1239,11 +1258,11 @@ containing a value of this type.
            @see #PullToRefresh_ptrSubHeaderTextAppearance
          */
         public static final int[] PullToRefresh = {
-            0x7f01000e, 0x7f01000f, 0x7f010010, 0x7f010011,
-            0x7f010012, 0x7f010013, 0x7f010014, 0x7f010015,
-            0x7f010016, 0x7f010017, 0x7f010018, 0x7f010019,
-            0x7f01001a, 0x7f01001b, 0x7f01001c, 0x7f01001d,
-            0x7f01001e, 0x7f01001f, 0x7f010020
+            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
+            0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007,
+            0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b,
+            0x7f01000c, 0x7f01000d, 0x7f01000e, 0x7f01000f,
+            0x7f010010, 0x7f010011, 0x7f010012
         };
         /**
           <p>
@@ -1258,7 +1277,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrAdapterViewBackground
         */
-        public static final int PullToRefresh_ptrAdapterViewBackground = 16;
+        public static int PullToRefresh_ptrAdapterViewBackground = 16;
         /**
           <p>
           @attr description
@@ -1277,7 +1296,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrAnimationStyle
         */
-        public static final int PullToRefresh_ptrAnimationStyle = 12;
+        public static int PullToRefresh_ptrAnimationStyle = 12;
         /**
           <p>
           @attr description
@@ -1289,7 +1308,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrDrawable
         */
-        public static final int PullToRefresh_ptrDrawable = 6;
+        public static int PullToRefresh_ptrDrawable = 6;
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#ptrDrawableBottom}
           attribute's value can be found in the {@link #PullToRefresh} array.
@@ -1299,7 +1318,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.wicare.wistorm:ptrDrawableBottom
         */
-        public static final int PullToRefresh_ptrDrawableBottom = 18;
+        public static int PullToRefresh_ptrDrawableBottom = 18;
         /**
           <p>
           @attr description
@@ -1311,7 +1330,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrDrawableEnd
         */
-        public static final int PullToRefresh_ptrDrawableEnd = 8;
+        public static int PullToRefresh_ptrDrawableEnd = 8;
         /**
           <p>
           @attr description
@@ -1323,7 +1342,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrDrawableStart
         */
-        public static final int PullToRefresh_ptrDrawableStart = 7;
+        public static int PullToRefresh_ptrDrawableStart = 7;
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#ptrDrawableTop}
           attribute's value can be found in the {@link #PullToRefresh} array.
@@ -1333,7 +1352,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.wicare.wistorm:ptrDrawableTop
         */
-        public static final int PullToRefresh_ptrDrawableTop = 17;
+        public static int PullToRefresh_ptrDrawableTop = 17;
         /**
           <p>
           @attr description
@@ -1347,7 +1366,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrHeaderBackground
         */
-        public static final int PullToRefresh_ptrHeaderBackground = 1;
+        public static int PullToRefresh_ptrHeaderBackground = 1;
         /**
           <p>
           @attr description
@@ -1361,7 +1380,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrHeaderSubTextColor
         */
-        public static final int PullToRefresh_ptrHeaderSubTextColor = 3;
+        public static int PullToRefresh_ptrHeaderSubTextColor = 3;
         /**
           <p>
           @attr description
@@ -1373,7 +1392,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrHeaderTextAppearance
         */
-        public static final int PullToRefresh_ptrHeaderTextAppearance = 10;
+        public static int PullToRefresh_ptrHeaderTextAppearance = 10;
         /**
           <p>
           @attr description
@@ -1387,7 +1406,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrHeaderTextColor
         */
-        public static final int PullToRefresh_ptrHeaderTextColor = 2;
+        public static int PullToRefresh_ptrHeaderTextColor = 2;
         /**
           <p>
           @attr description
@@ -1404,7 +1423,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrListViewExtrasEnabled
         */
-        public static final int PullToRefresh_ptrListViewExtrasEnabled = 14;
+        public static int PullToRefresh_ptrListViewExtrasEnabled = 14;
         /**
           <p>
           @attr description
@@ -1428,7 +1447,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrMode
         */
-        public static final int PullToRefresh_ptrMode = 4;
+        public static int PullToRefresh_ptrMode = 4;
         /**
           <p>
           @attr description
@@ -1441,7 +1460,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrOverScroll
         */
-        public static final int PullToRefresh_ptrOverScroll = 9;
+        public static int PullToRefresh_ptrOverScroll = 9;
         /**
           <p>
           @attr description
@@ -1455,7 +1474,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrRefreshableViewBackground
         */
-        public static final int PullToRefresh_ptrRefreshableViewBackground = 0;
+        public static int PullToRefresh_ptrRefreshableViewBackground = 0;
         /**
           <p>
           @attr description
@@ -1471,7 +1490,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrRotateDrawableWhilePulling
         */
-        public static final int PullToRefresh_ptrRotateDrawableWhilePulling = 15;
+        public static int PullToRefresh_ptrRotateDrawableWhilePulling = 15;
         /**
           <p>
           @attr description
@@ -1484,7 +1503,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrScrollingWhileRefreshingEnabled
         */
-        public static final int PullToRefresh_ptrScrollingWhileRefreshingEnabled = 13;
+        public static int PullToRefresh_ptrScrollingWhileRefreshingEnabled = 13;
         /**
           <p>
           @attr description
@@ -1497,7 +1516,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrShowIndicator
         */
-        public static final int PullToRefresh_ptrShowIndicator = 5;
+        public static int PullToRefresh_ptrShowIndicator = 5;
         /**
           <p>
           @attr description
@@ -1509,7 +1528,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>This is a private symbol.
           @attr name com.wicare.wistorm:ptrSubHeaderTextAppearance
         */
-        public static final int PullToRefresh_ptrSubHeaderTextAppearance = 11;
+        public static int PullToRefresh_ptrSubHeaderTextAppearance = 11;
         /** Attributes that can be used with a SlidingMenu.
            <p>Includes the following attributes:</p>
            <table>
@@ -1547,10 +1566,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            @see #SlidingMenu_viewBehind
          */
         public static final int[] SlidingMenu = {
-            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
-            0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007,
-            0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b,
-            0x7f01000c, 0x7f01000d
+            0x7f010013, 0x7f010014, 0x7f010015, 0x7f010016,
+            0x7f010017, 0x7f010018, 0x7f010019, 0x7f01001a,
+            0x7f01001b, 0x7f01001c, 0x7f01001d, 0x7f01001e,
+            0x7f01001f, 0x7f010020
         };
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#behindOffset}
@@ -1567,7 +1586,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.wicare.wistorm:behindOffset
         */
-        public static final int SlidingMenu_behindOffset = 3;
+        public static int SlidingMenu_behindOffset = 3;
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#behindScrollScale}
           attribute's value can be found in the {@link #SlidingMenu} array.
@@ -1581,7 +1600,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.wicare.wistorm:behindScrollScale
         */
-        public static final int SlidingMenu_behindScrollScale = 5;
+        public static int SlidingMenu_behindScrollScale = 5;
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#behindWidth}
           attribute's value can be found in the {@link #SlidingMenu} array.
@@ -1597,7 +1616,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.wicare.wistorm:behindWidth
         */
-        public static final int SlidingMenu_behindWidth = 4;
+        public static int SlidingMenu_behindWidth = 4;
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#fadeDegree}
           attribute's value can be found in the {@link #SlidingMenu} array.
@@ -1611,7 +1630,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.wicare.wistorm:fadeDegree
         */
-        public static final int SlidingMenu_fadeDegree = 11;
+        public static int SlidingMenu_fadeDegree = 11;
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#fadeEnabled}
           attribute's value can be found in the {@link #SlidingMenu} array.
@@ -1625,7 +1644,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.wicare.wistorm:fadeEnabled
         */
-        public static final int SlidingMenu_fadeEnabled = 10;
+        public static int SlidingMenu_fadeEnabled = 10;
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#mode}
           attribute's value can be found in the {@link #SlidingMenu} array.
@@ -1642,7 +1661,7 @@ containing a value of this type.
 </table>
           @attr name com.wicare.wistorm:mode
         */
-        public static final int SlidingMenu_mode = 0;
+        public static int SlidingMenu_mode = 0;
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#selectorDrawable}
           attribute's value can be found in the {@link #SlidingMenu} array.
@@ -1652,7 +1671,7 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.wicare.wistorm:selectorDrawable
         */
-        public static final int SlidingMenu_selectorDrawable = 13;
+        public static int SlidingMenu_selectorDrawable = 13;
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#selectorEnabled}
           attribute's value can be found in the {@link #SlidingMenu} array.
@@ -1666,7 +1685,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.wicare.wistorm:selectorEnabled
         */
-        public static final int SlidingMenu_selectorEnabled = 12;
+        public static int SlidingMenu_selectorEnabled = 12;
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#shadowDrawable}
           attribute's value can be found in the {@link #SlidingMenu} array.
@@ -1676,7 +1695,7 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.wicare.wistorm:shadowDrawable
         */
-        public static final int SlidingMenu_shadowDrawable = 8;
+        public static int SlidingMenu_shadowDrawable = 8;
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#shadowWidth}
           attribute's value can be found in the {@link #SlidingMenu} array.
@@ -1692,7 +1711,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.wicare.wistorm:shadowWidth
         */
-        public static final int SlidingMenu_shadowWidth = 9;
+        public static int SlidingMenu_shadowWidth = 9;
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#touchModeAbove}
           attribute's value can be found in the {@link #SlidingMenu} array.
@@ -1706,11 +1725,10 @@ containing a value of this type.
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
 <tr><td><code>margin</code></td><td>0</td><td></td></tr>
 <tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
-<tr><td><code>none</code></td><td>2</td><td></td></tr>
 </table>
           @attr name com.wicare.wistorm:touchModeAbove
         */
-        public static final int SlidingMenu_touchModeAbove = 6;
+        public static int SlidingMenu_touchModeAbove = 6;
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#touchModeBehind}
           attribute's value can be found in the {@link #SlidingMenu} array.
@@ -1724,11 +1742,10 @@ containing a value of this type.
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
 <tr><td><code>margin</code></td><td>0</td><td></td></tr>
 <tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
-<tr><td><code>none</code></td><td>2</td><td></td></tr>
 </table>
           @attr name com.wicare.wistorm:touchModeBehind
         */
-        public static final int SlidingMenu_touchModeBehind = 7;
+        public static int SlidingMenu_touchModeBehind = 7;
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#viewAbove}
           attribute's value can be found in the {@link #SlidingMenu} array.
@@ -1738,7 +1755,7 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.wicare.wistorm:viewAbove
         */
-        public static final int SlidingMenu_viewAbove = 1;
+        public static int SlidingMenu_viewAbove = 1;
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#viewBehind}
           attribute's value can be found in the {@link #SlidingMenu} array.
@@ -1748,7 +1765,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.wicare.wistorm:viewBehind
         */
-        public static final int SlidingMenu_viewBehind = 2;
+        public static int SlidingMenu_viewBehind = 2;
         /** Attributes that can be used with a WHorizontalProgressBarWithNumber.
            <p>Includes the following attributes:</p>
            <table>
@@ -1792,7 +1809,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.wicare.wistorm:progress_reached_bar_height
         */
-        public static final int WHorizontalProgressBarWithNumber_progress_reached_bar_height = 2;
+        public static int WHorizontalProgressBarWithNumber_progress_reached_bar_height = 2;
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#progress_reached_color}
           attribute's value can be found in the {@link #WHorizontalProgressBarWithNumber} array.
@@ -1807,7 +1824,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.wicare.wistorm:progress_reached_color
         */
-        public static final int WHorizontalProgressBarWithNumber_progress_reached_color = 1;
+        public static int WHorizontalProgressBarWithNumber_progress_reached_color = 1;
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#progress_text_color}
           attribute's value can be found in the {@link #WHorizontalProgressBarWithNumber} array.
@@ -1822,7 +1839,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.wicare.wistorm:progress_text_color
         */
-        public static final int WHorizontalProgressBarWithNumber_progress_text_color = 5;
+        public static int WHorizontalProgressBarWithNumber_progress_text_color = 5;
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#progress_text_offset}
           attribute's value can be found in the {@link #WHorizontalProgressBarWithNumber} array.
@@ -1838,7 +1855,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.wicare.wistorm:progress_text_offset
         */
-        public static final int WHorizontalProgressBarWithNumber_progress_text_offset = 6;
+        public static int WHorizontalProgressBarWithNumber_progress_text_offset = 6;
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#progress_text_size}
           attribute's value can be found in the {@link #WHorizontalProgressBarWithNumber} array.
@@ -1854,7 +1871,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.wicare.wistorm:progress_text_size
         */
-        public static final int WHorizontalProgressBarWithNumber_progress_text_size = 4;
+        public static int WHorizontalProgressBarWithNumber_progress_text_size = 4;
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#progress_text_visibility}
           attribute's value can be found in the {@link #WHorizontalProgressBarWithNumber} array.
@@ -1871,7 +1888,7 @@ containing a value of this type.
 </table>
           @attr name com.wicare.wistorm:progress_text_visibility
         */
-        public static final int WHorizontalProgressBarWithNumber_progress_text_visibility = 7;
+        public static int WHorizontalProgressBarWithNumber_progress_text_visibility = 7;
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#progress_unreached_bar_height}
           attribute's value can be found in the {@link #WHorizontalProgressBarWithNumber} array.
@@ -1887,7 +1904,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.wicare.wistorm:progress_unreached_bar_height
         */
-        public static final int WHorizontalProgressBarWithNumber_progress_unreached_bar_height = 3;
+        public static int WHorizontalProgressBarWithNumber_progress_unreached_bar_height = 3;
         /**
           <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#progress_unreached_color}
           attribute's value can be found in the {@link #WHorizontalProgressBarWithNumber} array.
@@ -1902,6 +1919,6 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.wicare.wistorm:progress_unreached_color
         */
-        public static final int WHorizontalProgressBarWithNumber_progress_unreached_color = 0;
+        public static int WHorizontalProgressBarWithNumber_progress_unreached_color = 0;
     };
 }

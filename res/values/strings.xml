@@ -53,11 +53,15 @@
 	<string name="app_copyright">Copyright @ 2015-2016 Wistorm</string>
 	<string name="about_app_org">http://www.bibibaba.cn</string>
 	
+	<!--  帐号信息  --> 
 	<string name="sex_title">请选择性别</string>
 	<string name="cancel">取消</string>
 	<string name="ok">确定</string>
-	
-	
+	<string name="finish_all_msg">请填写完整信息</string> 
+	<string name="pw_two_diff">2次输入的密码不一致</string> 
+	<string name="pw_err_again">密码错误，请重新输入</string> 
+	<string name="pw_ud_succ">密码修改成功</string> 
+	<string name="pw_ud_fail">密码修改失败</string> 
 	
 	
 	
