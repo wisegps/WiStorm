@@ -13,6 +13,10 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
+/**
+ * @author W
+ * 汽车选择侧边栏快速搜索字母
+ */
 public class WCarSelectorSideBar extends View {
 	// 触摸事件
 	private OnTouchingLetterChangedListener onTouchingLetterChangedListener;

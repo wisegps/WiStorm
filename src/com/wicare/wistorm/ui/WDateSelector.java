@@ -6,16 +6,13 @@ import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.content.Context;
-import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.EditText;
-import android.widget.TextView;
 
 import com.wicare.wistorm.R;
 
 
 /**
- * DateSlector
+ * 日期选择
  * @author Wu
  * @date 2015-10-9
  */
@@ -24,14 +21,12 @@ public class WDateSelector {
 	private Context mContext;
 	private int mYear, mMonthOfYear, mDayOfMonth;
 	private String strYear,strMonthOfYear,strDayOfMonth;
-	
-
+	private OnDateChangedListener mOnDateChangedListener;//接口
 
 	public void setStrDayOfMonth(String strDayOfMonth) {
 		this.strDayOfMonth = strDayOfMonth;
 	}
 
-	private OnDateChangedListener mOnDateChangedListener;
 	
 	public WDateSelector(Context context){		
 		mContext = context; 
@@ -42,14 +37,10 @@ public class WDateSelector {
         mDayOfMonth = c.get(Calendar.DAY_OF_MONTH);  
         
 	}
-	  
+	 
 
 	/**
-	 * select date for @param (TextView、EditText or Button)
-	 * 
-	 * @param textView
-	 * @param editText
-	 * @param button
+	 * 设置的日期
 	 */
 	public void setDate(){
 		  
@@ -83,14 +74,15 @@ public class WDateSelector {
 		datePickerDialog.show();
 	}
 
-	 /*
-     *接口回调 参数是当前的View
+	/**
+     * 接口回调：选择日期变化接口回调
      */
     public interface OnDateChangedListener {
         void onDateChanged(String year,String month,String day);
     }
-    /*
-     *对外的公开方法 
+    
+    /**
+     * 对外的公开方法 ：设置日期变化的监听
      */
     public void setOnDateChangedListener(OnDateChangedListener callback){
         mOnDateChangedListener = callback;
@@ -106,27 +98,27 @@ public class WDateSelector {
         }
     }
 
-    public String getStrYear() {
+    private String getStrYear() {
 		return strYear;
 	}
 
 
-	public void setStrYear(String strYear) {
+    private void setStrYear(String strYear) {
 		this.strYear = strYear;
 	}
 
 
-	public String getStrMonthOfYear() {
+    private String getStrMonthOfYear() {
 		return strMonthOfYear;
 	}
 
 
-	public void setStrMonthOfYear(String strMonthOfYear) {
+    private void setStrMonthOfYear(String strMonthOfYear) {
 		this.strMonthOfYear = strMonthOfYear;
 	}
 
 
-	public String getStrDayOfMonth() {
+    private String getStrDayOfMonth() {
 		return strDayOfMonth;
 	}
 

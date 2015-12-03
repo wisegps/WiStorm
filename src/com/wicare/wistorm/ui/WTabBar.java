@@ -13,9 +13,9 @@ import android.widget.TextView;
 import com.wicare.wistorm.R;
 
 /**
- * TabBar
- * @author c
+ * @author Wu
  * @date 2015-10-9
+ * 导航栏 具体引用参考demo 在布局xml中的使用
  */
 public class WTabBar extends LinearLayout implements OnClickListener{
 	

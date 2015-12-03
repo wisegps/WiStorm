@@ -119,6 +119,9 @@ public class WLisView extends Activity{
     
     
     
+    /**
+     * @return  返回listview的显示数据
+     */
     public List<Map<String,Object>> getmData(){  
         for(int i=0;i<mListTitle.length;i++){  
             Map<String,Object> map=new HashMap<String,Object>();  

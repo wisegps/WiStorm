@@ -19,9 +19,9 @@ public class WHorizontalProgressBarWithNumber extends ProgressBar {
 
 	private static final int DEFAULT_TEXT_SIZE = 10;
 	private static final int DEFAULT_TEXT_COLOR = Color.GRAY;
-	private static final int DEFAULT_COLOR_UNREACHED_COLOR = 0xFFd3d6da;
-	private static final int DEFAULT_HEIGHT_REACHED_PROGRESS_BAR = 2;
-	private static final int DEFAULT_HEIGHT_UNREACHED_PROGRESS_BAR = 2;
+	private static final int DEFAULT_COLOR_UNREACHED_COLOR = 0xFFd3d6da;//未达到的进度的颜色
+	private static final int DEFAULT_HEIGHT_REACHED_PROGRESS_BAR = 2;//进度条宽度
+	private static final int DEFAULT_HEIGHT_UNREACHED_PROGRESS_BAR = 2;//未达到的进度的宽度
 	private static final int DEFAULT_SIZE_TEXT_OFFSET = 0;
 	
 	/**

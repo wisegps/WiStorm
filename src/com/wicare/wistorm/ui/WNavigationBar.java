@@ -21,8 +21,8 @@ import android.widget.SimpleAdapter;
 import android.widget.AdapterView.OnItemClickListener;
 
 /**
- * @author Administrator
- *
+ * @author Wu
+ * 具体引用参考demo在布局xml中的引用方式
  */
 public class WNavigationBar extends LinearLayout implements OnPageChangeListener{
 	
@@ -32,9 +32,7 @@ public class WNavigationBar extends LinearLayout implements OnPageChangeListener
 	
 	ImageView imgCircleDot0;//左边的圆点
 	ImageView imgCircleDot1;//右边的圆点
-	
-	private OnGridviewClickListener onGridviewClickListener;//Gridview 点击监听
-	
+	private OnGridviewClickListener onGridviewClickListener;//Gridview 接口
 
 	public WNavigationBar(Context context, AttributeSet attrs) {
 		super(context, attrs);
@@ -80,9 +78,6 @@ public class WNavigationBar extends LinearLayout implements OnPageChangeListener
 		LinearLayout ll = (LinearLayout)this.getChildAt(1);
 		imgCircleDot0 = (ImageView) ll.getChildAt(0).findViewById(R.id.iv_circle_page_0);
 		imgCircleDot1 = (ImageView) ll.getChildAt(1).findViewById(R.id.iv_circle_page_1);
-	
-		
-		
 	}
 	
 	

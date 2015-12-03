@@ -3,7 +3,6 @@ package com.wicare.wistorm.toolkit;
 import com.wicare.wistorm.R;
 
 import android.app.Activity;
-import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -13,6 +12,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * @author Wu
+ * 关于页面
+ */
 public class WAboutApp extends Activity {
 	
 	private ImageView ivBack;

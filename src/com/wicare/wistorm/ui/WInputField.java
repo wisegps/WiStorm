@@ -1,6 +1,5 @@
 package com.wicare.wistorm.ui;
 
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -49,6 +48,9 @@ public class WInputField extends EditText implements
     }
     
     
+    /**
+     * 初始化view
+     */
     private void init() { 
     	//获取EditText的DrawableRight,假如没有设置我们就使用默认的图片
     	mClearDrawable = getCompoundDrawables()[2]; 

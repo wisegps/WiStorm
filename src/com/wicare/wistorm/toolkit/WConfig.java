@@ -14,10 +14,6 @@ public class WConfig {
 	public static String userIconPath = BasePath + "userIcon/";
 	/** 车品牌logo **/
 	public static String VehicleLogoPath = BasePath + "vehicleLogo/";
-	
-	
-	
-	
 	public static String USER_DATA = "userData";
 	public static String PASSWD    = "password";
 }

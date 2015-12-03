@@ -23,13 +23,17 @@ import com.wicare.wistorm.R;
  */
 public class WBottomPopupWindow extends PopupWindow {
 	private Context mContext;
-	ListView lv_pop;
-	OnItemClickListener onItemClickListener;
-	PopupWindow mPopupWindow;
+	private ListView lv_pop; //listview popupwindow上面的按键
+	private OnItemClickListener onItemClickListener;//按键监听的接口
+	private PopupWindow mPopupWindow;
 	
 	public WBottomPopupWindow(Context context){
 		mContext = context;
 	}
+	
+	/**
+	 * @param v  A parent view to get the android.view.View.getWindowToken() token from
+	 */
 	public void initView(View v){
 		LayoutInflater mLayoutInflater = LayoutInflater.from(mContext);
         View popunwindwow = mLayoutInflater.inflate(R.layout.ws_buttom_popupwindow,null);
@@ -44,22 +48,40 @@ public class WBottomPopupWindow extends PopupWindow {
         lv_pop = (ListView)popunwindwow.findViewById(R.id.lv_pop);
 	}
 	
+	
+	/**
+	 * 隐藏pupupwindow 
+	 */
 	public void dismiss(){
         mPopupWindow.dismiss();
 	}
 	
+	/**
+	 * @param items pupupwindow的按键
+	 */
 	public void setData(List<String> items){
 		lv_pop.setAdapter(new ItemAdapter(items));
 	}
 	
+	/**
+	 * @author Wu
+	 * popupwindow 按键的点击事件的接口
+	 */
 	public interface OnItemClickListener{
 		public abstract void OnItemClick(int index);
 	}
 	
+	/**
+	 * @param onItemClickListener popupwindow 按键点击事件监听
+	 */
 	public void SetOnItemClickListener(OnItemClickListener onItemClickListener){
 		this.onItemClickListener = onItemClickListener;
 	}
 	
+	/**
+	 * @author Wu
+	 * popupwindow 的按键适配器
+	 */
 	class ItemAdapter extends BaseAdapter{
 		private LayoutInflater layoutInflater;
 		List<String> datas;

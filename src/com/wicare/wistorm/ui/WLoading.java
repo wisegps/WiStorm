@@ -29,6 +29,11 @@ public class WLoading extends Dialog{
 	    super(context, theme);
 	}
 	     
+    /**
+     * 设置WLoading的参数
+     * @param context
+     * @return
+     */
     public static WLoading createDialog(Context context){
     	
         wLoading = new WLoading(context,R.style.progressDialog);

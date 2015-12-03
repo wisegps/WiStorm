@@ -1,9 +1,13 @@
 package com.wicare.wistorm.ui;
 
+/**
+ * @author Wu
+ * 城市选择的一个实体类。用来设置 城市名字和拼音
+ */
 public class WCity {
 	
-	public String name;
-	public String pinyin;
+	public String name;//城市的名字
+	public String pinyin;//城市的拼音
 	
 	public WCity() {
 		super();

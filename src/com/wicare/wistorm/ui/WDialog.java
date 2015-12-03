@@ -10,7 +10,6 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -18,12 +17,11 @@ import com.wicare.wistorm.R;
 
 
 /**
- * 自定义  alert Dialog
+ * 自定义 Dialog
  * @author Wu
- *
  */
 public class WDialog extends Dialog{
-	//实现默认构造函数  
+
 	public WDialog(Context context, int theme) {   
 	    super(context, theme);  
 	}  
@@ -36,10 +34,7 @@ public class WDialog extends Dialog{
 	public WDialog(Context context) {  
 	    super(context);  
 	} 
-	
-	
-	
-	
+
 	 /**
 	 * 所有的方法执行完都会返回一个Builder
 	 * 使得后面可以直接create和show 
@@ -50,7 +45,6 @@ public class WDialog extends Dialog{
         private String message;  
         private String positiveButtonText;//确定按钮  
         private String negativeButtonText;//取消按钮  
-        private View contentView;  
         private BaseAdapter adapter;//listview的adapter  
         //确定按钮事件  
         private DialogInterface.OnClickListener positiveButtonClickListener;  
@@ -127,17 +121,6 @@ public class WDialog extends Dialog{
             return this;  
         } 
         
-        /**
-         * 设置背景
-         * @param adapter
-         * @return
-         */ 
-        public Builder setContentView(View v) {  
-            this.contentView = v;  
-            return this;  
-        } 
-        
-        
         /** 
          * 设置确定按钮和其点击事件   
          * @param positiveButtonText 
@@ -164,7 +147,6 @@ public class WDialog extends Dialog{
 
         /**
          * 对话框的 createview方法 
-         * 
          * @return
          */
         @SuppressLint("InflateParams") 
@@ -178,7 +160,7 @@ public class WDialog extends Dialog{
                     LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));  
             // 设置标题  
             ((TextView) layout.findViewById(R.id.title)).setText(title);  
-          //设置listview的adapter如果没有就隐藏listview  
+            //设置listview的adapter如果没有就隐藏listview  
             if(adapter != null && adapter.getCount()>0){  
                 ListView listView = (ListView)layout.findViewById(R.id.listView);  
                 listView.setAdapter(adapter);  
@@ -191,8 +173,6 @@ public class WDialog extends Dialog{
                         View.GONE);  
                 layout.findViewById(R.id.lv_view).setVisibility(View.GONE);
             }  
-  
-  
             //设置确定按钮  
             if (positiveButtonText != null) {  
                 ((TextView) layout.findViewById(R.id.positiveButton))  

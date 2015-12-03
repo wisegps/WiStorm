@@ -11,8 +11,8 @@ import com.wicare.wistorm.R;
 
 
 /**
- * TimeSelector
- * @author c
+ * 时间选择
+ * @author Wu
  * @date 2015-10-9
  * 
  */
@@ -20,14 +20,10 @@ public class WTimeSelector {
 
 	private Context mContext;
 	private int mHour,mMinute;
-	
 	private String strHour,strMinute;
+	private OnTimeChangedListener mOnTimeChangedListener;//接口
 	
-	
-
-	private OnTimeChangedListener mOnTimeChangedListener;
 	public WTimeSelector(Context context){
-		
 		mContext = context;
 		// get current 
         final Calendar c = Calendar.getInstance();  
@@ -35,9 +31,9 @@ public class WTimeSelector {
         mMinute = c.get(Calendar.MINUTE);  
 	}
 	
+
 	/**
-	 * @param tv 
-	 * @param ed
+	 * 设置时间
 	 */
 	public void setTime(){
 		
@@ -65,21 +61,22 @@ public class WTimeSelector {
 	}
 	
 	
-	 /*
-     *接口回调 参数是当前的View
+	/**
+     * 接口回调 ：选择时间变化接口回调
      */
     public interface OnTimeChangedListener {
         void onTimeChanged(String hour,String minute);
     }
-    /*
-     *对外的公开方法 
+    
+    /**
+     * 对外的公开方法 ：设置时间变化的监听
      */
     public void setOnTimeChangedListener(OnTimeChangedListener callback){
         mOnTimeChangedListener = callback;
     }
      
     /**
-     *  numberPicker 变化时候监听函数
+     *  numberPicker 事件变化监听函数
      */
     private void onDateChanged() {
         if (mOnTimeChangedListener != null) {
@@ -87,19 +84,19 @@ public class WTimeSelector {
         }
     }
 
-    public String getStrHour() {
+    private String getStrHour() {
 		return strHour;
 	}
 
-	public void setStrHour(String strHour) {
+    private void setStrHour(String strHour) {
 		this.strHour = strHour;
 	}
 
-	public String getStrMinute() {
+    private String getStrMinute() {
 		return strMinute;
 	}
 
-	public void setStrMinute(String strMinute) {
+    private void setStrMinute(String strMinute) {
 		this.strMinute = strMinute;
 	}
 }

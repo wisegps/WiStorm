@@ -8,6 +8,10 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
+/**
+ * @author Wu
+ * 城市搜索侧边栏
+ */
 public class WLetterSideBar extends View {
 
 	OnTouchingLetterChangedListener onTouchingLetterChangedListener;
@@ -96,11 +100,18 @@ public class WLetterSideBar extends View {
 		return super.onTouchEvent(event);
 	}
 
+	/**
+	 * @param onTouchingLetterChangedListener 设置触摸事件监听
+	 */
 	public void setOnTouchingLetterChangedListener(
 			OnTouchingLetterChangedListener onTouchingLetterChangedListener) {
 		this.onTouchingLetterChangedListener = onTouchingLetterChangedListener;
 	}
 
+	/**
+	 * @author Wu
+	 * 侧边栏触摸事件接口
+	 */
 	public interface OnTouchingLetterChangedListener {
 		public void onTouchingLetterChanged(String s);
 	}

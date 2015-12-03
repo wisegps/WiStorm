@@ -10,6 +10,10 @@ import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
 import net.sourceforge.pinyin4j.format.HanyuPinyinVCharType;
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
 
+/**
+ * @author Wu
+ * 汉字转拼音
+ */
 public class WPingYinUtil {
 
 	/**
@@ -45,6 +49,10 @@ public class WPingYinUtil {
 		}
 	}
 
+	/**
+	 * @param chines 拼音
+	 * @return 拼音的首字母
+	 */
 	public static String converterToFirstSpell(String chines) {
 		String pinyinName = "";
 		char[] nameChar = chines.toCharArray();
