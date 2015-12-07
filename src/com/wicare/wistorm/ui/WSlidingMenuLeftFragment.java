@@ -17,6 +17,11 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+/**
+ * @author Wu
+ *
+ * 侧滑菜单左边菜单栏内容
+ */
 public class WSlidingMenuLeftFragment extends Fragment implements OnItemClickListener {
 	
 	private View mView;
@@ -168,7 +173,4 @@ public class WSlidingMenuLeftFragment extends Fragment implements OnItemClickLis
 	    ImageView img;  
 	    TextView  title;   
 	   }
-
-
-
 }

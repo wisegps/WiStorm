@@ -22,7 +22,8 @@ import android.widget.AdapterView.OnItemClickListener;
 
 /**
  * @author Wu
- * 具体引用参考demo在布局xml中的引用方式
+ * 
+ * 九宫格滑动页面导航.具体引用参考demo在布局xml中的引用方式
  */
 public class WNavigationBar extends LinearLayout implements OnPageChangeListener{
 	

@@ -12,6 +12,10 @@ import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 
+/**
+ * @author Wu
+ * 生成二维码图像
+ */
 public class WZxingBitmapUtil {
 
 	/**

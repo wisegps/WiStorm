@@ -24,6 +24,11 @@ import android.widget.Toast;
 
 import com.wicare.wistorm.R;
 
+/**
+ * @author Wu
+ * 
+ * 搜索框演示
+ */
 public class WSearchBarActivity extends Activity implements TextWatcher, 
 		OnItemClickListener, OnClickListener{
 	

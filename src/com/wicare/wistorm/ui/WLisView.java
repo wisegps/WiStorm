@@ -26,16 +26,15 @@ import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.wicare.wistorm.R;
 
 /**
- * WLisView
  * @author Wu
- * @date 2015-10-9
+ * 
  */
 public class WLisView extends Activity{
 	
 	final String TAG = WLisView.this.toString();
 	
     private String[] mListTitle={"姓名: ","性别: ","年龄: ","居住地: ","邮箱: "};
-    private String[] mListStr={"wendeWu","男","25","shenzhen","wuwende@live.cn"}; 
+    private String[] mListStr={"Wistorm","男","100","shenzhen","1000@live.cn"}; 
 	private int i=0; 
 	
 	private PullToRefreshListView  mPullToRefreshListView;  
@@ -134,6 +133,9 @@ public class WLisView extends Activity{
 	
     
     
+	/**
+	 * 异步加载
+	 */
 	private class GetDataTask extends AsyncTask<Void, Void, Map<String,Object>> {  
         @Override  
         protected Map<String, Object> doInBackground(Void... params) {  
@@ -144,10 +146,12 @@ public class WLisView extends Activity{
 			} catch (InterruptedException e) {  
 			    e.printStackTrace();  
 			}  
-			map.put("title","title"+(i++)+":--->");  
-			map.put("info", "info" + (i++));  
-			//加入数据，这里是可以的  
-		    mData.add(map);  
+			i++;
+			map.put("title","title"+(i)+":--->");  
+			map.put("info", "info" + (i));  
+//			//加入数据，这里是可以的  
+//		    mData.add(map);  
+		    
 		    return map;  
 		}  
 		@Override  
@@ -162,9 +166,7 @@ public class WLisView extends Activity{
  
 
 	/**
-	 * 
-	 * 搜索列表的适配器
-	 * 
+	 * 上下拉列表的适配器
  	 */
  	public class listPullToRefreshAdapter extends BaseAdapter{
  		

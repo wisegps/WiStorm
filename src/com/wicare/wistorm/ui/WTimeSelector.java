@@ -11,10 +11,9 @@ import com.wicare.wistorm.R;
 
 
 /**
- * 时间选择
  * @author Wu
- * @date 2015-10-9
  * 
+ * 时间选择
  */
 public class WTimeSelector {
 

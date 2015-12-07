@@ -2,6 +2,10 @@ package com.wicare.wistorm.toolkit;
 
 import android.os.Environment;
 
+/**
+ * @author Wu
+ * wistorm 的一些配置如：文件路径，url等
+ */
 public class WConfig {
 
 	public static String BaseUrl = "http://api.bibibaba.cn/";

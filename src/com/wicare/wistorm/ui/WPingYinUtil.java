@@ -12,6 +12,7 @@ import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombi
 
 /**
  * @author Wu
+ * 
  * 汉字转拼音
  */
 public class WPingYinUtil {

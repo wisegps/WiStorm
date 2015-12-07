@@ -12,6 +12,11 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.RectF;
 
+/**
+ * @author Wu
+ * 
+ * 图片成比例压缩
+ */
 public class WPicCompresses {
 	/**
 	 * 获取正方形图片

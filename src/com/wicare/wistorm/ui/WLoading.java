@@ -12,9 +12,9 @@ import android.widget.TextView;
 import com.wicare.wistorm.R;
 
 /**
- * customs progressbar  
  * @author Wu
- *
+ * 
+ * 自定义加载框
  */
 public class WLoading extends Dialog{
 	 
@@ -56,7 +56,7 @@ public class WLoading extends Dialog{
 	  
     
     /**
-     * 设置 Progressbar 显示的信息
+     * 设置加载框显示的信息
      * @param strMessage
      * @return
      *

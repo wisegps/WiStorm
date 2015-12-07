@@ -19,6 +19,11 @@ import android.net.Uri;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
+/**
+ * @author Wu
+ *
+ * 自定义的圆形 ImageView
+ */
 public class CircleImageView extends ImageView{
 	
 	private static final ScaleType SCALE_TYPE = ScaleType.CENTER_CROP;
@@ -41,13 +46,17 @@ public class CircleImageView extends ImageView{
     private float mBorderRadius;
     private boolean mReady;
     private boolean mSetupPending;
+    
+    
     public CircleImageView(Context context) {
         super(context);
         init();
     }
+    
     public CircleImageView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
+    
     public CircleImageView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         TypedArray a = context.obtainStyledAttributes(attrs,
@@ -59,6 +68,10 @@ public class CircleImageView extends ImageView{
         a.recycle();
         init();
     }
+    
+    /**
+     * 初始化
+     */
     private void init() {
         super.setScaleType(SCALE_TYPE);
         mReady = true;
@@ -67,10 +80,12 @@ public class CircleImageView extends ImageView{
             mSetupPending = false;
         }
     }
+    
     @Override
     public ScaleType getScaleType() {
         return SCALE_TYPE;
     }
+    
     @Override
     public void setScaleType(ScaleType scaleType) {
         if (scaleType != SCALE_TYPE) {
@@ -78,6 +93,7 @@ public class CircleImageView extends ImageView{
                     "ScaleType %s not supported.", scaleType));
         }
     }
+    
     @Override
     protected void onDraw(Canvas canvas) {
         if (getDrawable() == null) {
@@ -90,14 +106,17 @@ public class CircleImageView extends ImageView{
                     mBorderPaint);
         }
     }
+    
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
         setup();
     }
+    
     public int getBorderColor() {
         return mBorderColor;
     }
+    
     public void setBorderColor(int borderColor) {
         if (borderColor == mBorderColor) {
             return;
@@ -106,9 +125,11 @@ public class CircleImageView extends ImageView{
         mBorderPaint.setColor(mBorderColor);
         invalidate();
     }
+    
     public int getBorderWidth() {
         return mBorderWidth;
     }
+    
     public void setBorderWidth(int borderWidth) {
         if (borderWidth == mBorderWidth) {
             return;
@@ -116,30 +137,35 @@ public class CircleImageView extends ImageView{
         mBorderWidth = borderWidth;
         setup();
     }
+    
     @Override
     public void setImageBitmap(Bitmap bm) {
         super.setImageBitmap(bm);
         mBitmap = bm;
         setup();
     }
+    
     @Override
     public void setImageDrawable(Drawable drawable) {
         super.setImageDrawable(drawable);
         mBitmap = getBitmapFromDrawable(drawable);
         setup();
     }
+    
     @Override
     public void setImageResource(int resId) {
         super.setImageResource(resId);
         mBitmap = getBitmapFromDrawable(getDrawable());
         setup();
     }
+    
     @Override
     public void setImageURI(Uri uri) {
         super.setImageURI(uri);
         mBitmap = getBitmapFromDrawable(getDrawable());
         setup();
     }
+    
     private Bitmap getBitmapFromDrawable(Drawable drawable) {
         if (drawable == null) {
             return null;
@@ -164,6 +190,7 @@ public class CircleImageView extends ImageView{
             return null;
         }
     }
+    
     private void setup() {
         if (!mReady) {
             mSetupPending = true;

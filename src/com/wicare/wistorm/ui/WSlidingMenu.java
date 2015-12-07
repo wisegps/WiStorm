@@ -9,6 +9,11 @@ import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
 import com.wicare.wistorm.R;
 
+/**
+ * @author Wu
+ * 
+ * 侧滑菜单Activity 。可以直接继承
+ */
 public class WSlidingMenu extends SlidingFragmentActivity{
 	
 	static final String TAG = "WSlidingMenu";

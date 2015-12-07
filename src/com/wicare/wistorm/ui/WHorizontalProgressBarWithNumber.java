@@ -13,7 +13,8 @@ import android.widget.ProgressBar;
 
 /**
  * @author Wu
- * 条形进度条
+ * 
+ * 条形进度条 
  */
 public class WHorizontalProgressBarWithNumber extends ProgressBar {
 

@@ -17,8 +17,9 @@ import com.wicare.wistorm.R;
 
 
 /**
- * 自定义 Dialog
  * @author Wu
+ * 
+ * 自定义加载弹框
  */
 public class WDialog extends Dialog{
 

@@ -4,6 +4,7 @@ import android.widget.GridView;
 
 /**
  * @author Wu
+ * 
  * 热门城市显示的gridview
  */
 public class WCityGridView extends GridView {

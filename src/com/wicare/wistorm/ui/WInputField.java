@@ -17,10 +17,9 @@ import android.widget.EditText;
 import com.wicare.wistorm.R;
 
 /**
- * 自定义带有清除按键的 EditText  
  * @author Wu
  * @date 2015-10-15
- * 
+ * 自定义带有清除按键的 EditText  
  */
 public class WInputField extends EditText implements  
 		OnFocusChangeListener, TextWatcher{

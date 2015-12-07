@@ -25,6 +25,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+/**
+ * @author Wu
+ * 
+ * 修改帐号的昵称Activity
+ */
 public class WNameChangeActivity extends Activity {
 	
 	private static final int UPDATA_NAME  = 1;

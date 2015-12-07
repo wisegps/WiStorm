@@ -14,7 +14,8 @@ import android.view.View;
 import android.widget.TextView;
 
 /**
- * @author W
+ * @author Wu
+ * 
  * 汽车选择侧边栏快速搜索字母
  */
 public class WCarSelectorSideBar extends View {

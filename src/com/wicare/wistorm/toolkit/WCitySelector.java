@@ -47,6 +47,11 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * @author Wu
+ * 
+ * 城市选择Activity
+ */
 public class WCitySelector extends Activity implements OnScrollListener, TextWatcher, OnItemClickListener{
 	
 	private BaseAdapter adapter;
@@ -98,6 +103,9 @@ public class WCitySelector extends Activity implements OnScrollListener, TextWat
 		mLocationClient.start();
 	}
 	
+	/**
+	 * 定位初始化参数
+	 */
 	private void InitLocation() {
 		// 设置定位参数
 		LocationClientOption option = new LocationClientOption();
@@ -115,9 +123,7 @@ public class WCitySelector extends Activity implements OnScrollListener, TextWat
 		mLocationClient.setLocOption(option);
 	}
 	
-	/* (non-Javadoc)
-	 * @see android.app.Activity#onPause()
-	 */
+
 	@Override
 	protected void onPause() {
 		// TODO Auto-generated method stub
@@ -179,7 +185,7 @@ public class WCitySelector extends Activity implements OnScrollListener, TextWat
 	/**
 	 * 热门城市
 	 */
-	public void hotCityInit() {
+	private void hotCityInit() {
 		WCity wCity = new WCity("上海", "2");
 		city_hot.add(wCity);
 		wCity = new WCity("北京", "2");
@@ -232,7 +238,7 @@ public class WCitySelector extends Activity implements OnScrollListener, TextWat
 	/**
 	 * 实现实位回调监听
 	 */
-	public class MyLocationListener implements BDLocationListener {
+	private class MyLocationListener implements BDLocationListener {
 
 		@Override
 		public void onReceiveLocation(BDLocation arg0) {
@@ -748,6 +754,10 @@ public class WCitySelector extends Activity implements OnScrollListener, TextWat
 		}
 	}
 
+	
+	/** 
+	 * 搜索框变化监听：搜索框（编辑框）变化时候实现的逻辑代码
+	 */
 	@Override
 	public void beforeTextChanged(CharSequence s, int start, int count,
 			int after) {
@@ -783,6 +793,9 @@ public class WCitySelector extends Activity implements OnScrollListener, TextWat
 		// TODO Auto-generated method stub
 	}
 
+	/** 
+	 * 点击事件：点击城市后返回当前点击的城市名称
+	 */
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {

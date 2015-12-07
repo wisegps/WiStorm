@@ -12,7 +12,7 @@ public class SystemTools {
 	/**
 	 * MD5
 	 * @param s
-	 * @return
+	 * @return 返回编码后的字符串
 	 */
 	public static String getM5DEndo(String s) {
 		if (s == null) {

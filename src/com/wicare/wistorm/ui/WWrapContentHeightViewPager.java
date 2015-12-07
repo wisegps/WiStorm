@@ -7,7 +7,8 @@ import android.view.View;
 
 /**
  * @author Wu
- * 自定义viewpager 自适应高度
+ * 
+ * 自定义viewpager 自适应高度 （具体请参考demo中在xml布局中的引用）
  */
 public class WWrapContentHeightViewPager extends ViewPager{
 

@@ -26,6 +26,7 @@ import android.widget.Toast;
 
 /**
  * @author Wu
+ * 
  * 修改密码页面
  */
 public class WUpdatePwdActivity extends Activity{

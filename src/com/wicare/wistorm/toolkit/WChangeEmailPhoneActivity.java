@@ -22,10 +22,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 /**
- * 修改手机号和邮箱页面
- * 
  * @author Wu
  * 
+ * 修改手机号和邮箱页面
  */
 public class WChangeEmailPhoneActivity extends Activity {
 	

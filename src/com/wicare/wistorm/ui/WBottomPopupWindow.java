@@ -57,7 +57,7 @@ public class WBottomPopupWindow extends PopupWindow {
 	}
 	
 	/**
-	 * @param items pupupwindow的按键
+	 * @param items pupupwindow的按键名称（items的长度就是按键的个数）
 	 */
 	public void setData(List<String> items){
 		lv_pop.setAdapter(new ItemAdapter(items));

@@ -54,6 +54,7 @@ import android.widget.Toast;
 
 /**
  * @author Wu
+ * 
  * 帐号信息以及修改
  */
 public class WAccountActivity extends Activity implements OnUploadProcessListener {

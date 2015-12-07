@@ -18,6 +18,11 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ * @author Wu
+ * 
+ * 汽车品牌选择列表适配器
+ */
 public class WCarBrandAdapter extends BaseAdapter {
 	
 	

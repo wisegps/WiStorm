@@ -2,6 +2,7 @@ package com.wicare.wistorm.ui;
 
 /**
  * @author Wu
+ * 
  * 城市选择的一个实体类。用来设置 城市名字和拼音
  */
 public class WCity {

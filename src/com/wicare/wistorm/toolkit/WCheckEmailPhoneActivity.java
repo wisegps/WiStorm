@@ -27,10 +27,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 /**
+ * @author Wu
+ * 
  * 修改手机号和邮箱验证页面
- * 
- * @author Administrator
- * 
  */
 public class WCheckEmailPhoneActivity extends Activity {
 	static final String TAG = "WCheckEmailPhoneActivity";

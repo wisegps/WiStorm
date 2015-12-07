@@ -10,6 +10,7 @@ import android.view.View;
 
 /**
  * @author Wu
+ * 
  * 城市搜索侧边栏
  */
 public class WLetterSideBar extends View {

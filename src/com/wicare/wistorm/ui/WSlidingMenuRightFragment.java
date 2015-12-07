@@ -10,6 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+/**
+ * @author Wu
+ *
+ * 侧滑菜单右边的内容（四个选项卡的导航栏）
+ */
 public class WSlidingMenuRightFragment extends Fragment implements OnTabChangedListener{
 	
 	private View mView;
@@ -29,20 +34,20 @@ public class WSlidingMenuRightFragment extends Fragment implements OnTabChangedL
 		// TODO Auto-generated method stub
 		switch (index) {
 		case 0:
-			// add your code 
+			// 添加你的逻辑代码
 			Toast.makeText(getActivity(), "选项卡一", Toast.LENGTH_SHORT).show();
 			break;
 		case 1:
-			// add your code
+			// 添加你的逻辑代码
 			Toast.makeText(getActivity(), "选项卡二", Toast.LENGTH_SHORT).show();
 			break;
 		case 2:
-			// add your code
+			// 添加你的逻辑代码
 			Toast.makeText(getActivity(), "选项卡三", Toast.LENGTH_SHORT).show();
 			break;
 	
 		case 3:
-			// add your code
+			// 添加你的逻辑代码
 			Toast.makeText(getActivity(), "选项卡四", Toast.LENGTH_SHORT).show();
 			break;
 	

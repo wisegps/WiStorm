@@ -12,9 +12,9 @@ import com.wicare.wistorm.R;
 
 
 /**
- * 日期选择
  * @author Wu
- * @date 2015-10-9
+ * 
+ * 日期选择
  */
 public class WDateSelector {
 
