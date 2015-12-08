@@ -87,12 +87,21 @@ public class HttpThread {
 	
 	
 	
+	/**
+	 * @author Wu
+	 * post 提交数据
+	 */
 	public static class postDataThread extends Thread{
 		Handler handler;
 		String url;
 		int what;
 		List<NameValuePair> params;
-
+		/**
+		 * @param handler handler 
+		 * @param url url
+		 * @param parms 提交的参数
+		 * @param what msg.what
+		 */
 		public postDataThread(Handler handler,String url,List<NameValuePair> params,int what){
 			this.handler = handler;
 			this.url = url;
@@ -133,11 +142,22 @@ public class HttpThread {
 		}
 	}
 	
+	/**
+	 * @author Wu
+	 * 
+	 * put提交数据
+	 */
 	public static class putDataThread extends Thread{
 		Handler handler;
 		String url;
 		int what;
 		List<NameValuePair> parms;
+		/**
+		 * @param handler handler 
+		 * @param url url
+		 * @param parms 提交的参数
+		 * @param what msg.what
+		 */
 		public putDataThread(Handler handler,String url,List<NameValuePair> parms,int what){
 			this.handler = handler;
 			this.url = url;

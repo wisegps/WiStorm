@@ -2,14 +2,15 @@ package com.wicare.wistorm.model;
 
 /**
  * @author Wu
+ * 
  * 汽车品牌数据
  */
 public class CarBrandData {
 
-	private String brand;
-	private String letter;
-	private String id;
-	private String logoUrl;
+	private String brand; //汽车品牌
+	private String letter;//汽车品牌的字母
+	private String id;//id号
+	private String logoUrl;//图片的url
 	
 	
 	public String getBrand() {
