@@ -8,10 +8,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.content.Context;
-import android.os.Message;
 import android.util.Log;
-import android.util.Xml.Encoding;
-import android.webkit.WebView.FindListener;
+//import android.webkit.WebView.FindListener;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
