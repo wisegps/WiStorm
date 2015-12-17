@@ -19,7 +19,7 @@ import com.wicare.wistorm.R;
  */
 public class WTabBar extends LinearLayout implements OnClickListener{
 	
-	final String TAG = WTabBar.this.toString();
+	private static final String TAG = "WTabBar";
 	
 	// 选项卡未选中时的缺省图片背景
 	private int[] imgNormalDefault = { 
