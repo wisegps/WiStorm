@@ -8,6 +8,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.content.Context;
+import android.net.Uri;
+import android.os.Handler;
+import android.os.Message;
+import android.os.Handler.Callback;
 import android.util.Log;
 //import android.webkit.WebView.FindListener;
 
@@ -19,6 +23,8 @@ import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.wicare.wistorm.http.BaseVolley;
+import com.wicare.wistorm.http.Msg;
 import com.wicare.wistorm.toolkit.WEncrypt;
 
 /**
@@ -28,20 +34,51 @@ import com.wicare.wistorm.toolkit.WEncrypt;
  * @date 2015-10-12
  */
 public class WUserApi extends WiStormAPI {
-
+	public String Method_Access_Token = "wicare.user.access_token";
 	public OnLoginListener onLoginListener;
 	public HashMap<String, String> hashParam = new HashMap<String, String>();
 
 	public Context context;
+	private Handler workHandler;// 工作线程，非UI线程
 	public RequestQueue mQueue;
+	private BaseVolley volley;
 
 	public WUserApi() {
 		super();
+		this.workHandler = super.initWorkHandler(handleCallBack);
+		volley = new BaseVolley(workHandler);
 	}
 
 	public WUserApi(Context context) {
 		super();
 		this.context = context;
+	}
+
+	/**
+	 * 工作子线程回调函数
+	 */
+	private Callback handleCallBack = new Callback() {
+		@Override
+		public boolean handleMessage(Message msg) {
+			switch (msg.what) {
+			case Msg.M_Usr_Token:
+				Log.i("WUserApi", msg.obj.toString());
+				break;
+			}
+
+			return false;
+		}
+	};
+
+	// 获取令牌
+	// 参数：account: 手机号码或者邮箱地址
+	// passsword: md5(登陆密码)
+	public void requestAccessToken(String account, String password) {
+		HashMap<String, String> params = new HashMap<String, String>();
+		params.put("account", account);
+		params.put("password", password);
+		String url = super.getUrl(Method_Access_Token, "", params);
+		volley.request(url, Msg.M_Usr_Token);
 	}
 
 	/**
@@ -53,12 +90,11 @@ public class WUserApi extends WiStormAPI {
 	 */
 	public void login(String userName, String password) {
 
-		String appSecret = "7de743e26f6a9b71a14b8ac3";
-		String appKey = "51ccb6294c18a0979cc10240";
+		String appSecret = "21fb644e20c93b72773bf0f8d0905052";
+		String appKey = "9410bc1cbfa8f44ee5f8a331ba8dd3fc";
 		String method = "wicare.user.login";
-
 		String timestamp = super.getCurrentTime();
-
+		timestamp.replace(" ", "20%");
 		String format = "json";
 		String v = "1.0";
 		String signMethod = "md5";
@@ -77,28 +113,23 @@ public class WUserApi extends WiStormAPI {
 		// 签名方式
 		hashParam.put("sign_method", signMethod);
 		// 需要返回的字段
-		hashParam.put("fields", fields);
+		// hashParam.put("fields", fields);
 		// 登陆接口所需参数
 		hashParam.put("account", userName);
 		// 登陆接口所需参数
 		hashParam.put("password", password);
 		// 把参数排序并进行拼接
 		String s = super.raw(hashParam);
-		String sign = WEncrypt.MD5(appSecret + s + appSecret);
-
-		try {
-			timestamp = URLEncoder.encode(timestamp, "UTF-8");
-		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
-		}
+		Log.i("WUserApi", s);
+		
+		String sign = WEncrypt.MD5(appSecret + s + appSecret).toUpperCase();
 		String path = super.basePath + method + "&timestamp=" + timestamp
 				+ "&format=" + format + "&app_key=" + appKey + "&v=" + v
-				+ "&sign_method=" + signMethod + "&fields=" + fields
-				+ "&account=" + userName + "&password=" + password + "&sign="
-				+ sign;
-		Log.i("WUserApi", s);
+				+ "&sign_method=" + signMethod + "&account=" + userName
+				+ "&password=" + password + "&sign=" + sign;
+		
+		path = Uri.encode(path);
 		Log.i("WUserApi", path);
-
 		request(path);
 
 	}
@@ -167,7 +198,7 @@ public class WUserApi extends WiStormAPI {
 		 * 
 		 * loginSucess 登录成功
 		 */
-		public  void loginSucess(String response);
+		public void loginSucess(String response);
 
 		/**
 		 * 
@@ -179,12 +210,12 @@ public class WUserApi extends WiStormAPI {
 		public void loginFail(int statusCode);
 
 	}
-	
+
 	public final static int Login_Sucess = 0;
 	public final static int Fail_Account = 1;
 	public final static int Fail_Password = 2;
 	public final static int Fail_Net = 3;
 	public final static int Fail_Null = 4;
 	public final static int Fail_Bound = 5;
-	
+
 }
