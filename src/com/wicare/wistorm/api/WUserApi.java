@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.wicare.wistorm.http.BaseVolley;
 import com.wicare.wistorm.http.Msg;
+import com.wicare.wistorm.model.Customer;
 import com.wicare.wistorm.toolkit.WEncrypt;
 
 /**
@@ -32,8 +33,10 @@ public class WUserApi extends WiStormAPI {
 	public String Method_User_Psd_Reset = "wicare.user.password.reset";
 
 	public String Method_User_Volid_Code = "wicare.user.valid_code";
-	
+
 	public String Wicare_User_Create = "wicare.user.create";
+	
+	public String Wicare_User_Get = "wicare.user.get";
 
 	public HashMap<String, String> hashParam = new HashMap<String, String>();
 
@@ -65,6 +68,9 @@ public class WUserApi extends WiStormAPI {
 		public boolean handleMessage(Message msg) {
 			switch (msg.what) {
 			case Msg.M_Usr_Token:
+				
+				Log.i("WUserApi",
+						"M_Usr_Token handleCallBack" + msg.obj.toString());
 				parseToken(msg);
 				break;
 			case Msg.M_Usr_Login:
@@ -84,16 +90,22 @@ public class WUserApi extends WiStormAPI {
 				parseReset(msg);
 				break;
 			case Msg.M_Usr_Create:
-				Log.i("WUserApi", "M_Usr_Create handleCallBack"+msg.obj.toString());
+				Log.i("WUserApi",
+						"M_Usr_Create handleCallBack" + msg.obj.toString());
 				parseCreate(msg);
 				break;
+			case Msg.M_Usr_Get:
+				Log.i("WUserApi",
+						"M_Usr_Get handleCallBack" + msg.obj.toString());
+				parseGet(msg);
+				break;
+				
 			}
 			return false;
 		}
 	};
 
-	
-	/*****************************************************解析网络返回的数据********************************/
+	/***************************************************** 解析网络返回的数据 ********************************/
 	/**
 	 * 解析返回的token数据
 	 * 
@@ -219,19 +231,20 @@ public class WUserApi extends WiStormAPI {
 			e.printStackTrace();
 		}
 	}
-	
+
 	/**
 	 * 解析创建用户返回信息
+	 * 
 	 * @param msg
 	 */
-	public void parseCreate(Message msg){
-		
-		if(msg.arg1==-1){
+	public void parseCreate(Message msg) {
+
+		if (msg.arg1 == -1) {
 			Toast.makeText(context, "网络请求失败", Toast.LENGTH_SHORT).show();
 			return;
 		}
-		
-		Log.i("WUserApi", "M_Usr_Create parseCreate"+msg.obj.toString());
+
+		Log.i("WUserApi", "M_Usr_Create parseCreate" + msg.obj.toString());
 		try {
 			JSONObject json = new JSONObject(msg.obj.toString());
 			Message uimsg = uiHandler.obtainMessage();
@@ -246,9 +259,51 @@ public class WUserApi extends WiStormAPI {
 		}
 	}
 	
+	/**
+	 * 解析创建用户返回信息
+	 * 
+	 * @param msg
+	 */
+	public void parseGet(Message msg) {
+
+		if (msg.arg1 == -1) {
+			Toast.makeText(context, "网络请求失败", Toast.LENGTH_SHORT).show();
+			return;
+		}
+
+		Log.i("WUserApi", "M_Usr_Create parseGet" + msg.obj.toString());
+		try {
+			JSONObject json = new JSONObject(msg.obj.toString());
+			Message uimsg = uiHandler.obtainMessage();
+			uimsg.what = msg.what;
+			Bundle bundle = new Bundle();
+			bundle = msg.getData();
+			int custId = json.getInt("cust_id");
+			String  custName = json.getString("cust_name");
+			int custType = json.getInt("cust_type");
+			String  mobile = json.getString("mobile");
+			String  address = json.getString("address");
+			String  remark = json.getString("remark");
+			String  tel = json.getString("tel");
+			String  photo = json.getString("photo");
+			Customer customer = new Customer();
+			customer.setCustId(custId);
+			customer.setCustName(custName);
+			customer.setMobile(mobile);
+			customer.setAddress(address);
+			customer.setRemark(remark);
+			customer.setCustType(custType);
+			customer.setTel(tel);
+			bundle.putSerializable("customer", customer);
+			uimsg.setData(bundle);
+			uiHandler.sendMessage(uimsg);
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+	}
 	
-	
-	/*****************************************************请求业务********************************/
+
+	/***************************************************** 请求业务 ********************************/
 
 	/**
 	 * 获取令牌
@@ -383,33 +438,28 @@ public class WUserApi extends WiStormAPI {
 	}
 
 	/**
-	 创建客户信息 params 的key包含下面：
-	 
-	mode: 创建模式 1:仅仅创建用户 2:同时创建用户,车辆,到店记录
-	seller_id: 商户ID, 如果没有默认为0
-	cust_type: 用户类型 1:车主 2:商户
-	cust_name: 用户名称
-	mobile: 手机
-	obj_name: 车牌号
-	frame_no: 车架号
-	car_brand_id: 品牌ID
-	car_brand: 品牌
-	car_series_id: 车系ID
-	car_series: 车系
-	car_type_id: 车款ID
-	car_type: 车款
-	mileage: 行驶里程
-	if_arrive: 是否到店, 1则需要传入到店类型和备注, 0则不需要
-	business_type: 业务类型
-	business_content: 业务内容
+	 * 创建客户信息 params 的key包含下面：
+	 * 
+	 * mode: 创建模式 1:仅仅创建用户 2:同时创建用户,车辆,到店记录 seller_id: 商户ID, 如果没有默认为0 cust_type:
+	 * 用户类型 1:车主 2:商户 cust_name: 用户名称 mobile: 手机 obj_name: 车牌号 frame_no: 车架号
+	 * car_brand_id: 品牌ID car_brand: 品牌 car_series_id: 车系ID car_series: 车系
+	 * car_type_id: 车款ID car_type: 车款 mileage: 行驶里程 if_arrive: 是否到店,
+	 * 1则需要传入到店类型和备注, 0则不需要 business_type: 业务类型 business_content: 业务内容
 	 */
 	public void create(HashMap<String, String> params) {
-		
+
 		Log.i("WUserApi", "M_Usr_Create create");
 		String url = super.getUrl(Wicare_User_Create, "", params);
-		
-		Log.i("WUserApi", "M_Usr_Create create url:"+url);
+
+		Log.i("WUserApi", "M_Usr_Create create url:" + url);
 		volley.request(url, Msg.M_Usr_Create);
+	}
+	
+	public void get(HashMap<String, String> params){
+		String fields = "cust_id,cust_name,cust_type,car_brand,car_series,parent_cust_id,logo,remark,create_time,update_time,photo,address,tel,mobile";
+		String url = super.getUrl(Wicare_User_Get, fields, params);
+		Log.i("WUserApi", "M_Usr_Create  get url:" + url);
+		volley.request(url, Msg.M_Usr_Get);
 	}
 
 }

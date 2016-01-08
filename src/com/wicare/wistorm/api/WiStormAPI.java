@@ -122,7 +122,7 @@ public class WiStormAPI extends WiStorm {
 
 		// 无返回字段
 		if (fields != null && fields.length() > 0) {
-			buffer.append("&fields" + fields);
+			buffer.append("&fields=" + fields);
 		}
 
 		// 把params变成字符串参数
@@ -160,10 +160,12 @@ public class WiStormAPI extends WiStorm {
 		// 时间戳yyyy-mm-dd hh:nn:ss
 
 		timestamp = getCurrentTime();
-		Log.i("WiStormAPI", timestamp);
+	
 		timestamp = timestamp.replace(" ", "20%");
-		;
 		Log.i("WiStormAPI", timestamp);
+//		timestamp =  encodeUTF(timestamp);
+//		;
+		
 		hashParam.put("timestamp", timestamp);
 		// 返回数据格式
 		hashParam.put("format", format);
