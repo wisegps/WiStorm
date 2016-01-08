@@ -761,6 +761,10 @@ public class WCitySelector extends Activity implements OnScrollListener, TextWat
 	@Override
 	public void beforeTextChanged(CharSequence s, int start, int count,
 			int after) {
+	}
+
+	@Override
+	public void onTextChanged(CharSequence s, int start, int before, int count) {
 		/**搜索到结果*/
 		if (s.toString() == null || "".equals(s.toString())) {
 			letterListView.setVisibility(View.VISIBLE);
@@ -781,11 +785,6 @@ public class WCitySelector extends Activity implements OnScrollListener, TextWat
 				resultListAdapter.notifyDataSetChanged();
 			}
 		}
-	}
-
-	@Override
-	public void onTextChanged(CharSequence s, int start, int before, int count) {
-		// TODO Auto-generated method stub
 	}
 
 	@Override
