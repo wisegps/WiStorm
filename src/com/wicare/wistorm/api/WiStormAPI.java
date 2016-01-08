@@ -1,5 +1,6 @@
 package com.wicare.wistorm.api;
 
+import java.io.UTFDataFormatException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
@@ -83,17 +84,18 @@ public class WiStormAPI extends WiStorm {
 
 	/*----------------------------系统参数--------------------------------*/
 
-
 	public WiStormAPI() {
 		super();
-		
+
 	}
-	
+
 	/**
 	 * 新建一个网络请求子线程的handler
-	 * @param handleCallBack  网络请求的回调函数
+	 * 
+	 * @param handleCallBack
+	 *            网络请求的回调函数
 	 */
-	public Handler initWorkHandler(Callback handleCallBack){
+	public Handler initWorkHandler(Callback handleCallBack) {
 		HandlerThread handlerThread = new HandlerThread("WiStormAPI");
 		handlerThread.start();
 		Looper looper = handlerThread.getLooper();
@@ -115,8 +117,6 @@ public class WiStormAPI extends WiStorm {
 	public String getUrl(String method, String fields,
 			HashMap<String, String> params) {
 		sign = generateSign(method, fields, params);
-		
-		
 
 		StringBuffer buffer = new StringBuffer();
 
@@ -129,7 +129,9 @@ public class WiStormAPI extends WiStorm {
 		Iterator<String> it = params.keySet().iterator();
 		while (it.hasNext()) {
 			String key = it.next();
-			buffer.append("&" + key + "=" + params.get(key));
+			String value = params.get(key);
+			value = encodeUTF(value);
+			buffer.append("&" + key + "=" + value);
 		}
 
 		String url = basePath + method + "&timestamp=" + timestamp + "&format="
@@ -159,7 +161,8 @@ public class WiStormAPI extends WiStorm {
 
 		timestamp = getCurrentTime();
 		Log.i("WiStormAPI", timestamp);
-		timestamp= timestamp.replace(" ", "20%");;
+		timestamp = timestamp.replace(" ", "20%");
+		;
 		Log.i("WiStormAPI", timestamp);
 		hashParam.put("timestamp", timestamp);
 		// 返回数据格式
@@ -174,17 +177,26 @@ public class WiStormAPI extends WiStorm {
 		if (fields != null && fields.length() > 0) {
 			hashParam.put("fields", fields);
 		}
-		
+
 		// 参数字段放进去
 		Iterator<String> it = params.keySet().iterator();
 		while (it.hasNext()) {
 			String key = it.next();
-			hashParam.put(key, params.get(key));
+			String value = params.get(key);
+			value = encodeUTF(value);
+			Log.i("LoginTest", key + ": " + value);
+			hashParam.put(key, value);
+
 		}
 		// 把参数排序并进行拼接
 		String s = raw(hashParam);
 		String sign = WEncrypt.MD5(appSecret + s + appSecret).toUpperCase();
 		return sign;
+	}
+
+	private String encodeUTF(String value) {
+		value = Uri.encode(value);
+		return value;
 	}
 
 	/**

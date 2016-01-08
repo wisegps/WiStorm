@@ -86,6 +86,7 @@ public class BaseVolley {
 				public void onResponse(String response) {
 					Message msg = handler.obtainMessage();
 					msg.what = msgWhat;
+					msg.arg1 = 0;
 					msg.obj = response;
 					handler.sendMessage(msg);
 				}
@@ -101,7 +102,8 @@ public class BaseVolley {
 				public void onErrorResponse(VolleyError error) {
 					Message msg = handler.obtainMessage();
 					msg.what = msgWhat;
-					msg.obj = error.getMessage();
+					msg.arg1 = -1;
+					msg.obj = error;
 					handler.sendMessage(msg);
 				}
 			};
