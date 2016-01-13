@@ -132,6 +132,7 @@ public class WiStormAPI extends WiStorm {
 			String value = params.get(key);
 			value = encodeUTF(value);
 			buffer.append("&" + key + "=" + value);
+			
 		}
 
 		String url = basePath + method + "&timestamp=" + timestamp + "&format="
@@ -192,6 +193,7 @@ public class WiStormAPI extends WiStorm {
 		}
 		// 把参数排序并进行拼接
 		String s = raw(hashParam);
+		Log.i("LoginTest",s);
 		String sign = WEncrypt.MD5(appSecret + s + appSecret).toUpperCase();
 		return sign;
 	}

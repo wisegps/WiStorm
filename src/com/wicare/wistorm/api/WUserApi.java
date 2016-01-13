@@ -35,8 +35,15 @@ public class WUserApi extends WiStormAPI {
 	public String Method_User_Volid_Code = "wicare.user.valid_code";
 
 	public String Wicare_User_Create = "wicare.user.create";
-	
+
 	public String Wicare_User_Get = "wicare.user.get";
+
+	public String Wicare_User_Update = "wicare.user.update";
+	
+	public String Wicare_User_Cust_List = "wicare.user.customers.list";
+	
+
+	 
 
 	public HashMap<String, String> hashParam = new HashMap<String, String>();
 
@@ -68,7 +75,6 @@ public class WUserApi extends WiStormAPI {
 		public boolean handleMessage(Message msg) {
 			switch (msg.what) {
 			case Msg.M_Usr_Token:
-				
 				Log.i("WUserApi",
 						"M_Usr_Token handleCallBack" + msg.obj.toString());
 				parseToken(msg);
@@ -81,7 +87,6 @@ public class WUserApi extends WiStormAPI {
 				break;
 			case Msg.M_Usr_Register:
 				parseRegister(msg);
-
 				break;
 			case Msg.M_Usr_Volid_Code:
 				parseVolidCode(msg);
@@ -99,7 +104,16 @@ public class WUserApi extends WiStormAPI {
 						"M_Usr_Get handleCallBack" + msg.obj.toString());
 				parseGet(msg);
 				break;
+			case Msg.M_Usr_Update:
+				Log.i("WUserApi",
+						"M_Usr_Update handleCallBack" + msg.obj.toString());
+				parseUpate(msg);
 				
+			case Msg.M_Usr_Cust_List:
+				Log.i("WUserApi",
+						"M_Usr_Cust_List handleCallBack" + msg.obj.toString());
+				parseCustList(msg);
+				break;
 			}
 			return false;
 		}
@@ -258,7 +272,7 @@ public class WUserApi extends WiStormAPI {
 			e.printStackTrace();
 		}
 	}
-	
+
 	/**
 	 * 解析创建用户返回信息
 	 * 
@@ -279,13 +293,13 @@ public class WUserApi extends WiStormAPI {
 			Bundle bundle = new Bundle();
 			bundle = msg.getData();
 			int custId = json.getInt("cust_id");
-			String  custName = json.getString("cust_name");
+			String custName = json.getString("cust_name");
 			int custType = json.getInt("cust_type");
-			String  mobile = json.getString("mobile");
-			String  address = json.getString("address");
-			String  remark = json.getString("remark");
-			String  tel = json.getString("tel");
-			String  photo = json.getString("photo");
+			String mobile = json.getString("mobile");
+			String address = json.getString("address");
+			String remark = json.getString("remark");
+			String tel = json.getString("tel");
+			String photo = json.getString("photo");
 			Customer customer = new Customer();
 			customer.setCustId(custId);
 			customer.setCustName(custName);
@@ -302,6 +316,36 @@ public class WUserApi extends WiStormAPI {
 		}
 	}
 	
+	
+	/**
+	 * 更新客户信息返回数据
+	 * @param msg
+	 */
+	public void parseUpate(Message msg){
+		if (msg.arg1 == -1) {
+			Toast.makeText(context, "网络请求失败", Toast.LENGTH_SHORT).show();
+			return;
+		}
+
+		Log.i("WUserApi", "M_Usr_Create parseUpate" + msg.obj.toString());
+		try {
+			JSONObject json = new JSONObject(msg.obj.toString());
+			Message uimsg = uiHandler.obtainMessage();
+			uimsg.what = msg.what;
+			Bundle bundle = new Bundle();
+			bundle = msg.getData();
+			bundle.putString("cust_id", json.getString("cust_id"));
+			uimsg.setData(bundle);
+			uiHandler.sendMessage(uimsg);
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	public void parseCustList(Message msg){
+		
+	}
 
 	/***************************************************** 请求业务 ********************************/
 
@@ -454,12 +498,34 @@ public class WUserApi extends WiStormAPI {
 		Log.i("WUserApi", "M_Usr_Create create url:" + url);
 		volley.request(url, Msg.M_Usr_Create);
 	}
-	
-	public void get(HashMap<String, String> params){
+
+	/**
+	 * 
+	 * @param params
+	 *            access_token:"" cust_id:""
+	 * 
+	 */
+	public void get(HashMap<String, String> params) {
 		String fields = "cust_id,cust_name,cust_type,car_brand,car_series,parent_cust_id,logo,remark,create_time,update_time,photo,address,tel,mobile";
 		String url = super.getUrl(Wicare_User_Get, fields, params);
 		Log.i("WUserApi", "M_Usr_Create  get url:" + url);
 		volley.request(url, Msg.M_Usr_Get);
 	}
+
+	/**
+	 * 
+	 * @param params  需要修改的参数前加下划线，_obj_name-更新车牌号
+	 * params.put("cust_id", custId); params.put("access_token", "");
+	 * params.put("_obj_name", "粤update1");
+	 */
+	public void update(HashMap<String, String> params) {
+
+		String url = super.getUrl(Wicare_User_Update, "", params);
+
+		Log.i("WUserApi", "Wicare_User_Update  url:" + url);
+		volley.request(url, Msg.M_Usr_Update);
+	}
+	
+	
 
 }

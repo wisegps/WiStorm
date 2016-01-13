@@ -26,8 +26,9 @@ public class Msg {
 	
 	public final static int M_Usr_Create = 1030;// 创建用户接口
 	public final static int M_Usr_Get = 1031;// 用户信息接口
+	public final static int M_Usr_Update = 1032;// 修改用户信息接口
 	public final static int M_Usr_Token = 104;// 获取Access Token
-	public final static int M_Usr_Customers = 105;// 获取用户下属客户
+	public final static int M_Usr_Cust_List = 105;// 获取用户下属客户
 	public final static int M_Usr_Vehicles = 106;// 获取用户下属车辆
 	public final static int M_Usr_Vehicle = 107;// 搜索用户下属车辆
 	public final static int M_Usr_Devices = 108;// 获取用户下属设备
