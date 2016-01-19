@@ -41,6 +41,13 @@ public class Msg {
 	public final static int M_Usr_Pois_Search = 115;// 搜索用户下属所有兴趣点或电子围栏
 	public final static int M_Usr_poi_Get = 116;// 获取兴趣单或者电子围栏信息
 	
+	public final static int M_Biz_Create = 117;// 业务信息
+	public final static int M_Biz_Update = 118;// 业务信息
+	
+	public final static int M_Biz_Update_Status = 119;// 业务信息
+	public final static int M_Biz_List = 120;// 业务信息
+	public final static int M_Biz_Total = 121;// 业务信息
+	
 	
 	/**
 	 * 5.通讯接口 comm
