@@ -69,6 +69,14 @@ public class Msg {
 	public final static int M_Vehicle_List = 137;// 车辆列表
 	public final static int M_Vehicle_Search = 138;// 搜索车辆
 
+	
+	/**
+	 * 设备接口
+	 */
+	public final static int M_Device_Update = 140;// 新增车辆
+	public final static int M_Device_List = 141;// 修改车辆
+	public final static int M_Device_Obd_Datas = 142;// 获取车辆信息
+	
 	/**
 	 * 5.通讯接口 comm
 	 */
