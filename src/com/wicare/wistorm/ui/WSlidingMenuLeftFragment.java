@@ -16,6 +16,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * @author Wu
@@ -66,18 +67,21 @@ public class WSlidingMenuLeftFragment extends Fragment implements OnItemClickLis
 		switch (position) {
 		case 0:
 			// add your code 
-			Intent i1 = new Intent(getActivity(),WSlidingmenu_One.class);
-			startActivity(i1);
+//			Intent i1 = new Intent(getActivity(),WSlidingmenu_One.class);
+//			startActivity(i1);
+			Toast.makeText(getActivity(), "点击了菜单一", Toast.LENGTH_SHORT).show();
 			break;
 		case 1:
 			// add your code 
-			Intent i2 = new Intent(getActivity(),WSlidingmenu_Two.class);
-			startActivity(i2);
+//			Intent i2 = new Intent(getActivity(),WSlidingmenu_Two.class);
+//			startActivity(i2);
+			Toast.makeText(getActivity(), "点击了菜单二", Toast.LENGTH_SHORT).show();
 			break;
 		case 2:
 			// add your code 
-			Intent i3 = new Intent(getActivity(),WSlidingmenu_Three.class);
-			startActivity(i3);
+//			Intent i3 = new Intent(getActivity(),WSlidingmenu_Three.class);
+//			startActivity(i3);
+			Toast.makeText(getActivity(), "点击了菜单三", Toast.LENGTH_SHORT).show();
 			break;
 		}	
 	} 

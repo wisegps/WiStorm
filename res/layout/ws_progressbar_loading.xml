@@ -14,7 +14,7 @@
 	        android:id="@+id/iv_loading" 
 	        android:layout_width="wrap_content" 
 	        android:layout_height="wrap_content" 
-	        android:background="@anim/ws_progressbar_loading" />
+	        android:background="@anim/bga_refresh_loding" />
 	        
 	    <TextView 
 	        android:id="@+id/tv_loading_msg" 

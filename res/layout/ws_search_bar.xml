@@ -33,7 +33,7 @@
         
     </RelativeLayout>
 
-    <View
+  <!--   <View
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:background="#bdbfc1" />
@@ -52,6 +52,6 @@
             android:divider="@null"
             android:scrollbars="none" >
         </ListView>
-        
+         -->
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.wicare.wistorm.ui;
+/*package com.wicare.wistorm.ui;
 
 import java.util.ArrayList;
 
@@ -24,37 +24,37 @@ import android.widget.Toast;
 
 import com.wicare.wistorm.R;
 
-/**
+*//**
  * @author Wu
  * 
  * 搜索框演示
- */
+ *//*
 public class WSearchBarActivity extends Activity implements TextWatcher, 
 		OnItemClickListener, OnClickListener{
 	
 	
 	private static final String TAG = "WSearchBarActivity";
-	/**
+	*//**
 	 * 搜索列表
-	 */
+	 *//*
 	private ListView lvSearch;
-	/**
+	*//**
 	 * 自定义的搜索框
-	 */
+	 *//*
 	private WInputField etSearch = null;
-	/**
+	*//**
 	 * 返回
-	 */
+	 *//*
 	private ImageView ivBack = null;
 	
 	Handler mHandler = new Handler();
-	/**
+	*//**
 	 * listview 适配器
-	 */
+	 *//*
 	private listSearchBarAdapter searchBarAdapter;
-	/**
+	*//**
 	 * 筛选出来的数据
-	 */	
+	 *//*	
 	ArrayList<String> newListData = new ArrayList<String>();
 	
 	@Override
@@ -69,9 +69,9 @@ public class WSearchBarActivity extends Activity implements TextWatcher,
 		initWSearchBar();
 	}	
 	
-	/**
+	*//**
 	 * 初始化WSearchBar
-	 */
+	 *//*
 	private void initWSearchBar(){
 		Log.i(TAG, "initWSearchBar()...");
 		// 设监听
@@ -89,11 +89,11 @@ public class WSearchBarActivity extends Activity implements TextWatcher,
 		WSearchBarActivity.this.finish();
 	}
 	
-	/**
+	*//**
 	 * 获得根据搜索框的数据data来从元数据筛选，筛选出来的数据放入mDataSubs里
 	 * @param mDataSubs
 	 * @param data
-	 */
+	 *//*
 	private void getmNewDates(String strKey){
 		for(int i = 0; i < getData().size(); i++){
 			if(getData().get(i).contains(strKey)){
@@ -103,10 +103,10 @@ public class WSearchBarActivity extends Activity implements TextWatcher,
 		}	
 	}
 	
-	/**
+	*//**
 	 * 这些把预先设置的数据存到arraylist
 	 * @return arraylist
-	 */
+	 *//*
 	private ArrayList<String> getData() {
 		String[] SourceDateList = this.getResources().getStringArray(R.array.English);
 		ArrayList<String> arraylist = new ArrayList<String>();   
@@ -118,9 +118,9 @@ public class WSearchBarActivity extends Activity implements TextWatcher,
 	}  
 	
 	
-	/**
+	*//**
 	 * 刷新listview搜索结果
-	 */
+	 *//*
 	Runnable searchChanged = new Runnable() {	
  		@Override
  		public void run() {
@@ -137,19 +137,19 @@ public class WSearchBarActivity extends Activity implements TextWatcher,
  	};
  	
  	
- 	/**
+ 	*//**
  	 * 	设置搜索页面的返回图标
  	 * @param ivBackId
- 	 */
+ 	 *//*
  	public void setIvBack(int ivBackId){
  		ImageView ivBack   = (ImageView) findViewById(R.id.iv_back);
  		ivBack.setImageResource(ivBackId);
  	}
  	
- 	/**
+ 	*//**
  	 * 	设置搜索框背景
  	 * @param editTextBackgroundId
- 	 */
+ 	 *//*
  	public void setEditTextBackground(int editTextBackgroundId){
  		etSearch.setBackgroundResource(editTextBackgroundId);
  	}
@@ -186,9 +186,9 @@ public class WSearchBarActivity extends Activity implements TextWatcher,
 	}
 	
 	
-	/**
+	*//**
 	 * 搜索列表的适配器
- 	 */
+ 	 *//*
  	public class listSearchBarAdapter extends BaseAdapter{
  		
 		private ArrayList<String> searchListData;
@@ -237,21 +237,22 @@ public class WSearchBarActivity extends Activity implements TextWatcher,
 		}
 		
 		
-		/**
+		*//**
 		 * @param searchListData
-		 */
+		 *//*
 		public void setData(ArrayList<String> searchListData) {
 			this.searchListData = searchListData;
 			Log.i(TAG, "listSearchBarAdapter()...setData()....");
 		}	
  	}
  	
- 	/**
+ 	*//**
  	 * ui for adapter
- 	 */
+ 	 *//*
  	class ViewHolder { 
  	    ImageView img_icon; 
  	    ImageView img_up;
  	    TextView  tv_info;  
  	}
 }
+*/

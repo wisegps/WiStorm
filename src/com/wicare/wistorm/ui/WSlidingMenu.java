@@ -5,9 +5,9 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.Window;
 
-import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
-import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
 import com.wicare.wistorm.R;
+import com.wicare.wistorm.ui.slidingmuen.SlidingFragmentActivity;
+import com.wicare.wistorm.ui.slidingmuen.SlidingMenu;
 
 /**
  * @author Wu
