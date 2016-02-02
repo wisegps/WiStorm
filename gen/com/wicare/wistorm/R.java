@@ -9,9 +9,9 @@ package com.wicare.wistorm;
 
 public final class R {
     public static final class anim {
-        public static int bga_refresh_loding=0x7f040000;
-        public static int ws_menu_bottom_in=0x7f040001;
-        public static int ws_menu_bottom_out=0x7f040002;
+        public static int ws_menu_bottom_in=0x7f040000;
+        public static int ws_menu_bottom_out=0x7f040001;
+        public static int ws_progress_bar_style=0x7f040002;
     }
     public static final class array {
         public static int English=0x7f060002;
@@ -328,254 +328,240 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int title_width=0x7f080007;
     }
     public static final class drawable {
-        public static int bga_refresh_loading01=0x7f020000;
-        public static int bga_refresh_loading02=0x7f020001;
-        public static int bga_refresh_loading03=0x7f020002;
-        public static int bga_refresh_loading04=0x7f020003;
-        public static int bga_refresh_loading05=0x7f020004;
-        public static int bga_refresh_loading06=0x7f020005;
-        public static int bga_refresh_loading07=0x7f020006;
-        public static int bga_refresh_loading08=0x7f020007;
-        public static int bga_refresh_loading09=0x7f020008;
-        public static int bga_refresh_loading10=0x7f020009;
-        public static int bga_refresh_loading11=0x7f02000a;
-        public static int bga_refresh_loading12=0x7f02000b;
-        public static int bt_blue_press=0x7f02000c;
-        public static int ic_launcher=0x7f02000d;
-        public static int ic_richpush_actionbar_back=0x7f02000e;
-        public static int ic_richpush_actionbar_divider=0x7f02000f;
-        public static int icon_car_default=0x7f020010;
-        public static int nav_icon_ok_nor=0x7f020011;
-        public static int nav_icon_ok_sel=0x7f020012;
-        public static int nav_ok=0x7f020013;
-        public static int refresh_head_arrow=0x7f020014;
-        public static int richpush_btn_selector=0x7f020015;
-        public static int ssdk_auth_title_back=0x7f020016;
-        public static int ssdk_back_arr=0x7f020017;
-        public static int ssdk_logo=0x7f020018;
-        public static int ssdk_oks_auth_follow_cb_chd=0x7f020019;
-        public static int ssdk_oks_auth_follow_cb_unc=0x7f02001a;
-        public static int ssdk_oks_auth_title_back=0x7f02001b;
-        public static int ssdk_oks_blue_point=0x7f02001c;
-        public static int ssdk_oks_btn_back_nor=0x7f02001d;
-        public static int ssdk_oks_classic_platform_corners_bg=0x7f02001e;
-        public static int ssdk_oks_edittext_back=0x7f02001f;
-        public static int ssdk_oks_img_cancel=0x7f020020;
-        public static int ssdk_oks_light_blue_point=0x7f020021;
-        public static int ssdk_oks_logo_alipay=0x7f020022;
-        public static int ssdk_oks_logo_bluetooth=0x7f020023;
-        public static int ssdk_oks_logo_douban=0x7f020024;
-        public static int ssdk_oks_logo_dropbox=0x7f020025;
-        public static int ssdk_oks_logo_email=0x7f020026;
-        public static int ssdk_oks_logo_evernote=0x7f020027;
-        public static int ssdk_oks_logo_facebook=0x7f020028;
-        public static int ssdk_oks_logo_facebookmessenger=0x7f020029;
-        public static int ssdk_oks_logo_flickr=0x7f02002a;
-        public static int ssdk_oks_logo_foursquare=0x7f02002b;
-        public static int ssdk_oks_logo_googleplus=0x7f02002c;
-        public static int ssdk_oks_logo_instagram=0x7f02002d;
-        public static int ssdk_oks_logo_instapaper=0x7f02002e;
-        public static int ssdk_oks_logo_kaixin=0x7f02002f;
-        public static int ssdk_oks_logo_kakaostory=0x7f020030;
-        public static int ssdk_oks_logo_kakaotalk=0x7f020031;
-        public static int ssdk_oks_logo_laiwang=0x7f020032;
-        public static int ssdk_oks_logo_laiwangmoments=0x7f020033;
-        public static int ssdk_oks_logo_line=0x7f020034;
-        public static int ssdk_oks_logo_linkedin=0x7f020035;
-        public static int ssdk_oks_logo_mingdao=0x7f020036;
-        public static int ssdk_oks_logo_pinterest=0x7f020037;
-        public static int ssdk_oks_logo_pocket=0x7f020038;
-        public static int ssdk_oks_logo_qq=0x7f020039;
-        public static int ssdk_oks_logo_qzone=0x7f02003a;
-        public static int ssdk_oks_logo_renren=0x7f02003b;
-        public static int ssdk_oks_logo_shortmessage=0x7f02003c;
-        public static int ssdk_oks_logo_sinaweibo=0x7f02003d;
-        public static int ssdk_oks_logo_sohusuishenkan=0x7f02003e;
-        public static int ssdk_oks_logo_tencentweibo=0x7f02003f;
-        public static int ssdk_oks_logo_tumblr=0x7f020040;
-        public static int ssdk_oks_logo_twitter=0x7f020041;
-        public static int ssdk_oks_logo_vkontakte=0x7f020042;
-        public static int ssdk_oks_logo_wechat=0x7f020043;
-        public static int ssdk_oks_logo_wechatfavorite=0x7f020044;
-        public static int ssdk_oks_logo_wechatmoments=0x7f020045;
-        public static int ssdk_oks_logo_whatsapp=0x7f020046;
-        public static int ssdk_oks_logo_yixin=0x7f020047;
-        public static int ssdk_oks_logo_yixinmoments=0x7f020048;
-        public static int ssdk_oks_logo_youdao=0x7f020049;
-        public static int ssdk_oks_pin=0x7f02004a;
-        public static int ssdk_oks_ptr_ptr=0x7f02004b;
-        public static int ssdk_oks_shake_to_share_back=0x7f02004c;
-        public static int ssdk_oks_skyblue_actionbar_back_btn=0x7f02004d;
-        public static int ssdk_oks_skyblue_actionbar_ok_btn=0x7f02004e;
-        public static int ssdk_oks_skyblue_editpage_bg=0x7f02004f;
-        public static int ssdk_oks_skyblue_editpage_close=0x7f020050;
-        public static int ssdk_oks_skyblue_editpage_divider=0x7f020051;
-        public static int ssdk_oks_skyblue_editpage_image_bg=0x7f020052;
-        public static int ssdk_oks_skyblue_editpage_image_remove=0x7f020053;
-        public static int ssdk_oks_skyblue_logo_alipayshare=0x7f020054;
-        public static int ssdk_oks_skyblue_logo_alipayshare_checked=0x7f020055;
-        public static int ssdk_oks_skyblue_logo_baidutieba=0x7f020056;
-        public static int ssdk_oks_skyblue_logo_baidutieba_checked=0x7f020057;
-        public static int ssdk_oks_skyblue_logo_bluetooth=0x7f020058;
-        public static int ssdk_oks_skyblue_logo_bluetooth_checked=0x7f020059;
-        public static int ssdk_oks_skyblue_logo_douban=0x7f02005a;
-        public static int ssdk_oks_skyblue_logo_douban_checked=0x7f02005b;
-        public static int ssdk_oks_skyblue_logo_dropbox=0x7f02005c;
-        public static int ssdk_oks_skyblue_logo_dropbox_checked=0x7f02005d;
-        public static int ssdk_oks_skyblue_logo_email=0x7f02005e;
-        public static int ssdk_oks_skyblue_logo_email_checked=0x7f02005f;
-        public static int ssdk_oks_skyblue_logo_evernote=0x7f020060;
-        public static int ssdk_oks_skyblue_logo_evernote_checked=0x7f020061;
-        public static int ssdk_oks_skyblue_logo_facebook=0x7f020062;
-        public static int ssdk_oks_skyblue_logo_facebook_checked=0x7f020063;
-        public static int ssdk_oks_skyblue_logo_facebookmessenger=0x7f020064;
-        public static int ssdk_oks_skyblue_logo_facebookmessenger_checked=0x7f020065;
-        public static int ssdk_oks_skyblue_logo_flickr=0x7f020066;
-        public static int ssdk_oks_skyblue_logo_flickr_checked=0x7f020067;
-        public static int ssdk_oks_skyblue_logo_foursquare=0x7f020068;
-        public static int ssdk_oks_skyblue_logo_foursquare_checked=0x7f020069;
-        public static int ssdk_oks_skyblue_logo_googleplus=0x7f02006a;
-        public static int ssdk_oks_skyblue_logo_googleplus_checked=0x7f02006b;
-        public static int ssdk_oks_skyblue_logo_instagram=0x7f02006c;
-        public static int ssdk_oks_skyblue_logo_instagram_checked=0x7f02006d;
-        public static int ssdk_oks_skyblue_logo_instapaper=0x7f02006e;
-        public static int ssdk_oks_skyblue_logo_instapaper_checked=0x7f02006f;
-        public static int ssdk_oks_skyblue_logo_kaixin=0x7f020070;
-        public static int ssdk_oks_skyblue_logo_kaixin_checked=0x7f020071;
-        public static int ssdk_oks_skyblue_logo_kakaostory=0x7f020072;
-        public static int ssdk_oks_skyblue_logo_kakaostory_checked=0x7f020073;
-        public static int ssdk_oks_skyblue_logo_kakaotalk=0x7f020074;
-        public static int ssdk_oks_skyblue_logo_kakaotalk_checked=0x7f020075;
-        public static int ssdk_oks_skyblue_logo_laiwangmoments=0x7f020076;
-        public static int ssdk_oks_skyblue_logo_laiwangmoments_checked=0x7f020077;
-        public static int ssdk_oks_skyblue_logo_line=0x7f020078;
-        public static int ssdk_oks_skyblue_logo_line_checked=0x7f020079;
-        public static int ssdk_oks_skyblue_logo_linkedin=0x7f02007a;
-        public static int ssdk_oks_skyblue_logo_linkedin_checked=0x7f02007b;
-        public static int ssdk_oks_skyblue_logo_mingdao=0x7f02007c;
-        public static int ssdk_oks_skyblue_logo_mingdao_checked=0x7f02007d;
-        public static int ssdk_oks_skyblue_logo_neteasemicroblog=0x7f02007e;
-        public static int ssdk_oks_skyblue_logo_neteasemicroblog_checked=0x7f02007f;
-        public static int ssdk_oks_skyblue_logo_pinterest=0x7f020080;
-        public static int ssdk_oks_skyblue_logo_pinterest_checked=0x7f020081;
-        public static int ssdk_oks_skyblue_logo_pocket=0x7f020082;
-        public static int ssdk_oks_skyblue_logo_pocket_checked=0x7f020083;
-        public static int ssdk_oks_skyblue_logo_qq=0x7f020084;
-        public static int ssdk_oks_skyblue_logo_qq_checked=0x7f020085;
-        public static int ssdk_oks_skyblue_logo_qzone=0x7f020086;
-        public static int ssdk_oks_skyblue_logo_qzone_checked=0x7f020087;
-        public static int ssdk_oks_skyblue_logo_renren=0x7f020088;
-        public static int ssdk_oks_skyblue_logo_renren_checked=0x7f020089;
-        public static int ssdk_oks_skyblue_logo_shortmessage=0x7f02008a;
-        public static int ssdk_oks_skyblue_logo_shortmessage_checked=0x7f02008b;
-        public static int ssdk_oks_skyblue_logo_sinaweibo=0x7f02008c;
-        public static int ssdk_oks_skyblue_logo_sinaweibo_checked=0x7f02008d;
-        public static int ssdk_oks_skyblue_logo_sohumicroblog=0x7f02008e;
-        public static int ssdk_oks_skyblue_logo_sohumicroblog_checked=0x7f02008f;
-        public static int ssdk_oks_skyblue_logo_sohusuishenkan=0x7f020090;
-        public static int ssdk_oks_skyblue_logo_sohusuishenkan_checked=0x7f020091;
-        public static int ssdk_oks_skyblue_logo_tencentweibo=0x7f020092;
-        public static int ssdk_oks_skyblue_logo_tencentweibo_checked=0x7f020093;
-        public static int ssdk_oks_skyblue_logo_tumblr=0x7f020094;
-        public static int ssdk_oks_skyblue_logo_tumblr_checked=0x7f020095;
-        public static int ssdk_oks_skyblue_logo_twitter=0x7f020096;
-        public static int ssdk_oks_skyblue_logo_twitter_checked=0x7f020097;
-        public static int ssdk_oks_skyblue_logo_vkontakte=0x7f020098;
-        public static int ssdk_oks_skyblue_logo_vkontakte_checked=0x7f020099;
-        public static int ssdk_oks_skyblue_logo_wechat=0x7f02009a;
-        public static int ssdk_oks_skyblue_logo_wechat_checked=0x7f02009b;
-        public static int ssdk_oks_skyblue_logo_wechatfavorite=0x7f02009c;
-        public static int ssdk_oks_skyblue_logo_wechatfavorite_checked=0x7f02009d;
-        public static int ssdk_oks_skyblue_logo_wechatmoments=0x7f02009e;
-        public static int ssdk_oks_skyblue_logo_wechatmoments_checked=0x7f02009f;
-        public static int ssdk_oks_skyblue_logo_whatsapp=0x7f0200a0;
-        public static int ssdk_oks_skyblue_logo_whatsapp_checked=0x7f0200a1;
-        public static int ssdk_oks_skyblue_logo_yixin=0x7f0200a2;
-        public static int ssdk_oks_skyblue_logo_yixin_checked=0x7f0200a3;
-        public static int ssdk_oks_skyblue_logo_yixinmoments=0x7f0200a4;
-        public static int ssdk_oks_skyblue_logo_yixinmoments_checked=0x7f0200a5;
-        public static int ssdk_oks_skyblue_logo_youdao=0x7f0200a6;
-        public static int ssdk_oks_skyblue_logo_youdao_checked=0x7f0200a7;
-        public static int ssdk_oks_skyblue_platform_checked=0x7f0200a8;
-        public static int ssdk_oks_skyblue_platform_checked_disabled=0x7f0200a9;
-        public static int ssdk_oks_skyblue_platform_list_item=0x7f0200aa;
-        public static int ssdk_oks_skyblue_platform_list_item_selected=0x7f0200ab;
-        public static int ssdk_oks_skyblue_platform_list_selector=0x7f0200ac;
-        public static int ssdk_oks_title_back=0x7f0200ad;
-        public static int ssdk_oks_title_shadow=0x7f0200ae;
-        public static int ssdk_oks_yaoyiyao=0x7f0200af;
-        public static int ssdk_title_div=0x7f0200b0;
-        public static int switch_city_item_selector=0x7f0200b1;
-        public static int ws_account_icon=0x7f0200b2;
-        public static int ws_alpha_overlay=0x7f0200b3;
-        public static int ws_bg_adress=0x7f0200b4;
-        public static int ws_bg_border_rect=0x7f0200b5;
-        public static int ws_bg_btn_blue=0x7f0200b6;
-        public static int ws_bg_rect_list_search=0x7f0200b7;
-        public static int ws_bg_white=0x7f0200b8;
-        public static int ws_bg_white_shade=0x7f0200b9;
-        public static int ws_btn_bg=0x7f0200ba;
-        public static int ws_btn_blue=0x7f0200bb;
-        public static int ws_btn_blue_press=0x7f0200bc;
-        public static int ws_btn_check=0x7f0200bd;
-        public static int ws_btn_right=0x7f0200be;
-        public static int ws_btn_unckeck=0x7f0200bf;
-        public static int ws_car_selector_tv_overlay_bg=0x7f0200c0;
-        public static int ws_checkbox_checked=0x7f0200c1;
-        public static int ws_checkbox_unchecked=0x7f0200c2;
-        public static int ws_clearedittext_selector=0x7f0200c3;
-        public static int ws_common_icon_back_btn_normal=0x7f0200c4;
-        public static int ws_common_icon_searchbox_magnifier_2=0x7f0200c5;
-        public static int ws_dialog_bg=0x7f0200c6;
-        public static int ws_ic_slidingmenu_menu_1=0x7f0200c7;
-        public static int ws_ic_slidingmenu_menu_2=0x7f0200c8;
-        public static int ws_ic_slidingmenu_menu_3=0x7f0200c9;
-        public static int ws_ico_baba=0x7f0200ca;
-        public static int ws_ico_back=0x7f0200cb;
-        public static int ws_ico_people_no=0x7f0200cc;
-        public static int ws_ico_poi_atm=0x7f0200cd;
-        public static int ws_ico_poi_bank=0x7f0200ce;
-        public static int ws_ico_poi_beauty=0x7f0200cf;
-        public static int ws_ico_poi_bus=0x7f0200d0;
-        public static int ws_ico_poi_charge=0x7f0200d1;
-        public static int ws_ico_poi_company=0x7f0200d2;
-        public static int ws_ico_poi_food=0x7f0200d3;
-        public static int ws_ico_poi_gas=0x7f0200d4;
-        public static int ws_ico_poi_home=0x7f0200d5;
-        public static int ws_ico_poi_hospital=0x7f0200d6;
-        public static int ws_ico_poi_hotel=0x7f0200d7;
-        public static int ws_ico_poi_metro=0x7f0200d8;
-        public static int ws_ico_poi_more=0x7f0200d9;
-        public static int ws_ico_poi_movie=0x7f0200da;
-        public static int ws_ico_poi_parking=0x7f0200db;
-        public static int ws_ico_poi_repair=0x7f0200dc;
-        public static int ws_ico_poi_scenic=0x7f0200dd;
-        public static int ws_ico_poi_shop=0x7f0200de;
-        public static int ws_ico_tab_friends=0x7f0200df;
-        public static int ws_ico_tab_friends_c=0x7f0200e0;
-        public static int ws_ico_tab_home=0x7f0200e1;
-        public static int ws_ico_tab_home_c=0x7f0200e2;
-        public static int ws_ico_tab_more=0x7f0200e3;
-        public static int ws_ico_tab_more_c=0x7f0200e4;
-        public static int ws_ico_tab_msg=0x7f0200e5;
-        public static int ws_ico_tab_msg_c=0x7f0200e6;
-        public static int ws_icon_search_up_retrieval=0x7f0200e7;
-        public static int ws_icon_user=0x7f0200e8;
-        public static int ws_img_circle_dot_blue=0x7f0200e9;
-        public static int ws_img_circle_dot_blue_light=0x7f0200ea;
-        public static int ws_loading_bg=0x7f0200eb;
-        public static int ws_login_bg=0x7f0200ec;
-        public static int ws_logo=0x7f0200ed;
-        public static int ws_map_follow=0x7f0200ee;
-        public static int ws_nav_back=0x7f0200ef;
-        public static int ws_nav_icon_back=0x7f0200f0;
-        public static int ws_park=0x7f0200f1;
-        public static int ws_progress_bg=0x7f0200f2;
-        public static int ws_round_bg=0x7f0200f3;
-        public static int ws_search_bar_selector=0x7f0200f4;
-        public static int ws_search_clear_normal=0x7f0200f5;
-        public static int ws_search_clear_pressed=0x7f0200f6;
-        public static int ws_selector_checkbox=0x7f0200f7;
+        public static int ic_launcher=0x7f020000;
+        public static int ic_richpush_actionbar_back=0x7f020001;
+        public static int ic_richpush_actionbar_divider=0x7f020002;
+        public static int icon_car_default=0x7f020003;
+        public static int richpush_btn_selector=0x7f020004;
+        public static int ssdk_auth_title_back=0x7f020005;
+        public static int ssdk_back_arr=0x7f020006;
+        public static int ssdk_logo=0x7f020007;
+        public static int ssdk_oks_auth_follow_cb_chd=0x7f020008;
+        public static int ssdk_oks_auth_follow_cb_unc=0x7f020009;
+        public static int ssdk_oks_auth_title_back=0x7f02000a;
+        public static int ssdk_oks_blue_point=0x7f02000b;
+        public static int ssdk_oks_btn_back_nor=0x7f02000c;
+        public static int ssdk_oks_classic_platform_corners_bg=0x7f02000d;
+        public static int ssdk_oks_edittext_back=0x7f02000e;
+        public static int ssdk_oks_img_cancel=0x7f02000f;
+        public static int ssdk_oks_light_blue_point=0x7f020010;
+        public static int ssdk_oks_logo_alipay=0x7f020011;
+        public static int ssdk_oks_logo_bluetooth=0x7f020012;
+        public static int ssdk_oks_logo_douban=0x7f020013;
+        public static int ssdk_oks_logo_dropbox=0x7f020014;
+        public static int ssdk_oks_logo_email=0x7f020015;
+        public static int ssdk_oks_logo_evernote=0x7f020016;
+        public static int ssdk_oks_logo_facebook=0x7f020017;
+        public static int ssdk_oks_logo_facebookmessenger=0x7f020018;
+        public static int ssdk_oks_logo_flickr=0x7f020019;
+        public static int ssdk_oks_logo_foursquare=0x7f02001a;
+        public static int ssdk_oks_logo_googleplus=0x7f02001b;
+        public static int ssdk_oks_logo_instagram=0x7f02001c;
+        public static int ssdk_oks_logo_instapaper=0x7f02001d;
+        public static int ssdk_oks_logo_kaixin=0x7f02001e;
+        public static int ssdk_oks_logo_kakaostory=0x7f02001f;
+        public static int ssdk_oks_logo_kakaotalk=0x7f020020;
+        public static int ssdk_oks_logo_laiwang=0x7f020021;
+        public static int ssdk_oks_logo_laiwangmoments=0x7f020022;
+        public static int ssdk_oks_logo_line=0x7f020023;
+        public static int ssdk_oks_logo_linkedin=0x7f020024;
+        public static int ssdk_oks_logo_mingdao=0x7f020025;
+        public static int ssdk_oks_logo_pinterest=0x7f020026;
+        public static int ssdk_oks_logo_pocket=0x7f020027;
+        public static int ssdk_oks_logo_qq=0x7f020028;
+        public static int ssdk_oks_logo_qzone=0x7f020029;
+        public static int ssdk_oks_logo_renren=0x7f02002a;
+        public static int ssdk_oks_logo_shortmessage=0x7f02002b;
+        public static int ssdk_oks_logo_sinaweibo=0x7f02002c;
+        public static int ssdk_oks_logo_sohusuishenkan=0x7f02002d;
+        public static int ssdk_oks_logo_tencentweibo=0x7f02002e;
+        public static int ssdk_oks_logo_tumblr=0x7f02002f;
+        public static int ssdk_oks_logo_twitter=0x7f020030;
+        public static int ssdk_oks_logo_vkontakte=0x7f020031;
+        public static int ssdk_oks_logo_wechat=0x7f020032;
+        public static int ssdk_oks_logo_wechatfavorite=0x7f020033;
+        public static int ssdk_oks_logo_wechatmoments=0x7f020034;
+        public static int ssdk_oks_logo_whatsapp=0x7f020035;
+        public static int ssdk_oks_logo_yixin=0x7f020036;
+        public static int ssdk_oks_logo_yixinmoments=0x7f020037;
+        public static int ssdk_oks_logo_youdao=0x7f020038;
+        public static int ssdk_oks_pin=0x7f020039;
+        public static int ssdk_oks_ptr_ptr=0x7f02003a;
+        public static int ssdk_oks_shake_to_share_back=0x7f02003b;
+        public static int ssdk_oks_skyblue_actionbar_back_btn=0x7f02003c;
+        public static int ssdk_oks_skyblue_actionbar_ok_btn=0x7f02003d;
+        public static int ssdk_oks_skyblue_editpage_bg=0x7f02003e;
+        public static int ssdk_oks_skyblue_editpage_close=0x7f02003f;
+        public static int ssdk_oks_skyblue_editpage_divider=0x7f020040;
+        public static int ssdk_oks_skyblue_editpage_image_bg=0x7f020041;
+        public static int ssdk_oks_skyblue_editpage_image_remove=0x7f020042;
+        public static int ssdk_oks_skyblue_logo_alipayshare=0x7f020043;
+        public static int ssdk_oks_skyblue_logo_alipayshare_checked=0x7f020044;
+        public static int ssdk_oks_skyblue_logo_baidutieba=0x7f020045;
+        public static int ssdk_oks_skyblue_logo_baidutieba_checked=0x7f020046;
+        public static int ssdk_oks_skyblue_logo_bluetooth=0x7f020047;
+        public static int ssdk_oks_skyblue_logo_bluetooth_checked=0x7f020048;
+        public static int ssdk_oks_skyblue_logo_douban=0x7f020049;
+        public static int ssdk_oks_skyblue_logo_douban_checked=0x7f02004a;
+        public static int ssdk_oks_skyblue_logo_dropbox=0x7f02004b;
+        public static int ssdk_oks_skyblue_logo_dropbox_checked=0x7f02004c;
+        public static int ssdk_oks_skyblue_logo_email=0x7f02004d;
+        public static int ssdk_oks_skyblue_logo_email_checked=0x7f02004e;
+        public static int ssdk_oks_skyblue_logo_evernote=0x7f02004f;
+        public static int ssdk_oks_skyblue_logo_evernote_checked=0x7f020050;
+        public static int ssdk_oks_skyblue_logo_facebook=0x7f020051;
+        public static int ssdk_oks_skyblue_logo_facebook_checked=0x7f020052;
+        public static int ssdk_oks_skyblue_logo_facebookmessenger=0x7f020053;
+        public static int ssdk_oks_skyblue_logo_facebookmessenger_checked=0x7f020054;
+        public static int ssdk_oks_skyblue_logo_flickr=0x7f020055;
+        public static int ssdk_oks_skyblue_logo_flickr_checked=0x7f020056;
+        public static int ssdk_oks_skyblue_logo_foursquare=0x7f020057;
+        public static int ssdk_oks_skyblue_logo_foursquare_checked=0x7f020058;
+        public static int ssdk_oks_skyblue_logo_googleplus=0x7f020059;
+        public static int ssdk_oks_skyblue_logo_googleplus_checked=0x7f02005a;
+        public static int ssdk_oks_skyblue_logo_instagram=0x7f02005b;
+        public static int ssdk_oks_skyblue_logo_instagram_checked=0x7f02005c;
+        public static int ssdk_oks_skyblue_logo_instapaper=0x7f02005d;
+        public static int ssdk_oks_skyblue_logo_instapaper_checked=0x7f02005e;
+        public static int ssdk_oks_skyblue_logo_kaixin=0x7f02005f;
+        public static int ssdk_oks_skyblue_logo_kaixin_checked=0x7f020060;
+        public static int ssdk_oks_skyblue_logo_kakaostory=0x7f020061;
+        public static int ssdk_oks_skyblue_logo_kakaostory_checked=0x7f020062;
+        public static int ssdk_oks_skyblue_logo_kakaotalk=0x7f020063;
+        public static int ssdk_oks_skyblue_logo_kakaotalk_checked=0x7f020064;
+        public static int ssdk_oks_skyblue_logo_laiwangmoments=0x7f020065;
+        public static int ssdk_oks_skyblue_logo_laiwangmoments_checked=0x7f020066;
+        public static int ssdk_oks_skyblue_logo_line=0x7f020067;
+        public static int ssdk_oks_skyblue_logo_line_checked=0x7f020068;
+        public static int ssdk_oks_skyblue_logo_linkedin=0x7f020069;
+        public static int ssdk_oks_skyblue_logo_linkedin_checked=0x7f02006a;
+        public static int ssdk_oks_skyblue_logo_mingdao=0x7f02006b;
+        public static int ssdk_oks_skyblue_logo_mingdao_checked=0x7f02006c;
+        public static int ssdk_oks_skyblue_logo_neteasemicroblog=0x7f02006d;
+        public static int ssdk_oks_skyblue_logo_neteasemicroblog_checked=0x7f02006e;
+        public static int ssdk_oks_skyblue_logo_pinterest=0x7f02006f;
+        public static int ssdk_oks_skyblue_logo_pinterest_checked=0x7f020070;
+        public static int ssdk_oks_skyblue_logo_pocket=0x7f020071;
+        public static int ssdk_oks_skyblue_logo_pocket_checked=0x7f020072;
+        public static int ssdk_oks_skyblue_logo_qq=0x7f020073;
+        public static int ssdk_oks_skyblue_logo_qq_checked=0x7f020074;
+        public static int ssdk_oks_skyblue_logo_qzone=0x7f020075;
+        public static int ssdk_oks_skyblue_logo_qzone_checked=0x7f020076;
+        public static int ssdk_oks_skyblue_logo_renren=0x7f020077;
+        public static int ssdk_oks_skyblue_logo_renren_checked=0x7f020078;
+        public static int ssdk_oks_skyblue_logo_shortmessage=0x7f020079;
+        public static int ssdk_oks_skyblue_logo_shortmessage_checked=0x7f02007a;
+        public static int ssdk_oks_skyblue_logo_sinaweibo=0x7f02007b;
+        public static int ssdk_oks_skyblue_logo_sinaweibo_checked=0x7f02007c;
+        public static int ssdk_oks_skyblue_logo_sohumicroblog=0x7f02007d;
+        public static int ssdk_oks_skyblue_logo_sohumicroblog_checked=0x7f02007e;
+        public static int ssdk_oks_skyblue_logo_sohusuishenkan=0x7f02007f;
+        public static int ssdk_oks_skyblue_logo_sohusuishenkan_checked=0x7f020080;
+        public static int ssdk_oks_skyblue_logo_tencentweibo=0x7f020081;
+        public static int ssdk_oks_skyblue_logo_tencentweibo_checked=0x7f020082;
+        public static int ssdk_oks_skyblue_logo_tumblr=0x7f020083;
+        public static int ssdk_oks_skyblue_logo_tumblr_checked=0x7f020084;
+        public static int ssdk_oks_skyblue_logo_twitter=0x7f020085;
+        public static int ssdk_oks_skyblue_logo_twitter_checked=0x7f020086;
+        public static int ssdk_oks_skyblue_logo_vkontakte=0x7f020087;
+        public static int ssdk_oks_skyblue_logo_vkontakte_checked=0x7f020088;
+        public static int ssdk_oks_skyblue_logo_wechat=0x7f020089;
+        public static int ssdk_oks_skyblue_logo_wechat_checked=0x7f02008a;
+        public static int ssdk_oks_skyblue_logo_wechatfavorite=0x7f02008b;
+        public static int ssdk_oks_skyblue_logo_wechatfavorite_checked=0x7f02008c;
+        public static int ssdk_oks_skyblue_logo_wechatmoments=0x7f02008d;
+        public static int ssdk_oks_skyblue_logo_wechatmoments_checked=0x7f02008e;
+        public static int ssdk_oks_skyblue_logo_whatsapp=0x7f02008f;
+        public static int ssdk_oks_skyblue_logo_whatsapp_checked=0x7f020090;
+        public static int ssdk_oks_skyblue_logo_yixin=0x7f020091;
+        public static int ssdk_oks_skyblue_logo_yixin_checked=0x7f020092;
+        public static int ssdk_oks_skyblue_logo_yixinmoments=0x7f020093;
+        public static int ssdk_oks_skyblue_logo_yixinmoments_checked=0x7f020094;
+        public static int ssdk_oks_skyblue_logo_youdao=0x7f020095;
+        public static int ssdk_oks_skyblue_logo_youdao_checked=0x7f020096;
+        public static int ssdk_oks_skyblue_platform_checked=0x7f020097;
+        public static int ssdk_oks_skyblue_platform_checked_disabled=0x7f020098;
+        public static int ssdk_oks_skyblue_platform_list_item=0x7f020099;
+        public static int ssdk_oks_skyblue_platform_list_item_selected=0x7f02009a;
+        public static int ssdk_oks_skyblue_platform_list_selector=0x7f02009b;
+        public static int ssdk_oks_title_back=0x7f02009c;
+        public static int ssdk_oks_title_shadow=0x7f02009d;
+        public static int ssdk_oks_yaoyiyao=0x7f02009e;
+        public static int ssdk_title_div=0x7f02009f;
+        public static int switch_city_item_selector=0x7f0200a0;
+        public static int ws_account_icon=0x7f0200a1;
+        public static int ws_alpha_overlay=0x7f0200a2;
+        public static int ws_bg_adress=0x7f0200a3;
+        public static int ws_bg_border_rect=0x7f0200a4;
+        public static int ws_bg_btn_blue=0x7f0200a5;
+        public static int ws_bg_rect_list_search=0x7f0200a6;
+        public static int ws_bg_white=0x7f0200a7;
+        public static int ws_bg_white_shade=0x7f0200a8;
+        public static int ws_bt_blue_press=0x7f0200a9;
+        public static int ws_btn_bg=0x7f0200aa;
+        public static int ws_btn_blue=0x7f0200ab;
+        public static int ws_btn_blue_press=0x7f0200ac;
+        public static int ws_btn_check=0x7f0200ad;
+        public static int ws_btn_right=0x7f0200ae;
+        public static int ws_btn_unckeck=0x7f0200af;
+        public static int ws_car_selector_tv_overlay_bg=0x7f0200b0;
+        public static int ws_checkbox_checked=0x7f0200b1;
+        public static int ws_checkbox_unchecked=0x7f0200b2;
+        public static int ws_clearedittext_selector=0x7f0200b3;
+        public static int ws_common_icon_back_btn_normal=0x7f0200b4;
+        public static int ws_common_icon_searchbox_magnifier_2=0x7f0200b5;
+        public static int ws_dialog_bg=0x7f0200b6;
+        public static int ws_ic_slidingmenu_menu_1=0x7f0200b7;
+        public static int ws_ic_slidingmenu_menu_2=0x7f0200b8;
+        public static int ws_ic_slidingmenu_menu_3=0x7f0200b9;
+        public static int ws_ico_baba=0x7f0200ba;
+        public static int ws_ico_back=0x7f0200bb;
+        public static int ws_ico_people_no=0x7f0200bc;
+        public static int ws_ico_poi_atm=0x7f0200bd;
+        public static int ws_ico_poi_bank=0x7f0200be;
+        public static int ws_ico_poi_beauty=0x7f0200bf;
+        public static int ws_ico_poi_bus=0x7f0200c0;
+        public static int ws_ico_poi_charge=0x7f0200c1;
+        public static int ws_ico_poi_company=0x7f0200c2;
+        public static int ws_ico_poi_food=0x7f0200c3;
+        public static int ws_ico_poi_gas=0x7f0200c4;
+        public static int ws_ico_poi_home=0x7f0200c5;
+        public static int ws_ico_poi_hospital=0x7f0200c6;
+        public static int ws_ico_poi_hotel=0x7f0200c7;
+        public static int ws_ico_poi_metro=0x7f0200c8;
+        public static int ws_ico_poi_more=0x7f0200c9;
+        public static int ws_ico_poi_movie=0x7f0200ca;
+        public static int ws_ico_poi_parking=0x7f0200cb;
+        public static int ws_ico_poi_repair=0x7f0200cc;
+        public static int ws_ico_poi_scenic=0x7f0200cd;
+        public static int ws_ico_poi_shop=0x7f0200ce;
+        public static int ws_ico_tab_friends=0x7f0200cf;
+        public static int ws_ico_tab_friends_c=0x7f0200d0;
+        public static int ws_ico_tab_home=0x7f0200d1;
+        public static int ws_ico_tab_home_c=0x7f0200d2;
+        public static int ws_ico_tab_more=0x7f0200d3;
+        public static int ws_ico_tab_more_c=0x7f0200d4;
+        public static int ws_ico_tab_msg=0x7f0200d5;
+        public static int ws_ico_tab_msg_c=0x7f0200d6;
+        public static int ws_icon_search_up_retrieval=0x7f0200d7;
+        public static int ws_icon_user=0x7f0200d8;
+        public static int ws_img_circle_dot_blue=0x7f0200d9;
+        public static int ws_img_circle_dot_blue_light=0x7f0200da;
+        public static int ws_loading_bg=0x7f0200db;
+        public static int ws_login_bg=0x7f0200dc;
+        public static int ws_logo=0x7f0200dd;
+        public static int ws_map_follow=0x7f0200de;
+        public static int ws_nav_back=0x7f0200df;
+        public static int ws_nav_icon_back=0x7f0200e0;
+        public static int ws_nav_icon_ok_nor=0x7f0200e1;
+        public static int ws_nav_icon_ok_sel=0x7f0200e2;
+        public static int ws_nav_ok=0x7f0200e3;
+        public static int ws_park=0x7f0200e4;
+        public static int ws_round_bg=0x7f0200e5;
+        public static int ws_search_bar_selector=0x7f0200e6;
+        public static int ws_search_clear_normal=0x7f0200e7;
+        public static int ws_search_clear_pressed=0x7f0200e8;
+        public static int ws_selector_checkbox=0x7f0200e9;
     }
     public static final class id {
         public static int MyLetterListView01=0x7f090046;
@@ -636,7 +622,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int iv_carbrand_logo=0x7f090050;
         public static int iv_circle_page_0=0x7f090083;
         public static int iv_circle_page_1=0x7f090084;
-        public static int iv_loading=0x7f090085;
         public static int iv_pic=0x7f09003a;
         public static int iv_qr_image=0x7f090049;
         public static int iv_sure=0x7f090092;
@@ -669,6 +654,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int notePswd=0x7f090077;
         public static int okImageView=0x7f09002a;
         public static int openLight=0x7f09005e;
+        public static int p_loading=0x7f090085;
         public static int pbLocate=0x7f09006e;
         public static int positiveButton=0x7f09006b;
         public static int preview_view=0x7f09005c;
@@ -972,52 +958,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int ws_anim_menu_bottom_bar=0x7f0b0003;
     }
     public static final class styleable {
-        /** Attributes that can be used with a CircleImageView.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CircleImageView_border_color com.wicare.wistorm:border_color}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircleImageView_border_width com.wicare.wistorm:border_width}</code></td><td></td></tr>
-           </table>
-           @see #CircleImageView_border_color
-           @see #CircleImageView_border_width
-         */
-        public static final int[] CircleImageView = {
-            0x7f010000, 0x7f010001
-        };
-        /**
-          <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#border_color}
-          attribute's value can be found in the {@link #CircleImageView} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.wicare.wistorm:border_color
-        */
-        public static int CircleImageView_border_color = 1;
-        /**
-          <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#border_width}
-          attribute's value can be found in the {@link #CircleImageView} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.wicare.wistorm:border_width
-        */
-        public static int CircleImageView_border_width = 0;
         /** Attributes that can be used with a SlidingMenu.
            <p>Includes the following attributes:</p>
            <table>
@@ -1255,6 +1195,52 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           @attr name com.wicare.wistorm:viewBehind
         */
         public static int SlidingMenu_viewBehind = 2;
+        /** Attributes that can be used with a WCircleImageView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #WCircleImageView_border_color com.wicare.wistorm:border_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #WCircleImageView_border_width com.wicare.wistorm:border_width}</code></td><td></td></tr>
+           </table>
+           @see #WCircleImageView_border_color
+           @see #WCircleImageView_border_width
+         */
+        public static final int[] WCircleImageView = {
+            0x7f010000, 0x7f010001
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#border_color}
+          attribute's value can be found in the {@link #WCircleImageView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.wicare.wistorm:border_color
+        */
+        public static int WCircleImageView_border_color = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.wicare.wistorm.R.attr#border_width}
+          attribute's value can be found in the {@link #WCircleImageView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.wicare.wistorm:border_width
+        */
+        public static int WCircleImageView_border_width = 0;
         /** Attributes that can be used with a WHorizontalProgressBarWithNumber.
            <p>Includes the following attributes:</p>
            <table>

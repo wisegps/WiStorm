@@ -7,6 +7,7 @@ import android.graphics.drawable.AnimationDrawable;
 import android.view.Gravity;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.wicare.wistorm.R;
@@ -45,14 +46,14 @@ public class WLoading extends Dialog{
     }
     
 	  
-    public void onWindowFocusChanged(boolean hasFocus){  
-        if (wLoading == null){
-            return;
-        } 
-        ImageView imageView = (ImageView) wLoading.findViewById(R.id.iv_loading);
-        AnimationDrawable animationDrawable = (AnimationDrawable) imageView.getBackground();
-        animationDrawable.start();
-    }
+//    public void onWindowFocusChanged(boolean hasFocus){  
+//        if (wLoading == null){
+//            return;
+//        } 
+//        ProgressBar progressBar = (ProgressBar) wLoading.findViewById(R.id.p_loading);
+//        AnimationDrawable animationDrawable = (AnimationDrawable) progressBar.getBackground();
+//        animationDrawable.start();
+//    }
 	  
     
     /**

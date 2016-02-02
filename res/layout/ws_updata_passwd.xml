@@ -28,7 +28,7 @@
 	        android:padding="@dimen/margins"
 	        android:layout_alignParentRight="true"
 	        android:layout_centerVertical="true"
-	        android:src="@drawable/nav_ok"/>
+	        android:src="@drawable/ws_nav_ok"/>
 	</RelativeLayout>
 	<LinearLayout 
 	    android:layout_width="fill_parent"

@@ -39,16 +39,14 @@
             android:textSize="@dimen/content" />
         
         
-        <com.wicare.wistorm.ui.CircleImageView
+        <com.wicare.wistorm.ui.WCircleImageView
             android:id="@+id/iv_pic"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentRight="true"
             android:src="@drawable/ws_ico_people_no"
             app:border_width="1dp"
-            app:border_color="@color/white"  >
-            
-        </com.wicare.wistorm.ui.CircleImageView> 
+            app:border_color="@color/white"  />
             
         
     </RelativeLayout>
