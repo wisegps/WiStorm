@@ -21,4 +21,15 @@
         </attr>
     </declare-styleable>
     
+    <declare-styleable name="RotationProgressBar">
+        <attr name="style" format="reference"></attr>
+        <attr name="rpb_color" format="color"></attr>
+        <attr name="rpb_colors" format="reference"></attr>
+        <attr name="rpb_strokewidth" format="dimension"></attr>
+        <attr name="rpb_sweep_speed" format="float"></attr>
+        <attr name="rpb_sweep_min" format="integer"></attr>
+        <attr name="rpb_sweep_max" format="integer"></attr>
+        <attr name="rpb_rotation_speed" format="integer"></attr>
+    </declare-styleable>
+    
 </resources>

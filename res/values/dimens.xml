@@ -30,4 +30,12 @@
     <dimen name="content">16sp</dimen>
     <dimen name="small">14sp</dimen>
     <dimen name="score_number">50sp</dimen>
+    
+    <dimen name="rpb_stroke_width">4dip</dimen>
+    <integer name="rpb_sweep_min">20</integer>
+    <integer name="rpb_sweep_max">300</integer>
+
+    <item name="rpb_sweep_speed" format="float" type="string">1</item>
+    <item name="rpb_rotation_speed" format="float" type="string">1</item>
+    
 </resources>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wistorm="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:paddingTop="18dp"
@@ -7,26 +8,27 @@
     android:paddingLeft="36dp"
     android:paddingRight="36dp"
     android:background="@drawable/ws_alpha_overlay" >     
-	        
-    <ProgressBar 
-        android:id="@+id/p_loading"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:indeterminateDrawable="@anim/ws_progress_bar_style" />    
+        
+    <!-- wistorm:rpb_color="#eeeeee" 自定义rotationProgressBar 颜色 -->
+    <com.wicare.wistorm.ui.WRotationProgressBar 
+         android:id="@+id/rotation_progress_bar"
+	     style="@style/RotationProgressBarStyle"
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     android:layout_marginTop="8dp"
+	     wistorm:rpb_color="#eeeeee"
+	     android:layout_centerHorizontal="true" />
         
     <TextView 
         android:id="@+id/tv_loading_msg" 
         android:layout_width="wrap_content" 
         android:layout_height="wrap_content" 
-        android:layout_below="@id/p_loading"
+        android:layout_below="@id/rotation_progress_bar"
         android:layout_centerHorizontal="true"
         android:textColor="#eeeeee"
         android:layout_gravity="center"
         android:textSize="16sp"
         android:text="加载中..."
         android:layout_marginTop="15dp"/> 
-        
- 
-        
+           
 </RelativeLayout>

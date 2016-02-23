@@ -3,11 +3,9 @@ package com.wicare.wistorm.ui;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.graphics.drawable.AnimationDrawable;
+import android.graphics.Color;
 import android.view.Gravity;
 import android.view.ViewGroup.LayoutParams;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.wicare.wistorm.R;
@@ -35,8 +33,7 @@ public class WLoading extends Dialog{
      * @param context
      * @return
      */
-    public static WLoading createDialog(Context context){
-    	
+    public static WLoading createDialog(Context context){  	
         wLoading = new WLoading(context,R.style.progressDialog);
         wLoading.setContentView(R.layout.ws_progressbar_loading);
         wLoading.getWindow().getAttributes().gravity = Gravity.CENTER;
@@ -44,16 +41,6 @@ public class WLoading extends Dialog{
         wLoading.getWindow().getAttributes().height =  LayoutParams.WRAP_CONTENT;
         return wLoading;
     }
-    
-	  
-//    public void onWindowFocusChanged(boolean hasFocus){  
-//        if (wLoading == null){
-//            return;
-//        } 
-//        ProgressBar progressBar = (ProgressBar) wLoading.findViewById(R.id.p_loading);
-//        AnimationDrawable animationDrawable = (AnimationDrawable) progressBar.getBackground();
-//        animationDrawable.start();
-//    }
 	  
     
     /**
