@@ -11,6 +11,8 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.graphics.Shader;
 import android.graphics.SweepGradient;
+import android.os.Handler;
+import android.os.Message;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
@@ -22,10 +24,13 @@ import android.view.View;
 public class WCircleProView extends View {
 	
 	static final String TAG = WCircleProView.class.getSimpleName();
+	private static final int NEED_INVALIDATE = 1;
 	private int MaxInsideProgress = 270;
 	private int MaxProgress = MaxInsideProgress;
 	
 	private boolean enableInsideRing = false;
+	
+	private boolean enableScaleRingRun = false;
 	
 	private int colorBg = Color.WHITE; //背景颜色
 	private int colorBgRing = 0x80ffffff;//内环颜色
@@ -59,7 +64,7 @@ public class WCircleProView extends View {
 	private float rotateOutPointer = 0;
 	private float rotateInPointer = 0;
 	private float progressInitInsideRotateDegree = 135;//内环调整这个可以调整起始的位置
-	private float progressInitOutsideRotateDegree = progressInitInsideRotateDegree +90;//内环调整这个可以调整起始的位置
+	private float progressInitOutsideRotateDegree = progressInitInsideRotateDegree +90;//外环圆点调整这个可以调整起始的位置
 	
 	private float[] ringDashIntervals = new float[]{3f, 6f};
 	private float[] sweepGradientColorPos = new float[]{0f, 300f / 360f, 330f / 360f, 1f};//颜色渐变的范围长度
@@ -134,12 +139,48 @@ public class WCircleProView extends View {
 	
 	
 	
+	/**
+	 * @param enable  是否内层圆环也绘制进度
+	 */
 	public void enableInsideScaleRing(boolean enable){
 		this.enableInsideRing = enable;
 		if(enableInsideRing){
 			MaxProgress = 0;
 		}
 	}
+	
+
+	/**
+	 * @param enable 让外环圆点转动
+	 */
+	public void enableScaleRingPointRun(boolean enable){
+		this.enableScaleRingRun = enable;
+		postInvalidate();
+	}
+	
+ 
+    /**
+     * 操作UI主线程
+     */
+	int currentProgress =0;
+    private Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what) {
+                case NEED_INVALIDATE:
+                	if(currentProgress>75 && currentProgress<100){
+                		currentProgress = currentProgress + 2;
+                	}else{
+                		currentProgress = currentProgress + 1;
+                	}           
+                    setProgressOutsideRingRotateDegree(currentProgress);
+                    if(currentProgress == 100)
+                    	currentProgress = 0;
+                    break;
+            }
+        }
+    };
 	
 	private void translateCanvas(Canvas canvas, float x, float y, float z) {
 		matrixCanvas.reset();
@@ -160,9 +201,12 @@ public class WCircleProView extends View {
 	 */
 	private void drawContent(Canvas canvas) {
 		// Check rotate bound
-		if (rotateOutPointer >= 270f) {
-			rotateOutPointer= 270f;
+		if(!enableScaleRingRun){
+			if (rotateOutPointer >= 270f) {
+				rotateOutPointer= 270f;
+			}
 		}
+		
 
 		// Rotate ring sweep gradient
 		matrixSweepGradient.setRotate(getProgressInitInsideRingRotateDegree(), centerX, centerY);
@@ -189,6 +233,10 @@ public class WCircleProView extends View {
 		canvas.rotate(getProgressOutsideRingRotateDegree(), centerX, centerY);
 		canvas.drawCircle(centerX, centerY - radiusScaleRing, scaleRingPointSize, paintCiecle);
 		canvas.restore();
+		
+		if(enableScaleRingRun){
+			mHandler.sendEmptyMessageDelayed(NEED_INVALIDATE, 10);
+		}
 	}
 
 	/**
@@ -262,9 +310,6 @@ public class WCircleProView extends View {
 	}
 
 
-
-	
-	
 	/**
 	 * @return 返回内环初始角度
 	 */
@@ -301,11 +346,21 @@ public class WCircleProView extends View {
 	 * @param rotateSecondPointer  进度 
 	 */
 	public void setProgressOutsideRingRotateDegree(int rotateOutsidePointer){
-		if(enableInsideRing){
-			this.rotateOutPointer = rotateOutsidePointer * (MaxInsideProgress/10) / 10;
+		if(enableScaleRingRun){
+			MaxProgress = 360;
+			if(enableInsideRing){
+				this.rotateOutPointer = rotateOutsidePointer * (MaxInsideProgress/10) / 10;
+			}else{
+				this.rotateOutPointer = rotateOutsidePointer * (MaxProgress/10) / 10;
+			}
 		}else{
-			this.rotateOutPointer = rotateOutsidePointer * (MaxProgress/10) / 10;
+			if(enableInsideRing){
+				this.rotateOutPointer = rotateOutsidePointer * (MaxInsideProgress/10) / 10;
+			}else{
+				this.rotateOutPointer = rotateOutsidePointer * (MaxProgress/10) / 10;
+			}
 		}
+		
 		postInvalidate();
 	}
 	
