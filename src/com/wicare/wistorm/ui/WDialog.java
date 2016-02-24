@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
@@ -36,6 +37,15 @@ public class WDialog extends Dialog{
 	    super(context);  
 	} 
 
+	
+	/**
+	 * @author Wu
+	 *
+	 * dialog item列表点击事件接口
+	 */
+	public interface DialogListOnclickListener{
+		void onDialogListOnClick(WDialog dialog,int position);
+	}
 	 /**
 	 * 所有的方法执行完都会返回一个Builder
 	 * 使得后面可以直接create和show 
@@ -51,8 +61,8 @@ public class WDialog extends Dialog{
         private DialogInterface.OnClickListener positiveButtonClickListener;  
         //取消按钮事件  
         private DialogInterface.OnClickListener negativeButtonClickListener;  
-        //listview的item点击事件  
-        private AdapterView.OnItemClickListener listViewOnclickListener;  
+        //Dialog的item点击事件  接口
+        private DialogListOnclickListener dialogListOnclickListener;  
   
         public Builder(Context context) {  
             this.context = context;  
@@ -117,8 +127,8 @@ public class WDialog extends Dialog{
          * @param listViewOnclickListener
          * @return
          */
-        public Builder setOnClickListener(AdapterView.OnItemClickListener listViewOnclickListener) {  
-            this.listViewOnclickListener = listViewOnclickListener;  
+        public Builder setOnClickListener(DialogListOnclickListener dialogListOnclickListener) {  
+            this.dialogListOnclickListener = dialogListOnclickListener;  
             return this;  
         } 
         
@@ -165,8 +175,16 @@ public class WDialog extends Dialog{
             if(adapter != null && adapter.getCount()>0){  
                 ListView listView = (ListView)layout.findViewById(R.id.listView);  
                 listView.setAdapter(adapter);  
-                if(listViewOnclickListener!=null){  
-                    listView.setOnItemClickListener(listViewOnclickListener);  
+                if(dialogListOnclickListener!=null){  
+                    listView.setOnItemClickListener(new OnItemClickListener() {
+
+						@Override
+						public void onItemClick(AdapterView<?> parent,
+								View view, int position, long id) {
+							// TODO Auto-generated method stub
+							dialogListOnclickListener.onDialogListOnClick(dialog,position);
+						}
+					});  
                 }  
   
             }else{  

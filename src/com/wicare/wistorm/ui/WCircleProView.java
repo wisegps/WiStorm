@@ -18,7 +18,9 @@ import android.util.TypedValue;
 import android.view.View;
 
 /**
- * @author Wu 圆形进度UI
+ * @author Wu 
+ * 
+ * 圆形进度UI
  *
  */
 public class WCircleProView extends View {
