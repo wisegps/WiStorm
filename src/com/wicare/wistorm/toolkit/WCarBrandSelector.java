@@ -498,7 +498,7 @@ public class WCarBrandSelector extends Activity implements OnClickListener, Text
 	 */
 	private void startProgressDialog() {
 		if (mWLoading == null) {
-			mWLoading = WLoading.createDialog(this);
+			mWLoading = WLoading.createDialog(this,WLoading.SMALL_TYPE);
 			mWLoading.setMessage("数据加载中...");
 		}
 		mWLoading.show();

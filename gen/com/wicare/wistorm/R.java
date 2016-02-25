@@ -823,16 +823,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int ws_navigation_gridview_item=0x7f030021;
         public static int ws_navigation_item=0x7f030022;
         public static int ws_navigationbar=0x7f030023;
-        public static int ws_progressbar_loading=0x7f030024;
-        public static int ws_pull_refresh_items=0x7f030025;
-        public static int ws_search_bar=0x7f030026;
-        public static int ws_slidingmenu_left_content=0x7f030027;
-        public static int ws_slidingmenu_left_fragment=0x7f030028;
-        public static int ws_slidingmenu_right_content=0x7f030029;
-        public static int ws_slidingmenu_right_tabbar=0x7f03002a;
-        public static int ws_sms=0x7f03002b;
-        public static int ws_tabbar=0x7f03002c;
-        public static int ws_updata_passwd=0x7f03002d;
+        public static int ws_progressbar_loading_large=0x7f030024;
+        public static int ws_progressbar_loading_small=0x7f030025;
+        public static int ws_pull_refresh_items=0x7f030026;
+        public static int ws_search_bar=0x7f030027;
+        public static int ws_slidingmenu_left_content=0x7f030028;
+        public static int ws_slidingmenu_left_fragment=0x7f030029;
+        public static int ws_slidingmenu_right_content=0x7f03002a;
+        public static int ws_slidingmenu_right_tabbar=0x7f03002b;
+        public static int ws_sms=0x7f03002c;
+        public static int ws_tabbar=0x7f03002d;
+        public static int ws_updata_passwd=0x7f03002e;
     }
     public static final class menu {
         public static int main=0x7f0d0000;

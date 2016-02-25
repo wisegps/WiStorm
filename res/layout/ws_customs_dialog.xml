@@ -3,16 +3,15 @@
     android:minWidth="250dp"  
     android:orientation="vertical"  
     android:layout_width="match_parent"  
-    android:layout_height="wrap_content" 
-    android:background="#eaeaea"
-    android:padding="3dp" >  
+    android:layout_height="wrap_content"
+    android:background="@drawable/ws_round_bg" >  
     
     
-    <LinearLayout 
+   <!--  <LinearLayout 
         android:background="@drawable/ws_round_bg" 
         android:orientation="vertical"  
 	    android:layout_width="fill_parent"  	    
-	    android:layout_height="wrap_content" >
+	    android:layout_height="wrap_content" > -->
 
          <!-- dialog 标题 --> 
         <TextView  
@@ -94,7 +93,7 @@
             android:textSize="18sp"
             android:singleLine="true"/>  
 	             
-    </LinearLayout>
+    <!-- </LinearLayout> -->
    
    
    

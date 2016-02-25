@@ -3,7 +3,6 @@ package com.wicare.wistorm.ui;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.graphics.Color;
 import android.view.Gravity;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.TextView;
@@ -19,11 +18,15 @@ public class WLoading extends Dialog{
 	 
 	private Context context;
 	private static WLoading wLoading;
+	public static int LARGE_TYPE = 1;
+	public static int SMALL_TYPE = 2;
+	
 	
 	public WLoading(Context context) {
 		super(context);
 		this.context = context;
 	}
+	
 	public WLoading(Context context, int theme) {
 	    super(context, theme);
 	}
@@ -31,11 +34,16 @@ public class WLoading extends Dialog{
     /**
      * 设置WLoading的参数
      * @param context
+     * @param type Loading 样式  ：type=1 样式是Large;type=2 样式是Small;
      * @return
      */
-    public static WLoading createDialog(Context context){  	
+    public static WLoading createDialog(Context context,int type){  	
         wLoading = new WLoading(context,R.style.progressDialog);
-        wLoading.setContentView(R.layout.ws_progressbar_loading);
+        if(type == 1){
+        	wLoading.setContentView(R.layout.ws_progressbar_loading_large);
+        }else{
+        	wLoading.setContentView(R.layout.ws_progressbar_loading_small);
+        }
         wLoading.getWindow().getAttributes().gravity = Gravity.CENTER;
         wLoading.getWindow().getAttributes().width  =  LayoutParams.WRAP_CONTENT;
         wLoading.getWindow().getAttributes().height =  LayoutParams.WRAP_CONTENT;
