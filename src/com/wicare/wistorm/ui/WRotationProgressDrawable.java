@@ -26,20 +26,20 @@ import android.view.animation.LinearInterpolator;
  */
 public class WRotationProgressDrawable extends Drawable implements Animatable {
 
-	public static final String TAG = "SimpleProgressDrawable";
+	public static final String TAG = "WRotationProgressDrawable";
 
 	private RectF mRectF = null;
 	private Paint mPaint;
 	private int mColor = Color.RED;
-	private int mStrokeWidth = 10;
+	private int mStrokeWidth = 6;
 
 	private ValueAnimator mRotationAnimator;
 	private ValueAnimator mSweepAppearAnimator;
 	private ValueAnimator mSweepDisAppearAnimator;
 	private ValueAnimator mEndAnimator;
 
-	private int mRotationDuration = 2000;
-	private int mSweepDuration = 600;
+	private int mRotationDuration = 1800;
+	private int mSweepDuration = 400;
 	private int mEndDuration = 200;
 	private float mSweepSpeed = 1f;
 	private float mRotationSpeed = 1f;

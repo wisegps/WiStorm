@@ -100,7 +100,7 @@ public class WCarBrandSelector extends Activity implements OnClickListener, Text
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ws_brand_selector);
 		initView();
-		startProgressDialog();//加载弹框
+//		startProgressDialog();//加载弹框
 		
 		Log.e(TAG, "---------"+VehicleLogoPath);
 	}
@@ -162,7 +162,7 @@ public class WCarBrandSelector extends Activity implements OnClickListener, Text
 			logoUrl    = brandDatas.get(position).getLogoUrl();
 			Log.e(TAG, carBrank + "--" + carBrankId + "--" + logoUrl);
 			getSeriesData(carBrankId);
-			startProgressDialog();//弹框
+//			startProgressDialog();//弹框
 		}
 	};
 	
@@ -177,7 +177,7 @@ public class WCarBrandSelector extends Activity implements OnClickListener, Text
 			carSerie    = carSeries.get(position)[1];
 			Log.e(TAG, carSerie + "--" + carSeriesId);
 			getTypeData(carSeriesId);
-			startProgressDialog();//弹框
+//			startProgressDialog();//弹框
 		}
 	};
 	
@@ -307,7 +307,7 @@ public class WCarBrandSelector extends Activity implements OnClickListener, Text
 			// 刷新品牌logo
 			imageThread = new Imagehread();
 			imageThread.start();
-			stopProgressDialog();//关闭弹框
+//			stopProgressDialog();//关闭弹框
 		} catch (JSONException e2) {
 			e2.printStackTrace();
 		}
@@ -342,7 +342,7 @@ public class WCarBrandSelector extends Activity implements OnClickListener, Text
 			carSeriesAndTypeAdapter adapter = new carSeriesAndTypeAdapter(this, carSeries);
 			carModelListView.setAdapter(adapter);
 			carModelListView.setVisibility(View.VISIBLE);
-			stopProgressDialog();//关闭弹框
+//			stopProgressDialog();//关闭弹框
 		} catch (JSONException e1) {
 			e1.printStackTrace();
 		}
@@ -376,7 +376,7 @@ public class WCarBrandSelector extends Activity implements OnClickListener, Text
 			carSeriesAndTypeAdapter adapter = new carSeriesAndTypeAdapter(this, carTypes);
 			carTypelListView.setAdapter(adapter);
 			carTypelListView.setVisibility(View.VISIBLE);
-			stopProgressDialog();//关闭弹框
+//			stopProgressDialog();//关闭弹框
 			if (jsonTypeLength == 0) {
 				Intent intent = new Intent();
 				intent.putExtra("brank", carBrank);
@@ -496,23 +496,23 @@ public class WCarBrandSelector extends Activity implements OnClickListener, Text
 	/**
 	 * 开始显示加载
 	 */
-	private void startProgressDialog() {
+/*	private void startProgressDialog() {
 		if (mWLoading == null) {
 			mWLoading = WLoading.createDialog(this,WLoading.SMALL_TYPE);
 			mWLoading.setMessage("数据加载中...");
 		}
 		mWLoading.show();
-	}
+	}*/
 
 	/**
 	 * 关闭加载提示
 	 */
-	private void stopProgressDialog() {
+/*	private void stopProgressDialog() {
 		if (mWLoading != null) {
 			mWLoading.dismiss();
 			mWLoading = null;
 		}
-	}
+	}*/
 	
 	
 	
