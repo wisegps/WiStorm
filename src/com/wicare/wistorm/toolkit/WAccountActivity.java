@@ -4,7 +4,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -23,8 +25,12 @@ import com.wicare.wistorm.http.HttpThread;
 import com.wicare.wistorm.toolkit.WUploadUtil.OnUploadProcessListener;
 import com.wicare.wistorm.ui.WBottomPopupWindow;
 import com.wicare.wistorm.ui.WBottomPopupWindow.OnItemClickListener;
-import com.wicare.wistorm.ui.WDateSelector;
-import com.wicare.wistorm.ui.WDateSelector.OnDateChangedListener;
+import com.wicare.wistorm.ui.pickerview.TimePopupWindow;
+import com.wicare.wistorm.ui.pickerview.TimePopupWindow.OnTimeSelectListener;
+import com.wicare.wistorm.ui.pickerview.TimePopupWindow.Type;
+//import com.wicare.wistorm.ui.WBottomPopupWindow.OnItemClickListener;
+//import com.wicare.wistorm.ui.WDateSelector;
+//import com.wicare.wistorm.ui.WDateSelector.OnDateChangedListener;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -45,6 +51,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
@@ -73,6 +80,7 @@ public class WAccountActivity extends Activity implements OnUploadProcessListene
 	private ImageView iv_pic;//头像
 	private RequestQueue mQueue;
 	private String birth;//生日
+	private TimePopupWindow pwDate;//日期选择器
 	
 	
 	@Override
@@ -97,6 +105,29 @@ public class WAccountActivity extends Activity implements OnUploadProcessListene
 		tv_birth.setOnClickListener(onClickListener);
 		TextView tv_update_pwd = (TextView) findViewById(R.id.tv_update_pwd);
 		tv_update_pwd.setOnClickListener(onClickListener);
+		
+		pwDate = new TimePopupWindow(WAccountActivity.this, Type.YEAR_MONTH_DAY);
+		pwDate.setOnTimeSelectListener(new OnTimeSelectListener() {
+			
+			@Override
+			public void onTimeSelect(Date date) {
+				// TODO Auto-generated method stub
+				String url = WConfig.BaseUrl 
+						+ "customer/" 
+						+ WConfig.CustomerId 
+						+ "/field?" 
+						+ "auth_code=" + WConfig.AuthCode;
+				String Date = getDate(date);
+				
+				List<NameValuePair> params = new ArrayList<NameValuePair>();
+				params.add(new BasicNameValuePair("field_name", "birth"));
+				params.add(new BasicNameValuePair("field_type", "Date"));
+				params.add(new BasicNameValuePair("field_value", Date));
+				new HttpThread.putDataThread(mHandler, url, params, UPDATA_ACCOUNT).start();
+				tv_birth.setText(Date);
+			}
+		});
+		
 		//开启线程获取服务器数据
 		new HttpThread.getDataThread(mHandler, accountUrl, GET_ACCOUNT_MSG).start();	
 	}
@@ -167,26 +198,27 @@ public class WAccountActivity extends Activity implements OnUploadProcessListene
 				picPop();
 			}
 			if(v.getId() == R.id.tv_birth){//设置生日日期
-				WDateSelector dateSelector = new WDateSelector(WAccountActivity.this);
-				dateSelector.setDate();
-				dateSelector.setOnDateChangedListener(new OnDateChangedListener() {
-					
-					@Override
-					public void onDateChanged(String year, String month, String day) {
-						String url = WConfig.BaseUrl 
-								+ "customer/" 
-								+ WConfig.CustomerId 
-								+ "/field?" 
-								+ "auth_code=" + WConfig.AuthCode;
-						String Date = year + "-" + month + "-" + day;
-						List<NameValuePair> params = new ArrayList<NameValuePair>();
-						params.add(new BasicNameValuePair("field_name", "birth"));
-						params.add(new BasicNameValuePair("field_type", "Date"));
-						params.add(new BasicNameValuePair("field_value", Date));
-						new HttpThread.putDataThread(mHandler, url, params, UPDATA_ACCOUNT).start();
-						tv_birth.setText(Date);
-					}
-				});
+				pwDate.showAtLocation(v, Gravity.BOTTOM, 0, 0,new Date());
+//				WDateSelector dateSelector = new WDateSelector(WAccountActivity.this);
+//				dateSelector.setDate();
+//				dateSelector.setOnDateChangedListener(new OnDateChangedListener() {
+//					
+//					@Override
+//					public void onDateChanged(String year, String month, String day) {
+//						String url = WConfig.BaseUrl 
+//								+ "customer/" 
+//								+ WConfig.CustomerId 
+//								+ "/field?" 
+//								+ "auth_code=" + WConfig.AuthCode;
+//						String Date = year + "-" + month + "-" + day;
+//						List<NameValuePair> params = new ArrayList<NameValuePair>();
+//						params.add(new BasicNameValuePair("field_name", "birth"));
+//						params.add(new BasicNameValuePair("field_type", "Date"));
+//						params.add(new BasicNameValuePair("field_value", Date));
+//						new HttpThread.putDataThread(mHandler, url, params, UPDATA_ACCOUNT).start();
+//						tv_birth.setText(Date);
+//					}
+//				});
 			}
 		}
 	};
@@ -426,5 +458,14 @@ public class WAccountActivity extends Activity implements OnUploadProcessListene
 	@Override
 	public void initUpload(int fileSize) {
 	}
+	
+	/**
+	 * @param date
+	 * @return
+	 */
+	public static String getDate(Date date) {
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        return format.format(date);
+    }
 }	
 
