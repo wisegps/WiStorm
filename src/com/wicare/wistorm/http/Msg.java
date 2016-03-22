@@ -81,4 +81,37 @@ public class Msg {
 	 * 5.通讯接口 comm
 	 */
 	public final static int M_Comm_Sms_Send = 500;// 发送短信验证码
+	
+	
+	/**
+	 * 6.净化器接口
+	 */
+	/*get Token*/
+	public static final int GET_NEW_API_TOKEN      = 600;
+	
+	/*Set air speend command*/
+	public static final int SET_AIR_SPEED_COMMAND  = 601;
+	
+	/*Set air Switch command*/
+	public static final int SET_AIR_SWITCH_COMMAND = 602;
+	
+	/*Set air Model command*/
+	public static final int SET_AIR_MODEL_COMMAND  = 603;
+	
+	public final static String AIR_POWER_ON  = "{switch:1}";
+	public final static String AIR_POWER_OFF = "{switch:0}";
+	
+	
+	public final static String AIR_NORMAL_MODEL = "{air_mode:0}";
+	public final static String AIR_SMART_MODEL  = "{air_mode:1}";
+	public final static String AIR_TIMER_MODEL  = "{air_mode:2}";
+	
+	
+	public final static String LOW_SPEED    = "{air_speed:1}";
+	public final static String MIDDLE_SPEED = "{air_speed:2}";
+	public final static String HIGHT_SPEED  = "{air_speed:3}";
+	
+	public final static String SPEED_COMMAND_MODEL      = "16453";//调节速度   低、中、高
+	public final static String MODEL_SET_COMMAND_MODEL  = "16452";//设置模式   手动、智能、定时
+	public final static String SWITCH_COMMAND_MODEL     = "16451";//设置开关   启动 、停止
 }

@@ -198,9 +198,26 @@ public class WiStormAPI extends WiStorm {
 		return sign;
 	}
 
+	/**
+	 * @param value
+	 * @return
+	 */
 	private String encodeUTF(String value) {
-		value = Uri.encode(value);
-		return value;
+//		value = Uri.encode(value);
+//		return value;
+		
+		if(value.contains("@")){//如果没有这个 ，当帐号是邮箱的时候会出现 签名错误
+			return value;
+		}else if(value.contains(":")){//冒号不用转换
+			value = Uri.encode(value.substring(0,value.indexOf(":"))) +  ":" 
+					+ Uri.encode(value.substring(value.indexOf(":")+1,value.length()));
+			
+			Log.d("FragmentHomeAir", value);
+			return value;
+		}else{
+			value = Uri.encode(value);
+			return value;
+		}
 	}
 
 	/**
