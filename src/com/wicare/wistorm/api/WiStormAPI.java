@@ -1,8 +1,5 @@
 package com.wicare.wistorm.api;
 
-import java.io.UTFDataFormatException;
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,13 +9,11 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 
 import android.net.Uri;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Looper;
-import android.os.Message;
 import android.os.Handler.Callback;
 import android.util.Log;
 
@@ -86,7 +81,6 @@ public class WiStormAPI extends WiStorm {
 
 	public WiStormAPI() {
 		super();
-
 	}
 
 	/**
