@@ -1,6 +1,9 @@
 package com.wicare.wistorm.toolkit;
 
+import org.json.JSONObject;
+
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -12,10 +15,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.Response.Listener;
 import com.wicare.wistorm.R;
 import com.wicare.wistorm.api.WUserApi;
 import com.wicare.wistorm.http.BaseVolley;
-import com.wicare.wistorm.http.Msg;
 import com.wicare.wistorm.ui.WInputField;
 
 /**
@@ -24,15 +29,19 @@ import com.wicare.wistorm.ui.WInputField;
  * @author c
  * @date 2015-10-13
  */
-public class WLoginActivity extends Activity implements OnClickListener
-		{
+public abstract class WLoginActivity extends Activity implements OnClickListener{
 
 	private WInputField etAccount, etPassword;
 	public Button btnLogin;//登录按钮
 	private int bgId = R.drawable.ws_login_bg; //默认背景
 	private int logoId = R.drawable.ws_logo;//默认logo
 	public WUserApi userApi;
-	public Handler handler;
+	protected abstract void onClickRegister();//点击注册账号
+	protected abstract void onClickUpdataPassword();//点击重置密码
+	protected abstract void onLoginSuccess();//登陆成功
+	protected abstract void onLoginFail();//登陆失败
+	protected abstract void initUI();//初始化UI
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -44,8 +53,10 @@ public class WLoginActivity extends Activity implements OnClickListener
 		etPassword = (WInputField) findViewById(R.id.et_password);
 		btnLogin = (Button) findViewById(R.id.btn_login);
 		btnLogin.setOnClickListener(this);
-		
-		
+		findViewById(R.id.tv_register).setOnClickListener(this);
+		findViewById(R.id.tv_password).setOnClickListener(this);
+		init();
+		initUI();
 	}
 
 	/**
@@ -53,12 +64,9 @@ public class WLoginActivity extends Activity implements OnClickListener
 	 */
 	public void init(){
 		//初始化网络
-		BaseVolley.init(this);
-		// 网络请求回调
-		handler = new Handler(callback);
+		BaseVolley.init(WLoginActivity.this);
 		 //用户api 
-		userApi = new WUserApi(handler);
-		
+		userApi = new WUserApi();
 	}
 	/**
 	 * 实现控件点击接口
@@ -68,6 +76,10 @@ public class WLoginActivity extends Activity implements OnClickListener
 		// 点击登录
 		if (view.getId() == R.id.btn_login) {
 			login();
+		}else if(view.getId() == R.id.tv_register){
+			onClickRegister();
+		}else if(view.getId() == R.id.tv_password){
+			onClickUpdataPassword();
 		}
 	}
 
@@ -78,90 +90,55 @@ public class WLoginActivity extends Activity implements OnClickListener
 	private void login() {
 		String userName = etAccount.getText().toString().trim();
 		String password = etPassword.getText().toString().trim();
-
 		if (userName.length() == 0 || password.length() == 0) {
 			//loginFail(WUserApi.Fail_Null);
-
+			Toast.makeText(WLoginActivity.this, "用户名或密码不能为空", Toast.LENGTH_SHORT).show();
 			etAccount.setShakeAnimation();
 			etPassword.setShakeAnimation();
 			return;
 		}
-
 		btnLogin.setEnabled(false);
-		
-		// 设置登录监听接口
-		// 发送请求
-		userApi.login(userName, password);
-	}
+		userApi.login(userName, password, new Listener<String>() {
 
-	
-	/**
-	 * 网络回调
-	 */
-	Handler.Callback callback = new Handler.Callback() {
-
-		@Override
-		public boolean handleMessage(Message msg) {
-			switch (msg.what) {
-			case Msg.M_Usr_Token:
-				Bundle bundle = msg.getData();
-				String access_token = bundle.getString("access_token");
-				String valid_time = bundle.getString("valid_time");
-				Log.i("LoginTest", "返回access_token值" + access_token);
-				Log.i("LoginTest", "返回valid_time值" + valid_time);
-				break;
-			case Msg.M_Usr_Login:
-				bundle = msg.getData();
-				String cust_id = bundle.getString("cust_id");
-				access_token = bundle.getString("access_token");
-				valid_time = bundle.getString("valid_time");
-				Log.i("LoginTest", "返回cust_id值" + cust_id);
-				Log.i("LoginTest", "返回access_token值" + access_token);
-				Log.i("LoginTest", "返回valid_time值" + valid_time);
-				break;
+			@Override
+			public void onResponse(final String response) {
+				// TODO Auto-generated method stub
+				parseLogin(response);
 			}
-			
-			return false;
-		}
+		} , new Response.ErrorListener() {
 
-	};
+			@Override
+			public void onErrorResponse(final VolleyError error) {
+				// TODO Auto-generated method stub
+				btnLogin.setEnabled(true);
+				onLoginFail();
+			}
+		});
+	}
+
 	
 	/**
-	 * 实现登录监听接口，登录成功回调函数
-	 * 
-	
-	@Override
-	public void loginSucess(String response) {
-		Toast.makeText(this, "登录成功", Toast.LENGTH_SHORT).show();
-		Log.i("WLoginActivity", response);
-		btnLogin.setEnabled(true);
-	}
- */
-	/**
-	 * 实现登录监听接口，登录失败回调函数
-	 * 
-	 
-	@Override
-	public void loginFail(int statusCode) {
-		// 根据错误码，显示不同错误提示信息
-		int errorId = R.string.ws_login_id_wrong;
-
-		if (statusCode == WUserApi.Fail_Bound) {
-			errorId = R.string.ws_accout_bind_phone;
-		} else if (statusCode == WUserApi.Fail_Account
-				|| statusCode == WUserApi.Fail_Password) {
-			errorId = R.string.ws_login_id_wrong;
-		} else if (statusCode == WUserApi.Fail_Net) {
-			errorId = R.string.ws_net_timeout;
-		} else if (statusCode == WUserApi.Fail_Null) {
-			errorId = R.string.ws_login_null;
+	 * @param strJson
+	 */
+	private void parseLogin(String strJson){
+		try {
+			JSONObject object = new JSONObject(strJson);	
+			if("0".equals(object.getString("status_code"))){
+				String access_token = object.getString("access_token");
+				String cust_id      = object.getString("cust_id");
+				String cust_name    = object.getString("cust_name");
+				btnLogin.setEnabled(true);
+				onLoginSuccess();
+			}else{
+				onLoginFail();
+			}		
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-		Toast.makeText(this, errorId, Toast.LENGTH_LONG).show();
-		etAccount.setShakeAnimation();
-		etPassword.setShakeAnimation();
-		btnLogin.setEnabled(true);
 	}
-*/
+	
+	
+	
 	/**
 	 * setBackground 子类重写覆盖此方法可以设置背景图片
 	 * 

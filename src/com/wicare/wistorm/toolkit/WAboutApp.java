@@ -16,10 +16,12 @@ import android.widget.Toast;
  * @author Wu
  * 关于页面
  */
-public class WAboutApp extends Activity {
+public abstract class WAboutApp extends Activity {
 	
 	private ImageView ivBack;
 	private RelativeLayout rl_updata;
+	
+	protected abstract void onClickUpdata();//检查版本更新 
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +47,7 @@ public class WAboutApp extends Activity {
 				WAboutApp.this.finish();
 			}
 			if(v.getId() == R.id.rl_updata){
-				Toast.makeText(WAboutApp.this, getResources().getString(R.string.app_checkupdata), Toast.LENGTH_SHORT).show();
+				onClickUpdata();
 			}
 		}
 	};

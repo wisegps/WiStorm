@@ -23,7 +23,7 @@ import android.widget.PopupWindow;
  * @author Sai
  * 
  */
-public class TimePopupWindow extends PopupWindow implements OnClickListener {
+public class WTimePopupWindow extends PopupWindow implements OnClickListener {
 	public enum Type {
 		ALL, YEAR_MONTH_DAY, HOURS_MINS, MONTH_DAY_HOUR_MIN
 	}// 四种选择模式，年月日时分，年月日，时分，月日时分
@@ -35,7 +35,7 @@ public class TimePopupWindow extends PopupWindow implements OnClickListener {
 	private static final String TAG_CANCEL = "cancel";
 	private OnTimeSelectListener timeSelectListener;
 
-	public TimePopupWindow(Context context, Type type) {
+	public WTimePopupWindow(Context context, Type type) {
 		super(context);
 		this.setWidth(LayoutParams.FILL_PARENT);
 		this.setHeight(LayoutParams.WRAP_CONTENT);

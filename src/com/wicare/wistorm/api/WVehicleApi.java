@@ -19,8 +19,6 @@ public class WVehicleApi extends WiStormAPI {
 	public String Method_Vehicle_Update = "wicare.vehicle.update";//修改车辆
 	public String Method_Vehicle_Search = "wicare.vehicles.search";//搜索车辆信息
 	public String Method_Vehicle_List = "wicare.vehicles.list";//删除车辆
-	
-	
 
 	public HashMap<String, String> hashParam = new HashMap<String, String>();
 

@@ -25,9 +25,9 @@ import com.wicare.wistorm.http.HttpThread;
 import com.wicare.wistorm.toolkit.WUploadUtil.OnUploadProcessListener;
 import com.wicare.wistorm.ui.WBottomPopupWindow;
 import com.wicare.wistorm.ui.WBottomPopupWindow.OnItemClickListener;
-import com.wicare.wistorm.ui.pickerview.TimePopupWindow;
-import com.wicare.wistorm.ui.pickerview.TimePopupWindow.OnTimeSelectListener;
-import com.wicare.wistorm.ui.pickerview.TimePopupWindow.Type;
+import com.wicare.wistorm.ui.pickerview.WTimePopupWindow;
+import com.wicare.wistorm.ui.pickerview.WTimePopupWindow.OnTimeSelectListener;
+import com.wicare.wistorm.ui.pickerview.WTimePopupWindow.Type;
 //import com.wicare.wistorm.ui.WBottomPopupWindow.OnItemClickListener;
 //import com.wicare.wistorm.ui.WDateSelector;
 //import com.wicare.wistorm.ui.WDateSelector.OnDateChangedListener;
@@ -80,7 +80,7 @@ public class WAccountActivity extends Activity implements OnUploadProcessListene
 	private ImageView iv_pic;//头像
 	private RequestQueue mQueue;
 	private String birth;//生日
-	private TimePopupWindow pwDate;//日期选择器
+	private WTimePopupWindow pwDate;//日期选择器
 	
 	
 	@Override
@@ -106,7 +106,7 @@ public class WAccountActivity extends Activity implements OnUploadProcessListene
 		TextView tv_update_pwd = (TextView) findViewById(R.id.tv_update_pwd);
 		tv_update_pwd.setOnClickListener(onClickListener);
 		
-		pwDate = new TimePopupWindow(WAccountActivity.this, Type.YEAR_MONTH_DAY);
+		pwDate = new WTimePopupWindow(WAccountActivity.this, Type.YEAR_MONTH_DAY);
 		pwDate.setOnTimeSelectListener(new OnTimeSelectListener() {
 			
 			@Override

@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.wicare.wistorm.R;
-import com.wicare.wistorm.ui.pickerview.TimePopupWindow.Type;
+import com.wicare.wistorm.ui.pickerview.WTimePopupWindow.Type;
 
 import android.content.Context;
 import android.view.View;

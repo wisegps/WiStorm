@@ -20,7 +20,7 @@ import android.widget.PopupWindow;
  * @author Sai
  *
  */
-public class OptionsPopupWindow extends PopupWindow implements OnClickListener {
+public class WOptionsPopupWindow extends PopupWindow implements OnClickListener {
 	private View rootView; // 总的布局
 	WheelOptions wheelOptions;
 	private View btnSubmit, btnCancel;
@@ -28,7 +28,7 @@ public class OptionsPopupWindow extends PopupWindow implements OnClickListener {
 	private static final String TAG_SUBMIT = "submit";
 	private static final String TAG_CANCEL = "cancel";
 
-	public OptionsPopupWindow(Context context) {
+	public WOptionsPopupWindow(Context context) {
 		super(context);
 		this.setWidth(LayoutParams.FILL_PARENT);
 		this.setHeight(LayoutParams.WRAP_CONTENT);
