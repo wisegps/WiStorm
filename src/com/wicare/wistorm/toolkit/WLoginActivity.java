@@ -3,11 +3,7 @@ package com.wicare.wistorm.toolkit;
 import org.json.JSONObject;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -21,33 +17,43 @@ import com.android.volley.Response.Listener;
 import com.wicare.wistorm.R;
 import com.wicare.wistorm.api.WUserApi;
 import com.wicare.wistorm.http.BaseVolley;
+import com.wicare.wistorm.http.OnFailure;
+import com.wicare.wistorm.http.OnSuccess;
 import com.wicare.wistorm.ui.WInputField;
 
 /**
  * WLoginActivity 用户登录Activity 继承该类可以复用登录界面和登录功能
  * 
- * @author c
+ * @author Wu
  * @date 2015-10-13
  */
 public abstract class WLoginActivity extends Activity implements OnClickListener{
 
 	private WInputField etAccount, etPassword;
 	public Button btnLogin;//登录按钮
-	private int bgId = R.drawable.ws_login_bg; //默认背景
-	private int logoId = R.drawable.ws_logo;//默认logo
+	private int logoId  = R.drawable.ic_launcher;//默认logo
+	private int bgColor = R.color.blue_press;
 	public WUserApi userApi;
 	protected abstract void onClickRegister();//点击注册账号
 	protected abstract void onClickUpdataPassword();//点击重置密码
-	protected abstract void onLoginSuccess();//登陆成功
+	protected abstract void onLoginSuccess(String response);//登陆成功
 	protected abstract void onLoginFail();//登陆失败
-	protected abstract void initUI();//初始化UI
+	protected abstract void setUpView();//初始化UI
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.ws_login);
-		setBackground(bgId);
+		init();
+		setUpView();
+	}
+
+	/**
+	 * 初始化
+	 */
+	public void init(){
+		setBackgroundColor(bgColor);
 		setLogo(logoId);
 		etAccount = (WInputField) findViewById(R.id.et_account);
 		etPassword = (WInputField) findViewById(R.id.et_password);
@@ -55,22 +61,13 @@ public abstract class WLoginActivity extends Activity implements OnClickListener
 		btnLogin.setOnClickListener(this);
 		findViewById(R.id.tv_register).setOnClickListener(this);
 		findViewById(R.id.tv_password).setOnClickListener(this);
-		init();
-		initUI();
-	}
-
-	/**
-	 * 初始化
-	 */
-	public void init(){
 		//初始化网络
 		BaseVolley.init(WLoginActivity.this);
 		 //用户api 
 		userApi = new WUserApi();
 	}
-	/**
-	 * 实现控件点击接口
-	 */
+	
+	
 	@Override
 	public void onClick(View view) {
 		// 点击登录
@@ -84,7 +81,6 @@ public abstract class WLoginActivity extends Activity implements OnClickListener
 	}
 
 	/**
-	 * 
 	 * login 点击后发送登录请求
 	 */
 	private void login() {
@@ -98,17 +94,17 @@ public abstract class WLoginActivity extends Activity implements OnClickListener
 			return;
 		}
 		btnLogin.setEnabled(false);
-		userApi.login(userName, password, new Listener<String>() {
-
+		userApi.login(userName, password, new OnSuccess() {
+			
 			@Override
-			public void onResponse(final String response) {
+			protected void onSuccess(String response) {
 				// TODO Auto-generated method stub
 				parseLogin(response);
 			}
-		} , new Response.ErrorListener() {
-
+		},new OnFailure() {
+			
 			@Override
-			public void onErrorResponse(final VolleyError error) {
+			protected void onFailure(VolleyError error) {
 				// TODO Auto-generated method stub
 				btnLogin.setEnabled(true);
 				onLoginFail();
@@ -120,16 +116,24 @@ public abstract class WLoginActivity extends Activity implements OnClickListener
 	/**
 	 * @param strJson
 	 */
+	/**   
+	 * @Title: parseLogin   
+	 * @Description: TODO(解析)   
+	 * @param: @param strJson      
+	 * @return: void      
+	 * @throws   
+	 */  
 	private void parseLogin(String strJson){
 		try {
 			JSONObject object = new JSONObject(strJson);	
 			if("0".equals(object.getString("status_code"))){
-				String access_token = object.getString("access_token");
-				String cust_id      = object.getString("cust_id");
-				String cust_name    = object.getString("cust_name");
+//				String access_token = object.getString("access_token");
+//				String cust_id      = object.getString("cust_id");
+//				String cust_name    = object.getString("cust_name");
 				btnLogin.setEnabled(true);
-				onLoginSuccess();
+				onLoginSuccess(strJson);
 			}else{
+				btnLogin.setEnabled(true);
 				onLoginFail();
 			}		
 		} catch (Exception e) {
@@ -140,22 +144,32 @@ public abstract class WLoginActivity extends Activity implements OnClickListener
 	
 	
 	/**
-	 * setBackground 子类重写覆盖此方法可以设置背景图片
+	 * 在继承WloginActivity 的 setUpView()方法中去重写setBackground()可以设置背景图片
 	 * 
-	 * @param bgId
-	 *            图片ID
+	 * @param bgId 背景图片id
+	 *            
 	 */
 	public void setBackground(int bgId) {
-		this.bgId = bgId;
 		findViewById(R.id.ws_llyt_login).setBackgroundResource(bgId);
-
 	}
+	
+	
+	/** 
+	 * 在继承WloginActivity 的 setUpView()方法中去重写setBackground()可以设置背景颜色
+	 * 
+	 * @param bgColor 登陆背景颜色
+	 */
+	public void setBackgroundColor(int bgColor){
+		this.bgColor = bgColor;
+		findViewById(R.id.ws_llyt_login).setBackgroundColor(bgColor);
+	}
+	
+	
 
 	/**
-	 * setLogo 子类重写覆盖此方法可以设置logo图片
+	 * 在继承WloginActivity 的 setUpView()方法中去重写setLogo()可以设置app的logo
 	 * 
-	 * @param logoId
-	 *            图片id
+	 * @param logoId 背景图片id
 	 */
 	public void setLogo(int logoId) {
 		this.logoId = logoId;

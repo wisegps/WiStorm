@@ -33,6 +33,15 @@ public class WBaseApi extends WiStormAPI {
 	private Handler workHandler;// 工作线程，非UI线程
 	private BaseVolley volley;
 
+	
+	public WBaseApi(){
+		init_1();
+	}
+	
+	public void init_1(){
+		volley = new BaseVolley();
+	}
+	
 	public WBaseApi(Handler uiHandler) {
 		this.uiHandler = uiHandler;
 		init();

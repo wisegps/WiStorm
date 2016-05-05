@@ -14,9 +14,11 @@ import com.wicare.wistorm.ui.slidingmuen.SlidingMenu;
  * 
  * 侧滑菜单Activity 。可以直接继承
  */
-public class WSlidingMenu extends SlidingFragmentActivity{
+public abstract class WSlidingMenu extends SlidingFragmentActivity{
 	
 	static final String TAG = "WSlidingMenu";
+	
+	protected abstract void setUpView();//重写设置侧滑菜单
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,7 @@ public class WSlidingMenu extends SlidingFragmentActivity{
 		setContentView(R.layout.ws_slidingmenu_right_content);
 		setBehindContentView(R.layout.ws_slidingmenu_left_content);
 		initSlidingMenu();
+		setUpView();
 	}
 	
 	 /**
@@ -36,7 +39,7 @@ public class WSlidingMenu extends SlidingFragmentActivity{
                 .replace(R.id.menu_left_content, new WSlidingMenuLeftFragment()).commit();
         
         getSupportFragmentManager().beginTransaction()
-        .replace(R.id.menu_right_content, new WSlidingMenuRightFragment()).commit();
+        		.replace(R.id.menu_right_content, new WSlidingMenuRightFragment()).commit();
         
         // 实例化滑动菜单对象
         SlidingMenu sm = getSlidingMenu();
@@ -94,7 +97,7 @@ public class WSlidingMenu extends SlidingFragmentActivity{
 	 * @param offset 设置侧滑菜单栏的滑出宽度
 	 */
 	public void setSlidingmenuBehindOffset(int offset){
-		SlidingMenu sm =getSlidingMenu();
+		SlidingMenu sm = getSlidingMenu();
 		sm.setBehindOffset(offset);
 	}
 	

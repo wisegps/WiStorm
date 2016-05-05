@@ -3,7 +3,7 @@
     android:id="@+id/ws_llyt_login"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/ws_login_bg"
+    android:background="#50B7DE"
     android:gravity="center"
     android:orientation="vertical" >
 

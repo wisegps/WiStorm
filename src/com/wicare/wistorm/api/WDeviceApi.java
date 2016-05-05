@@ -23,9 +23,6 @@ public class WDeviceApi extends WiStormAPI {
 	public String Method_Device_List = "wicare.devices.list";//获取设备列表
 	public String Method_Device_Obd_Datas = "wicare.device_obd_datas.list";//获取电压曲线及水温曲线
 	public String Method_Device_Update = "wicare.device.update";//更新设备信息
-	
-	
-
 	public HashMap<String, String> hashParam = new HashMap<String, String>();
 
 	public Context context;

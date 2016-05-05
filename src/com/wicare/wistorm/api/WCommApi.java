@@ -6,6 +6,8 @@ import android.content.Context;
 import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
 import com.wicare.wistorm.http.BaseVolley;
+import com.wicare.wistorm.http.OnFailure;
+import com.wicare.wistorm.http.OnSuccess;
 /**
  * 发送短信验证码
  * 
@@ -39,12 +41,12 @@ public class WCommApi extends WiStormAPI {
 	 * @param onSuccess 连接成功回调
 	 * @param onError   连接失败回调
 	 */
-	public void sendSMS(String mobile, int type,Listener<String> onSuccess,ErrorListener onError){
+	public void sendSMS(String mobile, int type,OnSuccess onSuccess, OnFailure onFailure){
 		HashMap<String, String> params = new HashMap<String, String>();
 		params.put("mobile", mobile);
 		params.put("type", type+"");
 		String url = super.getUrl(Method_Comm_Sms_Send, "", params);
-		volley.request(url, onSuccess,onError);
+		volley.request(url, onSuccess,onFailure);
 	}
 
 }

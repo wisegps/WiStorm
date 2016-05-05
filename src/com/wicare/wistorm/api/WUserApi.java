@@ -8,6 +8,8 @@ import android.util.Log;
 import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
 import com.wicare.wistorm.http.BaseVolley;
+import com.wicare.wistorm.http.OnFailure;
+import com.wicare.wistorm.http.OnSuccess;
 import com.wicare.wistorm.toolkit.WEncrypt;
 
 /**
@@ -53,13 +55,13 @@ public class WUserApi extends WiStormAPI {
 	 * @param onSuccess 连接成功回调
 	 * @param onError   连接失败回调
 	 */
-	public void getToken(String account, String password,Listener<String> onSuccess,ErrorListener onError) {
+	public void getToken(String account, String password,OnSuccess onSuccess,OnFailure onFailure) {
 		password = WEncrypt.MD5(password);
 		HashMap<String, String> params = new HashMap<String, String>();
 		params.put("account", account);
 		params.put("password", password);
 		String url = super.getUrl(Method_Access_Token, "", params);
-		volley.request(url,onSuccess,onError);
+		volley.request(url,onSuccess,onFailure);
 	}
 
 
@@ -71,13 +73,13 @@ public class WUserApi extends WiStormAPI {
 	 * @param onSuccess 连接成功回调
 	 * @param onError   连接失败回调
 	 */
-	public void login(String account, String password,Listener<String> onSuccess,ErrorListener onError) {
+	public void login(String account, String password,OnSuccess onSuccess,OnFailure onFailure) {
 		password = WEncrypt.MD5(password);
 		HashMap<String, String> params = new HashMap<String, String>();
 		params.put("account", account);
 		params.put("password", password);
 		String url = super.getUrl(Method_User_Login, "", params);
-		volley.request(url,onSuccess,onError);
+		volley.request(url,onSuccess,onFailure);
 	}
 	
 	/**
@@ -87,11 +89,11 @@ public class WUserApi extends WiStormAPI {
 	 * @param onSuccess 连接成功回调
 	 * @param onError   连接失败回调
 	 */
-	public void thridLogin(String loginId,Listener<String> onSuccess,ErrorListener onError) {
+	public void thridLogin(String loginId,OnSuccess onSuccess,OnFailure onFailure) {
 		HashMap<String, String> params = new HashMap<String, String>();
 		params.put("login_id",loginId);
 		String url = super.getUrl(Method_User_SSO_Login, "", params);
-		volley.request(url,onSuccess,onError);
+		volley.request(url,onSuccess,onFailure);
 	}
 	
 
@@ -101,12 +103,12 @@ public class WUserApi extends WiStormAPI {
 	 * @param onSuccess 连接成功回调
 	 * @param onError   连接失败回调
 	 */
-	public void exists(String mobile,String cust_name,Listener<String> onSuccess,ErrorListener onError){
+	public void exists(String mobile,String cust_name,OnSuccess onSuccess,OnFailure onFailure){
 		HashMap<String, String> params = new HashMap<String, String>();
 		params.put("mobile",mobile);
 		params.put("cust_name",cust_name);
 		String url = super.getUrl(Method_User_User_exist, "", params);
-		volley.request(url,onSuccess,onError);
+		volley.request(url,onSuccess,onFailure);
 	}
 	
 	/**
@@ -118,7 +120,7 @@ public class WUserApi extends WiStormAPI {
 	 * @param onSuccess 连接成功回调
 	 * @param onError   连接失败回调
 	 */
-	public void register(String account, String password, String validCode,Listener<String> onSuccess,ErrorListener onError) {
+	public void register(String account, String password, String validCode,OnSuccess onSuccess,OnFailure onFailure) {
 		password = WEncrypt.MD5(password);
 		HashMap<String, String> params = new HashMap<String, String>();
 		// 1: 通过手机号 2:通过邮箱
@@ -135,7 +137,7 @@ public class WUserApi extends WiStormAPI {
 		params.put("valid_type", validType);
 		params.put("valid_code", validCode);
 		String url = super.getUrl(Method_User_Register, "", params);
-		volley.request(url,onSuccess,onError);
+		volley.request(url,onSuccess,onFailure);
 	}
 
 	/**
@@ -152,7 +154,7 @@ public class WUserApi extends WiStormAPI {
 	 * @param onSuccess 连接成功回调
 	 * @param onError   连接失败回调
 	 */
-	public void volidCode(String account, String validCode,Listener<String> onSuccess,ErrorListener onError) {
+	public void volidCode(String account, String validCode,OnSuccess onSuccess,OnFailure onFailure) {
 		HashMap<String, String> params = new HashMap<String, String>();
 		// 1: 通过手机号 2:通过邮箱
 		String validType = "1";
@@ -167,7 +169,7 @@ public class WUserApi extends WiStormAPI {
 		params.put("valid_type", validType);
 		params.put("valid_code", validCode);
 		String url = super.getUrl(Method_User_Volid_Code, "", params);
-		volley.request(url,onSuccess,onError);
+		volley.request(url,onSuccess,onFailure);
 	}
 
 	/**
@@ -181,7 +183,7 @@ public class WUserApi extends WiStormAPI {
 	 * @param onError   连接失败回调
 	 */
 	public void reset(String account, String password, String validType,
-			String validCode,Listener<String> onSuccess,ErrorListener onError) {
+			String validCode,OnSuccess onSuccess,OnFailure onFailure) {
 		password = WEncrypt.MD5(password);
 		HashMap<String, String> params = new HashMap<String, String>();
 		params.put("account", account);
@@ -190,7 +192,7 @@ public class WUserApi extends WiStormAPI {
 		params.put("valid_code", validCode);
 
 		String url = super.getUrl(Method_User_Psd_Reset, "", params);
-		volley.request(url,onSuccess,onError);
+		volley.request(url,onSuccess,onFailure);
 	}
 
 
@@ -206,13 +208,13 @@ public class WUserApi extends WiStormAPI {
 	 * @param onSuccess 连接成功回调
 	 * @param onError   连接失败回调
 	 */
-	public void create(HashMap<String, String> params,Listener<String> onSuccess,ErrorListener onError) {
+	public void create(HashMap<String, String> params,OnSuccess onSuccess,OnFailure onFailure) {
 
 		Log.i("WUserApi", "M_Usr_Create create");
 		String url = super.getUrl(Wicare_User_Create, "", params);
 
 		Log.i("WUserApi", "M_Usr_Create create url:" + url);
-		volley.request(url,onSuccess,onError);
+		volley.request(url,onSuccess,onFailure);
 	}
 
 
@@ -222,11 +224,11 @@ public class WUserApi extends WiStormAPI {
 	 * @param onSuccess 连接成功回调
 	 * @param onError   连接失败回调
 	 */
-	public void get(HashMap<String, String> params,Listener<String> onSuccess,ErrorListener onError) {
+	public void get(HashMap<String, String> params,OnSuccess onSuccess,OnFailure onFailure) {
 		String fields = "cust_id,cust_name,cust_type,car_brand,car_series,parent_cust_id,logo,remark,create_time,update_time,photo,address,tel,mobile";
 		String url = super.getUrl(Wicare_User_Get, fields, params);
 		Log.i("WUserApi", "M_Usr_Create  get url:" + url);
-		volley.request(url,onSuccess,onError);
+		volley.request(url,onSuccess,onFailure);
 	}
 
 	
@@ -237,10 +239,10 @@ public class WUserApi extends WiStormAPI {
 	 * @param onSuccess 连接成功回调
 	 * @param onError   连接失败回调
 	 */
-	public void update(HashMap<String, String> params,Listener<String> onSuccess,ErrorListener onError) {
+	public void update(HashMap<String, String> params,OnSuccess onSuccess,OnFailure onFailure) {
 		String url = super.getUrl(Wicare_User_Update, "", params);
 		Log.i("WUserApi", "Wicare_User_Update  url:" + url);
-		volley.request(url,onSuccess,onError);
+		volley.request(url,onSuccess,onFailure);
 	}
 	
 

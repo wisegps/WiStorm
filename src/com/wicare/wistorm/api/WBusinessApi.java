@@ -11,12 +11,9 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.Handler.Callback;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.wicare.wistorm.http.BaseVolley;
 import com.wicare.wistorm.http.Msg;
-import com.wicare.wistorm.model.Customer;
-import com.wicare.wistorm.toolkit.WEncrypt;
 
 /**
  * WBusinessApi 业务模块

@@ -5,6 +5,8 @@ import java.util.HashMap;
 import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
 import com.wicare.wistorm.http.BaseVolley;
+import com.wicare.wistorm.http.OnFailure;
+import com.wicare.wistorm.http.OnSuccess;
 
 public class WAirApi extends WiStormAPI{
 
@@ -37,14 +39,14 @@ public class WAirApi extends WiStormAPI{
 	 * @param onSuccess 提交数据成功的回调
 	 * @param onError   提交数据失败的回调
 	 */
-	public void setAirSpeed(String token,String device_id,String command,Listener<String> onSuccess,ErrorListener onError){
+	public void setAirSpeed(String token,String device_id,String command,OnSuccess onSuccess,OnFailure onFailure){
 		HashMap<String, String> params = new HashMap<String, String>();
 		params.put("access_token", token);
 		params.put("device_id", device_id);
 		params.put("params", command);
 		params.put("cmd_type", AIR_SPEED);
 		String url = super.getUrl(Method_Set_Command, "", params);
-		volley.request(url, onSuccess,onError);
+		volley.request(url, onSuccess,onFailure);
 	}
 	
 
@@ -55,14 +57,14 @@ public class WAirApi extends WiStormAPI{
 	 * @param onSuccess 提交数据成功的回调
 	 * @param onError   提交数据失败的回调
 	 */
-	public void setAirModel(String token,String device_id,String command,Listener<String> onSuccess,ErrorListener onError){
+	public void setAirModel(String token,String device_id,String command,OnSuccess onSuccess,OnFailure onFailure){
 		HashMap<String, String> params = new HashMap<String, String>();
 		params.put("access_token", token);
 		params.put("device_id", device_id);
 		params.put("params", command);
 		params.put("cmd_type", AIR_MODEL);
 		String url = super.getUrl(Method_Set_Command, "", params);
-		volley.request(url, onSuccess,onError);
+		volley.request(url, onSuccess,onFailure);
 	}
 	
 	/**
@@ -72,14 +74,14 @@ public class WAirApi extends WiStormAPI{
 	 * @param onSuccess 提交数据成功的回调
 	 * @param onError   提交数据失败的回调
 	 */
-	public void setAirSwitch(String token,String device_id,String command,Listener<String> onSuccess,ErrorListener onError){
+	public void setAirSwitch(String token,String device_id,String command,OnSuccess onSuccess,OnFailure onFailure){
 		HashMap<String, String> params = new HashMap<String, String>();
 		params.put("access_token", token);
 		params.put("device_id", device_id);
 		params.put("params", command);
 		params.put("cmd_type", AIR_SWITCH);
 		String url = super.getUrl(Method_Set_Command, "", params);
-		volley.request(url, onSuccess,onError);
+		volley.request(url, onSuccess,onFailure);
 	}
 
 }
