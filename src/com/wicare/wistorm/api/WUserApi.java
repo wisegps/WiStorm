@@ -30,7 +30,8 @@ public class WUserApi extends WiStormAPI {
 	public String Wicare_User_Create     = "wicare.user.create";
 	public String Wicare_User_Get        = "wicare.user.get";
 	public String Wicare_User_Update     = "wicare.user.update";
-	public String Wicare_User_Cust_List  = "wicare.user.customers.list";
+	public String Wicare_User_List       = "wicare.users.list";
+	public String Wicare_User_Bind       = "wicare.user.bind";
 
 	public HashMap<String, String> hashParam = new HashMap<String, String>();
 	public Context context;
@@ -233,9 +234,14 @@ public class WUserApi extends WiStormAPI {
 
 	
 	/**
-	 * @param params 需要修改的参数前加下划线，_obj_name-更新车牌号
-	 * params.put("cust_id", custId); params.put("access_token", "");
-	 * params.put("_obj_name", "粤update1");
+	 * @param params 本页最下面客户字段中除了cust_id, create_time,mobile,update_time之外的字段，
+	 * 				需要修改的条件参数前加下划线如 “_cust_id” 修改客户id 下的参数，其他参数字段不变(如下就是修改车牌)
+	 * 				params.put("_cust_id", custId); 
+	 * 				params.put("access_token", token);
+	 * 				params.put("obj_name", "粤update1");
+	 * 
+	 * 除了cust_id, create_time,mobile,update_time之外
+	 * 
 	 * @param onSuccess 连接成功回调
 	 * @param onError   连接失败回调
 	 */
@@ -245,5 +251,65 @@ public class WUserApi extends WiStormAPI {
 		volley.request(url,onSuccess,onFailure);
 	}
 	
-
+	
+	/** 
+	 * @param params    本页最下面客户字段中除了cust_id, create_time,mobile,update_time之外的字段
+	 * @param onSuccess 连接成功回调
+	 * @param onFailure 连接失败回调
+	 */
+	public void bind(HashMap<String, String> params,OnSuccess onSuccess,OnFailure onFailure){
+		String url = super.getUrl(Wicare_User_Bind, "", params);
+		Log.i("WUserApi", "Wicare_User_Bind  url:" + url);
+		volley.request(url,onSuccess,onFailure);
+	}
+	
+	/**
+	 * @param params 如下所示：
+	 * 				 params.put("access_token",app.access_token);
+	 *				 params.put("seller_id", 你的商户ID);//根据商户ID获取用户列表  
+	 *	             params.put("sorts", "cust_name");//排序依据
+	 *	             params.put("limit", "20");       //返回的数量
+	 * @param fields 客户表的字段（请查看最下面的客户表字段）
+	 * @param onSuccess 连接成功回调
+	 * @param onFailure 连接成功回调
+	 */
+	public void getList(HashMap<String, String> params,String fields,OnSuccess onSuccess,OnFailure onFailure){
+		String url = super.getUrl(Wicare_User_List, fields, params);
+		Log.i("WUserApi", "Wicare_User_Cust_List  url:" + url);
+		volley.request(url,onSuccess,onFailure);
+	}
+	
+	/*
+	 * 客户信息字段
+	 * 
+	cust_id: Number,
+    seller_id: Number,         //商户ID, 如果为商户, 则为0, 如果为车主, 则为车主所绑定的商户, 如果为员工, 则为员工所属商户
+    login_id: String,          //第三方登录返回的标识ID
+    cust_name: String,         //用户昵称
+    cust_type: Number,         //用户类型 0: 无车 1: 车主 2：服务商 3: 员工
+    service_type: Number,      //服务商类型（0 销售，1 售后，2 保险，3 理赔，4 代办，5 维修，6 保养）
+    car_brand: String,         //车辆品牌
+    car_series: String,        //车型
+    mobile: String,            //登陆手机
+    email: String,             //邮箱地址
+    password: String,          //登陆密码
+    province: String,          //省份
+    city: String,              //城市
+    loc: {},                   //经纬度
+    logo: String,              //车主头像
+    photo: [],                 //店铺照片
+    remark: String,            //用户简介
+    sex: Number,               //性别
+    birth: Date,               //生日
+    contacts: String,          //联系人
+    address: String,           //联系地址
+    tel: String,               //联系电话
+    id_card_type: String,      //驾照类型
+    annual_inspect_date: Date, //驾照年审
+    change_date: Date,         //换证日期
+    balance: Number,           //账户余额，仅用于返还现金，暂时不支持充值
+    privilege: String,         //操作权限, 格式:功能编码01,功能编码02,功能编码03,功能编码04
+    create_time: Date,         //创建时间
+    update_time: Date          //更新时间
+*/
 }
