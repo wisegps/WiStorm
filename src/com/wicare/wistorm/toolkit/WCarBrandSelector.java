@@ -73,12 +73,15 @@ public class WCarBrandSelector extends Activity implements OnClickListener, Text
 	private static final int GET_CAR_Series_DATA = 2;
 	private static final int GET_CAR_Types_DATA  = 3;
 	private static final int GET_Logo_IMAGE      = 4;
+	
 	/** 品牌 **/
 	private List<CarBrandData> brandDatas = new ArrayList<CarBrandData>(); // 车辆品牌集合
 	/** 车型 **/
 	private List<String[]> carSeries = new ArrayList<String[]>();
 	/** 车款 **/
 	private List<String[]> carTypes = new ArrayList<String[]>();
+	
+	
 	private TextView tv_title = null;
 	private TextView letterIndex = null;// 字母索引选中提示框
 	private WCarSelectorSideBar sideBar;//侧旁的字母列表
@@ -94,6 +97,8 @@ public class WCarBrandSelector extends Activity implements OnClickListener, Text
 	private boolean imageDownload = true;
 	private Imagehread imageThread = null;
 	
+	private List<CarBrandData> searchDateList = new ArrayList<CarBrandData>();
+	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -101,7 +106,7 @@ public class WCarBrandSelector extends Activity implements OnClickListener, Text
 		setContentView(R.layout.ws_brand_selector);
 		initView();
 //		startProgressDialog();//加载弹框
-		
+		getBrandData();
 		Log.e(TAG, "---------"+VehicleLogoPath);
 	}
 	
@@ -143,8 +148,6 @@ public class WCarBrandSelector extends Activity implements OnClickListener, Text
 				}
 			}
 		});
-		//开启线程获取服务器数据
-		new HttpThread.getDataThread(mHandler, carBrand_url, GET_CAR_BRAND_DATA).start();
 	}
 	
 	
@@ -157,9 +160,9 @@ public class WCarBrandSelector extends Activity implements OnClickListener, Text
 		@Override
 		public void onItemClick(AdapterView<?> parent, View view, int position,
 				long id) {	
-			carBrank   = brandDatas.get(position).getBrand();
-			carBrankId = brandDatas.get(position).getId();
-			logoUrl    = brandDatas.get(position).getLogoUrl();
+			carBrank   = searchDateList.get(position).getBrand();
+			carBrankId = searchDateList.get(position).getId();
+			logoUrl    = searchDateList.get(position).getLogoUrl();
 			Log.e(TAG, carBrank + "--" + carBrankId + "--" + logoUrl);
 			getSeriesData(carBrankId);
 //			startProgressDialog();//弹框
@@ -302,6 +305,7 @@ public class WCarBrandSelector extends Activity implements OnClickListener, Text
 			brandDatas = filledData(brankList);
 			Collections.sort(brandDatas, comparator);
 			mCarBrandAdapter = new WCarBrandAdapter(this);
+			searchDateList = brandDatas;
 			mCarBrandAdapter.setData(brankList);
 			carBrandListView.setAdapter(mCarBrandAdapter);
 			// 刷新品牌logo
@@ -395,8 +399,17 @@ public class WCarBrandSelector extends Activity implements OnClickListener, Text
 		}
     }
     
+    
     /**
-     * 获取车品牌
+     * 获取汽车品牌
+     */
+    private void getBrandData(){
+    	//开启线程获取服务器数据
+    	new HttpThread.getDataThread(mHandler, carBrand_url, GET_CAR_BRAND_DATA).start();
+    }
+    
+    /**
+     * 获取车系列
      * @param carBrandId 	汽车id
      */
     private void getSeriesData(String carBrandId){
@@ -470,7 +483,7 @@ public class WCarBrandSelector extends Activity implements OnClickListener, Text
 			List<CarBrandData> filterDateList = new ArrayList<CarBrandData>();
 			// 编辑框的内容为空的时候
 			if (TextUtils.isEmpty(filterStr)) {
-				filterDateList = brandDatas;
+				searchDateList = brandDatas;
 			} else {
 				// 匹配某些类型的品牌
 				filterDateList.clear();
@@ -479,13 +492,16 @@ public class WCarBrandSelector extends Activity implements OnClickListener, Text
 					if (name.indexOf(filterStr.toString()) != -1
 							|| characterParser.getPingYin(name).startsWith(
 									filterStr.toString())) {
+						
 						filterDateList.add(sortModel);
+						Log.d("CARDATA", filterDateList.size() + "赛选字符不是空:" + sortModel.getBrand() );
 					}
 				}
+				searchDateList = filterDateList;
 			}
 			// 根据a-z进行排序
-			Collections.sort(filterDateList, comparator);
-			mCarBrandAdapter.setData(filterDateList);
+			Collections.sort(searchDateList, comparator);
+			mCarBrandAdapter.setData(searchDateList);
 			carBrandListView.setAdapter(mCarBrandAdapter);
 		} catch (Exception e) {
 			e.printStackTrace();
