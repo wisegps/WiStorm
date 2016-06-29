@@ -197,10 +197,18 @@ public class WiStormAPI extends WiStorm {
 	 * @return
 	 */
 	private String encodeUTF(String value) {
-//		value = Uri.encode(value);
-//		return value;
-		
-		if(value.contains("@")){//如果没有这个 ，当帐号是邮箱的时候会出现 签名错误
+		if(value.contains("@") && value.contains(" ")){
+			String str = "";
+			String[] sourceStrArray = value.split("@");
+			for (int i = 0; i < sourceStrArray.length; i++) {
+				if(i>0){
+					str = str + "@";
+				}
+				str = str +sourceStrArray[i].replace(" ", "%20");
+	        }
+			System.out.println("LoginTest: " + str);
+			return str;
+		}else if(value.contains("@") && !value.contains(" ")){//如果没有这个 ，当帐号是邮箱的时候会出现 签名错误
 			return value;
 		}else if(value.contains(":")){//冒号不用转换
 			value = Uri.encode(value.substring(0,value.indexOf(":"))) +  ":" 

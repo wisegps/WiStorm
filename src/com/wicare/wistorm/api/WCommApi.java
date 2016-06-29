@@ -19,7 +19,6 @@ public class WCommApi extends WiStormAPI {
 	public String Method_Comm_Sms_Send   = "wicare.comm.sms.send";
 	/* type: 发送短信类型   1: 普通校验码信息 2: 忘记密码校验信息*/
 	public final static int Tpye_Nomal = 1,Type_Forget_Password = 2;
-	public HashMap<String, String> hashParam = new HashMap<String, String>();
 	public Context context;
 	private BaseVolley volley;
 

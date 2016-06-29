@@ -1,100 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?>  
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
-    android:minWidth="250dp"  
-    android:orientation="vertical"  
-    android:layout_width="match_parent"  
-    android:layout_height="wrap_content"
-    android:background="@drawable/ws_round_bg" >  
-    
-    
-   <!--  <LinearLayout 
-        android:background="@drawable/ws_round_bg" 
-        android:orientation="vertical"  
-	    android:layout_width="fill_parent"  	    
-	    android:layout_height="wrap_content" > -->
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"  >
 
-         <!-- dialog 标题 --> 
-        <TextView  
-            android:id="@+id/title"  
-            android:padding="10dip" 
-            android:textSize="24sp"
-            android:background="@color/white" 
-            android:textColor="@color/blue_press"
-            android:layout_width="match_parent"  
-            android:layout_height="wrap_content" />  
-	            
-	    <View 
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:background="@color/gray_light" />
-	    
-	        
-        <ListView 
-            android:id="@+id/listView"
-            android:textSize="18sp"
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="250dp"
+        android:layout_height="118dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:background="@drawable/ws_shape_dialog">
+        <TextView
+            android:id="@+id/tv_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp">            
-        </ListView> 
-        
-        <View 
-            android:id="@+id/lv_view"
+            android:gravity="left"
+            android:textColor="#5d6268"
+            android:textSize="15dp"
+            android:text="标题"/>
+        <LinearLayout
+            android:id="@+id/ll_btn"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:background="@color/gray_light" />
-    
-   	<!-- dialog 内容 -->
-        <TextView  
-            android:id="@+id/message"  
-            android:padding="10dip"  
-            android:textSize="18sp"
-            android:background="@color/white" 
-            android:layout_width="fill_parent"  
-            android:layout_height="wrap_content" />  	            
-	    
-	    <View 
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btn_neg"
+                android:layout_width="97dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="11dp"
+                android:textColor="@color/green_light"
+                android:background="@null"
+                android:textSize="15dp"
+                android:text="取消"/>
+            <Button
+                android:id="@+id/btn_pos"
+                android:layout_width="97dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="11dp"
+                android:textColor="@color/green_light"
+                android:background="@null"
+                android:textSize="15dp"
+                android:text="确定"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_above="@id/ll_btn"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:background="@color/gray_light" />
-	     
-	   	<!-- dialog 确定和取消按钮 --> 
-        <TextView   
-            android:id="@+id/positiveButton"  
-            android:background="@color/white"  
-            android:padding="10dip" 
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_width="match_parent"   
-            android:layout_height="wrap_content"
-            android:textColor="@color/blue_press"  
-            android:textSize="18sp"
-            android:singleLine="true"/> 
-             
-        <View 
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:background="@color/gray_light" />
-        
-        <TextView   
-            android:id="@+id/negativeButton"  
-         	android:background="@color/white" 
-         	android:padding="10dip" 
-         	android:gravity="center"
-            android:layout_width="match_parent"  
-            android:layout_height="wrap_content" 
-            android:textColor="@color/blue_press" 
-            android:textSize="18sp"
-            android:singleLine="true"/>  
-	             
-    <!-- </LinearLayout> -->
-   
-   
-   
-</LinearLayout>  
+            android:paddingBottom="25dp"
+            android:textColor="#5d6268"
+            android:textSize="15dp"
+            android:text="信息"/>
+    </RelativeLayout>
+
+</LinearLayout>

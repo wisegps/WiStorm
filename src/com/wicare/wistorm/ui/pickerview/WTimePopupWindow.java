@@ -20,7 +20,7 @@ import android.widget.PopupWindow;
 /**
  * 时间选择器
  * 
- * @author Sai
+ * @author wu
  * 
  */
 public class WTimePopupWindow extends PopupWindow implements OnClickListener {
@@ -159,6 +159,9 @@ public class WTimePopupWindow extends PopupWindow implements OnClickListener {
 		public void onTimeSelect(Date date);
 	}
 
+	/**
+	 * @param timeSelectListener 选择时间监听器
+	 */
 	public void setOnTimeSelectListener(OnTimeSelectListener timeSelectListener) {
 		this.timeSelectListener = timeSelectListener;
 	}

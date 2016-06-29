@@ -2,8 +2,6 @@ package com.wicare.wistorm.api;
 
 import java.util.HashMap;
 
-import com.android.volley.Response.ErrorListener;
-import com.android.volley.Response.Listener;
 import com.wicare.wistorm.http.BaseVolley;
 import com.wicare.wistorm.http.OnFailure;
 import com.wicare.wistorm.http.OnSuccess;
@@ -15,9 +13,6 @@ public class WAirApi extends WiStormAPI{
 	public static final String  AIR_SPEED  = "16453";
 	public static final String  AIR_SWITCH = "16451";
 	public static final String  AIR_MODEL  = "16452";
-	
-	public HashMap<String, String> hashParam = new HashMap<String, String>();
-
 	private BaseVolley volley;
 	
 	public WAirApi(){

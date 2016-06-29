@@ -633,10 +633,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int ws_search_clear_normal=0x7f0200e9;
         public static int ws_search_clear_pressed=0x7f0200ea;
         public static int ws_selector_checkbox=0x7f0200eb;
+        public static int ws_shape_dialog=0x7f0200ec;
     }
     public static final class id {
         public static int MyLetterListView01=0x7f0b0052;
-        public static int action_settings=0x7f0b00a3;
+        public static int action_settings=0x7f0b00a2;
         public static int actionbarLayout=0x7f0b0026;
         public static int actionbarLayoutId=0x7f0b001d;
         public static int alpha=0x7f0b0057;
@@ -647,20 +648,22 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
          */
         public static int auto_focus=0x7f0b0001;
         public static int backImageView=0x7f0b0035;
-        public static int bmapView=0x7f0b0088;
+        public static int bmapView=0x7f0b0087;
         public static int bt_Submit=0x7f0b0072;
         public static int bt_bigin_scan=0x7f0b0053;
         public static int bt_item_pop=0x7f0b0067;
         public static int bt_register=0x7f0b006e;
-        public static int bt_sure=0x7f0b008a;
+        public static int bt_sure=0x7f0b0089;
         public static int btnCancel=0x7f0b0021;
-        public static int btnGetCode=0x7f0b009f;
+        public static int btnGetCode=0x7f0b009e;
         public static int btnSubmit=0x7f0b0022;
-        public static int btn_login=0x7f0b0082;
+        public static int btn_login=0x7f0b0081;
+        public static int btn_neg=0x7f0b0075;
+        public static int btn_pos=0x7f0b0076;
         public static int checkedImageView=0x7f0b003a;
         public static int city=0x7f0b0073;
         public static int closeImageView=0x7f0b002a;
-        public static int content=0x7f0b009b;
+        public static int content=0x7f0b009a;
         public static int day=0x7f0b001a;
         public static int decode=0x7f0b0002;
         public static int decode_failed=0x7f0b0003;
@@ -668,78 +671,74 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int divider=0x7f0b002b;
         public static int encode_failed=0x7f0b0005;
         public static int encode_succeeded=0x7f0b0006;
-        public static int etPhone=0x7f0b009e;
+        public static int etPhone=0x7f0b009d;
         public static int et_account=0x7f0b006d;
         public static int et_captcha=0x7f0b0070;
         public static int et_car_key=0x7f0b0060;
-        public static int et_name=0x7f0b0089;
-        public static int et_new_pwd=0x7f0b00a1;
-        public static int et_new_pwd_again=0x7f0b00a2;
-        public static int et_password=0x7f0b0081;
+        public static int et_name=0x7f0b0088;
+        public static int et_new_pwd=0x7f0b00a0;
+        public static int et_new_pwd_again=0x7f0b00a1;
+        public static int et_password=0x7f0b0080;
         public static int et_pwd=0x7f0b0071;
-        public static int et_search=0x7f0b0097;
+        public static int et_search=0x7f0b0096;
         public static int fullscreen=0x7f0b0011;
-        public static int gps_city=0x7f0b0079;
+        public static int gps_city=0x7f0b0078;
         public static int gridView=0x7f0b0037;
-        public static int gview_1=0x7f0b008d;
+        public static int gview_1=0x7f0b008c;
         public static int hScrollView=0x7f0b002f;
         public static int hour=0x7f0b001b;
-        public static int image=0x7f0b008b;
+        public static int image=0x7f0b008a;
         public static int imageRemoveBtn=0x7f0b0034;
         public static int imageView=0x7f0b0033;
         public static int imagesLinearLayout=0x7f0b0030;
-        public static int img=0x7f0b007e;
+        public static int img=0x7f0b007d;
         public static int imgRichpushBtnBack=0x7f0b001e;
         public static int imgView=0x7f0b001f;
         public static int invisible=0x7f0b000d;
         public static int iv_app_logo=0x7f0b003d;
         public static int iv_back=0x7f0b003c;
         public static int iv_carbrand_logo=0x7f0b005c;
-        public static int iv_circle_page_0=0x7f0b0091;
-        public static int iv_circle_page_1=0x7f0b0092;
+        public static int iv_circle_page_0=0x7f0b0090;
+        public static int iv_circle_page_1=0x7f0b0091;
         public static int iv_pic=0x7f0b0046;
         public static int iv_qr_image=0x7f0b0055;
-        public static int iv_sure=0x7f0b00a0;
+        public static int iv_sure=0x7f0b009f;
         public static int launch_product_query=0x7f0b0007;
         public static int left=0x7f0b000f;
-        public static int listView=0x7f0b0074;
         public static int list_view=0x7f0b004f;
         public static int ll_account=0x7f0b0044;
+        public static int ll_btn=0x7f0b0074;
         public static int ll_cards=0x7f0b0014;
         public static int ll_item=0x7f0b0056;
         public static int ll_main=0x7f0b0045;
-        public static int llyt_circle_page=0x7f0b0090;
+        public static int llyt_circle_page=0x7f0b008f;
         public static int locate=0x7f0b0059;
         public static int locateHint=0x7f0b005a;
         public static int logoImageView=0x7f0b0038;
         public static int lv_car_brand=0x7f0b0061;
         public static int lv_car_model=0x7f0b0064;
         public static int lv_car_type=0x7f0b0065;
-        public static int lv_left_menu=0x7f0b0099;
+        public static int lv_left_menu=0x7f0b0098;
         public static int lv_pop=0x7f0b0066;
-        public static int lv_view=0x7f0b0075;
         public static int mainRelLayout=0x7f0b0027;
         public static int margin=0x7f0b0012;
-        public static int menu_left_content=0x7f0b0098;
-        public static int menu_right_content=0x7f0b009a;
-        public static int message=0x7f0b0076;
+        public static int menu_left_content=0x7f0b0097;
+        public static int menu_right_content=0x7f0b0099;
         public static int min=0x7f0b001c;
         public static int month=0x7f0b0019;
         public static int name=0x7f0b0058;
         public static int nameTextView=0x7f0b0039;
-        public static int negativeButton=0x7f0b0078;
         public static int okImageView=0x7f0b0036;
         public static int openLight=0x7f0b006a;
         public static int options1=0x7f0b0015;
         public static int options2=0x7f0b0016;
         public static int options3=0x7f0b0017;
         public static int optionspicker=0x7f0b0023;
-        public static int pbLocate=0x7f0b007a;
-        public static int positiveButton=0x7f0b0077;
+        public static int pbLocate=0x7f0b0079;
         public static int preview_view=0x7f0b0068;
         public static int quit=0x7f0b0008;
-        public static int recentHint=0x7f0b007b;
-        public static int recent_city=0x7f0b007c;
+        public static int recentHint=0x7f0b007a;
+        public static int recent_city=0x7f0b007b;
         public static int restart_preview=0x7f0b0009;
         public static int return_scan_result=0x7f0b000a;
         public static int right=0x7f0b0010;
@@ -747,7 +746,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int rl_top_title=0x7f0b003b;
         public static int rl_updata=0x7f0b0041;
         public static int rl_v=0x7f0b003e;
-        public static int rotation_progress_bar=0x7f0b0093;
+        public static int rotation_progress_bar=0x7f0b0092;
         public static int sb_letter=0x7f0b0063;
         public static int scan_result=0x7f0b0054;
         public static int scrollView=0x7f0b0013;
@@ -757,8 +756,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int selected_view=0x7f0b0000;
         public static int sh=0x7f0b004e;
         public static int slidingmenumain=0x7f0b0025;
-        public static int tabbarLayout=0x7f0b009d;
-        public static int text=0x7f0b008c;
+        public static int tabbarLayout=0x7f0b009c;
+        public static int text=0x7f0b008b;
         public static int textCounterTextView=0x7f0b002e;
         public static int textEditText=0x7f0b002c;
         public static int timepicker=0x7f0b0024;
@@ -778,28 +777,29 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int tv_carbrand=0x7f0b005d;
         public static int tv_carbrand_list_letter=0x7f0b005b;
         public static int tv_email=0x7f0b0049;
-        public static int tv_item_info=0x7f0b0096;
-        public static int tv_item_title=0x7f0b0095;
-        public static int tv_loading_msg=0x7f0b0094;
+        public static int tv_item_info=0x7f0b0095;
+        public static int tv_item_title=0x7f0b0094;
+        public static int tv_loading_msg=0x7f0b0093;
+        public static int tv_msg=0x7f0b0077;
         public static int tv_name=0x7f0b0048;
         public static int tv_noresult=0x7f0b0051;
-        public static int tv_password=0x7f0b0084;
+        public static int tv_password=0x7f0b0083;
         public static int tv_phone=0x7f0b0047;
-        public static int tv_register=0x7f0b0085;
+        public static int tv_register=0x7f0b0084;
         public static int tv_sex=0x7f0b004a;
         public static int tv_title=0x7f0b006c;
-        public static int tv_update=0x7f0b0086;
+        public static int tv_update=0x7f0b0085;
         public static int tv_update_pwd=0x7f0b004c;
-        public static int tv_version=0x7f0b0087;
-        public static int v_line=0x7f0b007d;
-        public static int v_vertal_line=0x7f0b0083;
-        public static int viewLine=0x7f0b009c;
+        public static int tv_version=0x7f0b0086;
+        public static int v_line=0x7f0b007c;
+        public static int v_vertal_line=0x7f0b0082;
+        public static int viewLine=0x7f0b009b;
         public static int viewfinder_view=0x7f0b0069;
-        public static int viewpager=0x7f0b008f;
+        public static int viewpager=0x7f0b008e;
         public static int visible=0x7f0b000e;
-        public static int wn=0x7f0b008e;
-        public static int ws_iv_logo=0x7f0b0080;
-        public static int ws_llyt_login=0x7f0b007f;
+        public static int wn=0x7f0b008d;
+        public static int ws_iv_logo=0x7f0b007f;
+        public static int ws_llyt_login=0x7f0b007e;
         public static int year=0x7f0b0018;
     }
     public static final class integer {
@@ -1052,7 +1052,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static int AppTheme=0x7f0c0001;
-        public static int RotationProgressBarStyle=0x7f0c0005;
+        public static int RotationProgressBarStyle=0x7f0c0006;
+        /**  dialog style
+  背景缓存颜色  
+         */
+        public static int alertDialog=0x7f0c0003;
         /**  dialog style
   背景缓存颜色  
          */
@@ -1060,13 +1064,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /**  时间选择器popwidnow 显示消失动画 
  指定消失的动画xml 
          */
-        public static int timepopwindow_anim_style=0x7f0c0006;
+        public static int timepopwindow_anim_style=0x7f0c0007;
         /**  标题返回按钮样式 
          */
-        public static int title_back_style=0x7f0c0004;
+        public static int title_back_style=0x7f0c0005;
         /**   WBottomPopupWindow  anim  
          */
-        public static int ws_anim_menu_bottom_bar=0x7f0c0003;
+        public static int ws_anim_menu_bottom_bar=0x7f0c0004;
     }
     public static final class styleable {
         /** Attributes that can be used with a RotationProgressBar.

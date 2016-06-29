@@ -5,8 +5,6 @@ import java.util.HashMap;
 import android.content.Context;
 import android.util.Log;
 
-import com.android.volley.Response.ErrorListener;
-import com.android.volley.Response.Listener;
 import com.wicare.wistorm.http.BaseVolley;
 import com.wicare.wistorm.http.OnFailure;
 import com.wicare.wistorm.http.OnSuccess;
@@ -33,16 +31,14 @@ public class WUserApi extends WiStormAPI {
 	public String Wicare_User_List       = "wicare.users.list";
 	public String Wicare_User_Bind       = "wicare.user.bind";
 
-	public HashMap<String, String> hashParam = new HashMap<String, String>();
 	public Context context;
 	private BaseVolley volley;
 
-	
 	public WUserApi(){
-		init_1();
+		init();
 	}
 	
-	public void init_1(){
+	public void init(){
 		volley = new BaseVolley();
 	}
 	
