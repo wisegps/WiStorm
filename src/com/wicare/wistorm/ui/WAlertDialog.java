@@ -42,6 +42,8 @@ public class WAlertDialog extends Dialog{
         private String message;  
         private String positiveButtonText;//确定按钮  
         private String negativeButtonText;//取消按钮
+        private int color_msg = 0;
+        private int color_btn = 0;
         //确定按钮事件  
         private OnClickListener positiveButtonClickListener;
         //取消按钮事件  
@@ -50,6 +52,26 @@ public class WAlertDialog extends Dialog{
         public Builder(Context context) {  
             this.context = context;  
         } 
+        
+        
+        /**
+         * @param color
+         * 			设置信息和标题的字体颜色
+         * @return
+         */
+        public Builder setMessageColor(int color){
+        	this.color_msg = color;
+        	return this;
+        }
+        
+        /**
+         * @param color 设置button的字体颜色
+         * @return
+         */
+        public Builder setButtonColor(int color){
+        	this.color_btn = color;
+        	return this;
+        }
         
         /** 
          * 从资源文件中设置 dialog的消息
@@ -130,6 +152,9 @@ public class WAlertDialog extends Dialog{
             if(title != null){
                 // 设置标题
                 ((TextView) layout.findViewById(R.id.tv_title)).setText(title);
+                if(color_msg != 0){
+                	((TextView) layout.findViewById(R.id.tv_title)).setTextColor(color_msg);
+                }
             }else{
                 layout.findViewById(R.id.tv_title).setVisibility(View.GONE);
             }
@@ -142,6 +167,9 @@ public class WAlertDialog extends Dialog{
                                     DialogInterface.BUTTON_POSITIVE);
                         }
                     });
+                    if(color_btn != 0){
+                    	((TextView) layout.findViewById(R.id.btn_pos)).setTextColor(color_btn);
+                    }
                 }  
             } else {
                 layout.findViewById(R.id.btn_pos).setVisibility(View.GONE);
@@ -154,12 +182,18 @@ public class WAlertDialog extends Dialog{
                             negativeButtonClickListener.onClick(dialog,DialogInterface.BUTTON_NEGATIVE);
                         }
                     });
+                    if(color_btn != 0){
+                    	((TextView) layout.findViewById(R.id.btn_neg)).setTextColor(color_btn);
+                    }
                 }  
             } else {
                 layout.findViewById(R.id.btn_neg).setVisibility(View.GONE);
             }
             if (message != null) {  
                 ((TextView) layout.findViewById(R.id.tv_msg)).setText(message);
+                if(color_msg != 0){
+                	((TextView) layout.findViewById(R.id.tv_msg)).setTextColor(color_msg);
+                }
             }else{
                 layout.findViewById(R.id.tv_msg).setVisibility(View.GONE);
             }
