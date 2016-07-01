@@ -100,10 +100,9 @@ public class WUserApi extends WiStormAPI {
 	 * @param onSuccess 连接成功回调
 	 * @param onError   连接失败回调
 	 */
-	public void exists(String mobile,String cust_name,OnSuccess onSuccess,OnFailure onFailure){
+	public void exists(String mobile,OnSuccess onSuccess,OnFailure onFailure){
 		HashMap<String, String> params = new HashMap<String, String>();
 		params.put("mobile",mobile);
-		params.put("cust_name",cust_name);
 		String url = super.getUrl(Method_User_User_exist, "", params);
 		volley.request(url,onSuccess,onFailure);
 	}
