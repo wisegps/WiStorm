@@ -2,6 +2,8 @@ package com.wicare.wistorm.api;
 
 import java.util.HashMap;
 
+import android.content.Context;
+
 import com.wicare.wistorm.http.BaseVolley;
 import com.wicare.wistorm.http.OnFailure;
 import com.wicare.wistorm.http.OnSuccess;
@@ -15,7 +17,8 @@ public class WAirApi extends WiStormAPI{
 	public static final String  AIR_MODEL  = "16452";
 	private BaseVolley volley;
 	
-	public WAirApi(){
+	public WAirApi(Context context){
+		super(context);
 		init();
 	}
 
@@ -25,6 +28,28 @@ public class WAirApi extends WiStormAPI{
 	public void init(){
 		volley = new BaseVolley();
 	}
+	
+	
+	
+	/**
+	 * 向设备发送信息
+	 * 
+	 * @param params
+	 * 			参数字段
+	 * @param fields
+	 * 			返回字段
+	 * @param callback
+	 * 			连接回调
+	 */
+	public void commandCreate(HashMap<String, String> params,String fields,OnSuccess onSuccess,OnFailure onFailure){
+		String url = super.getUrl(Method_Set_Command, fields, params);
+		volley.request(url, onSuccess,onFailure);
+	}
+	
+	
+	
+	
+	
 	
 
 	/**

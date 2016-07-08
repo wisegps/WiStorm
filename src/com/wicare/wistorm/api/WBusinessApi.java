@@ -32,131 +32,17 @@ public class WBusinessApi extends WiStormAPI {
 	public HashMap<String, String> hashParam = new HashMap<String, String>();
 
 	public Context context;
-	private Handler uiHandler;// UI线程
-	private Handler workHandler;// 工作线程，非UI线程
 	private BaseVolley volley;
 
-	public WBusinessApi(Handler uiHandler) {
-		this.uiHandler = uiHandler;
+	
+	public WBusinessApi(Context context) {
+		super(context);
 		init();
 	}
-
-	/**
-	 * 初始化数据
-	 * 
-	 * @param uiHandler
-	 */
-	public void init() {
-		this.workHandler = super.initWorkHandler(handleCallBack);
-		volley = new BaseVolley(workHandler);
+	
+	public void init(){
+		volley = new BaseVolley();
 	}
-
-	/**
-	 * 工作子线程回调函数,负责接收网络返回数据，并交给解析函数进一步处理
-	 */
-	private Callback handleCallBack = new Callback() {
-		@Override
-		public boolean handleMessage(Message msg) {
-			switch (msg.what) {
-			case Msg.M_Biz_Create:
-				Log.i("WUserApi",
-						"M_Usr_Token handleCallBack" + msg.obj.toString());
-				parseCreate(msg);
-				break;
-			case Msg.M_Biz_Update:
-				Log.i("WUserApi",
-						"M_Biz_Update handleCallBack" + msg.obj.toString());
-				parseUpdate(msg);
-				break;
-			case Msg.M_Biz_List:
-				Log.i("WUserApi",
-						"Method_Biz_List handleCallBack" + msg.obj.toString());
-				parseGet(msg);
-				break;
-			case Msg.M_Biz_Total:
-				Log.i("WUserApi",
-						"M_Biz_Total handleCallBack" + msg.obj.toString());
-				parseGetTotal(msg);
-				break;
-			}
-			return false;
-		}
-	};
-
-	/***************************************************** 解析网络返回的数据 ********************************/
-	/**
-	 * 解析返回的数据
-	 * 
-	 * @param msg
-	 */
-	private void parseCreate(Message msg) {
-		try {
-			JSONObject json = new JSONObject(msg.obj.toString());
-			Message uimsg = uiHandler.obtainMessage();
-			uimsg.what = msg.what;
-			Bundle bundle = msg.getData();
-			String status_code = json.getString("status_code");
-			String business_id = json.getString("business_id");
-			bundle.putString("status_code", status_code);
-			bundle.putString("business_id", business_id);
-			uimsg.setData(bundle);
-			uiHandler.sendMessage(uimsg);
-		} catch (JSONException e) {
-			e.printStackTrace();
-		}
-	}
-	
-	/**
-	 * 解析返回的数据
-	 * 
-	 * @param msg
-	 */
-	private void parseUpdate(Message msg) {
-		try {
-			JSONObject json = new JSONObject(msg.obj.toString());
-			Message uimsg = uiHandler.obtainMessage();
-			uimsg.what = msg.what;
-			Bundle bundle = msg.getData();
-			String status_code = json.getString("status_code");
-			bundle.putString("status_code", status_code);
-			uimsg.setData(bundle);
-			uiHandler.sendMessage(uimsg);
-		} catch (JSONException e) {
-			e.printStackTrace();
-		}
-	}
-	
-	
-	/**
-	 * 解析返回的数据
-	 * 
-	 * @param msg
-	 */
-	private void parseGet(Message msg) {
-			Message uimsg = uiHandler.obtainMessage();
-			uimsg.what = msg.what;
-			Bundle bundle = msg.getData();
-			bundle.putString("list", msg.obj.toString());
-			uimsg.setData(bundle);
-			uiHandler.sendMessage(uimsg);
-	}
-	
-	
-	/**
-	 * 解析返回的数据
-	 * 
-	 * @param msg
-	 */
-	private void parseGetTotal(Message msg) {
-			Message uimsg = uiHandler.obtainMessage();
-			uimsg.what = msg.what;
-			Bundle bundle = msg.getData();
-			bundle.putString("total", msg.obj.toString());
-			uimsg.setData(bundle);
-			uiHandler.sendMessage(uimsg);
-	}
-	
-
 
 	/***************************************************** 请求业务 ********************************/
 

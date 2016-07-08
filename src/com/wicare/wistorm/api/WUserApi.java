@@ -34,7 +34,8 @@ public class WUserApi extends WiStormAPI {
 	public Context context;
 	private BaseVolley volley;
 
-	public WUserApi(){
+	public WUserApi(Context context){
+		super(context);
 		init();
 	}
 	

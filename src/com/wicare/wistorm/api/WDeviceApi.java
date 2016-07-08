@@ -23,7 +23,8 @@ public class WDeviceApi extends WiStormAPI {
 	public Context context;
 	private BaseVolley volley;
 	
-	public WDeviceApi(){
+	public WDeviceApi(Context context){
+		super(context);
 		init();
 	}
 	

@@ -10,6 +10,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import android.content.Context;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.HandlerThread;
@@ -62,8 +66,8 @@ public class WiStormAPI extends WiStorm {
 
 	/*----------------------------系统参数--------------------------------*/
 	// WOP分配给应用的AppKey ，创建应用时可获得
-	private String appSecret = "21fb644e20c93b72773bf0f8d0905052";
-	private String appKey = "9410bc1cbfa8f44ee5f8a331ba8dd3fc";
+	private String appSecret = "";
+	private String appKey = "";
 	// 时间戳，格式为yyyy-mm-dd HH:mm:ss，例如：2013-05-06 13:52:03。
 	private String timestamp = "";
 	// 可选，指定响应格式。目前支持格式为json
@@ -76,13 +80,53 @@ public class WiStormAPI extends WiStorm {
 	private String signMethod = "md5";
 	// 通过用户登陆获取或者访问获取Access Token的授权接口获取
 	private String session = "";
-
+	
 	/*----------------------------系统参数--------------------------------*/
 
-	public WiStormAPI() {
+	public WiStormAPI(Context context) {
 		super();
+		this.appSecret = getAppSecret(context);
+		this.appKey = getAppkey(context);
+		Log.d("TEST_WISTORM", "appSecret: " +  appSecret + "\n" + "appKey: " + appKey);
 	}
 
+	/**
+	 * @param context
+	 * @return
+	 */
+	public String getAppSecret(Context context){
+		
+		ApplicationInfo appInfo = null;
+		String msg = null;
+		try {
+			appInfo = context.getPackageManager()
+			        .getApplicationInfo(context.getPackageName(),PackageManager.GET_META_DATA);
+		} catch (NameNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	msg = appInfo.metaData.getString("Wistorm_appSecret");
+    	return msg;
+	}
+	
+	/**
+	 * @param context
+	 * @return
+	 */
+	public String getAppkey(Context context){
+		
+		ApplicationInfo appInfo = null;
+		try {
+			appInfo = context.getPackageManager()
+			        .getApplicationInfo(context.getPackageName(),PackageManager.GET_META_DATA);
+		} catch (NameNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	String msg = appInfo.metaData.getString("Wistorm_appKey");
+    	return msg;
+	}
+	
 	/**
 	 * 新建一个网络请求子线程的handler
 	 * 
@@ -206,15 +250,12 @@ public class WiStormAPI extends WiStorm {
 				}
 				str = str +sourceStrArray[i].replace(" ", "%20");
 	        }
-			System.out.println("LoginTest: " + str);
 			return str;
-		}else if(value.contains("@") && !value.contains(" ")){//如果没有这个 ，当帐号是邮箱的时候会出现 签名错误
+		}else if(value.contains("@") && !value.contains(" ")){
 			return value;
-		}else if(value.contains(":")){//冒号不用转换
+		}else if(value.contains(":")){
 			value = Uri.encode(value.substring(0,value.indexOf(":"))) +  ":" 
 					+ Uri.encode(value.substring(value.indexOf(":")+1,value.length()));
-			
-			Log.d("FragmentHomeAir", value);
 			return value;
 		}else{
 			value = Uri.encode(value);

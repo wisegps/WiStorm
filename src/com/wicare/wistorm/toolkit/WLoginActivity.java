@@ -64,7 +64,7 @@ public abstract class WLoginActivity extends Activity implements OnClickListener
 		//初始化网络
 		BaseVolley.init(WLoginActivity.this);
 		 //用户api 
-		userApi = new WUserApi();
+		userApi = new WUserApi(WLoginActivity.this);
 	}
 	
 	

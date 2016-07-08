@@ -2,6 +2,8 @@ package com.wicare.wistorm.api;
 
 import java.util.HashMap;
 
+import android.content.Context;
+
 import com.wicare.wistorm.http.BaseVolley;
 import com.wicare.wistorm.http.OnFailure;
 import com.wicare.wistorm.http.OnSuccess;
@@ -20,7 +22,8 @@ public class WBaseApi extends WiStormAPI {
 	
 	private BaseVolley volley;
 
-	public WBaseApi(){
+	public WBaseApi(Context context){
+		super(context);
 		init();
 	}
 	
